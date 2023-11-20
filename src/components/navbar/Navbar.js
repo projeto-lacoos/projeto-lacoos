@@ -33,7 +33,7 @@ export default function Navbar() {
                 </Link>
               </li>
               <li>
-                <Link className="item" to={"/"}>
+                <Link className="item" to={"/pacote"}>
                   Pacotes
                 </Link>
               </li>
@@ -48,7 +48,7 @@ export default function Navbar() {
                 </Link>
               </li>
               <li>
-                <Link id="modo-daltonismo" className="item" to={"/"}>
+                <Link id="modo-daltonismo" className="item" to={"/modo-daltonismo"}>
                   Modo Daltonismo
                 </Link>
               </li>
