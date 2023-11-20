@@ -8,6 +8,7 @@ import RecuperacaoSenha from './components/pages/recuperacaoSenha/RecuperacaoSen
 import NovaConta from './components/pages/novaConta/NovaConta';
 import Perfil from './components/pages/perfil/Perfil';
 import Pagamento from './components/pages/pagamento/Pagamento';
+import Sobre from './components/pages/sobre/Sobre';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route exact path="/nova-conta" element={<NovaConta />} />
         <Route exact path="/perfil" element={<Perfil />} />
         <Route exact path="/pagamento" element={<Pagamento />} />
+        <Route exact path="/sobre" element={<Sobre />} />
       </Routes>
     </BrowserRouter>
   );

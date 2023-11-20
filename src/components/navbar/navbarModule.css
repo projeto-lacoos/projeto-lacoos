@@ -1,12 +1,12 @@
-.home {
+.home-navbar {
     position: relative;
 }
 
-.home input {
+.home-navbar input {
     display: none;
 }
 
-.home label {
+.home-navbar label {
     position: absolute;
     right: 3rem;
     top: 5.5rem;
@@ -24,17 +24,17 @@
     visibility: hidden;
 }
 
-.home .navbar input:checked ~ .modal-navbar {
+.home-navbar .navbar input:checked ~ .modal-navbar {
     visibility: visible;
 }
 
-.home .navbar .modal-navbar .navbar-e {
+.home-navbar .navbar .modal-navbar .navbar-e {
     width: 70vw;
     height: 100vh;
     opacity: 0.4;
     background-color: #000;
 }
-.home .navbar .modal-navbar .navbar-d {
+.home-navbar .navbar .modal-navbar .navbar-d {
     background-color: #fff;
     display: flex;
     width: 30vw;
@@ -82,12 +82,12 @@
     text-decoration: underline;
 }
 
-.home .navbar .menu {
+.home-navbar .navbar .menu {
     width: 5.5rem;
     height: 2.1rem;
 }
 
-.home .navbar .menu .hamburguer {
+.home-navbar .navbar .menu .hamburguer {
     width: 100%;
     height: .4rem;
     background-color: #fff;
@@ -98,7 +98,7 @@
     cursor: pointer;
 }
 
-.home .navbar .menu .hamburguer:before {
+.home-navbar .navbar .menu .hamburguer:before {
     background-color: #fff;
     content: "";
     display: block;
@@ -110,7 +110,7 @@
     border-radius: 10px ;
 }
 
-.home .navbar .menu .hamburguer:after {
+.home-navbar .navbar .menu .hamburguer:after {
     background-color: #fff;
     content: "";
     display: block;
@@ -122,19 +122,19 @@
     border-radius: 10px ;
 }
 
-.home .navbar input:checked ~ label .menu .hamburguer {
+.home-navbar .navbar input:checked ~ label .menu .hamburguer {
     transform: rotate(45deg);
     background-color: #658955;
 }
 
-.home .navbar input:checked ~ label .menu .hamburguer:before {
+.home-navbar .navbar input:checked ~ label .menu .hamburguer:before {
     transform: rotate(90deg);
     background-color: #658955;
     top: 0px;
     transition: 0.2s ease-in-out;
 }
 
-.home .navbar input:checked ~ label .menu .hamburguer:after {
+.home-navbar .navbar input:checked ~ label .menu .hamburguer:after {
     transform: rotate(90deg);
     background-color: #658955;
     bottom: 0px;
@@ -146,7 +146,7 @@
 }
 
 @media(max-width: 1500px){
-    .home .navbar .menu {
+    .home-navbar .navbar .menu {
         margin-right: 2rem;
     }
 

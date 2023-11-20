@@ -14,8 +14,8 @@ import PlanoCasamento from "../../planoCasamento/PlanoCasamento";
 export default function Home() {
   return (
     <>
+      <Navbar />
       <section className="home">
-        <Navbar />
         <Link to={"/"}>
           <img className="logo-laçoos" src={LogoReduzida} alt="" />
         </Link>
