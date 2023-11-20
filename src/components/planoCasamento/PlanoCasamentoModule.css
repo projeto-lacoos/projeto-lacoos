@@ -1,0 +1,20 @@
+.caminho-planejamento .caixa-textos .texto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5.4rem;
+}
+
+.caminho-planejamento .caixa-textos .texto .conteudo-home h2 {
+    font-size: 4.7rem;
+    color: #658955;
+    font-weight: 400;
+    margin-bottom: 2.5rem;
+}
+
+.caminho-planejamento .caixa-textos .texto .conteudo-home p {
+    font-size: 2.7rem;
+    font-weight: 500;
+    text-align: justify;
+    width: 56.8rem;
+}

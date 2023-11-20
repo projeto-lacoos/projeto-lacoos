@@ -1,0 +1,205 @@
+/* SECTION HOME */
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 0 auto;
+
+    
+    width: 100%;
+    background: url(../../../img/home/fundo-home.jpg) no-repeat top center;
+    background-size: cover;
+}
+
+.home .logo-laçoos {
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    width: 10rem;
+}
+
+.home .container-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 100vh;
+    gap: 2.6rem;
+    margin-left: 8.5rem;
+}
+
+.home .container-home .botao-home {
+    background-color: #C3B107;
+    padding: 1.7rem 3.5rem;
+    width: fit-content;
+    color: #fff;
+    font-size: 2.4rem;
+    font-weight: 500;
+    border-radius: 4rem;
+    cursor: pointer;
+
+}
+
+.home .container-home .textos-central {
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(8px);
+    padding: 3.8rem 0.9rem 0.9rem 3.8rem;
+    border-radius: 2.3rem;
+}
+
+.home .container-home .textos-central .titulo-principal,
+.home .container-home .textos-central .titulo-principal .css-titulo {
+    font-size: 7.5rem;
+    font-weight: 500;
+    color: #fff;
+    line-height: 90.2%;
+}
+
+.home .container-home .textos-central .titulo-principal .css-titulo {
+    color: #C3B107;
+}
+
+.home .container-home .textos-central p {
+    font-size: 2.7rem;
+    font-weight: 500;
+    line-height: 139.7%;
+    color: #fff;
+}
+
+.home .logo-rede-social {
+    position: absolute;
+    width: 100%;
+    padding: 1rem 3rem;
+    bottom: 0;
+}
+
+.home .logo-rede-social .rede-social {
+    display: flex;
+    gap: 2rem;
+    color: #fff;
+}
+
+.home .logo-rede-social .rede-social a svg {
+    font-size: 7rem;
+}
+
+.home .rede-social .link-rede-social{
+    color: #fff;
+}
+
+/* SECTION CAMINHO PLANEJAMENTO */
+
+.caminho-planejamento {
+    position: relative;
+    margin: 20rem 0rem;
+}
+
+.caminho-planejamento .decoracao-cima {
+    position: absolute;
+    top: -20rem;
+    width: 1600px;
+}
+
+.caminho-planejamento .caixa-textos {
+    display: flex;
+    flex-direction: column;
+    gap: 7.4rem;
+}
+
+/* SECTION MODELOS CONVITES */
+.modelos-convites {
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.modelos-convites .titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #658955;
+    font-size: 9rem;
+    height: 100%;
+    margin-bottom: 4rem;
+}
+
+.convites {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8rem;
+    margin-bottom: 4rem;
+}
+
+.lista-convites {
+    position: relative;
+    width: 50rem;
+    height: 60rem;
+    background-color: aqua;
+}
+
+.lista-convites .imagem {
+    width: 50rem;
+}
+
+.btn-seta {
+    background-color: #658955;
+    color: #C3B107;
+    border-radius: 50%;
+    border: 0;
+    width: 7rem;
+    height: 7rem;
+    cursor: pointer;
+    transition: backgrond-color, 0.2s ease-in-out;
+    box-shadow: 0px 7px 29px 0px #64646f33;
+}
+
+.btn-seta:hover {
+    background-color: #C3B107;
+    color: #fff;
+}
+
+.btn-seta svg {
+    font-size: 2.5rem
+}
+
+.cartao {
+    opacity: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    box-shadow: 0px 7px 29px 0px #64646f33;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.cartao.selecionado {
+    opacity: 1;
+    z-index: 1;
+}
+
+.hashiLacoos {
+    position: absolute;
+    bottom: 4rem;
+    left: 2rem;
+}
+
+@media(max-width: 1500px){
+    .modelos-convites .modelo-de-convite .titulo {
+        font-size: 7rem;
+    }
+}
+
+@media(max-width: 1201px){
+    .modelos-convites .modelo-de-convite .titulo {
+        font-size: 5.5rem;
+    }
+}
