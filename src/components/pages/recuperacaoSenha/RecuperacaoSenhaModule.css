@@ -111,10 +111,11 @@
   cursor: pointer;
 }
 
-.voltar p{
+.voltar-recuperacao-senha p{
     color: #658955;
     font-size: 1.9rem;
     margin-left: 5rem;
+    text-align: left;
 }
 
 .voltar p:hover{

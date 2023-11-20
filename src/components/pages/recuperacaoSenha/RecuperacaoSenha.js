@@ -33,7 +33,7 @@ export default function RecuperacaoSenha() {
           <Link
             style={{ textDecoration: "none" }}
             to={"/login"}
-            className="voltar"
+            className="voltar-recuperacao-senha"
           >
             <p>Voltar</p>
           </Link>
