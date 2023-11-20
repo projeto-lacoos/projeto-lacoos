@@ -27,7 +27,7 @@ export default function RecuperacaoSenha() {
             <label htmlFor={"email_usuario"}>E-mail</label>
             <Input type={"text"} placeholder={"Exemplo.sac@xxxx.com"} name={"email_usuario"}/>
           </div>
-          <div className="button">
+          <div className="button-recuperacao-senha">
             <button>Enviar</button>
           </div>
           <Link

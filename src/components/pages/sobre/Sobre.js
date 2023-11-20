@@ -57,7 +57,7 @@ export default function Sobre() {
       </section>
       <section className="sobre-fontslacoos">
         <div className="conteudo-fonts">
-          <div className="button">
+          <div className="button-sobre">
             <button>Poppins</button>
           </div>
           <div className="poppins">
