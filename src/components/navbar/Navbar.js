@@ -53,6 +53,11 @@ export default function Navbar() {
                 </Link>
               </li>
               <li>
+                <Link id="notificacao-logar" className="item" to={"/notificacao-logar"}>
+                  Notificação Logar
+                </Link>
+              </li>
+              <li>
                 <Link className="item" to={"/"}>
                   Desconectar
                 </Link>

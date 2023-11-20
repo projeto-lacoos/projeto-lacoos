@@ -12,6 +12,7 @@ import Sobre from './components/pages/sobre/Sobre';
 import Pacote from './components/pages/pacote/Pacote';
 
 import ModoDaltonismo from './components/modoDaltonismo/ModoDaltonismo';
+import NotificacaoLogar from './components/notificacaoLogar/NotificacaoLogar';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route exact path="/pacote" element={<Pacote />} />
 
         <Route exact path="/modo-daltonismo" element={<ModoDaltonismo />} />
+        <Route exact path="/notificacao-logar" element={<NotificacaoLogar />} />
       </Routes>
     </BrowserRouter>
   );
