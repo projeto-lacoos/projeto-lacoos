@@ -6,7 +6,8 @@ import LogoReduzida from "../../../img/home/logo-reduzida.svg";
 import ImagemTexto1 from "../../../img/home/imagem-texto-1.jpg";
 import ImagemTexto2 from "../../../img/home/imagem-texto-2.jpg";
 import ImagemTexto3 from "../../../img/home/imagem-texto-3.jpg";
-import { FaInstagram, FaLinkedin } from "react-icons/fa";
+import DecoracaoCima from '../../../img/home/decoracao-cima.svg'
+import DecoracaoBaixo from '../../../img/home/decoracao-baixo.svg'
 
 import Navbar from "../../navbar/Navbar";
 import PlanoCasamento from "../../planoCasamento/PlanoCasamento";
@@ -41,6 +42,7 @@ export default function Home() {
         </div>
       </section>
       <section className="caminho-planejamento">
+        <img className="decoracao-cima" src={DecoracaoCima} alt="" />
         <div className="caixa-textos">
           <PlanoCasamento numero={"1."} titulo={"Seu plano ideal"} imagemTexto={ImagemTexto1} texto={"Oferecemos um plano personalizado para tornar o seu casamento ideal uma realidade. Nossa abordagem é feita sob medida, levando em consideração suas preferências individuais."} />
 
@@ -57,6 +59,7 @@ export default function Home() {
 
           <PlanoCasamento numero={"3."} titulo={"O dia do SIM!"} texto={"Chegamos à etapa do casamento, tudo está finalizado. Agora é só desfrutar ao máximo e confiar em nossa expertise para garantir que tudo ocorra de forma perfeita e conforme planejado."} imagemTexto={ImagemTexto3}/>
         </div>
+        <img className="decoracao-baixo" src={DecoracaoBaixo} alt="" />
       </section>
       <Footer />
     </>

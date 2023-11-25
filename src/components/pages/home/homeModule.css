@@ -101,7 +101,17 @@
 .caminho-planejamento .decoracao-cima {
     position: absolute;
     top: -20rem;
-    width: 1600px;
+    /* left: -7rem; */
+    width: 100%;
+    z-index: -1;
+}
+
+.caminho-planejamento .decoracao-baixo {
+    position: absolute;
+    bottom: -20rem;
+    right: 0;
+    width: 100%;
+    z-index: -1;
 }
 
 .caminho-planejamento .caixa-textos {
