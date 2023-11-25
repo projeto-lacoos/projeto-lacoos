@@ -10,6 +10,7 @@ import { FaInstagram, FaLinkedin } from "react-icons/fa";
 
 import Navbar from "../../navbar/Navbar";
 import PlanoCasamento from "../../planoCasamento/PlanoCasamento";
+import Footer from "../../footer/Footer";
 
 export default function Home() {
   return (
@@ -38,24 +39,6 @@ export default function Home() {
           </div>
           <div className="botao-home">Começar agora!</div>
         </div>
-        <div className="logo-rede-social">
-          <div className="rede-social">
-            <Link
-              className="link-rede-social"
-              to={"https://www.instagram.com/l.acoos"}
-              target="_blank"
-            >
-              <FaInstagram className="fa-brands fa-instagram" />
-            </Link>
-            <Link
-              className="link-rede-social"
-              to={"https://www.linkedin.com/company/projeto-laçoos/about/"}
-              target="_blank"
-            >
-              <FaLinkedin className="fa-brands fa-linkedin" />
-            </Link>
-          </div>
-        </div>
       </section>
       <section className="caminho-planejamento">
         <div className="caixa-textos">
@@ -75,6 +58,7 @@ export default function Home() {
           <PlanoCasamento numero={"3."} titulo={"O dia do SIM!"} texto={"Chegamos à etapa do casamento, tudo está finalizado. Agora é só desfrutar ao máximo e confiar em nossa expertise para garantir que tudo ocorra de forma perfeita e conforme planejado."} imagemTexto={ImagemTexto3}/>
         </div>
       </section>
+      <Footer />
     </>
   );
 }

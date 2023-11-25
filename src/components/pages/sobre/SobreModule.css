@@ -1,27 +1,24 @@
+.container {
+    position: relative;
+}
+
 .sobre-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
-    height: 90vh;
-    background: #f0f0f0 url(../../../img/sobre/header.png) no-repeat;
+    height: 100vh;
+    background: url(../../../img/sobre/header.png) no-repeat;
     background-size: cover;
 }
 
-.menu {
-    display: flex;
-    justify-content: right;
-    margin-right: 2.5rem;
-}
-
-.menu img {
-    width: 65px;
-}
-
-.menu img:hover {
-    cursor: pointer;
+.sobre-home .conteudo-logo {
+    width: 50rem;
 }
 
 .conteudo {
     width: 100%;
-    height: 90vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -35,14 +32,14 @@
 
 .conteudo p {
     font-weight: 500;
-    font-size: 24px;
+    font-size: 3.6rem;
     color: #FFFFFF;
 }
 
 .img-detalhes {
-    display: flex;
-    justify-content: right;
-    margin-top: -20rem;
+    position: absolute;
+    right: 0;
+    bottom: -22rem;
 }
 
 .detalhes {
@@ -63,13 +60,12 @@
 
 .conteudo-sobre {
     display: flex;
+    align-items: center;
 }
 
 .conteudo-sobre h1 {
-    width: 337px;
-    height: 83px;
     color: #658955;
-    font-size: 8rem;
+    font-size: 85px;
     margin-right: 5rem;
 }
 
@@ -82,7 +78,6 @@
 
 .conteudo-sobre p {
     width: 523px;
-    height: 252px;
     margin-left: 5rem;
     font-size: 26px;
 }
@@ -101,43 +96,44 @@
 }
 
 .sobre-fontslacoos {
-    width: 100%;
-    ;
-    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6.1rem 0;
 }
 
 .conteudo-fonts {
-    width: 100%;
-    ;
-    height: 50vh;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
 }
 
-.button-sobre button {
+.conteudo-fonts .buttons {
+    display: flex;
+    align-items: center;
+    gap: 10.7rem;
+}
+
+.button button {
     width: 461px;
     height: 164px;
-    border: none;
     background-color: #C9B920;
     color: #FFFFFF;
     border-radius: 26px;
     font-size: 44px;
+    border: none;
 }
 
-.poppins .title {
+.btn .title {
     font-size: 51px;
 }
 
-.poppins .p {
+.btn .p {
     font-size: 36px;
 }
 
-.dancingScript p {
-    width: 259px;
-    height: 122px;
-    font-size: 77px;
-    color: #658955;
+.roboto {
+    font-family: 'Roboto', sans-serif;
 }
 
 .sobre-imageslacoos {
@@ -183,9 +179,12 @@
 .sobre-integrantelacoos {
     width: 100%;
     height: 100vh;
+    font-family: "Poppins";
     text-align: center;
-    background: #f0f0f0 url(../../../img/sobre/sobre-back.jpg) no-repeat;
+    background-image: url(../../../img/sobre/sobre-back.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #f0f0f0;
     display: flex;
     flex-direction: column;
 }
@@ -224,8 +223,11 @@
 .sobre-footerlacoos {
     width: 100%;
     height: 75vh;
-    background: #f0f0f0 url(../../../img/sobre/footerbc.png) top center no-repeat;
+    background: url(../../../img/sobre/footerbc.png);
     background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    font-family: "Poppins";
     color: #FFFFFF;
     position: relative;
 }

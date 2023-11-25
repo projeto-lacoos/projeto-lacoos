@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Navbar from "../../navbar/Navbar";
 import "./PacoteModule.css";
+import Footer from "../../footer/Footer";
 
 export default function Pacote() {
   return (
@@ -8,7 +9,7 @@ export default function Pacote() {
       <Navbar />
       <div className="container-pacote">
         <h2 className="titulo-pacotes">
-          Sua história de anos
+          Sua história de amor
           <br />
           começa aqui!
         </h2>
@@ -67,6 +68,7 @@ export default function Pacote() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

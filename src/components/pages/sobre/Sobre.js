@@ -1,38 +1,38 @@
 import Navbar from "../../navbar/Navbar";
 import "./SobreModule.css";
 
-import LogoLacoos from '../../../img/sobre/logo-lacoos.png'
-import Detalhes from '../../../img/sobre/detalhes.png'
-import CartaoVisita from '../../../img/sobre/Cartao-visita.svg'
-import BackgroundCelular from '../../../img/sobre/backgroundcelular.png'
-import CorEsquerda from '../../../img/sobre/coresquerda.png'
-import CorDireita from '../../../img/sobre/cordireita.png'
-import Coracao from '../../../img/sobre/coracao.png'
-import Alianca from '../../../img/sobre/alianca.png'
-import Trigo from '../../../img/sobre/trigo.png'
-import Papel from '../../../img/sobre/papel.png'
-import Mensagem from '../../../img/sobre/msg.png'
-import Imagem39 from '../../../img/sobre/image_39.svg'
-import Garrett from '../../../img/sobre/garrett.png'
-import Moura from '../../../img/sobre/moura.png'
-import Filipe from '../../../img/sobre/filipe.png'
-import Gusbic from '../../../img/sobre/gusbic.png'
-import Ferraz from '../../../img/sobre/ferraz.png'
-import Mason from '../../../img/sobre/mason.png'
-import Luiza from '../../../img/sobre/luiza.png'
-import CaixaGarrafinha from '../../../img/sobre/images-caixaGarrafinha.png'
-import Instagram from '../../../img/sobre/instagram.png'
-import Linkedin from '../../../img/sobre/linkedin.png'
-import Github from '../../../img/sobre/github.png'
-import QRCode from '../../../img/sobre/qrcode.jpg'
+import LogoLacoos from "../../../img/sobre/oo.png";
+import Detalhes from "../../../img/sobre/detalhes.png";
+import CartaoVisita from "../../../img/sobre/Cartao-visita.png";
+import BackgroundCelular from "../../../img/sobre/backgroundcelular.png";
+import CorEsquerda from "../../../img/sobre/coresquerda.png";
+import CorDireita from "../../../img/sobre/cordireita.png";
+import Coracao from "../../../img/sobre/coracao.png";
+import Alianca from "../../../img/sobre/alianca.png";
+import Trigo from "../../../img/sobre/trigo.png";
+import Papel from "../../../img/sobre/papel.png";
+import Mensagem from "../../../img/sobre/msg.png";
+import Imagem39 from "../../../img/sobre/image_39.svg";
+import Garrett from "../../../img/sobre/garrett.png";
+import Moura from "../../../img/sobre/moura.png";
+import Filipe from "../../../img/sobre/filipe.png";
+import Gusbic from "../../../img/sobre/gusbic.png";
+import Ferraz from "../../../img/sobre/ferraz.png";
+import Mason from "../../../img/sobre/mason.png";
+import Luiza from "../../../img/sobre/luiza.png";
+import CaixaGarrafinha from "../../../img/sobre/images-caixaGarrafinha.png";
+import Instagram from "../../../img/sobre/instagram.png";
+import Linkedin from "../../../img/sobre/linkedin.png";
+import Github from "../../../img/sobre/github.png";
+import QRCode from "../../../img/sobre/qrcode.jpg";
 
 export default function Sobre() {
   return (
     <div id="container">
+      <Navbar />
       <section className="sobre-home">
-        <Navbar />
         <div className="conteudo">
-          <img src={LogoLacoos} alt="background-images" />
+          <img className="conteudo-logo" src={LogoLacoos} alt="background-images"/>
           <p>um vínculo além da visão</p>
         </div>
         <div className="img-detalhes">
@@ -41,7 +41,10 @@ export default function Sobre() {
       </section>
       <section className="sobre-lacoos">
         <div className="conteudo-sobre">
-          <h1>Sobre a Laçoos</h1>
+          <h1>
+            Sobre a<br />
+            Laçoos
+          </h1>
           <hr />
           <p>
             Plataforma que realiza a ponte para a realização de cerimônia de
@@ -57,15 +60,23 @@ export default function Sobre() {
       </section>
       <section className="sobre-fontslacoos">
         <div className="conteudo-fonts">
-          <div className="button-sobre">
-            <button>Poppins</button>
+          <div className="buttons">
+            <div className="button">
+              <button>Poppins</button>
+            </div>
+            <div className="btn">
+              <p className="title">Poppins</p>
+              <p className="p">Poppins</p>
+            </div>
           </div>
-          <div className="poppins">
-            <p className="title">Poppins</p>
-            <p className="p">Poppins</p>
-          </div>
-          <div className="dancingScript">
-            <p>Poppins</p>
+          <div className="buttons">
+            <div className="button">
+              <button className="roboto">Roboto</button>
+            </div>
+            <div className="btn">
+              <p className="title roboto">Roboto</p>
+              <p className="p roboto">Roboto</p>
+            </div>
           </div>
         </div>
       </section>
@@ -116,10 +127,12 @@ export default function Sobre() {
             <div className="card">
               <img src={Gusbic} alt="" />
               <p>Front-End</p>
+              <p>Desenvolvedor chatbot</p>
             </div>
             <div className="card">
               <img src={Ferraz} alt="" />
               <p>Design</p>
+              <p>Social Media</p>
             </div>
             <div className="card">
               <img src={Mason} alt="" />
