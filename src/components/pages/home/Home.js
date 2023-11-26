@@ -12,6 +12,7 @@ import DecoracaoBaixo from '../../../img/home/decoracao-baixo.svg'
 import Navbar from "../../navbar/Navbar";
 import PlanoCasamento from "../../planoCasamento/PlanoCasamento";
 import Footer from "../../footer/Footer";
+import CarrosselImagens from "../../carrosselImagens/CarrosselImagens";
 
 export default function Home() {
   return (
@@ -61,6 +62,7 @@ export default function Home() {
         </div>
         <img className="decoracao-baixo" src={DecoracaoBaixo} alt="" />
       </section>
+      <CarrosselImagens />
       <Footer />
     </body>
   );
