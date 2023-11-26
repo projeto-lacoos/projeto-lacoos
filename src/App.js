@@ -26,8 +26,7 @@ function App() {
         <Route exact path="/pagamento" element={<Pagamento />} />
         <Route exact path="/sobre" element={<Sobre />} />
         <Route exact path="/pacote" element={<Pacote />} />
-
-        <Route exact path="/modo-daltonismo" element={<ModoDaltonismo />} />
+        
         <Route exact path="/notificacao-logar" element={<NotificacaoLogar />} />
       </Routes>
     </BrowserRouter>

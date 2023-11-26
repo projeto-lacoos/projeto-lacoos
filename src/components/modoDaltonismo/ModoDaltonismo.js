@@ -7,13 +7,13 @@ import Monocromacia from '../../img/modoDaltonismo/Monocromacia.svg'
 import TritanopiaTritanomalia from '../../img/modoDaltonismo/Tritanopia-Tritanomalia.svg'
 import Acromatopsia from '../../img/modoDaltonismo/Acromatopsia.svg'
 
-export default function ModoDaltonismo() {
+export default function ModoDaltonismo({HandleModoDaltonismo}) {
   return (
     <div className="container-modo-daltonismo">
       <div className="caixa">
         <div className="conteudo-caixa">
           <div className="modo-daltonismo-caixa">
-            <Link className="btn-voltar" to={"/"}>Voltar</Link>
+            <span onClick={HandleModoDaltonismo} className="btn-voltar">Voltar</span>
             <div className="escolhas-modo-daltonismo">
               <h2 className="titulo-escolha">Escolha o modo daltonismo</h2>
               <div className="tipos-daltonismo">

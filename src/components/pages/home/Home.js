@@ -12,11 +12,24 @@ import DecoracaoBaixo from '../../../img/home/decoracao-baixo.svg'
 import Navbar from "../../navbar/Navbar";
 import PlanoCasamento from "../../planoCasamento/PlanoCasamento";
 import Footer from "../../footer/Footer";
+import { useState } from "react";
+import ModoDaltonismo from "../../modoDaltonismo/ModoDaltonismo";
 
 export default function Home() {
+  const [modoDaltonismo, setModoDaltonismo] = useState(false)
+
+  const HandleModoDaltonismo = () => {
+    if (modoDaltonismo === false){
+      setModoDaltonismo(true)
+    } else {
+      setModoDaltonismo(false)
+    }
+  }
+
   return (
     <>
-      <Navbar />
+      {modoDaltonismo === true ? (<ModoDaltonismo HandleModoDaltonismo={HandleModoDaltonismo} />) : ("")}
+      <Navbar HandleModoDaltonismo={HandleModoDaltonismo} />
       <section className="home">
         <Link to={"/"}>
           <img className="logo-laçoos" src={LogoReduzida} alt="" />

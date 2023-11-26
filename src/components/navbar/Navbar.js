@@ -4,7 +4,7 @@ import LogoReduzida from '../../img/navbar/logo-reduzida.svg'
 import FotoPerfil from '../../img/navbar/foto-perfil.svg'
 import { Link } from "react-router-dom";
 
-export default function Navbar() {
+export default function Navbar({HandleModoDaltonismo}) {
   return (
     <div className="home-navbar">
       <nav className="navbar">
@@ -48,9 +48,9 @@ export default function Navbar() {
                 </Link>
               </li>
               <li>
-                <Link id="modo-daltonismo" className="item" to={"/modo-daltonismo"}>
+                <span onClick={HandleModoDaltonismo} id="modo-daltonismo" className="item">
                   Modo Daltonismo
-                </Link>
+                </span>
               </li>
               <li>
                 <Link id="notificacao-logar" className="item" to={"/notificacao-logar"}>
