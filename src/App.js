@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useState } from 'react';
 
 import './App.css';
 
@@ -13,24 +14,37 @@ import Pacote from './components/pages/pacote/Pacote';
 
 import NotificacaoLogar from './components/notificacaoLogar/NotificacaoLogar';
 import Acessibilidade from './components/acessibilidade/Acessibilidade';
+import ModoDaltonismo from './components/modoDaltonismo/ModoDaltonismo';
 
 function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route exact path="/login" element={<Login />} />
-        <Route exact path="/recuperacao-senha" element={<RecuperacaoSenha />} />
-        <Route exact path="/nova-conta" element={<NovaConta />} />
-        <Route exact path="/perfil" element={<Perfil />} />
-        <Route exact path="/pagamento" element={<Pagamento />} />
-        <Route exact path="/sobre" element={<Sobre />} />
-        <Route exact path="/pacote" element={<Pacote />} />
+  const [modoDaltonismo, setModoDaltonismo] = useState(false)
 
-        <Route exact path="/notificacao-logar" element={<NotificacaoLogar />} />
-        <Route exact path="/acessibilidade" element={<Acessibilidade />} />
-      </Routes>
-    </BrowserRouter>
+  const HandleModoDaltonismo = () => {
+    if (modoDaltonismo === false){
+      setModoDaltonismo(true)
+    } else {
+      setModoDaltonismo(false)
+    }
+  }
+  return (
+    <>
+      {modoDaltonismo === true ? (<ModoDaltonismo HandleModoDaltonismo={HandleModoDaltonismo} />) : ("")}
+      <Acessibilidade HandleModoDaltonismo={HandleModoDaltonismo} />
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/recuperacao-senha" element={<RecuperacaoSenha />} />
+          <Route exact path="/nova-conta" element={<NovaConta />} />
+          <Route exact path="/perfil" element={<Perfil />} />
+          <Route exact path="/pagamento" element={<Pagamento />} />
+          <Route exact path="/sobre" element={<Sobre />} />
+          <Route exact path="/pacote" element={<Pacote />} />
+
+          <Route exact path="/notificacao-logar" element={<NotificacaoLogar />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 

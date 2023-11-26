@@ -1,25 +1,17 @@
 import "./navbarModule.css";
 
+import { Link } from "react-router-dom";
+
 import LogoReduzida from '../../img/navbar/logo-reduzida.svg'
 import FotoPerfil from '../../img/navbar/foto-perfil.svg'
-import { Link } from "react-router-dom";
-import { useEffect, useRef } from "react";
 
-export default function Navbar({HandleModoDaltonismo, estadoDaFuncao}) {
-  const clicando = useRef(null)
-
-  useEffect(() => {
-    if (estadoDaFuncao){
-      clicando.current.click();
-    }
-  }, [estadoDaFuncao])
-
+export default function Navbar() {
   return (
     <div className="home-navbar">
       <nav className="navbar">
         <input type="checkbox" name="" id="menu-hamburguer" />
         <label className="menu-label" htmlFor="menu-hamburguer">
-          <div className="menu" ref={clicando}>
+          <div className="menu">
             <span className="hamburguer" />
           </div>
         </label>
@@ -56,11 +48,11 @@ export default function Navbar({HandleModoDaltonismo, estadoDaFuncao}) {
                   Sobre nós
                 </Link>
               </li>
-              <li>
-                <Link onClick={HandleModoDaltonismo} id="modo-daltonismo" className="item">
+              {/* <li>
+                <Link id="modo-daltonismo" className="item">
                   Modo Daltonismo
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link id="notificacao-logar" className="item" to={"/notificacao-logar"}>
                   Notificação Logar

@@ -1,16 +1,25 @@
-.container-acessibilidade {
+body {
     height: 100vh;
-    position: absolute;
+    position: relative;
+}
+
+.container-acessibilidade .icone-acessibilidade {
+    position: fixed;
     right: 3.26rem;
     bottom: 10rem;
     width: 5.6rem;
     height: 5.6rem;
+    z-index: 10;
 }
 
-svg {
+.icone-acessibilidade svg {
     font-size: 5.6rem;
-    color: #658955;
-    background-color: #ffffff;
+    color: #C3B107;
+    background-color: #272514;
     border-radius: 50%;
     cursor: pointer;
+}
+
+.icone-acessibilidade svg:hover {
+    opacity: .5;
 }
