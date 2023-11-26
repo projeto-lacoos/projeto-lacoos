@@ -41,10 +41,6 @@
     position: relative;
 }
 
-.aparecer {
-    visibility: visible;
-}
-
 .modo-daltonismo-caixa .btn-voltar {
     position: absolute;
     top: 3rem;

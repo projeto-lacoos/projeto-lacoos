@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 import "./homeModule.css";
 
@@ -12,7 +13,6 @@ import DecoracaoBaixo from '../../../img/home/decoracao-baixo.svg'
 import Navbar from "../../navbar/Navbar";
 import PlanoCasamento from "../../planoCasamento/PlanoCasamento";
 import Footer from "../../footer/Footer";
-import { useState } from "react";
 import ModoDaltonismo from "../../modoDaltonismo/ModoDaltonismo";
 
 export default function Home() {
@@ -29,7 +29,7 @@ export default function Home() {
   return (
     <>
       {modoDaltonismo === true ? (<ModoDaltonismo HandleModoDaltonismo={HandleModoDaltonismo} />) : ("")}
-      <Navbar HandleModoDaltonismo={HandleModoDaltonismo} />
+      <Navbar estadoDaFuncao={modoDaltonismo} HandleModoDaltonismo={HandleModoDaltonismo} />
       <section className="home">
         <Link to={"/"}>
           <img className="logo-laçoos" src={LogoReduzida} alt="" />

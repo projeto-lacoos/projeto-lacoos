@@ -11,8 +11,8 @@ import Pagamento from './components/pages/pagamento/Pagamento';
 import Sobre from './components/pages/sobre/Sobre';
 import Pacote from './components/pages/pacote/Pacote';
 
-import ModoDaltonismo from './components/modoDaltonismo/ModoDaltonismo';
 import NotificacaoLogar from './components/notificacaoLogar/NotificacaoLogar';
+import Acessibilidade from './components/acessibilidade/Acessibilidade';
 
 function App() {
   return (
@@ -26,8 +26,9 @@ function App() {
         <Route exact path="/pagamento" element={<Pagamento />} />
         <Route exact path="/sobre" element={<Sobre />} />
         <Route exact path="/pacote" element={<Pacote />} />
-        
+
         <Route exact path="/notificacao-logar" element={<NotificacaoLogar />} />
+        <Route exact path="/acessibilidade" element={<Acessibilidade />} />
       </Routes>
     </BrowserRouter>
   );

@@ -9,7 +9,7 @@
 .home-navbar label {
     position: absolute;
     right: 3rem;
-    top: 5.5rem;
+    top: 3rem;
     z-index: 3;
 }
 
@@ -84,7 +84,8 @@
 
 .home-navbar .navbar .menu {
     width: 5.5rem;
-    height: 2.1rem;
+    height: 3.6rem;
+    cursor: pointer;
 }
 
 .home-navbar .navbar .menu .hamburguer {
@@ -95,7 +96,8 @@
     position: relative;
     border-radius: 10px;
     transition: 0.5s ease-in-out;
-    cursor: pointer;
+    position: absolute;
+    top: 1.6rem;
 }
 
 .home-navbar .navbar .menu .hamburguer:before {
