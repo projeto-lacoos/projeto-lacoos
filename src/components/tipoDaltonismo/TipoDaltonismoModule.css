@@ -1,0 +1,53 @@
+.tipos-daltonismo .tipo-daltonismo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 33.9rem;
+    color: #fff;
+}
+
+input[type="radio"] {
+    appearance: none;
+    position: relative;
+    width: 6rem;
+    height: 3.3rem;
+    border-radius: 5rem;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+input[type="radio"]::before {
+    content: "";
+    position: absolute;
+    background-color: #646363;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    top: .4rem;
+    left: .4rem;
+    transition: left .3s;
+}
+
+input[type="radio"]:checked::before {
+    left: 3.1rem;
+}
+
+.caixa .conteudo-caixa .modo-daltonismo-caixa .escolhas-modo-daltonismo .tipos-daltonismo
+ .tipo-daltonismo .cores-alternador input[type="radio"] {
+    position: relative;
+    width: 6rem;
+    height: 3.3rem;
+    border-radius: 2rem;
+    background-color: #fff;
+}
+
+.home .caixa .conteudo-caixa .modo-daltonismo-caixa .escolhas-modo-daltonismo .tipos-daltonismo
+ .tipo-daltonismo .cores-alternador input[type="radio"] {
+    position: absolute;
+    background-color: #646363;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    top: .4rem;
+    right: .4rem;
+}

@@ -1,3 +1,4 @@
+import TipoDaltonismo from "../tipoDaltonismo/TipoDaltonismo";
 import "./ModoDaltonismoModule.css";
 
 import DPDP from "../../img/modoDaltonismo/Deuteranomalia-Protanopia-Deuteranopia-Protanomalia.svg";
@@ -17,46 +18,10 @@ export default function ModoDaltonismo({HandleModoDaltonismo}) {
             <div className="escolhas-modo-daltonismo">
               <h2 className="titulo-escolha">Escolha o modo daltonismo</h2>
               <div className="tipos-daltonismo">
-                <div className="tipo-daltonismo">
-                  <div className="nome-daltonismo">
-                    <p>Deuteranomalia</p>
-                    <p>Protanopia</p>
-                    <p>Deuteranopia</p>
-                    <p>Protanomalia</p>
-                  </div>
-                  <div className="cores-alternador">
-                    <img src={DPDP} alt="" />
-                    <input type="radio" name="switch" id="switch" />
-                  </div>
-                </div>
-                <div className="tipo-daltonismo">
-                  <div className="nome-daltonismo">
-                    <p>Monocromacia</p>
-                  </div>
-                  <div className="cores-alternador">
-                    <img src={Monocromacia} alt="" />
-                    <input type="radio" name="switch" id="switch" />
-                  </div>
-                </div>
-                <div className="tipo-daltonismo">
-                  <div className="nome-daltonismo">
-                    <p>Tritanopia</p>
-                    <p>Tritanomalia</p>
-                  </div>
-                  <div className="cores-alternador">
-                    <img src={TritanopiaTritanomalia} alt="" />
-                    <input type="radio" name="switch" id="switch" />
-                  </div>
-                </div>
-                <div className="tipo-daltonismo">
-                  <div className="nome-daltonismo">
-                    <p>Acromatopsia</p>
-                  </div>
-                  <div className="cores-alternador">
-                    <img src={Acromatopsia} alt="" />
-                    <input type="radio" name="switch" id="switch" />
-                  </div>
-                </div>
+                <TipoDaltonismo imagem={DPDP} tipos={"Deuteranomalia Protanopia Deuteranopia Protanomalia"} />
+                <TipoDaltonismo imagem={Monocromacia} tipos={"Monocromacia"} />
+                <TipoDaltonismo imagem={TritanopiaTritanomalia} tipos={"Tritanopia Tritanomalia"} />
+                <TipoDaltonismo imagem={Acromatopsia} tipos={"Acromatopsia"} />
               </div>
             </div>
           </div>
