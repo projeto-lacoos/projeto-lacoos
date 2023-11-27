@@ -11,8 +11,6 @@ import Perfil from './components/pages/perfil/Perfil';
 import Pagamento from './components/pages/pagamento/Pagamento';
 import Sobre from './components/pages/sobre/Sobre';
 import Pacote from './components/pages/pacote/Pacote';
-
-import NotificacaoLogar from './components/notificacaoLogar/NotificacaoLogar';
 import Acessibilidade from './components/acessibilidade/Acessibilidade';
 import ModoDaltonismo from './components/modoDaltonismo/ModoDaltonismo';
 
@@ -26,6 +24,7 @@ function App() {
       setModoDaltonismo(false)
     }
   }
+
   return (
     <>
       {modoDaltonismo === true ? (<ModoDaltonismo HandleModoDaltonismo={HandleModoDaltonismo} />) : ("")}
@@ -40,8 +39,6 @@ function App() {
           <Route exact path="/pagamento" element={<Pagamento />} />
           <Route exact path="/sobre" element={<Sobre />} />
           <Route exact path="/pacote" element={<Pacote />} />
-
-          <Route exact path="/notificacao-logar" element={<NotificacaoLogar />} />
         </Routes>
       </BrowserRouter>
     </>

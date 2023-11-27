@@ -48,11 +48,6 @@ export default function Navbar() {
                   Sobre nós
                 </Link>
               </li>
-              {/* <li>
-                <Link id="modo-daltonismo" className="item">
-                  Modo Daltonismo
-                </Link>
-              </li> */}
               <li>
                 <Link id="notificacao-logar" className="item" to={"/notificacao-logar"}>
                   Notificação Logar

@@ -25,18 +25,10 @@ export default function Home() {
         <div className="container-home">
           <div className="textos-central">
             <h1 className="titulo-principal">
-              O melhor
-              <br />
-              site para
-              <br />
-              planejar
-              <span className="css-titulo"> seu</span>
-              <br />
-              <span className="css-titulo">casamento</span>
+              O melhor site para planejar<span className="css-titulo"> se casamento</span>
             </h1>
             <p>
-              de maneira acessível e com o<br />
-              planejamento que você merece!
+              de maneira acessível e com o planejamento que você merece!
             </p>
           </div>
           <div className="botao-home">Começar agora!</div>
@@ -58,9 +50,10 @@ export default function Home() {
             </div>
           </div>
 
-          <PlanoCasamento numero={"3."} titulo={"O dia do SIM!"} texto={"Chegamos à etapa do casamento, tudo está finalizado. Agora é só desfrutar ao máximo e confiar em nossa expertise para garantir que tudo ocorra de forma perfeita e conforme planejado."} imagemTexto={ImagemTexto3}/>
+          <PlanoCasamento numero={"3."} titulo={"O dia do SIM!"} texto={"Chegamos à etapa do casamento, tudo está finalizado. Agora é só desfrutar ao máximo e confiar em nossa expertise para garantir que tudo ocorra de forma perfeita e conforme planejado."} imagemTexto={ImagemTexto3} />
+          
+          <img className="decoracao-baixo" src={DecoracaoBaixo} alt="" />
         </div>
-        <img className="decoracao-baixo" src={DecoracaoBaixo} alt="" />
       </section>
       <CarrosselImagens />
       <Footer />
