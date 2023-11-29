@@ -1,32 +1,12 @@
-import "./PacoteModule.css";
+import "./ModelPacoteModelu.css";
 
 import { Link } from "react-router-dom";
-import Navbar from "../../navbar/Navbar";
-import Footer from "../../footer/Footer";
-import ModalPacote from "../../modalPacote/ModalPacote";
-import { useState } from "react";
 
-export default function Pacote() {
-  const [modalPacote, setModalPacote] = useState(false)
-
-  const handleAbrirModal = () => {
-    if (modalPacote === false){
-      setModalPacote(true)
-    } else {
-      setModalPacote(false)
-    }
-  }
+export default function ModalPacote({handleAbrirModal}) {
   return (
     <>
-      <Navbar />
-      {modalPacote ? (<ModalPacote handleAbrirModal={handleAbrirModal} />) : ("")}
-      <div className="container-pacote">
-        <h2 className="titulo-pacotes">
-          Sua história de amor
-          <br />
-          começa aqui!
-        </h2>
-        <div className="pacotes">
+      <div className="pacotes">
+        <div className="modal-pago">
           <div className="pacote">
             <h3 className="titulo-pacote">FELIZES PARA SEMPRE</h3>
             <p>Faça seu Orçamento</p>
@@ -46,14 +26,13 @@ export default function Pacote() {
               <li>MODELOS DE CONVITES</li>
               <li>PISO TÁTIL</li>
             </ul>
-            <p className="ver-mais" onClick={handleAbrirModal}>Ver mais</p>
             <Link to={"/pagamento"} className="btn">
               Case Agora
             </Link>
           </div>
+          <div className="btn-modal" onClick={handleAbrirModal}>Voltar</div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

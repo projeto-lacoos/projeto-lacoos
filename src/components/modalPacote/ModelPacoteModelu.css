@@ -1,0 +1,129 @@
+/* MODALS */
+.pacotes .modal-pago {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.329);
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.pacotes .modal-pago .pacote {
+    height: auto;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border: 2px solid #658955;
+    border-radius: 1.7rem;
+    padding: 4rem 3rem;
+    position: relative;
+}
+
+.pacotes .pacote .titulo-pacote {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.7rem;
+}
+
+.pacotes .modal-pago .pacote p {
+    font-size: 2.3rem;
+    font-weight: bold;
+    margin: 2rem 0;
+    color: #C3B107;
+}
+
+.pacotes .modal-pago .pacote .btn {
+    margin-top: 3.3rem;
+    padding: 1.2rem 5.1rem;
+    background-color: #658955;
+    color: #fff;
+    font-size: 2.3rem;
+    font-weight: 300;
+    border-radius: 2rem;
+}
+
+.pacotes .modal-pago .pacote .lista-pacote {
+    overflow-y: auto;
+    height: auto;
+}
+
+.pacotes .modal-pago .btn-modal {
+    padding: 1.2rem 5.1rem;
+    background-color: #658955;
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 300;
+    border-radius: 2rem;
+    position: absolute;
+    left: 5rem;
+    bottom: 5rem;
+    cursor: pointer;
+}
+
+.modal-pago.abrir-modal {
+    visibility: visible;
+}
+
+@media(max-width: 1500px) {
+    .container-pacote .titulo-pacotes {
+        font-size: 6rem;
+        margin-bottom: 3.5rem;
+    }
+
+    .container-pacote .pacotes .pacote {
+        padding: 3rem 2rem;
+        height: 43.6rem;
+        width: 35rem;
+    }
+
+    .container-pacote .pacotes .pacote .titulo-pacote {
+        font-family: sans-serif;
+        font-size: 2.5rem;
+    }
+
+    .container-pacote .pacotes .pacote p {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .container-pacote .pacotes .pacote .lista-pacote {
+        height: 13.2rem;
+        overflow-y: hidden;
+    }
+
+    .container-pacote .pacotes .pacote .lista-pacote li {
+        font-size: 1.6rem;
+    }
+
+    .container-pacote .pacotes .pacote .btn {
+        font-size: 1.9rem;
+    }
+
+    .container-pacote .pacotes .pacote .ver-mais {
+        bottom: 9.4rem;
+        right: 3rem;
+    }
+
+    .pacotes .modal-pago .pacote .btn {
+        margin-top: 2rem;
+    }
+
+    .pacotes .modal-pago .pacote {
+        height: auto;
+    }
+
+    .pacotes .modal-pago .pacote .lista-pacote {
+        overflow-y: auto;
+        height: auto;
+    }
+
+    .pacotes .modal-pago .btn-modal {
+        font-size: 1.9rem;
+    }
+}
