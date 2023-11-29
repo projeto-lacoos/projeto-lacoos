@@ -35,7 +35,7 @@ export default function Navbar() {
               </li>
               <li>
                 <Link className="item" to={"/pacote"}>
-                  Pacotes
+                  Pacote
                 </Link>
               </li>
               <li>
