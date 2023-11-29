@@ -1,38 +1,43 @@
 .container-carrossel {
-    width: 100%;
-    margin: 4rem auto;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative;
+    gap: 5rem;
+    margin: 4rem 0;
 }
 
-.container-carrossel .titulo-carrossel {
-    color: #658955;
-    font-size: 9rem;
-    height: 100%;
-    margin-bottom: 4rem;
-}
-
-.carousel {
-    cursor: grab;
-    overflow: hidden;
-    max-width: 90rem;
-}
-
-.inner {
+.carrossel-image {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50rem;
+    overflow-y: auto;
 }
 
-.inner .item {
-    min-height: 20rem;
-    min-width: 40rem;
-    padding: 1.4rem;
+.carrossel-image::-webkit-scrollbar{
+    display: none;
 }
 
-.item .imagemItem {
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
+.slide-item{
+    width: 50rem;
+}
+
+.btn-arrow {
+    display: flex;
+    padding: 2rem;
+    border: none;
+    border-radius: 50%;
+    background-color: #658955;
+    color: #C3B107;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.btn-arrow:hover {
+    background-color: #C3B107;
+    color: #fff;
+}
+
+.arrows {
+    font-size: 4rem;
 }
