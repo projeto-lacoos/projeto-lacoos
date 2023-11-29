@@ -42,10 +42,11 @@ export default function CarrosselImagens() {
 
     return (
         <section className='container-carrossel'>
+            {notificacao ? (<NotificacaoLogar />) : ("")}
             <button className="btn-arrow">
                 <FaArrowLeft onClick={handleLeftClick} className='arrows' />
             </button>
-            <div className='carrossel-image' ref={carousel}>
+            <div className='carrossel-image' ref={carousel} onClick={HandleNotificacao}>
                 {imagens.map((image, id) => (
                     <img className='slide-item' src={image} alt='Convite' />
                 ))}
