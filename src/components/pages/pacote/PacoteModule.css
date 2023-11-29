@@ -1,29 +1,30 @@
 .container-pacote {
-    height: 100vh;
-    background: url(../../../img/pacote/fundo-pacotes.jpg) no-repeat center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
+  height: 100vh;
+  background: url(../../../img/pacote/fundo-pacote.svg) no-repeat top center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
 }
 
-.container-pacote .titulo-pacotes {
+
+  .container-pacote .titulo-pacotes {
     font-size: 9rem;
     color: #fff;
     font-weight: bold;
     text-align: center;
     margin-bottom: 3.5rem;
-}
+  }
 
-.container-pacote .pacotes {
+  .container-pacote .pacotes {
     display: flex;
     align-items: center;
     gap: 6.8rem;
-}
+  }
 
-.container-pacote .pacotes .pacote {
+  .container-pacote .pacotes .pacote {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,33 +36,33 @@
     position: relative;
     height: 53.6rem;
     width: 39rem;
-}
+  }
 
-.container-pacote .pacotes .pacote .titulo-pacote {
-    font-family: 'Roboto', sans-serif;
+  .container-pacote .pacotes .pacote .titulo-pacote {
+    font-family: "Roboto", sans-serif;
     font-size: 2.7rem;
-}
+  }
 
-.container-pacote .pacotes .pacote p {
+  .container-pacote .pacotes .pacote p {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #C3B107;
-}
+    color: #c3b107;
+  }
 
-.container-pacote .pacotes .pacote .lista-pacote {
+  .container-pacote .pacotes .pacote .lista-pacote {
     height: 15.2rem;
     overflow-y: hidden;
-}
+  }
 
-.container-pacote .pacotes .pacote .lista-pacote li {
+  .container-pacote .pacotes .pacote .lista-pacote li {
     font-size: 2.2rem;
-}
+  }
 
-.container-pacote .pacotes .pacote .lista-pacote .lista-sem-bola {
+  .container-pacote .pacotes .pacote .lista-pacote .lista-sem-bola {
     list-style: none;
-}
+  }
 
-.container-pacote .pacotes .pacote .ver-mais {
+  .container-pacote .pacotes .pacote .ver-mais {
     position: absolute;
     font-size: 1.7rem;
     font-weight: 400;
@@ -69,13 +70,65 @@
     bottom: 12.2rem;
     right: 3rem;
     cursor: pointer;
-}
+  }
 
-.container-pacote .pacotes .pacote .btn {
+  .container-pacote .pacotes .pacote .btn {
     padding: 1.2rem 5.1rem;
     background-color: #658955;
     color: #fff;
     font-size: 2.5rem;
     font-weight: 300;
     border-radius: 2rem;
+  }
+
+
+@media (min-width: 1200px) and (max-width: 1919px) {
+  .container-pacote .titulo-pacotes {
+    font-size: 6rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .container-pacote .pacotes .pacote {
+    padding: 3rem 2rem;
+    height: 43.6rem;
+    width: 35rem;
+  }
+
+  .container-pacote .pacotes .pacote .titulo-pacote {
+    font-family: sans-serif;
+    font-size: 2.5rem;
+  }
+
+  .container-pacote .pacotes .pacote p {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .container-pacote .pacotes .pacote .lista-pacote {
+    height: 13.2rem;
+    overflow-y: hidden;
+  }
+
+  .container-pacote .pacotes .pacote .lista-pacote li {
+    font-size: 1.6rem;
+  }
+
+  .container-pacote .pacotes .pacote .btn {
+    font-size: 1.9rem;
+  }
+
+  .container-pacote .pacotes .pacote .ver-mais {
+    bottom: 9.4rem;
+    right: 3rem;
+  }
+}
+
+@media (min-width: 1920px) {}
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+@media (min-width: 768px) and (max-width: 991px) {
+}
+@media (min-width: 481px) and (max-width: 767px) {
+}
+@media (max-width: 480px) {
 }
