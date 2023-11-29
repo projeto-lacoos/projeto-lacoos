@@ -25,7 +25,7 @@ export default function Home() {
         <div className="container-home">
           <div className="textos-central">
             <h1 className="titulo-principal">
-              O melhor site para planejar<span className="css-titulo"> se casamento</span>
+              O melhor site para planejar<span className="css-titulo"> seu casamento</span>
             </h1>
             <p>
               de maneira acessível e com o planejamento que você merece!
