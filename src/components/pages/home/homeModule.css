@@ -101,6 +101,14 @@
     margin: 20rem 0rem;
 }
 
+.caminho-planejamento .caixa-textos h2 {
+    font-size: 3rem;
+  }
+
+  .caminho-planejamento .caixa-textos p {
+    font-size: 1.7rem;
+  }
+
 .caminho-planejamento .decoracao-cima {
     position: absolute;
     top: -20rem;
