@@ -22,6 +22,7 @@
 }
 
 .container-pacote .pacotes .pacote {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,6 +40,7 @@
 
 .container-pacote .pacotes .pacote .orcamento {
   font-weight: 400;
+  margin-bottom: 1.5rem;
 }
 
 .container-pacote .pacotes .pacote .planejamento {
@@ -71,7 +73,7 @@
   font-size: 1.7rem;
   font-weight: 400;
   color: rgba(0, 0, 0, 0.5);
-  bottom: 12.2rem;
+  bottom: 9.2rem;
   right: 3rem;
   cursor: pointer;
 }
@@ -96,7 +98,6 @@
 
   .container-pacote .pacotes .pacote p {
     font-size: 3rem;
-    margin-bottom: 2.5rem;
   }
 
   .container-pacote .pacotes .pacote .lista-pacote {
@@ -129,7 +130,6 @@
 
   .container-pacote .pacotes .pacote p {
     font-size: 2.5rem;
-    margin-bottom: 2.5rem;
   }
 
   .container-pacote .pacotes .pacote .lista-pacote li {
@@ -142,7 +142,7 @@
 
   .container-pacote .pacotes .pacote .ver-mais {
     font-size: 2.2rem;
-    bottom: 8.3rem;
+    bottom: 10.5rem;
   }
 
   .container-pacote .pacotes .pacote .btn {
@@ -162,7 +162,6 @@
 
   .container-pacote .pacotes .pacote p {
     font-size: 2.5rem;
-    margin-bottom: 2.5rem;
   }
 
   .container-pacote .pacotes .pacote .lista-pacote li {
@@ -194,7 +193,6 @@
 
   .container-pacote .pacotes .pacote p {
     font-size: 2.2rem;
-    margin-bottom: 2.5rem;
   }
 
   .container-pacote .pacotes .pacote .lista-pacote li {
@@ -226,7 +224,6 @@
 
   .container-pacote .pacotes .pacote p {
     font-size: 2.2rem;
-    margin-bottom: 2.5rem;
   }
 
   .container-pacote .pacotes .pacote .lista-pacote li {

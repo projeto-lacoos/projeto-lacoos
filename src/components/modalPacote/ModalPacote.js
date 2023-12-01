@@ -10,7 +10,8 @@ export default function ModalPacote({ handleAbrirModal }) {
         <div className="modal-pago">
           <div className="pacote">
             <h3 className="titulo-pacote">FELIZES PARA SEMPRE</h3>
-            <p>Faça seu Orçamento</p>
+            <p className="orcamento">faça seu orçamento</p>
+            <p className="planejamento">PLANEJAMENTO COMPLETO</p>
             <ul className="lista-pacote">
               <li>
                 <span className="icone">

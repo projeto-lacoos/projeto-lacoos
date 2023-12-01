@@ -6,7 +6,6 @@ import Footer from "../../footer/Footer";
 import ModalPacote from "../../modalPacote/ModalPacote";
 
 import { FaRegCheckCircle } from "react-icons/fa";
-
 import { useState } from "react";
 
 export default function Pacote() {
