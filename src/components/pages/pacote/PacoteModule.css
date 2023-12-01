@@ -257,8 +257,16 @@
     font-size: 2rem;
   }
 
-  .container-pacote .pacotes .pacote p {
-    font-size: 2rem;
+  .container-pacote .pacotes .pacote .orcamento {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+  }
+
+  .container-pacote .pacotes .pacote .planejamento {
+    font-size: 1.7rem;
+    color: #fff;
+    margin-bottom: 1rem;
   }
 
   .container-pacote .pacotes .pacote .lista-pacote {
@@ -266,12 +274,12 @@
   }
 
   .container-pacote .pacotes .pacote .lista-pacote li {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
 
   .container-pacote .pacotes .pacote .ver-mais {
-    font-size: 1.5rem;
-    bottom: 8.2rem;
+    font-size: 2rem;
+    bottom: 10rem;
     right: 3rem;
   }
 
