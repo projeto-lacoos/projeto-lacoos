@@ -78,32 +78,35 @@
 }
 
 @media (min-width: 1920px) {
+  .container-pacote .titulo-pacotes {
+    font-size: 7rem;
+  }
+
   .container-pacote .pacotes .pacote .titulo-pacote {
-    font-size: 4.5rem;
+    font-size: 3.5rem;
   }
 
   .container-pacote .pacotes .pacote p {
-    font-size: 4rem;
-    margin-bottom: 3rem;
+    font-size: 3rem;
+    margin-bottom: 2.5rem;
   }
 
   .container-pacote .pacotes .pacote .lista-pacote {
-    height: 35rem;
+    height: 19rem;
   }
 
   .container-pacote .pacotes .pacote .lista-pacote li {
-    font-size: 3.2rem;
+    font-size: 2.8rem;
   }
 
   .container-pacote .pacotes .pacote .ver-mais {
-    position: absolute;
-    font-size: 3rem;
+    font-size: 2.5rem;
     bottom: 12.2rem;
   }
 
   .container-pacote .pacotes .pacote .btn {
     margin-top: 10rem;
-    font-size: 4rem;
+    font-size: 3rem;
   }
 }
 
