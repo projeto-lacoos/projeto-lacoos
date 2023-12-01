@@ -32,8 +32,6 @@
   border-radius: 1.7rem;
   padding: 4.5rem 3.5rem;
   position: relative;
-  height: 53.6rem;
-  width: 39rem;
 }
 
 .container-pacote .pacotes .pacote .titulo-pacote {
@@ -52,10 +50,12 @@
 .container-pacote .pacotes .pacote .lista-pacote {
   height: 15.2rem;
   overflow-y: hidden;
+  list-style-type: disc;
 }
 
 .container-pacote .pacotes .pacote .lista-pacote li {
   font-size: 2.2rem;
+  text-shadow: 0px 4px 5px rgba(0, 0, 0, 0.35);
 }
 
 .container-pacote .pacotes .pacote .ver-mais {
@@ -77,6 +77,36 @@
   border-radius: 2rem;
 }
 
+@media (min-width: 1920px) {
+  .container-pacote .pacotes .pacote .titulo-pacote {
+    font-size: 4.5rem;
+  }
+
+  .container-pacote .pacotes .pacote p {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+  }
+
+  .container-pacote .pacotes .pacote .lista-pacote {
+    height: 35rem;
+  }
+
+  .container-pacote .pacotes .pacote .lista-pacote li {
+    font-size: 3.2rem;
+  }
+
+  .container-pacote .pacotes .pacote .ver-mais {
+    position: absolute;
+    font-size: 3rem;
+    bottom: 12.2rem;
+  }
+
+  .container-pacote .pacotes .pacote .btn {
+    margin-top: 10rem;
+    font-size: 4rem;
+  }
+}
+
 @media (min-width: 1200px) and (max-width: 1919px) {
   .container-pacote .titulo-pacotes {
     font-size: 6rem;
@@ -85,8 +115,6 @@
 
   .container-pacote .pacotes .pacote {
     padding: 3rem 2rem;
-    height: 43.6rem;
-    width: 35rem;
   }
 
   .container-pacote .pacotes .pacote .titulo-pacote {
@@ -149,7 +177,7 @@
   .container-pacote .pacotes .pacote .lista-pacote {
     height: 16.2rem;
   }
-  
+
   .container-pacote .pacotes .pacote .lista-pacote li {
     font-size: 1.5rem;
   }
@@ -159,7 +187,7 @@
     bottom: 8.2rem;
     right: 3rem;
   }
-  
+
   .container-pacote .pacotes .pacote .btn {
     padding: 1.2rem 4.1rem;
     font-size: 1.6rem;

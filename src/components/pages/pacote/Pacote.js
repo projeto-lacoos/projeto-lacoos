@@ -40,7 +40,7 @@ export default function Pacote() {
               <li>Lista de presentes</li>
               <li>Bebidas não alcoólicas</li>
               <li>Doces e salgados</li>
-              <li>Vestido Dde noiva</li>
+              <li>Vestido de noiva</li>
               <li>Buquê de flores</li>
               <li>Decoração completa</li>
               <li>Modelos de convites</li>
