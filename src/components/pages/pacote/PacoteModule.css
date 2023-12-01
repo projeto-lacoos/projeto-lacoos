@@ -20,7 +20,7 @@
 .container-pacote .pacotes {
   display: flex;
   align-items: center;
-  gap: 6.8rem;
+  margin-bottom: 1rem;
 }
 
 .container-pacote .pacotes .pacote {
@@ -30,7 +30,7 @@
   background-color: #fff;
   border: 2px solid #658955;
   border-radius: 1.7rem;
-  padding: 4.5rem 3.5rem;
+  padding: 3.5rem 3rem;
   position: relative;
 }
 
@@ -112,50 +112,132 @@
 
 @media (min-width: 1200px) and (max-width: 1919px) {
   .container-pacote .titulo-pacotes {
-    font-size: 6rem;
-    margin-bottom: 3.5rem;
-  }
-
-  .container-pacote .pacotes .pacote {
-    padding: 3rem 2rem;
+    font-size: 7rem;
   }
 
   .container-pacote .pacotes .pacote .titulo-pacote {
-    font-family: sans-serif;
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
   .container-pacote .pacotes .pacote p {
-    font-size: 2rem;
-    font-weight: bold;
-  }
-
-  .container-pacote .pacotes .pacote .lista-pacote {
-    height: 13.2rem;
-    overflow-y: hidden;
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
   }
 
   .container-pacote .pacotes .pacote .lista-pacote li {
-    font-size: 1.6rem;
+    font-size: 2.4rem;
   }
 
-  .container-pacote .pacotes .pacote .btn {
-    font-size: 1.9rem;
+  .container-pacote .pacotes .pacote .lista-pacote {
+    height: 15.9rem;
   }
 
   .container-pacote .pacotes .pacote .ver-mais {
-    bottom: 9.4rem;
-    right: 3rem;
+    font-size: 2.2rem;
+    bottom: 8.3rem;
+  }
+
+  .container-pacote .pacotes .pacote .btn {
+    margin-top: 5rem;
+    font-size: 2.5rem;
   }
 }
 
-@media (min-width: 1920px) {
-}
 @media (min-width: 992px) and (max-width: 1199px) {
+  .container-pacote .titulo-pacotes {
+    font-size: 6rem;
+  }
+
+  .container-pacote .pacotes .pacote .titulo-pacote {
+    font-size: 3rem;
+  }
+
+  .container-pacote .pacotes .pacote p {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .container-pacote .pacotes .pacote .lista-pacote li {
+    font-size: 2.4rem;
+  }
+
+  .container-pacote .pacotes .pacote .lista-pacote {
+    height: 15.9rem;
+  }
+
+  .container-pacote .pacotes .pacote .ver-mais {
+    font-size: 2.2rem;
+    bottom: 8.3rem;
+  }
+
+  .container-pacote .pacotes .pacote .btn {
+    margin-top: 5rem;
+    font-size: 2.5rem;
+  }
 }
 @media (min-width: 768px) and (max-width: 991px) {
+  .container-pacote .titulo-pacotes {
+    font-size: 5rem;
+  }
+
+  .container-pacote .pacotes .pacote .titulo-pacote {
+    font-size: 2.7rem;
+  }
+
+  .container-pacote .pacotes .pacote p {
+    font-size: 2.2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .container-pacote .pacotes .pacote .lista-pacote li {
+    font-size: 2.1rem;
+  }
+
+  .container-pacote .pacotes .pacote .lista-pacote {
+    height: 14.3rem;
+  }
+
+  .container-pacote .pacotes .pacote .ver-mais {
+    font-size: 2rem;
+    bottom: 8.3rem;
+  }
+
+  .container-pacote .pacotes .pacote .btn {
+    margin-top: 5rem;
+    font-size: 2.1rem;
+  }
 }
 @media (min-width: 481px) and (max-width: 767px) {
+  .container-pacote .titulo-pacotes {
+    font-size: 4rem;
+  }
+
+  .container-pacote .pacotes .pacote .titulo-pacote {
+    font-size: 2.7rem;
+  }
+
+  .container-pacote .pacotes .pacote p {
+    font-size: 2.2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .container-pacote .pacotes .pacote .lista-pacote li {
+    font-size: 2.1rem;
+  }
+
+  .container-pacote .pacotes .pacote .lista-pacote {
+    height: 14.3rem;
+  }
+
+  .container-pacote .pacotes .pacote .ver-mais {
+    font-size: 1.9rem;
+    bottom: 8rem;
+  }
+
+  .container-pacote .pacotes .pacote .btn {
+    margin-top: 5rem;
+    font-size: 2.1rem;
+  }
 }
 @media (max-width: 480px) {
   .container-pacote .titulo-pacotes {
@@ -172,13 +254,8 @@
     font-size: 2rem;
   }
 
-  .container-pacote .pacotes .pacote {
-    height: 45.6rem;
-    width: 29rem;
-  }
-
   .container-pacote .pacotes .pacote .lista-pacote {
-    height: 16.2rem;
+    height: 13rem;
   }
 
   .container-pacote .pacotes .pacote .lista-pacote li {
