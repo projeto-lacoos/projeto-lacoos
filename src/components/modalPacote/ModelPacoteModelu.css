@@ -1,90 +1,126 @@
 /* MODALS */
 .pacotes .modal-pago {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0.329);
-    height: 100vh;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.329);
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  overflow-y: auto;
 }
 
 .pacotes .modal-pago .pacote {
-    height: auto;    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #fff;
-    border: 2px solid #658955;
-    border-radius: 1.7rem;
-    padding: 4rem 3rem;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fff;
+  border: 2px solid #658955;
+  border-radius: 1.7rem;
+  padding: 4rem 3rem;
+  position: relative;
 }
 
 .pacotes .pacote .titulo-pacote {
-    font-family: 'Roboto', sans-serif;
-    font-size: 2.7rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 2.7rem;
 }
 
 .pacotes .modal-pago .pacote p {
-    font-size: 2.3rem;
-    font-weight: bold;
-    margin: 2rem 0;
-    color: #C3B107;
+  font-size: 2.3rem;
+  font-weight: bold;
+  margin: 2rem 0;
+  color: #c3b107;
+}
+
+.pacotes .modal-pago .lista-pacote li {
+  font-size: 2.2rem;
+  text-shadow: 0px 4px 5px rgba(0, 0, 0, 0.35);
 }
 
 .pacotes .modal-pago .pacote .btn {
-    margin-top: 3.3rem;
-    padding: 1.2rem 5.1rem;
-    background-color: #658955;
-    color: #fff;
-    font-size: 2.3rem;
-    font-weight: 300;
-    border-radius: 2rem;
+  margin-top: 3.3rem;
+  padding: 1.2rem 5.1rem;
+  background-color: #658955;
+  color: #fff;
+  font-size: 2.3rem;
+  font-weight: 300;
+  border-radius: 2rem;
 }
 
 .pacotes .modal-pago .pacote .lista-pacote {
-    overflow-y: auto;
-    height: auto;
+  overflow-y: auto;
+  height: auto;
 }
 
 .pacotes .modal-pago .btn-modal {
-    padding: 1.2rem 5.1rem;
-    background-color: #658955;
-    color: #fff;
-    font-size: 2.5rem;
-    font-weight: 300;
-    border-radius: 2rem;
-    position: absolute;
-    left: 5rem;
-    bottom: 5rem;
-    cursor: pointer;
+  color: #658955;
+  font-size: 2.5rem;
+  font-weight: bold;
+  border-radius: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 0.2rem;
+  cursor: pointer;
 }
 
-.modal-pago.abrir-modal {
-    visibility: visible;
+@media (min-width: 1920px) {
+}
+@media (min-width: 1200px) and (max-width: 1919px) {
+  .pacotes .modal-pago .pacote {
+    overflow-y: auto;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+@media (min-width: 768px) and (max-width: 991px) {
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .pacotes .modal-pago .pacote {
+    height: 80%;
+    width: 30rem;
+  }
+
+  .pacotes .pacote .titulo-pacote {
+    font-size: 2.2rem;
+  }
+
+  .pacotes .modal-pago .pacote p {
+    font-size: 2rem;
+  }
+
+  .pacotes .modal-pago .lista-pacote li {
+    font-size: 1.8rem;
+  }
+
+  .pacotes .modal-pago .pacote .btn {
+    font-size: 2rem;
+  }
 }
 
-@media(max-width: 1500px) {
-    .pacotes .modal-pago .pacote .btn {
-        margin-top: 2rem;
-    }
+@media (max-width: 480px) {
+  .pacotes .modal-pago .pacote {
+    height: 80%;
+    width: 30rem;
+  }
 
-    .pacotes .modal-pago .pacote {
-        height: auto;
-    }
+  .pacotes .pacote .titulo-pacote {
+    font-size: 2.2rem;
+  }
 
-    .pacotes .modal-pago .pacote .lista-pacote {
-        overflow-y: auto;
-        height: auto;
-    }
+  .pacotes .modal-pago .pacote p {
+    font-size: 2rem;
+  }
 
-    .pacotes .modal-pago .btn-modal {
-        font-size: 1.9rem;
-    }
+  .pacotes .modal-pago .lista-pacote li {
+    font-size: 1.8rem;
+  }
+
+  .pacotes .modal-pago .pacote .btn {
+    font-size: 2rem;
+  }
 }

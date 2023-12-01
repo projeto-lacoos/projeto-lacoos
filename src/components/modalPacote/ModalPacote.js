@@ -2,7 +2,7 @@ import "./ModelPacoteModelu.css";
 
 import { Link } from "react-router-dom";
 
-export default function ModalPacote({handleAbrirModal}) {
+export default function ModalPacote({ handleAbrirModal }) {
   return (
     <>
       <div className="pacotes">
@@ -11,26 +11,28 @@ export default function ModalPacote({handleAbrirModal}) {
             <h3 className="titulo-pacote">FELIZES PARA SEMPRE</h3>
             <p>Faça seu Orçamento</p>
             <ul className="lista-pacote">
-              <li>PLANEJAMENTO COMPLETO</li>
-              <li className="lista-sem-bola">-&gt; convidados + entrada</li>
-              <li className="lista-sem-bola">-&gt; playlist</li>
-              <li className="lista-sem-bola">-&gt; logística</li>
-              <li>ESPAÇO COMUNITÁRIO</li>
-              <li>MODELOS DE CONVITES</li>
-              <li>LISTA DE PRESENTES</li>
-              <li>BEBIDAS NÃO ALCOÓLICAS</li>
-              <li>DOCES E SALGADOS</li>
-              <li>VESTIDO DE NOIVA</li>
-              <li>BUQUÊ DE FLORES</li>
-              <li>DECORAÇÃO COMPLETA</li>
-              <li>MODELOS DE CONVITES</li>
-              <li>PISO TÁTIL</li>
+              <li>Planejamento completo</li>
+              <li>Convidados + Entrada</li>
+              <li>Playlist</li>
+              <li>Logística</li>
+              <li>Espaço comunitário</li>
+              <li>Modelos de convites</li>
+              <li>Lista de presentes</li>
+              <li>Bebidas não alcoólicas</li>
+              <li>Doces e salgados</li>
+              <li>Vestido de noiva</li>
+              <li>Buquê de flores</li>
+              <li>Decoração completa</li>
+              <li>Modelos de convites</li>
+              <li>Piso tátil</li>
             </ul>
             <Link to={"/pagamento"} className="btn">
               Case Agora
             </Link>
+            <div className="btn-modal" onClick={handleAbrirModal}>
+              X
+            </div>
           </div>
-          <div className="btn-modal" onClick={handleAbrirModal}>Voltar</div>
         </div>
       </div>
     </>

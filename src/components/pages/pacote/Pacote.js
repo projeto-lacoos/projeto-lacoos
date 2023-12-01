@@ -18,8 +18,8 @@ export default function Pacote() {
   }
   return (
     <>
-      <Navbar />
       {modalPacote ? (<ModalPacote handleAbrirModal={handleAbrirModal} />) : ("")}
+        <Navbar />
       <div className="container-pacote">
         <h2 className="titulo-pacotes">
           Sua história de amor
