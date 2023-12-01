@@ -25,6 +25,8 @@ import Instagram from "../../../img/sobre/instagram.png";
 import Linkedin from "../../../img/sobre/linkedin.png";
 import Github from "../../../img/sobre/github.png";
 import QRCode from "../../../img/sobre/qrcode.jpg";
+import Bodas from "../../../img/sobre/bodas.png";
+import Idvisual from "../../../img/sobre/icons-idvisual.png";
 
 export default function Sobre() {
   return (
@@ -51,6 +53,12 @@ export default function Sobre() {
             casamento que atenda as necessidades das pessoas com deficiência
             visual.
           </p>
+        </div>
+      </section>
+      <section className="sobre-bodas">
+        <div className="conteudo-bodas">
+          <h1 className="tituloBodas">Bodas de Casamento</h1>
+          <p className="descBodas">Efetuaremos a organização de cerimônias de renovação de votos, viagens, festas especiais para que cada casal celebre sua jornada de uma maneira única.</p>
         </div>
       </section>
       <section className="sobre-cartaolacoos">

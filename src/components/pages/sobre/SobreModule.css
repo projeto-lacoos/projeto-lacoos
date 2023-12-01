@@ -82,6 +82,40 @@
     font-size: 26px;
 }
 
+.sobre-bodas{
+    position: relative;
+    width: auto;
+    height: 100vh;
+    background-color: #F2F2EF;
+    background: url(../../../img/sobre/bodas.png) no-repeat;
+    background-size: cover;
+    /* filter: blur(1px); */
+}
+
+.conteudo-bodas{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 8.85rem;
+    left: 3.4rem;
+    gap: 1rem;
+}
+
+.tituloBodas{
+    width: 50.1rem;
+    height: auto;
+    font-family: 'Roboto', sans-serif;
+    font-size: 9.2rem;
+    color: #C3B107;
+}
+
+.descBodas{
+    width: 52.3rem;
+    height: 25.2rem;
+    color: #FFF;
+    font-size: 2.6rem;
+}
+
 .sobre-cartaolacoos {
     width: 100%;
     height: 85vh;
