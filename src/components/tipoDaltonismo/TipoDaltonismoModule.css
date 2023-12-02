@@ -1,53 +1,168 @@
 .tipos-daltonismo .tipo-daltonismo {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 33.9rem;
-    color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
 }
 
+.tipo-daltonismo .nome-daltonismo .tipos {
+    text-align: left;
+    width: 20rem;
+    font-size: 1.8rem;
+  }
+
 input[type="radio"] {
-    appearance: none;
-    position: relative;
-    width: 6rem;
-    height: 3.3rem;
-    border-radius: 5rem;
-    background-color: #fff;
-    cursor: pointer;
+  appearance: none;
+  position: relative;
+  width: 6rem;
+  height: 3.3rem;
+  border-radius: 5rem;
+  background-color: #fff;
+  cursor: pointer;
 }
 
 input[type="radio"]::before {
-    content: "";
-    position: absolute;
-    background-color: #646363;
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
-    top: .4rem;
-    left: .4rem;
-    transition: left .3s;
+  content: "";
+  position: absolute;
+  background-color: #646363;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  top: 0.4rem;
+  left: 0.4rem;
+  transition: left 0.3s;
 }
 
 input[type="radio"]:checked::before {
-    left: 3.1rem;
+  left: 3.1rem;
 }
 
-.caixa .conteudo-caixa .modo-daltonismo-caixa .escolhas-modo-daltonismo .tipos-daltonismo
- .tipo-daltonismo .cores-alternador input[type="radio"] {
-    position: relative;
+.caixa
+  .conteudo-caixa
+  .modo-daltonismo-caixa
+  .escolhas-modo-daltonismo
+  .tipos-daltonismo
+  .tipo-daltonismo
+  .cores-alternador
+  input[type="radio"] {
+  position: relative;
+  width: 6rem;
+  height: 3.3rem;
+  border-radius: 2rem;
+  background-color: #fff;
+}
+
+.home
+  .caixa
+  .conteudo-caixa
+  .modo-daltonismo-caixa
+  .escolhas-modo-daltonismo
+  .tipos-daltonismo
+  .tipo-daltonismo
+  .cores-alternador
+  input[type="radio"] {
+  position: absolute;
+  background-color: #646363;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  top: 0.4rem;
+  right: 0.4rem;
+}
+
+@media (min-width: 1920px) {
+}
+@media (min-width: 1200px) and (max-width: 1919px) {
+  .tipos-daltonismo .tipo-daltonismo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40rem;
+    gap: 1rem;
+  }
+
+  .tipo-daltonismo .nome-daltonismo .tipos {
+    text-align: left;
+    width: 20rem;
+    font-size: 1.8rem;
+  }
+
+  .tipo-daltonismo .cores-daltonismo {
+    width: 8rem;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .tipos-daltonismo .tipo-daltonismo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40rem;
+    gap: 1rem;
+  }
+
+  .tipo-daltonismo .nome-daltonismo .tipos {
+    text-align: left;
+    width: 20rem;
+    font-size: 1.8rem;
+  }
+
+  .tipo-daltonismo .cores-daltonismo {
+    width: 8rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .tipos-daltonismo .tipo-daltonismo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .tipo-daltonismo .nome-daltonismo .tipos {
+    text-align: left;
+    width: 20rem;
+    font-size: 1.8rem;
+  }
+
+  .tipo-daltonismo .cores-daltonismo {
+    width: 8rem;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .tipos-daltonismo .tipo-daltonismo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .tipo-daltonismo .nome-daltonismo .tipos {
+    text-align: center;
+    width: 20rem;
+    font-size: 1.8rem;
+  }
+
+  .tipo-daltonismo .cores-daltonismo {
+    width: 8rem;
+  }
+}
+@media (max-width: 480px) {
+  .tipos-daltonismo .tipo-daltonismo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .tipo-daltonismo .nome-daltonismo .tipos {
+    text-align: center;
+    width: 20rem;
+    font-size: 1.8rem;
+  }
+
+  .tipo-daltonismo .cores-daltonismo {
     width: 6rem;
-    height: 3.3rem;
-    border-radius: 2rem;
-    background-color: #fff;
-}
-
-.home .caixa .conteudo-caixa .modo-daltonismo-caixa .escolhas-modo-daltonismo .tipos-daltonismo
- .tipo-daltonismo .cores-alternador input[type="radio"] {
-    position: absolute;
-    background-color: #646363;
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
-    top: .4rem;
-    right: .4rem;
+  }
 }

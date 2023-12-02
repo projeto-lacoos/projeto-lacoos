@@ -6,10 +6,10 @@ export default function TipoDaltonismo({imagem, tipos}) {
   return (
     <div className="tipo-daltonismo">
       <div className="nome-daltonismo">
-        <p>{tipos}</p>
+        <p className="tipos">{tipos}</p>
       </div>
       <div className="cores-alternador">
-        <img src={imagem} alt="" />
+        <img className="cores-daltonismo" src={imagem} alt="" />
         <Input type={"radio"} name={"switch"} id={"switch"}/>
       </div>
     </div>
