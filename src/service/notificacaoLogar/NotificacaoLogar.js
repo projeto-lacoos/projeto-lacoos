@@ -9,7 +9,7 @@ export default function NotificacaoLogar() {
           <h2 className="titulo">
             VOCÊ PRECISA ESTAR LOGADO PARA ACESSAR NOSSOS PACOTES.
           </h2>
-          <Link to={"/login"}>
+          <Link className="link-login" to={"/login"}>
             <p className="notificacao-paragrafo">
               AINDA NÃO ESTÁ CADASTRADO? CRIE SUA CONTA AGORA E COMECE SUA JORNADA!
             </p>

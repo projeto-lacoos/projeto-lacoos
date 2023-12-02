@@ -1,5 +1,5 @@
-export default function Input({className, type, placeholder, name, id, htmlFor}){
+export default function Input({className, type, placeholder, name, id}){
     return (
-        <input className={className} htmlFor={htmlFor} type={type} required placeholder={placeholder} name={name} id={id}/>
+        <input className={className} type={type} required placeholder={placeholder} name={name} id={id}/>
     )
 }

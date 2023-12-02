@@ -42,12 +42,12 @@
     width: 36.9rem;
 }
 
-a {
+.link-login {
     color: #fff;
     text-align: center;
     bottom: 9rem;
 }
 
-a:hover {
+.link-login:hover {
     text-decoration: underline;
 }

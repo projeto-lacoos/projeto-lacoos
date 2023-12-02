@@ -2,31 +2,37 @@ import { Link } from "react-router-dom";
 
 import "./PerfilModule.css";
 
-import LogoReduzida from '../../../img/perfil/logo-reduzida.svg'
-import FotoPerfil from '../../../img/perfil/foto-perfil.svg'
+import Input from '../../input/Input'
+
+import LogoReduzida from "../../../img/perfil/logo-reduzida.svg";
+import FotoPerfil from "../../../img/perfil/foto-perfil.svg";
 
 export default function Perfil() {
   return (
     <div className="container-perfil">
       <div className="conteudo-container-perfil">
-        <Link to={"/"}>
-          <img src={LogoReduzida} alt="" />
-        </Link>
         <div className="conteudo">
-          <h2 className="titulo">MEU CASAMENTO</h2>
+          <header className="header">
+            <Link to={"/"}>
+              <img className="logo-perfil" src={LogoReduzida} alt="" />
+            </Link>
+            <h2 className="titulo-perfil">MEU CASAMENTO</h2>
+          </header>
           <div className="funcoes-perfil">
-            <img src={FotoPerfil} alt="" />
-            <div className="funcoes">
-              <p className="nome-usuario">Maria do Nascimento</p>
-              <Link to={"#"}>
-                <p>Meu Formulário</p>
-              </Link>
-              <Link to={"#"}>
-                <p>Meu Pacote</p>
-              </Link>
-              <Link to={"#"}>
-                <p>Convites</p>
-              </Link>
+            <img className="foto-perfil" src={FotoPerfil} alt="" />
+            <div class="funcoes">
+              <ul>
+                <li className="nome-usuario">Maria do Nascimento</li>
+                <Link to={"#"}>
+                  <li className="lista-perfil">Meu Formulário</li>
+                </Link>
+                <Link to={"#"}>
+                  <li className="lista-perfil">Meu Pacote</li>
+                </Link>
+                <Link to={"#"}>
+                  <li className="lista-perfil">Convites</li>
+                </Link>
+              </ul>
               <Link to={"/"}>
                 <button className="btn">Desconectar</button>
               </Link>
@@ -38,52 +44,27 @@ export default function Perfil() {
                 <div className="form-user-e">
                   <div className="grupo">
                     <label htmlFor="email-user">Login</label>
-                    <input
-                      type="email"
-                      name="email-user"
-                      id="email-user"
-                      placeholder="exemplo.sac@xxxx.com"
-                    />
+                    <Input className={"input-perfil"} type={"email"} placeholder={"exemplo.sac@xxxx.com"} name={"email-user"} id={"email-user"} />
                   </div>
                   <div className="cel-tel">
                     <div className="grupo">
                       <label htmlFor="celular">Celular</label>
-                      <input
-                        type="tel"
-                        name="celular"
-                        id="celular"
-                        placeholder="(xx) xxxxx-xxxx"
-                      />
+                      <Input className={"input-perfil"} type={"tel"} placeholder={"(xx) xxxxx-xxxx"} name={"celular"} id={"celular"} />
                     </div>
                     <div className="grupo">
                       <label htmlFor="telefone">Telefone</label>
-                      <input
-                        type="tel"
-                        name="telefone"
-                        id="telefone"
-                        placeholder="(xx) xxxx-xxxx"
-                      />
+                      <Input className={"input-perfil"} type={"tel"} placeholder={"(xx) xxxx-xxxx"} name={"telefone"} id={"telefone"} />
                     </div>
                   </div>
                 </div>
                 <div className="form-user-d">
                   <div className="grupo">
                     <label htmlFor="idade">Idade</label>
-                    <input
-                      type="number"
-                      name="idade"
-                      id="idade"
-                      placeholder="Sua idade"
-                    />
+                    <Input className={"input-perfil"} type={"number"} placeholder={"Sua idade"} name={"idade"} id={"idade"} />
                   </div>
                   <div className="grupo">
                     <label htmlFor="sexo">Sexo</label>
-                    <input
-                      type="text"
-                      name="sexo"
-                      id="sexo"
-                      placeholder="F, M ou outro"
-                    />
+                    <Input className={"input-perfil"} type={"text"} placeholder={"F, M ou outro"} name={"sexo"} id={"sexo"} />
                   </div>
                 </div>
               </div>
@@ -91,10 +72,7 @@ export default function Perfil() {
                 <button type="submit" className="btn-perfil">
                   Salvar alteração
                 </button>
-                <Link
-                  to={"/recuperacao-senha"}
-                  className="btn-perfil"
-                >
+                <Link to={"/recuperacao-senha"} className="btn-perfil">
                   Alterar senha
                 </Link>
               </div>
