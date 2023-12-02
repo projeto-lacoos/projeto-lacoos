@@ -1,11 +1,71 @@
-.caminho-planejamento .caixa-textos .texto .conteudo-home .btn-caminho-planejamento{
-    background-color: #658955;
-    color: #fff;
-    width: fit-content;
+.caminho-planejamento
+  .caixa-textos
+  .texto
+  .conteudo-home
+  .btn-caminho-planejamento {
+  border: 1px solid #658955;
+  background-color: #658955;
+  color: #fff;
+  width: fit-content;
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin-top: 5.4rem;
+  padding: 1.7rem 7.8rem;
+  border-radius: 4rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.caminho-planejamento
+  .caixa-textos
+  .texto
+  .conteudo-home
+  .btn-caminho-planejamento:hover {
+  background-color: #fff;
+  color: #658955;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .caminho-planejamento
+    .caixa-textos
+    .texto
+    .conteudo-home
+    .btn-caminho-planejamento {
+    margin: 0 auto;
     font-size: 2.4rem;
-    font-weight: 500;
-    margin-top: 5.4rem;
-    padding: 1.7rem 7.8rem;
-    border-radius: 4rem;
-    cursor: pointer;
+    margin-top: 2.4rem;
+  }
+}
+@media (max-width: 480px) {
+  .caminho-planejamento
+    .caixa-textos
+    .texto
+    .conteudo-home
+    .btn-caminho-planejamento {
+    margin: 0 auto;
+    font-size: 1.8rem;
+    margin-top: 2.4rem;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .caminho-planejamento
+    .caixa-textos
+    .texto
+    .conteudo-home
+    .btn-caminho-planejamento {
+    margin: 0 auto;
+    font-size: 2.4rem;
+    margin-top: 2.4rem;
+  }
+}
+@media (max-width: 480px) {
+  .caminho-planejamento
+    .caixa-textos
+    .texto
+    .conteudo-home
+    .btn-caminho-planejamento {
+    margin: 0 auto;
+    font-size: 1.8rem;
+    margin-top: 2.4rem;
+  }
 }

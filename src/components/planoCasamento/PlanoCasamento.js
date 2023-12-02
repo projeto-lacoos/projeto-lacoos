@@ -6,11 +6,11 @@ export default function PlanoCasamento({ numero, titulo, texto, imagemTexto, alt
     return (
         <div className={`texto ${className}`}>
             <div className="conteudo-home">
-                <h2>{numero}<br/>{titulo}</h2>
-                <p>{texto}</p>
+                <h2 className='titulo-planoCasamento'>{numero}<br/>{titulo}</h2>
+                <p className='p-planoCasamento'>{texto}</p>
                 <Botao className={classNameImage} to={'/sobre'} texto={"Saiba mais"} />
             </div>
-            <img src={imagemTexto} alt={altImagem} />
+            <img className='image-planoCasamento' src={imagemTexto} alt={altImagem} />
         </div>
     )
 }

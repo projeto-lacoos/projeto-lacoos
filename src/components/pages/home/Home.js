@@ -34,7 +34,7 @@ export default function Home() {
           <div className="botao-home">Começar agora!</div>
         </div>
       </section>
-      {/* <section className="caminho-planejamento">
+      <section className="caminho-planejamento">
         <img className="decoracao-cima" src={DecoracaoCima} alt="" />
         <div className="caixa-textos">
           <PlanoCasamento numero={"1."} titulo={"Seu plano ideal"} imagemTexto={ImagemTexto1} texto={"Oferecemos um plano personalizado para tornar o seu casamento ideal uma realidade. Nossa abordagem é feita sob medida, levando em consideração suas preferências individuais."} />
@@ -46,7 +46,7 @@ export default function Home() {
           <img className="decoracao-baixo" src={DecoracaoBaixo} alt="" />
         </div>
       </section>
-      <CarrosselImagens /> */}
+      {/* <CarrosselImagens /> */}
       <Footer />
     </body>
   );

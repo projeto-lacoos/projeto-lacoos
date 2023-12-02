@@ -1,37 +1,3 @@
-.caminho-planejamento .caixa-textos .texto {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5.4rem;
-}
-
-.caminho-planejamento .caixa-textos .texto .conteudo-home h2 {
-  font-size: 4.7rem;
-  color: #658955;
-  font-weight: 400;
-  margin-bottom: 2.5rem;
-}
-
-.caminho-planejamento .caixa-textos .texto .conteudo-home p {
-  font-size: 2.7rem;
-  font-weight: 500;
-  text-align: justify;
-  width: 56.8rem;
-}
-
-.caminho-planejamento {
-  position: relative;
-  margin: 20rem 0rem;
-}
-
-.caminho-planejamento .caixa-textos h2 {
-  font-size: 3rem;
-}
-
-.caminho-planejamento .caixa-textos p {
-  font-size: 1.7rem;
-}
-
 .caminho-planejamento .decoracao-cima {
   position: absolute;
   top: -20rem;
@@ -47,6 +13,36 @@
   z-index: -1;
 }
 
+.caminho-planejamento .caixa-textos .texto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5.4rem;
+}
+
+.caminho-planejamento
+  .caixa-textos
+  .texto
+  .conteudo-home
+  .titulo-planoCasamento {
+  font-size: 4.7rem;
+  color: #658955;
+  font-weight: 400;
+  margin-bottom: 2.5rem;
+}
+
+.caminho-planejamento .caixa-textos .texto .conteudo-home .p-planoCasamento {
+  font-size: 2.7rem;
+  font-weight: 500;
+  text-align: justify;
+  width: 56.8rem;
+}
+
+.caminho-planejamento {
+  position: relative;
+  margin: 20rem 0rem;
+}
+
 .caminho-planejamento .caixa-textos {
   display: flex;
   flex-direction: column;
@@ -60,4 +56,261 @@
 
 .sumir {
   display: none;
+}
+
+@media (min-width: 1920px) {
+  .caminho-planejamento .decoracao-cima {
+    position: absolute;
+    top: -20rem;
+    left: 0rem;
+    width: 90%;
+    z-index: -1;
+  }
+
+  .caminho-planejamento .decoracao-baixo {
+    position: absolute;
+    bottom: -20rem;
+    right: 0rem;
+    width: 100%;
+    z-index: -1;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1919px) {
+  .caminho-planejamento .caixa-textos .texto {
+    gap: 2.4rem;
+    margin: 1rem auto 0 auto;
+  }
+
+  .caminho-planejamento
+    .caixa-textos
+    .texto
+    .conteudo-home
+    .titulo-planoCasamento {
+    font-size: 3.7rem;
+    margin-bottom: 0rem;
+  }
+
+  .caminho-planejamento .caixa-textos .texto .conteudo-home .p-planoCasamento {
+    font-size: 2rem;
+    width: 45rem;
+  }
+
+  .caminho-planejamento .caixa-textos .texto .image-planoCasamento {
+    width: 45rem;
+  }
+
+  .caminho-planejamento {
+    position: relative;
+    margin: 5rem;
+  }
+
+  .caminho-planejamento .decoracao-cima {
+    position: absolute;
+    top: -5rem;
+    left: -5rem;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .caminho-planejamento .decoracao-baixo {
+    position: absolute;
+    bottom: -5rem;
+    right: -5rem;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .caminho-planejamento .caixa-textos {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .caminho-planejamento .caixa-textos .texto {
+    gap: 2.4rem;
+    margin: 0 auto;
+  }
+
+  .caminho-planejamento
+    .caixa-textos
+    .texto
+    .conteudo-home
+    .titulo-planoCasamento {
+    font-size: 3.7rem;
+    margin-bottom: 0rem;
+  }
+
+  .caminho-planejamento .caixa-textos .texto .conteudo-home .p-planoCasamento {
+    font-size: 2rem;
+    width: 40rem;
+  }
+
+  .caminho-planejamento .caixa-textos .texto .image-planoCasamento {
+    width: 40rem;
+  }
+
+  .caminho-planejamento {
+    position: relative;
+    margin: 5rem;
+  }
+
+  .caminho-planejamento .decoracao-cima {
+    position: absolute;
+    top: -5rem;
+    left: -5rem;
+    width: 110%;
+    z-index: -1;
+  }
+
+  .caminho-planejamento .decoracao-baixo {
+    position: absolute;
+    bottom: -5rem;
+    right: -5rem;
+    width: 110%;
+    z-index: -1;
+  }
+
+  .caminho-planejamento .caixa-textos {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .caminho-planejamento .caixa-textos .texto {
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+
+  .caminho-planejamento
+    .caixa-textos
+    .texto
+    .conteudo-home
+    .titulo-planoCasamento {
+    font-size: 3.7rem;
+    margin-bottom: 0rem;
+  }
+
+  .caminho-planejamento .caixa-textos .texto .conteudo-home .p-planoCasamento {
+    font-size: 2rem;
+    width: 45rem;
+  }
+
+  .caminho-planejamento .caixa-textos .texto .image-planoCasamento {
+    width: 45rem;
+  }
+
+  .caminho-planejamento {
+    position: relative;
+    margin: 5rem;
+  }
+
+  .caminho-planejamento .decoracao-cima {
+    position: absolute;
+    top: -5rem;
+    left: -5rem;
+    width: 114%;
+    z-index: -1;
+  }
+
+  .caminho-planejamento .decoracao-baixo {
+    position: absolute;
+    bottom: -5rem;
+    right: -5rem;
+    width: 114%;
+    z-index: -1;
+  }
+
+  .caminho-planejamento .caixa-textos {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .caminho-planejamento .caixa-textos .texto {
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+
+  .caminho-planejamento
+    .caixa-textos
+    .texto
+    .conteudo-home
+    .titulo-planoCasamento {
+    font-size: 3.7rem;
+    margin-bottom: 0rem;
+  }
+
+  .caminho-planejamento .caixa-textos .texto .conteudo-home .p-planoCasamento {
+    font-size: 2rem;
+    width: 45rem;
+  }
+
+  .caminho-planejamento .caixa-textos .texto .image-planoCasamento {
+    width: 45rem;
+  }
+
+  .caminho-planejamento {
+    position: relative;
+    margin: 5rem;
+  }
+
+  .caminho-planejamento .decoracao-cima,
+  .caminho-planejamento .decoracao-baixo {
+    display: none;
+  }
+
+  .caminho-planejamento .caixa-textos {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .texto.reverso {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+@media (max-width: 480px) {
+  .caminho-planejamento .caixa-textos .texto {
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+
+  .caminho-planejamento
+    .caixa-textos
+    .texto
+    .conteudo-home
+    .titulo-planoCasamento {
+    font-size: 2.5rem;
+    margin-bottom: 0rem;
+  }
+
+  .caminho-planejamento .caixa-textos .texto .conteudo-home .p-planoCasamento {
+    font-size: 1.7rem;
+    width: 30rem;
+  }
+
+  .caminho-planejamento .caixa-textos .texto .image-planoCasamento {
+    width: 30rem;
+  }
+
+  .caminho-planejamento {
+    position: relative;
+    margin: 5rem;
+  }
+
+  .caminho-planejamento .decoracao-cima,
+  .caminho-planejamento .decoracao-baixo {
+    display: none;
+  }
+
+  .caminho-planejamento .caixa-textos {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
 }
