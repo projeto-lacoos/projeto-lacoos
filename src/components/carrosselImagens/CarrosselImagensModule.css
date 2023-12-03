@@ -1,44 +1,123 @@
 .container-carrossel {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5rem;
-    margin: 4rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  margin: 4rem 0;
 }
 
 .carrossel-image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50rem;
-    overflow-y: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50rem;
+  overflow-x: auto;
 }
 
-.carrossel-image::-webkit-scrollbar{
-    display: none;
+.carrossel-image::-webkit-scrollbar {
+  display: none;
 }
 
-.slide-item{
-    width: 50rem;
-    cursor: pointer;
+.slide-item {
+  width: 50rem;
+  cursor: pointer;
 }
 
 .btn-arrow {
-    display: flex;
-    padding: 2rem;
-    border: none;
-    border-radius: 50%;
-    background-color: #658955;
-    color: #C3B107;
-    cursor: pointer;
-    transition: .3s ease-in-out;
+  display: flex;
+  padding: 2rem;
+  border: none;
+  border-radius: 50%;
+  background-color: #658955;
+  color: #c3b107;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
 
 .btn-arrow:hover {
-    background-color: #C3B107;
-    color: #fff;
+  background-color: #c3b107;
+  color: #fff;
 }
 
 .arrows {
-    font-size: 4rem;
+  font-size: 4rem;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .container-carrossel {
+    gap: 3rem;
+  }
+
+  .carrossel-image {
+    width: 40rem;
+  }
+
+  .slide-item {
+    width: 40rem;
+  }
+
+  .btn-arrow {
+    padding: 1rem;
+  }
+
+  .btn-arrow:hover {
+    background-color: #c3b107;
+    color: #fff;
+  }
+
+  .arrows {
+    font-size: 4.2rem;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .container-carrossel {
+    gap: 1rem;
+  }
+
+  .carrossel-image {
+    width: 30rem;
+  }
+
+  .slide-item {
+    width: 30rem;
+  }
+
+  .btn-arrow {
+    padding: 1rem;
+  }
+
+  .btn-arrow:hover {
+    background-color: #c3b107;
+    color: #fff;
+  }
+
+  .arrows {
+    font-size: 3.2rem;
+  }
+}
+@media (max-width: 480px) {
+  .container-carrossel {
+    gap: 1rem;
+  }
+
+  .carrossel-image {
+    width: 22rem;
+  }
+
+  .slide-item {
+    width: 22rem;
+  }
+
+  .btn-arrow {
+    padding: 0.7rem;
+  }
+
+  .btn-arrow:hover {
+    background-color: #c3b107;
+    color: #fff;
+  }
+
+  .arrows {
+    font-size: 2.2rem;
+  }
 }

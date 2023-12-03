@@ -1,6 +1,6 @@
 import './CarrosselImagensModule.css'
 
-import { useEffect, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 
 import convite1 from '../../img/carrosselImagens/convite1.jpg'
 import convite2 from '../../img/carrosselImagens/convite2.jpg'

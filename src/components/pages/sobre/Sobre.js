@@ -4,7 +4,8 @@ import "./SobreModule.css";
 import LogoLacoos from "../../../img/sobre/oo.png";
 import Detalhes from "../../../img/sobre/detalhes.png";
 import CartaoVisita from "../../../img/sobre/Cartao-visita.png";
-import BackgroundCelular from "../../../img/sobre/backgroundcelular.png";
+import BackgroundCelular1 from "../../../img/sobre/background1.svg";
+import BackgroundCelular2 from "../../../img/sobre/background2.svg";
 import CorEsquerda from "../../../img/sobre/coresquerda.png";
 import CorDireita from "../../../img/sobre/cordireita.png";
 import Coracao from "../../../img/sobre/coracao.png";
@@ -35,7 +36,7 @@ export default function Sobre() {
       <section className="sobre-home">
         <div className="conteudo">
           <img className="conteudo-logo" src={LogoLacoos} alt="background-images"/>
-          <p>um vínculo além da visão</p>
+          <p className="p-sobre">um vínculo além da visão</p>
         </div>
         <div className="img-detalhes">
           <img className="detalhes" src={Detalhes} alt="" />
@@ -43,12 +44,9 @@ export default function Sobre() {
       </section>
       <section className="sobre-lacoos">
         <div className="conteudo-sobre">
-          <h1>
-            Sobre a<br />
-            Laçoos
-          </h1>
-          <hr />
-          <p>
+          <h1 className="h1-conteudoSobre">Sobre a<br />Laçoos</h1>
+          <hr className="hr-conteudoSobre" />
+          <p className="p-conteudoSobre">
             Plataforma que realiza a ponte para a realização de cerimônia de
             casamento que atenda as necessidades das pessoas com deficiência
             visual.
@@ -70,7 +68,7 @@ export default function Sobre() {
         <div className="conteudo-fonts">
           <div className="buttons">
             <div className="button">
-              <button>Poppins</button>
+              <button className="btn-sobreNos">Poppins</button>
             </div>
             <div className="btn">
               <p className="title">Poppins</p>
@@ -79,7 +77,7 @@ export default function Sobre() {
           </div>
           <div className="buttons">
             <div className="button">
-              <button className="roboto">Roboto</button>
+              <button className="btn-sobreNos">Roboto</button>
             </div>
             <div className="btn">
               <p className="title roboto">Roboto</p>
@@ -90,7 +88,8 @@ export default function Sobre() {
       </section>
       <section className="sobre-imageslacoos">
         <div className="images">
-          <img src={BackgroundCelular} alt="" />
+          <img className="imagesLacoos-sobre" src={BackgroundCelular1} alt="" />
+          <img className="imagesLacoos-sobre" src={BackgroundCelular2} alt="" />
         </div>
       </section>
       <section className="sobre-idvisuallacoos">
@@ -114,7 +113,7 @@ export default function Sobre() {
           </div>
         </div>
       </section>
-      <section className="sobre-integrantelacoos">
+      {/* <section className="sobre-integrantelacoos">
         <div className="containerIntegrantes">
           <div className="conteudointegrantes">
             <div className="card">
@@ -160,8 +159,8 @@ export default function Sobre() {
             />
           </div>
         </div>
-      </section>
-      <section className="sobre-footerlacoos">
+      </section> */}
+      {/* <section className="sobre-footerlacoos">
         <div className="redesocial">
           <div className="cardsocial">
             <img src={Instagram} alt="" />
@@ -177,7 +176,7 @@ export default function Sobre() {
           </div>
           <img src={QRCode} alt="" />
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

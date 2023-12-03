@@ -46,7 +46,7 @@ export default function Home() {
           <img className="decoracao-baixo" src={DecoracaoBaixo} alt="" />
         </div>
       </section>
-      {/* <CarrosselImagens /> */}
+      <CarrosselImagens />
       <Footer />
     </body>
   );
