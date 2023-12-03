@@ -8,7 +8,9 @@ import Footer from '../../footer/Footer'
 import LogoReduzida from "../../../img/perfil/logo-reduzida.svg";
 import FotoPerfil from "../../../img/perfil/foto-perfil.svg";
 
+
 export default function Perfil() {
+
   return (
     <>
       <div className="container-perfil">
@@ -24,7 +26,7 @@ export default function Perfil() {
               <img className="foto-perfil" src={FotoPerfil} alt="" />
               <div class="funcoes">
                 <ul>
-                  <li className="nome-usuario">Maria do Nascimento</li>
+                  <li className="nome-usuario">Oi</li>
                   <Link to={"#"}>
                     <li className="lista-perfil">Meu Formulário</li>
                   </Link>

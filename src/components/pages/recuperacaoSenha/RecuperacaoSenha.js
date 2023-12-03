@@ -4,11 +4,46 @@ import LogoReduzido from "../../../img/recuperacaoSenha/logoReduzido.png";
 import Input from "../../input/Input";
 import { Link } from "react-router-dom";
 
+import { useState } from "react";
+
+import { Navigate } from "react-router-dom";
+
 export default function RecuperacaoSenha() {
+
+  const [email, setEmail] = useState('');
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    if (email !== '') {
+      try {
+        const response = await fetch('http://localhost:8080/v1/user/recover-password',
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              email: email
+            })
+          });
+        console.log('passou do fetch!');
+        const data = await response.json();
+        console.log(data);
+        if (typeof window !== undefined && response.ok) {
+          // Navigate("/resetar-senha");
+          Navigate("/resetar-senha");
+        }
+      } catch (error) {
+        console.log(error);
+        alert('Algo deu errado!');
+      }
+    }
+  }
+
   return (
     <div className="container-recuperacao-senha">
       <div className="lado-e">
-        <img src={LogoReduzido} className="logo-reduzido" alt="Logo Entrelaçoos"/>
+        <img src={LogoReduzido} className="logo-reduzido" alt="Logo Entrelaçoos" />
       </div>
       <div className="lado-d">
         <div className="box">
@@ -24,10 +59,11 @@ export default function RecuperacaoSenha() {
                 placeholder={"Exemplo.sac@xxxx.com"}
                 name={"email_usuario"}
                 className={"input-valor"}
+                onchange={(e) => { setEmail(e.target.value) }}
               />
             </div>
             <div className="button-recuperacao-senha">
-              <button type="submit" className="btn-recup-senha">Enviar</button>
+              <button type="submit" className="btn-recup-senha" onClick={onSubmit}>Enviar</button>
             </div>
           </form>
           <Link style={{ textDecoration: "none" }} to={"/login"} className="voltar-recuperacao-senha">Voltar</Link>
