@@ -35,7 +35,11 @@ export default function Sobre() {
       <Navbar />
       <section className="sobre-home">
         <div className="conteudo">
-          <img className="conteudo-logo" src={LogoLacoos} alt="background-images"/>
+          <img
+            className="conteudo-logo"
+            src={LogoLacoos}
+            alt="background-images"
+          />
           <p className="p-sobre">um vínculo além da visão</p>
         </div>
         <div className="img-detalhes">
@@ -44,7 +48,10 @@ export default function Sobre() {
       </section>
       <section className="sobre-lacoos">
         <div className="conteudo-sobre">
-          <h1 className="h1-conteudoSobre">Sobre a<br />Laçoos</h1>
+          <h1 className="h1-conteudoSobre">
+            Sobre a<br />
+            Laçoos
+          </h1>
           <hr className="hr-conteudoSobre" />
           <p className="p-conteudoSobre">
             Plataforma que realiza a ponte para a realização de cerimônia de
@@ -56,7 +63,11 @@ export default function Sobre() {
       <section className="sobre-bodas">
         <div className="conteudo-bodas">
           <h1 className="tituloBodas">Bodas de Casamento</h1>
-          <p className="descBodas">Efetuaremos a organização de cerimônias de renovação de votos, viagens, festas especiais para que cada casal celebre sua jornada de uma maneira única.</p>
+          <p className="descBodas">
+            Efetuaremos a organização de cerimônias de renovação de votos,
+            viagens, festas especiais para que cada casal celebre sua jornada de
+            uma maneira única.
+          </p>
         </div>
       </section>
       <section className="sobre-cartaolacoos">
@@ -95,72 +106,65 @@ export default function Sobre() {
       <section className="sobre-idvisuallacoos">
         <div className="conteudo-id">
           <div className="cores">
-            <img src={CorEsquerda} alt="" />
-            <img src={CorDireita} alt="" />
+            <img className="imagesCores" src={CorEsquerda} alt="" />
+            <img className="imagesCores" src={CorDireita} alt="" />
           </div>
           <div className="conteudoicons">
             <div className="icons">
-              <img src={Coracao} alt="" />
-              <img src={Alianca} alt="" />
-              <img src={Trigo} alt="" />
-              <img src={Papel} alt="" />
+              <img className="imagesIcons" src={Coracao} alt="" />
+              <img className="imagesIcons" src={Alianca} alt="" />
+              <img className="imagesIcons" src={Trigo} alt="" />
+              <img className="imagesIcons" src={Papel} alt="" />
             </div>
             <img className="icons-msg" src={Mensagem} alt="" />
-            <div>
-              <img src="" alt="" />
-              <img src={Imagem39} alt="" />
+            <div className="div-imageLacoos">
+              <img className="imagesLacoos" src={Imagem39} alt="" />
             </div>
           </div>
         </div>
       </section>
-      {/* <section className="sobre-integrantelacoos">
+      <section className="sobre-integrantelacoos">
         <div className="containerIntegrantes">
           <div className="conteudointegrantes">
             <div className="card">
-              <img src={Garrett} alt="" />
+              <img className="imageIntegrante" src={Garrett} alt="" />
               <p>FullStack</p>
               <p>Product Owner</p>
             </div>
             <div className="card">
-              <img src={Moura} alt="" />
+              <img className="imageIntegrante" src={Moura} alt="" />
               <p>Back-End</p>
               <p>Scrum Master</p>
             </div>
             <div className="card">
-              <img src={Filipe} alt="" />
+              <img className="imageIntegrante" src={Filipe} alt="" />
               <p>Front-End</p>
               <p>Financeiro</p>
             </div>
             <div className="card">
-              <img src={Gusbic} alt="" />
+              <img className="imageIntegrante" src={Gusbic} alt="" />
               <p>Front-End</p>
               <p>Desenvolvedor chatbot</p>
             </div>
             <div className="card">
-              <img src={Ferraz} alt="" />
+              <img className="imageIntegrante" src={Ferraz} alt="" />
               <p>Design</p>
               <p>Social Media</p>
             </div>
             <div className="card">
-              <img src={Mason} alt="" />
+              <img className="imageIntegrante" src={Mason} alt="" />
               <p>Design</p>
             </div>
             <div className="card">
-              <img src={Luiza} alt="" />
+              <img className="imageIntegrante" src={Luiza} alt="" />
               <p>Design</p>
               <p>Banco de Dados</p>
             </div>
           </div>
-          <div className="img">
-            <img
-              className="caixaGarrafinha"
-              src={CaixaGarrafinha}
-              alt=""
-            />
-          </div>
+          <img className="caixaGarrafinha" src={CaixaGarrafinha} alt="" />
         </div>
-      </section> */}
-      {/* <section className="sobre-footerlacoos">
+      </section>
+      <section className="sobre-footerlacoos">
         <div className="redesocial">
           <div className="cardsocial">
             <img src={Instagram} alt="" />
@@ -174,9 +178,9 @@ export default function Sobre() {
             <img src={Github} alt="" />
             <p>Projeto-lacoos</p>
           </div>
-          <img src={QRCode} alt="" />
+          <img className="imageQRCode" src={QRCode} alt="" />
         </div>
-      </section> */}
+      </section>
     </div>
   );
 }
