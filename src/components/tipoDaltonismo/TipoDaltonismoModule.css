@@ -11,7 +11,7 @@
     font-size: 1.8rem;
   }
 
-input[type="radio"] {
+.input-tipoDaltonismo {
   appearance: none;
   position: relative;
   width: 6rem;
@@ -21,7 +21,7 @@ input[type="radio"] {
   cursor: pointer;
 }
 
-input[type="radio"]::before {
+.input-tipoDaltonismo::before {
   content: "";
   position: absolute;
   background-color: #646363;
@@ -33,7 +33,7 @@ input[type="radio"]::before {
   transition: left 0.3s;
 }
 
-input[type="radio"]:checked::before {
+.input-tipoDaltonismo:checked::before {
   left: 3.1rem;
 }
 
@@ -44,7 +44,7 @@ input[type="radio"]:checked::before {
   .tipos-daltonismo
   .tipo-daltonismo
   .cores-alternador
-  input[type="radio"] {
+  .input-tipoDaltonismo {
   position: relative;
   width: 6rem;
   height: 3.3rem;
@@ -60,7 +60,7 @@ input[type="radio"]:checked::before {
   .tipos-daltonismo
   .tipo-daltonismo
   .cores-alternador
-  input[type="radio"] {
+  .input-tipoDaltonismo {
   position: absolute;
   background-color: #646363;
   width: 2.5rem;

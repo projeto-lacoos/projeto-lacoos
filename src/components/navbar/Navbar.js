@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 import LogoReduzida from '../../img/navbar/logo-reduzida.svg'
 import FotoPerfil from '../../img/navbar/foto-perfil.svg'
+import FotoUser from '../../img/navbar/foto-user.svg'
 import { ApplicationContext } from "../context/ApplicationProvider";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
@@ -82,7 +83,11 @@ export default function Navbar() {
                   <>
                     <li>
                       <img className="logo-reduzida" src={LogoReduzida} alt="" />
-                    </li>
+                    </li><li>
+                    <Link className="logar item" to={"/login"}>
+                      <img className="user" src={FotoUser} alt="" />
+                    </Link>
+                  </li>
                     <li>
                       <Link className="item" to={"/"}>
                         Início

@@ -1,0 +1,17 @@
+.container-servicos-pagamento {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.h2-servicos-pagamento {
+    font-size: 4.1rem;
+    font-family: 'Roboto', sans-serif;
+    color: #658955;
+    margin-bottom: 4rem;
+}
+
+.container-servicos-pagamento .container-pacotes {
+    display: flex;
+    gap: 10rem;
+}
