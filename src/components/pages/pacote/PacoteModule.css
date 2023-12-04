@@ -85,6 +85,13 @@
   font-size: 2.5rem;
   font-weight: 300;
   border-radius: 2rem;
+  transition: .3s ease-in-out;
+  border: 1px solid #658955;
+}
+
+.container-pacote .pacotes .pacote .btn:hover {
+  background-color: #fff;
+  color: #658955;
 }
 
 @media (min-width: 1920px) {
