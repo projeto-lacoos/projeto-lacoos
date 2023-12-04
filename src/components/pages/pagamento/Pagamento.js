@@ -6,7 +6,7 @@ import LogoReduzida from "../../../img/pagamento/logo-reduzida.svg";
 
 import Footer from "../../footer/Footer";
 import Navbar from "../../navbar/Navbar";
-import Servicos from "../../servicos/Servicos.js";
+import Servicos from "../../servicos/Servicos";
 
 export default function Pagamento() {
   return (
