@@ -1,15 +1,19 @@
 import "./PacoteModule.css";
 
-import { Link } from "react-router-dom";
 import Navbar from "../../navbar/Navbar";
 import Footer from "../../footer/Footer";
 import ModalPacote from "../../modalPacote/ModalPacote";
+import NotificacaoLogar from '../../../service/notificacaoLogar/NotificacaoLogar'
 
+import { Link } from "react-router-dom";
 import { FaRegCheckCircle } from "react-icons/fa";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { ApplicationContext } from "../../context/ApplicationProvider";
 
 export default function Pacote() {
   const [modalPacote, setModalPacote] = useState(false);
+
+  const { user, setAuth, auth } = useContext(ApplicationContext);
 
   const handleAbrirModal = () => {
     if (modalPacote === false) {

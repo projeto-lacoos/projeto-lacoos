@@ -1,23 +1,65 @@
 .container-itemPacote {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #658955;
-    border: 10px solid #658955;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #658955;
 }
 
 .container-itemPacote .img-container-itemPacote {
-    width: 31rem;
-    border: 3px solid #658955;
-    border-radius: 3.2rem;
+  width: 31rem;
+  border: 3px solid #658955;
+  border-radius: 3.2rem;
 }
 
 .container-itemPacote .h3-itemPacote,
 .container-itemPacote .p-itemPacote {
-    max-width: 31rem;
-    font-size: 2.9rem;
+  max-width: 31rem;
+  font-size: 2.9rem;
 }
 
-.input-itemPacote:checked ~ .container-itemPacote {
-    border: 10px solid #658955;
+.container-itemPacote .input-valor {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 1rem;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    padding: .5rem;
+    border-radius: 4rem;
+}
+
+.container-itemPacote .input-valor:hover {
+    background-color: #658955;
+    color: #fff;
+}
+
+@media (min-width: 1920px) {
+}
+@media (min-width: 1200px) and (max-width: 1919px) {
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container-itemPacote .img-container-itemPacote {
+    width: 24rem;
+  }
+
+  .container-itemPacote .h3-itemPacote,
+  .container-itemPacote .p-itemPacote {
+    max-width: 24rem;
+    font-size: 2.3rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+}
+@media (min-width: 481px) and (max-width: 767px) {
+}
+@media (max-width: 480px) {
+  .container-itemPacote .img-container-itemPacote {
+    width: 25rem;
+  }
+
+  .container-itemPacote .h3-itemPacote,
+  .container-itemPacote .p-itemPacote {
+    max-width: 25rem;
+    font-size: 2.3rem;
+  }
 }
