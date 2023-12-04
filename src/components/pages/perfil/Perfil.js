@@ -1,4 +1,8 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
+import { useContext } from "react";
+
+import { ApplicationContext } from "../../context/ApplicationProvider";
 
 import "./PerfilModule.css";
 
@@ -11,6 +15,17 @@ import FotoPerfil from "../../../img/perfil/foto-perfil.svg";
 
 export default function Perfil() {
 
+  const { user, setAuth } = useContext(ApplicationContext);
+
+  const navigate = useNavigate();
+
+  const logoutUser = () => {
+    localStorage.clear();
+    setAuth(false);
+    window.location.reload();
+    navigate("/"); 
+  }
+  
   return (
     <>
       <div className="container-perfil">
@@ -26,7 +41,7 @@ export default function Perfil() {
               <img className="foto-perfil" src={FotoPerfil} alt="" />
               <div class="funcoes">
                 <ul>
-                  <li className="nome-usuario">Oi</li>
+                  <li className="nome-usuario">Olá, {user?.name}</li>
                   <Link to={"#"}>
                     <li className="lista-perfil">Meu Formulário</li>
                   </Link>
@@ -38,7 +53,7 @@ export default function Perfil() {
                   </Link>
                 </ul>
                 <Link to={"/"}>
-                  <button className="btn">Desconectar</button>
+                  <button onClick={logoutUser} className="btn">Desconectar</button>
                 </Link>
               </div>
             </div>
@@ -51,7 +66,7 @@ export default function Perfil() {
                       <Input
                         className={"input-perfil"}
                         type={"email"}
-                        placeholder={"exemplo.sac@xxxx.com"}
+                        placeholder={user?.email}
                         name={"email-user"}
                         id={"email-user"}
                       />
@@ -62,7 +77,7 @@ export default function Perfil() {
                         <Input
                           className={"input-perfil"}
                           type={"tel"}
-                          placeholder={"(xx) xxxxx-xxxx"}
+                          placeholder={user?.phone}
                           name={"celular"}
                           id={"celular"}
                         />
@@ -72,7 +87,7 @@ export default function Perfil() {
                         <Input
                           className={"input-perfil"}
                           type={"tel"}
-                          placeholder={"(xx) xxxx-xxxx"}
+                          placeholder={user?.phone}
                           name={"telefone"}
                           id={"telefone"}
                         />
@@ -81,11 +96,11 @@ export default function Perfil() {
                   </div>
                   <div className="form-user-d">
                     <div className="grupo">
-                      <label htmlFor="idade">Idade</label>
+                      <label htmlFor="idade">Data de Nascimento</label>
                       <Input
                         className={"input-perfil"}
                         type={"number"}
-                        placeholder={"Sua idade"}
+                        placeholder={user?.birth_date}
                         name={"idade"}
                         id={"idade"}
                       />

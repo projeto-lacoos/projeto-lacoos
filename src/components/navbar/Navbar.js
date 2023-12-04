@@ -10,9 +10,10 @@ import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
 
-  const { user, setAuth, auth } = useContext(ApplicationContext)
+  const { user, setAuth, auth } = useContext(ApplicationContext);
 
   const navigate = useNavigate()
+
   const logoutUser = () => {
     localStorage.clear();
     setAuth(false);
@@ -36,12 +37,16 @@ export default function Navbar() {
               {auth ? (
                 <>
                   <li>
-                    <img className="logo-reduzida" src={LogoReduzida} alt="" style={{padding: 10}}/>
+                    <img className="logo-reduzida" src={LogoReduzida} alt="" />
                   </li>
                   <li>
                     <Link className="logar item" to={"/perfil"}>
                       <img className="user" src={FotoPerfil} alt="" />
-                      <span>{user?.name}</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="item" to={"/perfil"}>
+                      Meu Perfil
                     </Link>
                   </li>
                   <li>
@@ -49,7 +54,7 @@ export default function Navbar() {
                       Início
                     </Link>
                   </li>
-                  {/* <li>
+                  <li>
                     <Link className="item" to={"/pacote"}>
                       Pacote
                     </Link>
@@ -58,16 +63,18 @@ export default function Navbar() {
                     <Link className="item" to={"/"}>
                       Convites
                     </Link>
-                  </li> */}
+                  </li>
                   <li>
                     <Link className="item" to={"/sobre"}>
                       Sobre nós
                     </Link>
                   </li>
                   <li>
-                    <button onClick={() => { logoutUser() }}>
-                      Desconectar
-                    </button>
+                    <Link>
+                      <button onClick={() => { logoutUser() }}>
+                        Desconectar
+                      </button>
+                    </Link>
                   </li>
                 </>) :
 

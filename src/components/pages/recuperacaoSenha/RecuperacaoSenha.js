@@ -2,15 +2,15 @@ import "./RecuperacaoSenhaModule.css";
 
 import LogoReduzido from "../../../img/recuperacaoSenha/logoReduzido.png";
 import Input from "../../input/Input";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { useState } from "react";
-
-import { Navigate } from "react-router-dom";
 
 export default function RecuperacaoSenha() {
 
   const [email, setEmail] = useState('');
+
+  const navigate = useNavigate();
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -31,11 +31,11 @@ export default function RecuperacaoSenha() {
         console.log(data);
         if (typeof window !== undefined && response.ok) {
           // Navigate("/resetar-senha");
-          Navigate("/resetar-senha");
+          navigate("/resetar-senha");
         }
       } catch (error) {
         console.log(error);
-        alert('Algo deu errado!');
+        alert('Algo deu errado! Mas enviou o email!');
       }
     }
   }

@@ -3,7 +3,6 @@ import { useState, useContext } from 'react';
 import './App.css';
 import { Public } from './routes/Public';
 import { Auth } from './routes/Auth';
-import ResetarSenha from './components/pages/resetarSenha/resetarSenha';
 import { ApplicationContext } from './components/context/ApplicationProvider';
 import { ApplicationProvider } from './components/context/ApplicationProvider';
 import ModoDaltonismo from './components/modoDaltonismo/ModoDaltonismo';

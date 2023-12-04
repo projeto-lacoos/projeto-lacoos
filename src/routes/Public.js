@@ -20,20 +20,18 @@ export const Public = () => {
     const { auth } = useContext(ApplicationContext)
 
     return (
-
-        
-
         <BrowserRouter >
             <Routes>
                 <Route exact path="/" element={<Home />} />
-                <Route exact path="/login" element={auth ? <Home /> :<Login />} />
-                <Route exact path="/recuperacao-senha" element={auth ? <Home /> :<RecuperacaoSenha />} />
+                <Route exact path="/login" element={auth ? <Home /> : <Login />} />
+                <Route exact path="/recuperacao-senha" element={auth ? <Home /> : <RecuperacaoSenha />} />
                 <Route exact path="/nova-conta" element={auth ? <Home /> : <NovaConta />} />
+                <Route exact path="/perfil" element={auth ? <Perfil /> : <Home />} />
                 <Route exact path="/sobre" element={<Sobre />} />
                 <Route exact path="/pacote" element={<Pacote />} />
-                <Route exact path="/resetar-senha" element={auth ? <Home /> : <ResetarSenha />} />
+                <Route exact path="/resetar-senha" element={<ResetarSenha />} />
+                {/* <Route exact path="/recuperacao-senha" element={auth ? <ResetarSenha /> : <Home />} /> */}
             </Routes>
         </BrowserRouter >
-
     )
 }

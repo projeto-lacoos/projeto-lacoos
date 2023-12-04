@@ -33,10 +33,10 @@ export default function NovaConta() {
                     />
                   </label>
                   <label className="form_dados_label02">
-                    Idade
+                    Data de nascimento
                     <Input
                       className={"input input_idade"}
-                      type={"text"}
+                      type={"date"}
                       placeholder={"Sua idade"}
                       name={"idade_cliente"}
                     />
