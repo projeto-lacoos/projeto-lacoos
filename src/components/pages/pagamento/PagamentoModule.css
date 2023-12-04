@@ -181,6 +181,11 @@
 }
 @media (min-width: 1200px) and (max-width: 1919px) {
   /* SECTION INICIAL */
+  .pagamento-inicial .logo-reduzida {
+    top: 3%;
+    left: 3.5%;
+  }
+
   .container-titulo-desc .h2-pagamento-inicial,
   .container-titulo-desc .span-pagamento-inicial {
     font-size: 6.2rem;
@@ -188,6 +193,11 @@
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   /* SECTION INICIAL */
+  .pagamento-inicial .logo-reduzida {
+    top: 2%;
+    left: 4%;
+  }
+
   .container-titulo-desc .h2-pagamento-inicial,
   .container-titulo-desc .span-pagamento-inicial {
     font-size: 5.5rem;
@@ -195,6 +205,11 @@
 }
 @media (min-width: 768px) and (max-width: 991px) {
   /* SECTION INICIAL */
+  .pagamento-inicial .logo-reduzida {
+    top: 2%;
+    left: 4%;
+  }
+
   .container-titulo-desc .h2-pagamento-inicial,
   .container-titulo-desc .span-pagamento-inicial {
     font-size: 5.5rem;
@@ -206,6 +221,11 @@
 }
 @media (min-width: 481px) and (max-width: 767px) {
   /* SECTION INICIAL */
+  .pagamento-inicial .logo-reduzida {
+    top: 2%;
+    left: 4%;
+  }
+
   .container-titulo-desc {
     margin-left: 0rem;
     margin: 1rem;
@@ -222,6 +242,11 @@
 }
 @media (max-width: 480px) {
   /* SECTION INICIAL */
+  .pagamento-inicial .logo-reduzida {
+    top: 2%;
+    left: 4%;
+  }
+
   .container-titulo-desc {
     margin-left: 0rem;
     margin: 1rem;

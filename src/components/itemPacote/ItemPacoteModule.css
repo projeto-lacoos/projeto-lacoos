@@ -1,45 +1,76 @@
 .container-itemPacote {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #658955;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #658955;
 }
 
 .container-itemPacote .img-container-itemPacote {
-    width: 31rem;
-    border: 3px solid #658955;
-    border-radius: 3.2rem;
+  width: 31rem;
+  border: 3px solid #658955;
+  border-radius: 3.2rem;
 }
 
 .container-itemPacote .h3-itemPacote,
 .container-itemPacote .p-itemPacote {
-    max-width: 31rem;
-    font-size: 2.9rem;
+  max-width: 31rem;
+  font-size: 2.9rem;
 }
 
 /* Classe para esconder elementos visualmente, mas mantê-los acessíveis para leitores de tela */
 .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 /* Estilizando o radio customizado */
 .custom-radio {
-    display: inline-block;
-    width: 20px; /* Ajuste conforme necessário */
-    height: 20px; /* Ajuste conforme necessário */
-    /* background-color: #fff; Cor de fundo do quadrado */
-    border: 2px solid #658955; /* Cor da borda do quadrado */
-    cursor: pointer;
+  display: inline-block;
+  width: 20px; /* Ajuste conforme necessário */
+  height: 20px; /* Ajuste conforme necessário */
+  /* background-color: #fff; Cor de fundo do quadrado */
+  border: 2px solid #658955; /* Cor da borda do quadrado */
+  cursor: pointer;
 }
 
 /* Adicionando um estilo diferente quando o radio está marcado */
 .custom-radio + input[type="radio"].radio-quadrado:checked ~ .custom-radio {
-    background-color: #658955; /* Cor de fundo do quadrado quando marcado */
+  background-color: #658955; /* Cor de fundo do quadrado quando marcado */
+}
+
+@media (min-width: 1920px) {
+}
+@media (min-width: 1200px) and (max-width: 1919px) {
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container-itemPacote .img-container-itemPacote {
+    width: 24rem;
+  }
+
+  .container-itemPacote .h3-itemPacote,
+  .container-itemPacote .p-itemPacote {
+    max-width: 24rem;
+    font-size: 2.3rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+}
+@media (min-width: 481px) and (max-width: 767px) {
+}
+@media (max-width: 480px) {
+  .container-itemPacote .img-container-itemPacote {
+    width: 25rem;
+  }
+
+  .container-itemPacote .h3-itemPacote,
+  .container-itemPacote .p-itemPacote {
+    max-width: 25rem;
+    font-size: 2.3rem;
+  }
 }
