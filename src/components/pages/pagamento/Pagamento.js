@@ -19,7 +19,7 @@ export default function Pagamento() {
 
         <div className="container-titulo-desc">
           <h2 className="text-shadow h2-pagamento-inicial">
-            Chegou a hora das escolhas para{" "}
+            Chegou a hora das escolhas para
             <span className="span-pagamento-inicial">seu casamento</span>
           </h2>
           <p className="p-pagamento-inicial text-shadow2">
