@@ -168,6 +168,14 @@
   padding: 15px;
 }
 
+@media (min-width: 1200px) and (max-width: 1919px) {
+  .form_dados_label01,
+  .form_dados_label02 {
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+  }
+}
+
 @media (min-width: 992px) and (max-width: 1199px) {
   .form-conta-nova {
     padding: 15px;
