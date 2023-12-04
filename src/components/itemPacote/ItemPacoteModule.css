@@ -17,31 +17,20 @@
   font-size: 2.9rem;
 }
 
-/* Classe para esconder elementos visualmente, mas mantê-los acessíveis para leitores de tela */
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
+.container-itemPacote .input-valor {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 1rem;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    padding: .5rem;
+    border-radius: 4rem;
 }
 
-/* Estilizando o radio customizado */
-.custom-radio {
-  display: inline-block;
-  width: 20px; /* Ajuste conforme necessário */
-  height: 20px; /* Ajuste conforme necessário */
-  /* background-color: #fff; Cor de fundo do quadrado */
-  border: 2px solid #658955; /* Cor da borda do quadrado */
-  cursor: pointer;
-}
-
-/* Adicionando um estilo diferente quando o radio está marcado */
-.custom-radio + input[type="radio"].radio-quadrado:checked ~ .custom-radio {
-  background-color: #658955; /* Cor de fundo do quadrado quando marcado */
+.container-itemPacote .input-valor:hover {
+    background-color: #658955;
+    color: #fff;
 }
 
 @media (min-width: 1920px) {

@@ -43,13 +43,13 @@ export default function Servicos({ tituloEmpresa }) {
         />
         <ItemPacote
           imagemEmpresa={imagens1[1]}
-          nomeEmpresa={"Banda New Dance"}
-          valor={420}
+          nomeEmpresa={"Jona's"}
+          valor={356}
         />
         <ItemPacote
           imagemEmpresa={imagens1[2]}
-          nomeEmpresa={"Banda New Dance"}
-          valor={420}
+          nomeEmpresa={"Violinist Eventos"}
+          valor={992}
         />
       </div>
     </div>
