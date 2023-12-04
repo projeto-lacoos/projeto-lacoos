@@ -122,6 +122,7 @@
 @media (min-width: 1200px) and (max-width: 1919px) {
   .container-pacote .titulo-pacotes {
     font-size: 7rem;
+    margin-bottom: 1.5rem;
   }
 
   .container-pacote .pacotes .pacote .titulo-pacote {
