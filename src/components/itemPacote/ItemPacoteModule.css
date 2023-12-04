@@ -3,7 +3,6 @@
     flex-direction: column;
     align-items: center;
     color: #658955;
-    border: 10px solid #658955;
 }
 
 .container-itemPacote .img-container-itemPacote {
@@ -18,6 +17,29 @@
     font-size: 2.9rem;
 }
 
-.input-itemPacote:checked ~ .container-itemPacote {
-    border: 10px solid #658955;
+/* Classe para esconder elementos visualmente, mas mantê-los acessíveis para leitores de tela */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Estilizando o radio customizado */
+.custom-radio {
+    display: inline-block;
+    width: 20px; /* Ajuste conforme necessário */
+    height: 20px; /* Ajuste conforme necessário */
+    /* background-color: #fff; Cor de fundo do quadrado */
+    border: 2px solid #658955; /* Cor da borda do quadrado */
+    cursor: pointer;
+}
+
+/* Adicionando um estilo diferente quando o radio está marcado */
+.custom-radio + input[type="radio"].radio-quadrado:checked ~ .custom-radio {
+    background-color: #658955; /* Cor de fundo do quadrado quando marcado */
 }

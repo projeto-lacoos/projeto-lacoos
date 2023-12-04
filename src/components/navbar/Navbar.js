@@ -47,11 +47,6 @@ export default function Navbar() {
                     </Link>
                   </li>
                   <li>
-                    <Link className="item" to={"/perfil"}>
-                      Meu Perfil
-                    </Link>
-                  </li>
-                  <li>
                     <Link className="item" to={"/"}>
                       Início
                     </Link>
