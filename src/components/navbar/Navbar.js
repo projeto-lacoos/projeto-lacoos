@@ -2,25 +2,25 @@ import "./navbarModule.css";
 
 import { Link } from "react-router-dom";
 
-import LogoReduzida from '../../img/navbar/logo-reduzida.svg'
-import FotoPerfil from '../../img/navbar/foto-perfil.svg'
-import FotoUser from '../../img/navbar/foto-user.svg'
+import LogoReduzida from "../../img/navbar/logo-reduzida.svg";
+import FotoPerfil from "../../img/navbar/foto-perfil.svg";
+import FotoUser from "../../img/navbar/foto-user.svg";
+
 import { ApplicationContext } from "../context/ApplicationProvider";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
-
   const { user, setAuth, auth } = useContext(ApplicationContext);
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const logoutUser = () => {
     localStorage.clear();
     setAuth(false);
     window.location.reload();
-    navigate("/")
-  }
+    navigate("/");
+  };
 
   return (
     <div className="home-navbar">
@@ -43,6 +43,7 @@ export default function Navbar() {
                   <li>
                     <Link className="logar item" to={"/perfil"}>
                       <img className="user" src={FotoPerfil} alt="" />
+                      <span>Maria do Nascimento</span>
                     </Link>
                   </li>
                   <li>
@@ -72,54 +73,59 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link>
-                      <button onClick={() => { logoutUser() }}>
+                      <button
+                        onClick={() => {
+                          logoutUser();
+                        }}
+                      >
                         Desconectar
                       </button>
                     </Link>
                   </li>
-                </>) :
-
-                (
-                  <>
-                    <li>
-                      <img className="logo-reduzida" src={LogoReduzida} alt="" />
-                    </li><li>
+                </>
+              ) : (
+                <>
+                  <li>
+                    <img className="logo-reduzida" src={LogoReduzida} alt="" />
+                  </li>
+                  <li>
                     <Link className="logar item" to={"/login"}>
                       <img className="user" src={FotoUser} alt="" />
+                      <span>Login / Registrar-se</span>
                     </Link>
                   </li>
-                    <li>
-                      <Link className="item" to={"/"}>
-                        Início
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="item" to={"/login"}>
-                        Login
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="item" to={"/nova-conta"}>
-                        Registre-se
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="item" to={"/pacote"}>
-                        Pacote
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="item" to={"/"}>
-                        Convites
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="item" to={"/sobre"}>
-                        Sobre nós
-                      </Link>
-                    </li>
-                  </>
-                )}
+                  <li>
+                    <Link className="item" to={"/"}>
+                      Início
+                    </Link>
+                  </li>
+                  {/* <li>
+                    <Link className="item" to={"/login"}>
+                      Login
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="item" to={"/nova-conta"}>
+                      Registre-se
+                    </Link>
+                  </li> */}
+                  <li>
+                    <Link className="item" to={"/pacote"}>
+                      Pacote
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="item" to={"/"}>
+                      Convites
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="item" to={"/sobre"}>
+                      Sobre nós
+                    </Link>
+                  </li>
+                </>
+              )}
             </ul>
           </div>
         </div>

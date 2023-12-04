@@ -52,18 +52,12 @@
   margin-top: 3.5rem;
 }
 
-.navbar-d .itens-menu  {
+.navbar-d .itens-menu .logo-reduzida {
   top: 3%;
   width: 10rem;
   left: 50%;
   transform: translate(-50%);
   position: absolute;
-}
-
-.logo-reduzida {
-  position: relative;
-  padding-top: 10px;
-  padding-top: 10px;
 }
 
 .navbar-d .itens-menu .logar {
