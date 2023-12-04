@@ -99,8 +99,8 @@ export default function Perfil() {
                       <label htmlFor="idade">Data de Nascimento</label>
                       <Input
                         className={"input-perfil"}
-                        type={"number"}
-                        placeholder={user?.birth_date}
+                        type={"text"}
+                        placeholder={user?.phone} // birthDate
                         name={"idade"}
                         id={"idade"}
                       />

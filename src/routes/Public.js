@@ -30,6 +30,7 @@ export const Public = () => {
                 <Route exact path="/sobre" element={<Sobre />} />
                 <Route exact path="/pacote" element={<Pacote />} />
                 <Route exact path="/resetar-senha" element={<ResetarSenha />} />
+                <Route exact path="/pagamento" element={auth ? <Pagamento /> : <Home />} />
                 {/* <Route exact path="/recuperacao-senha" element={auth ? <ResetarSenha /> : <Home />} /> */}
             </Routes>
         </BrowserRouter >

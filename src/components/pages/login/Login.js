@@ -1,6 +1,6 @@
 import "./LoginModule.css";
 import { useContext, useState } from 'react';
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Input from "../../input/Input";
 import { ApplicationContext } from "../../context/ApplicationProvider";
 import { jwtDecode } from 'jwt-decode'
@@ -16,9 +16,7 @@ export default function Login() {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-
     if (email !== '' && senha !== '') {
-
       try {
         const response = await fetch('http://localhost:8080/v1/auth/login', {
           method: 'POST',
@@ -41,13 +39,10 @@ export default function Login() {
           if (token) {
             window.localStorage.setItem('token', token);
             const localUser = jwtDecode(token);
-            // console.log(localUser)
             setUser(localUser)
             setAuth(true)
             navigate("/")
           }
-          // console.log(token, "tipo do token é:", typeof (token));
-
         }
       } catch (error) {
         console.log(error);

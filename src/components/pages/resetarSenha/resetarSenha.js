@@ -17,7 +17,7 @@ export default function ResetarSenha() {
     e.preventDefault();
     if (senha == confirmaSenha) {
       try {
-        const response = await fetch('http://localhost:8080/v1/user/reset-password/7a9f3876-ddcb-43a2-8a20-6e960c08a08a',
+        const response = await fetch('http://localhost:8080/v1/user/reset-password/', // 87b6246c-35e7-4bc8-9e07-0334e79ca2f7
           {
             method: 'PATCH',
             headers: {
