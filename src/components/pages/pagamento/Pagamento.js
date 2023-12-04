@@ -4,23 +4,18 @@ import "./PagamentoModule.css";
 
 import LogoReduzida from "../../../img/pagamento/logo-reduzida.svg";
 
-<<<<<<< Updated upstream
-=======
 import Footer from "../../footer/Footer";
 import Navbar from "../../navbar/Navbar";
 import Servicos from "../../servicos/Servicos";
 
->>>>>>> Stashed changes
 export default function Pagamento() {
   return (
     <>
-      <div className="container-tela-pagamento">
-        <Link className="sumir" to={"/"}>
+      <Navbar />
+      <section className="pagamento-inicial">
+        <Link className="logo-reduzida" to={"/"}>
           <img src={LogoReduzida} alt="" />
         </Link>
-<<<<<<< Updated upstream
-        <div className="container-pagamento">
-=======
 
         <div className="container-titulo-desc">
           <h2 className="text-shadow h2-pagamento-inicial">
@@ -38,7 +33,6 @@ export default function Pagamento() {
         </section>
         <section className="container-tela-pagamento">
           {/* <div className="container-pagamento">
->>>>>>> Stashed changes
           <div className="header-pagamento">
           <h2 className="titulo-pagamento">PAGAMENTO</h2>
           <Link to={"/"}>
@@ -46,32 +40,6 @@ export default function Pagamento() {
           </Link>
           </div>
           <form action="" method="post" className="form-pagamento">
-<<<<<<< Updated upstream
-            <div className="nome-titular">
-              <label htmlFor="nome">Nome do titular</label>
-              <input
-                type="text"
-                name="nome"
-                id="nome"
-                placeholder="Nome como exibido no cartão"
-              />
-            </div>
-            <div className="validade-cvv-dataNascimento">
-              <div className="container-inputs">
-                <label htmlFor="validade">Validade</label>
-                <input
-                  type="datetime"
-                  name="validade"
-                  id="validade"
-                  placeholder="MM/AA"
-                />
-              </div>
-              <div className="container-inputs">
-                <label htmlFor="cvv">CVV</label>
-                <input type="number" name="cvv" id="cvv" placeholder="CVV" />
-              </div>
-              <div className="container-inputs">
-=======
           <div className="nome-titular">
           <label htmlFor="nome">Nome do titular</label>
           <Input type={"text"} name={"nome"} id={"nome"} placeholder={"Nome como exibido no cartão"}  />
@@ -86,43 +54,22 @@ export default function Pagamento() {
           <Input type={"number"} name={"cvv"} id={"cvv"} placeholder={"CVV"}  />
           </div>
           <div className="container-inputs">
->>>>>>> Stashed changes
                 <label htmlFor="dataNascimento">Data de nascimento</label>
-                <input
-                  type="datetime"
-                  name="dataNascimento"
-                  id="dataNascimento"
-                  placeholder="DD/MM/AA"
-                />
+                <Input type={"datetime"} name={"dataNascimento"} id={"dataNascimento"} placeholder={"DD/MM/AA"}  />
               </div>
             </div>
             <div className="numeroCartao">
               <label htmlFor="numeroCartao">Número do Cartão</label>
-              <input
-                type="number"
-                name="numeroCartao"
-                id="numeroCartao"
-                placeholder="xxxx.xxxx.xxxx.xxxx"
-              />
+              <Input type={"number"} name={"numeroCartao"} id={"numeroCartao"} placeholder={"xxxx.xxxx.xxxx.xxxx"}  />
             </div>
             <div className="cpf-telefone">
               <div className="container-inputs">
                 <label htmlFor="cpf">CPF (dono do cartão)</label>
-                <input
-                  type="number"
-                  name="cpf"
-                  id="cpf"
-                  placeholder="xxx.xxx.xxx-xx"
-                />
+                <Input type={"number"} name={"cpf"} id={"cpf"} placeholder={"xxx.xxx.xxx-xx"}  />
               </div>
               <div className="container-inputs">
                 <label htmlFor="telefone">Telefone (dono do cartão)</label>
-                <input
-                  type="tel"
-                  name="telefone"
-                  id="telefone"
-                  placeholder="(xx) xxxx-xxxx"
-                />
+                <Input type={"tel"} name={"telefone"} id={"telefone"} placeholder={"(xx) xxxx-xxxx"}  />
               </div>
             </div>
             <div className=" finalizar">
@@ -132,15 +79,10 @@ export default function Pagamento() {
               </button>
             </div>
           </form>
-<<<<<<< Updated upstream
-        </div>
-      </div>
-=======
         </div> */}
         </section>
+        <Footer />
       </form>
->>>>>>> Stashed changes
-      <Footer />
     </>
   );
 }

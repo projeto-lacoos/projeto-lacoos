@@ -14,54 +14,6 @@
     transform: translateX(-50%);
 }
 
-<<<<<<< Updated upstream
-=======
-.container-titulo-desc {
-  width: 52.2rem;
-  color: #fff;
-  margin-left: 8rem;
-  backdrop-filter: blur(8px);
-  padding: 1rem 1rem 1rem 2rem;
-  border-radius: 2rem;
-}
-
-.text-shadow {
-  text-shadow: 4px 5px 4px rgb(0, 0, 0, 0.25);
-}
-
-.text-shadow2 {
-  text-shadow: 3px 4px 4px rgb(0, 0, 0, 0.25);
-}
-
-.container-titulo-desc .h2-pagamento-inicial {
-  font-size: 8.5rem;
-  font-weight: 500;
-  line-height: 90%;
-}
-
-.container-titulo-desc .span-pagamento-inicial {
-  color: #c3b107;
-  font-size: 8.5rem;
-  font-weight: 500;
-  line-height: 90%;
-}
-
-.container-titulo-desc .p-pagamento-inicial {
-    font-size: 2.7rem;
-}
-
-/* SECTION ESCOLHAS PACOTES */
-.container-escolhas-pacotes {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 5rem 0;
-}
-
-/* CONTAINER PAGAMENTO */
-
->>>>>>> Stashed changes
 .container-pagamento {
     position: absolute;
     left: 8.6rem;
