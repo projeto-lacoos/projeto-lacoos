@@ -1,11 +1,60 @@
 import "./LoginModule.css";
-
-import Logo from "../../../img/login/Logo2.png";
-
-import { Link } from "react-router-dom";
+import { useContext, useState } from 'react';
+import { Link, Navigate } from "react-router-dom";
 import Input from "../../input/Input";
+import { ApplicationContext } from "../../context/ApplicationProvider";
+import { jwtDecode } from 'jwt-decode'
+import Logo from "../../../img/login/Logo2.png";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
+  const { setUser, setLocalUser, setAuth } = useContext(ApplicationContext);
+  const [email, setEmail] = useState('');
+  const [senha, setSenha] = useState('');
+
+  const navigate = useNavigate()
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+
+    if (email !== '' && senha !== '') {
+
+      try {
+        const response = await fetch('http://localhost:8080/v1/auth/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'accept': '*/*'
+          },
+          body: JSON.stringify({
+            email: email,
+            password: senha
+          })
+        });
+        console.log("enviou o fetch?");
+        const data = await response.json();
+        console.log(data);
+
+        if (typeof window !== undefined && response.ok) {
+          const token = data.token;
+          if (token) {
+            window.localStorage.setItem('token', token);
+            const localUser = jwtDecode(token);
+            console.log(localUser)
+            setUser(localUser)
+            setAuth(true)
+            navigate("/")
+          }
+          console.log(token, "tipo do token é:", typeof (token))
+
+        }
+      } catch (error) {
+        console.log(error);
+        alert('Algo deu errado!');
+      }
+    }
+  }
+
   return (
     <div className="header_logo">
       <ul className="nav_logo">
@@ -17,28 +66,28 @@ export default function Login() {
         </li>
       </ul>
       <section className="container-login">
-        <form className="form-login" method="post">
+        <div className="form-login">
           <h2 className="title_form">LOGIN</h2>
           <label className="label_login">
             E-mail
-            <Input className={"input-login"} type={"email"} placeholder={"exemplo.sac@xxxx.com"} name={"email_usuario"} />
+            <Input className={"input-login"} type={"email"} placeholder={"exemplo.sac@xxxx.com"} name={"email_usuario"} onchange={(e) => { setEmail(e.target.value) }} />
           </label>
           <label className="label_login">
             Senha
-            <Input className={"input-login"} type={"password"} placeholder={"Digite sua senha"} name={"senha_usuario"} />
+            <Input className={"input-login"} type={"password"} placeholder={"Digite sua senha"} name={"senha_usuario"} onchange={(e) => { setSenha(e.target.value) }} />
           </label>
           <p>
             <Link to={"/recuperacao-senha"} className="link_login_password">
               Esqueceu a senha?
             </Link>
           </p>
-          <input className="button_login" type="submit" defaultValue="ENTRAR" />
+          <button className="button_login" onClick={(e) => { onSubmit(e) }}>ENTRAR</button>
           <p>
             <Link to="/nova-conta" className="link_creat_cont">
               Não tem conta ainda? Crie agora
             </Link>
           </p>
-        </form>
+        </div>
       </section>
     </div>
   );
