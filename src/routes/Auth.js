@@ -16,7 +16,7 @@ export const Auth = () => {
                 <Route exact path="/" element={<Home />} />
                 <Route exact path="/perfil" element={auth ? <Perfil /> : <Home />} />
                 <Route exact path="/pagamento" element={auth ? <Pagamento /> : <Home />} />
-                {/* <Route exact path="/recuperacao-senha" element={auth ? <ResetarSenha /> : <Home />} /> */}
+                <Route exact path='/resetar-senha/#/:token' element={ auth ? <ResetarSenha/> : <Home />} />
             </Routes>
         </BrowserRouter>
     )

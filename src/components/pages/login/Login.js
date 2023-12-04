@@ -31,7 +31,8 @@ export default function Login() {
             password: senha
           })
         });
-        console.log("enviou o fetch?");
+
+        console.log("Errou a senha!!!");
         const data = await response.json();
         console.log(data);
 
@@ -40,12 +41,12 @@ export default function Login() {
           if (token) {
             window.localStorage.setItem('token', token);
             const localUser = jwtDecode(token);
-            console.log(localUser)
+            // console.log(localUser)
             setUser(localUser)
             setAuth(true)
             navigate("/")
           }
-          console.log(token, "tipo do token é:", typeof (token))
+          // console.log(token, "tipo do token é:", typeof (token));
 
         }
       } catch (error) {

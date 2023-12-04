@@ -99,16 +99,6 @@ export default function Navbar() {
                       Início
                     </Link>
                   </li>
-                  {/* <li>
-                    <Link className="item" to={"/login"}>
-                      Login
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="item" to={"/nova-conta"}>
-                      Registre-se
-                    </Link>
-                  </li> */}
                   <li>
                     <Link className="item" to={"/pacote"}>
                       Pacote

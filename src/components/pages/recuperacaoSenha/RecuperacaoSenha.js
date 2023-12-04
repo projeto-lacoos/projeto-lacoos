@@ -26,12 +26,8 @@ export default function RecuperacaoSenha() {
               email: email
             })
           });
-        console.log('passou do fetch!');
-        const data = await response.json();
-        console.log(data);
         if (typeof window !== undefined && response.ok) {
-          // Navigate("/resetar-senha");
-          navigate("/resetar-senha");
+          navigate("/login");
         }
       } catch (error) {
         console.log(error);

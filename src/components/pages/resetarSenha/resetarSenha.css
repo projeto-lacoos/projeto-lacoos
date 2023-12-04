@@ -1,3 +1,9 @@
-.container-resetar-senha{
-    
+.container-resetar-senha {
+    display: flex;
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+    height: 100vh;
+    /* Define a altura da div para ocupar toda a altura da tela */
 }
