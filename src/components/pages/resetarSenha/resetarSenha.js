@@ -3,9 +3,16 @@ import "./resetarSenha.css";
 import Input from "../../input/Input";
 
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 export default function ResetarSenha() {
+  const API = "http://localhost:8080/v1/user/reset-password"
+  const { search } = useLocation();
+  const params = new URLSearchParams(search);
+  const token = params.get('token');
+
+  console.log("search", search);
+  // console.log("params", params);
   
   const navigate = useNavigate();
 
@@ -15,9 +22,9 @@ export default function ResetarSenha() {
   const onSubmit = async (e) => {
 
     e.preventDefault();
-    if (senha == confirmaSenha) {
+    if (senha === confirmaSenha) {
       try {
-        const response = await fetch('http://localhost:8080/v1/user/reset-password/7a9f3876-ddcb-43a2-8a20-6e960c08a08a',
+        const response = await fetch(`${API}/${token}`,
           {
             method: 'PATCH',
             headers: {
