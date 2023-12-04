@@ -9,10 +9,8 @@ import Perfil from '../components/pages/perfil/Perfil';
 import Pagamento from '../components/pages/pagamento/Pagamento';
 import Sobre from '../components/pages/sobre/Sobre';
 import Pacote from '../components/pages/pacote/Pacote';
-import Acessibilidade from '../components/acessibilidade/Acessibilidade';
-import ModoDaltonismo from '../components/modoDaltonismo/ModoDaltonismo';
 import ResetarSenha from '../components/pages/resetarSenha/resetarSenha';
-import { ApplicationContext, ApplicationProvider } from '../components/context/ApplicationProvider';
+import { ApplicationContext } from '../components/context/ApplicationProvider';
 import { useContext } from 'react';
 
 export const Public = () => {
@@ -29,9 +27,8 @@ export const Public = () => {
                 <Route exact path="/perfil" element={auth ? <Perfil /> : <Home />} />
                 <Route exact path="/sobre" element={<Sobre />} />
                 <Route exact path="/pacote" element={<Pacote />} />
-                <Route exact path="/resetar-senha" element={<ResetarSenha />} />
+                <Route exact path="/resetar-senha/:token" element={<ResetarSenha />} />
                 <Route exact path="/pagamento" element={auth ? <Pagamento /> : <Home />} />
-                {/* <Route exact path="/recuperacao-senha" element={auth ? <ResetarSenha /> : <Home />} /> */}
             </Routes>
         </BrowserRouter >
     )

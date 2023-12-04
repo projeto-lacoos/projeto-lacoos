@@ -3,21 +3,23 @@ import "./resetarSenha.css";
 import Input from "../../input/Input";
 
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 export default function ResetarSenha() {
-  
+
+  const params = useParams();
+
   const navigate = useNavigate();
 
   const [senha, setSenha] = useState('');
   const [confirmaSenha, setConfirmaSenha] = useState('');
 
   const onSubmit = async (e) => {
-
     e.preventDefault();
     if (senha == confirmaSenha) {
       try {
-        const response = await fetch('http://localhost:8080/v1/user/reset-password/', // 87b6246c-35e7-4bc8-9e07-0334e79ca2f7
+        let token;
+        const response = await fetch(`http://localhost:8080/v1/user/reset-password/${params.token}`, // ${} | 87b6246c-35e7-4bc8-9e07-0334e79ca2f7
           {
             method: 'PATCH',
             headers: {
@@ -28,9 +30,11 @@ export default function ResetarSenha() {
               confirmPassword: confirmaSenha
             })
           });
-        console.log('passou do fetch!');
+        console.log(`${token}`);
+
         const data = await response.json();
         console.log(data);
+
         if (typeof window !== undefined && response.ok) {
           navigate("/login");
         }
@@ -38,7 +42,7 @@ export default function ResetarSenha() {
         console.log(error);
         alert('Algo deu errado! Mas enviou o email!');
       }
-    } else{
+    } else {
       console.log("Informe as senhas iguais.");
     }
 
@@ -47,11 +51,13 @@ export default function ResetarSenha() {
   return (
     <div className="container-resetar-senha">
       <div className="img-resetar-senha">
-        <Input placeholder={"Senha"} onchange={(e) => { setSenha(e.target.value)
+        <Input placeholder={"Senha"} onchange={(e) => {
+          setSenha(e.target.value)
         }}>Senha</Input>
         <br />
         <br />
-        <Input placeholder={"Confirmar senha"} onchange={(e) => { setConfirmaSenha(e.target.value)
+        <Input placeholder={"Confirmar senha"} onchange={(e) => {
+          setConfirmaSenha(e.target.value)
         }}>Confirmar senha</Input>
         <br />
         <br />

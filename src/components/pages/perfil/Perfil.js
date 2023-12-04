@@ -10,7 +10,8 @@ import Input from "../../input/Input";
 import Footer from '../../footer/Footer'
 
 import LogoReduzida from "../../../img/perfil/logo-reduzida.svg";
-import FotoPerfil from "../../../img/perfil/foto-perfil.svg";
+
+import FotoUser from "../../../img/navbar/foto-user.svg";
 
 
 export default function Perfil() {
@@ -38,7 +39,7 @@ export default function Perfil() {
               <h2 className="titulo-perfil">MEU CASAMENTO</h2>
             </header>
             <div className="funcoes-perfil">
-              <img className="foto-perfil" src={FotoPerfil} alt="" />
+              <img className="foto-perfil" src={FotoUser} alt="" />
               <div class="funcoes">
                 <ul>
                   <li className="nome-usuario">Olá, {user?.name}</li>
