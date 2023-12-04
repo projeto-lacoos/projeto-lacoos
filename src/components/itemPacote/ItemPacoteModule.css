@@ -1,0 +1,17 @@
+.container-itemPacote {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #658955;
+}
+
+.container-itemPacote .img-container-itemPacote {
+    width: 31rem;
+    border: 3px solid #658955;
+    border-radius: 3.2rem;
+}
+
+.container-itemPacote .h3-itemPacote,
+.container-itemPacote .p-itemPacote {
+    font-size: 2.9rem;
+}
