@@ -72,7 +72,7 @@ export default function Navbar() {
                     </Link>
                   </li>
                   <li>
-                    <Link>
+                    <Link className="item">
                       <button
                         onClick={() => {
                           logoutUser();

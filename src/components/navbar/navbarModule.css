@@ -91,6 +91,15 @@
   text-decoration: underline;
 }
 
+.navbar-d .itens-menu li button {
+  font-size: 2rem;
+  border: none;
+  font-weight: 500;
+  background-color: transparent;
+  color: #658955;
+  cursor: pointer;
+}
+
 .home-navbar .navbar .menu {
   width: 5.5rem;
   height: 3.6rem;
@@ -180,7 +189,8 @@
   }
 
   .navbar-d .itens-menu li a,
-  .navbar-d .itens-menu li span {
+  .navbar-d .itens-menu li span,
+  .navbar-d .itens-menu li button {
     font-size: 3rem;
   }
 }
@@ -214,7 +224,8 @@
   }
 
   .navbar-d .itens-menu li a,
-  .navbar-d .itens-menu li span {
+  .navbar-d .itens-menu li span,
+  .navbar-d .itens-menu li button {
     font-size: 2.4rem;
   }
 }
@@ -233,7 +244,8 @@
   }
 
   .navbar-d .itens-menu li a,
-  .navbar-d .itens-menu li span {
+  .navbar-d .itens-menu li span,
+  .navbar-d .itens-menu li button {
     font-size: 2.3rem;
   }
 }
@@ -290,7 +302,8 @@
   }
 
   .navbar-d .itens-menu li a,
-  .navbar-d .itens-menu li span {
+  .navbar-d .itens-menu li span,
+  .navbar-d .itens-menu li button {
     font-size: 1.8rem;
   }
 }
@@ -329,7 +342,8 @@
   }
 
   .navbar-d .itens-menu li a,
-  .navbar-d .itens-menu li span {
+  .navbar-d .itens-menu li span,
+  .navbar-d .itens-menu li button {
     font-size: 2rem;
   }
 }
