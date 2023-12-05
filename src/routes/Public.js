@@ -27,14 +27,9 @@ export const Public = () => {
                 <Route exact path="/perfil" element={auth ? <Perfil /> : <Home />} />
                 <Route exact path="/sobre" element={<Sobre />} />
                 <Route exact path="/pacote" element={<Pacote />} />
-<<<<<<< HEAD
-                <Route exact path="/resetar-senha/:token" element={<ResetarSenha />} />
-                <Route exact path="/pagamento" element={auth ? <Pagamento /> : <Home />} />
-=======
                 <Route exact path="/resetar-senha" element={<ResetarSenha />} />
                 <Route exact path="/pagamento" element={auth ? <Pagamento /> : <Home />} />
                 {/* <Route exact path="/recuperacao-senha" element={auth ? <ResetarSenha /> : <Home />} /> */}
->>>>>>> 15eb2587dcc35985d2d9646fcf560df7a259313a
             </Routes>
         </BrowserRouter >
     )

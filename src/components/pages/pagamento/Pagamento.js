@@ -32,18 +32,16 @@ export default function Pagamento() {
         <section className="container-escolhas-pacotes">
           <Servicos tituloEmpresa={"Profissionais na Área de Música"} />
         </section>
-        {/* <section className="container-tela-pagamento">
+        <section className="container-tela-pagamento">
           <div className="container-pagamento">
-            <div className="header-pagamento">
-              <h2 className="titulo-pagamento">PAGAMENTO</h2>
-              <Link to={"/"}>
-                <img src={LogoReduzida} alt="" />
-              </Link>
-            </div>
+            <h2 className="titulo-pagamento">PAGAMENTO</h2>
             <form action="" method="post" className="form-pagamento">
               <div className="nome-titular">
-                <label htmlFor="nome">Nome do titular</label>
+                <label className="label-pagamento" htmlFor="nome">
+                  Nome do titular
+                </label>
                 <Input
+                  className="input-pagamento"
                   type={"text"}
                   name={"nome"}
                   id={"nome"}
@@ -52,8 +50,11 @@ export default function Pagamento() {
               </div>
               <div className="validade-cvv-dataNascimento">
                 <div className="container-inputs">
-                  <label htmlFor="validade">Validade</label>
+                  <label className="label-pagamento" htmlFor="validade">
+                    Validade
+                  </label>
                   <Input
+                    className="input-pagamento"
                     type={"datetime"}
                     name={"validade"}
                     id={"validade"}
@@ -61,8 +62,11 @@ export default function Pagamento() {
                   />
                 </div>
                 <div className="container-inputs">
-                  <label htmlFor="cvv">CVV</label>
+                  <label className="label-pagamento" htmlFor="cvv">
+                    CVV
+                  </label>
                   <Input
+                    className="input-pagamento"
                     type={"number"}
                     name={"cvv"}
                     id={"cvv"}
@@ -70,8 +74,11 @@ export default function Pagamento() {
                   />
                 </div>
                 <div className="container-inputs">
-                  <label htmlFor="dataNascimento">Data de nascimento</label>
+                  <label className="label-pagamento" htmlFor="dataNascimento">
+                    Data de nascimento
+                  </label>
                   <Input
+                    className="input-pagamento"
                     type={"datetime"}
                     name={"dataNascimento"}
                     id={"dataNascimento"}
@@ -80,8 +87,11 @@ export default function Pagamento() {
                 </div>
               </div>
               <div className="numeroCartao">
-                <label htmlFor="numeroCartao">Número do Cartão</label>
+                <label className="label-pagamento" htmlFor="numeroCartao">
+                  Número do Cartão
+                </label>
                 <Input
+                  className="input-pagamento"
                   type={"number"}
                   name={"numeroCartao"}
                   id={"numeroCartao"}
@@ -90,8 +100,11 @@ export default function Pagamento() {
               </div>
               <div className="cpf-telefone">
                 <div className="container-inputs">
-                  <label htmlFor="cpf">CPF (dono do cartão)</label>
+                  <label className="label-pagamento" htmlFor="cpf">
+                    CPF (dono do cartão)
+                  </label>
                   <Input
+                    className="input-pagamento"
                     type={"number"}
                     name={"cpf"}
                     id={"cpf"}
@@ -99,8 +112,11 @@ export default function Pagamento() {
                   />
                 </div>
                 <div className="container-inputs">
-                  <label htmlFor="telefone">Telefone (dono do cartão)</label>
+                  <label className="label-pagamento" htmlFor="telefone">
+                    Telefone (dono do cartão)
+                  </label>
                   <Input
+                    className="input-pagamento"
                     type={"tel"}
                     name={"telefone"}
                     id={"telefone"}
@@ -109,14 +125,14 @@ export default function Pagamento() {
                 </div>
               </div>
               <div className=" finalizar">
-                <p className="valorFinal">Total: R$12.700,00</p>
+                <p className="valorFinal">Total: R$ 00,00</p>
                 <button className="btn-finalizar-pagamento" type="submit">
                   Finalizar
                 </button>
               </div>
             </form>
           </div>
-        </section> */}
+        </section>
         <Footer />
       </form>
     </>

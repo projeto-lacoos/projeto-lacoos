@@ -60,15 +60,17 @@
 
 /* CONTAINER PAGAMENTO */
 
-.container-pagamento {
-  background-color: #fff;
-  padding: 5rem;
-  border-radius: 1.7rem;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 0px 20px;
+.container-pagamento .titulo-pagamento {
+  font-size: 5.5rem;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
 }
 
-.container-pagamento .header-pagamento a {
-  display: none;
+.container-pagamento {
+  padding: 6.2rem;
+  color: #658955;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 .container-pagamento .form-pagamento {
@@ -76,51 +78,39 @@
   flex-direction: column;
 }
 
-.container-pagamento .titulo-pagamento {
-  font-size: 4rem;
-  font-weight: 600;
-}
-
 .form-pagamento .nome-titular {
   display: flex;
   flex-direction: column;
 }
 
-.form-pagamento .nome-titular label {
-  font-size: 2.1rem;
+.form-pagamento .nome-titular .label-pagamento,
+.form-pagamento .validade-cvv-dataNascimento .label-pagamento,
+.form-pagamento .numeroCartao .label-pagamento,
+.form-pagamento .cpf-telefone .label-pagamento {
+  font-size: 3rem;
   font-weight: 500;
-  margin: 4.6rem 0 0.8rem 0;
+  margin-bottom: 1rem;
 }
 
-.form-pagamento .nome-titular input {
-  border: 1px solid #658955;
+.form-pagamento .input-pagamento {
+  height: 11.3rem;
   border-radius: 1.7rem;
-  height: 4.5rem;
-  padding: 2rem 2.4rem;
+  font-size: 3rem;
+  border: 2px solid #658955;
+  padding: 3.4rem;
+  width: 100%;
 }
 
 .form-pagamento .validade-cvv-dataNascimento {
   margin-top: 3rem;
   display: flex;
-  gap: 1.3rem;
+  align-items: center;
+  gap: 2.3rem;
 }
 
 .container-inputs {
   display: flex;
   flex-direction: column;
-}
-
-.container-inputs label {
-  font-size: 2.1rem;
-  font-weight: 500;
-  margin-bottom: 0.8rem;
-}
-
-.container-inputs input {
-  border: 1px solid #658955;
-  border-radius: 1.7rem;
-  height: 4.5rem;
-  padding: 2rem 2.4rem;
   width: 100%;
 }
 
@@ -130,27 +120,10 @@
   flex-direction: column;
 }
 
-.form-pagamento .numeroCartao label {
-  font-size: 2.1rem;
-  font-weight: 500;
-  margin-bottom: 0.8rem;
-}
-
-.form-pagamento .numeroCartao input {
-  border: 1px solid #658955;
-  border-radius: 1.7rem;
-  height: 4.5rem;
-  padding: 2rem 2.4rem;
-}
-
 .form-pagamento .cpf-telefone {
   margin-top: 3rem;
   display: flex;
-  gap: 1.3rem;
-}
-
-.form-pagamento .cpf-telefone .container-inputs {
-  width: 100%;
+  gap: 2.3rem;
 }
 
 .form-pagamento .finalizar {
@@ -164,6 +137,7 @@
   color: rgba(0, 0, 0, 0.59);
   font-size: 3.5rem;
   font-weight: 600;
+  font-family: "Roboto", sans-serif;
 }
 
 .form-pagamento .finalizar .btn-finalizar-pagamento {
@@ -175,6 +149,13 @@
   padding: 1.7rem 6.4rem;
   border: none;
   cursor: pointer;
+  border: 1px solid #658955;
+  transition: 0.3s ease-in-out;
+}
+
+.form-pagamento .finalizar .btn-finalizar-pagamento:hover {
+  background-color: #fff;
+  color: #658955;
 }
 
 @media (min-width: 1920px) {
@@ -202,6 +183,15 @@
   .container-titulo-desc .span-pagamento-inicial {
     font-size: 5.5rem;
   }
+
+  /* CONTAINER PAGAMENTO */
+
+  .form-pagamento .nome-titular .label-pagamento,
+  .form-pagamento .validade-cvv-dataNascimento .label-pagamento,
+  .form-pagamento .numeroCartao .label-pagamento,
+  .form-pagamento .cpf-telefone .label-pagamento {
+    font-size: 2.6rem;
+  }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   /* SECTION INICIAL */
@@ -217,6 +207,60 @@
 
   .container-titulo-desc .p-pagamento-inicial {
     font-size: 2.5rem;
+  }
+
+  /* CONTAINER PAGAMENTO */
+
+  .container-pagamento .titulo-pagamento {
+    font-size: 4rem;
+  }
+
+  .container-pagamento {
+    padding: 4.2rem;
+  }
+
+  .form-pagamento .nome-titular .label-pagamento,
+  .form-pagamento .validade-cvv-dataNascimento .label-pagamento,
+  .form-pagamento .numeroCartao .label-pagamento,
+  .form-pagamento .cpf-telefone .label-pagamento {
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .form-pagamento .input-pagamento {
+    height: 5rem;
+    font-size: 2.2rem;
+  }
+
+  .form-pagamento .validade-cvv-dataNascimento {
+    margin-top: 0rem;
+  }
+
+  .container-inputs {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-pagamento .numeroCartao {
+    margin-top: 0rem;
+  }
+
+  .form-pagamento .cpf-telefone {
+    margin-top: 0rem;
+  }
+
+  .form-pagamento .finalizar {
+    justify-content: space-between;
+  }
+
+  .form-pagamento .finalizar .valorFinal {
+    font-size: 2.5rem;
+  }
+
+  .form-pagamento .finalizar .btn-finalizar-pagamento {
+    font-size: 2.5rem;
+    padding: 1.2rem 3rem;
   }
 }
 @media (min-width: 481px) and (max-width: 767px) {
@@ -239,6 +283,64 @@
   .container-titulo-desc .p-pagamento-inicial {
     font-size: 2.5rem;
   }
+
+  /* CONTAINER PAGAMENTO */
+
+  .container-pagamento .titulo-pagamento {
+    font-size: 4rem;
+  }
+
+  .container-pagamento {
+    padding: 4.2rem;
+  }
+
+  .form-pagamento .nome-titular .label-pagamento,
+  .form-pagamento .validade-cvv-dataNascimento .label-pagamento,
+  .form-pagamento .numeroCartao .label-pagamento,
+  .form-pagamento .cpf-telefone .label-pagamento {
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .form-pagamento .input-pagamento {
+    height: 5rem;
+    font-size: 2.2rem;
+  }
+
+  .form-pagamento .validade-cvv-dataNascimento {
+    margin-top: 0rem;
+    flex-direction: column;
+    gap: 0rem;
+  }
+
+  .container-inputs {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-pagamento .numeroCartao {
+    margin-top: 0rem;
+  }
+
+  .form-pagamento .cpf-telefone {
+    margin-top: 0rem;
+    flex-direction: column;
+    gap: 0rem;
+  }
+
+  .form-pagamento .finalizar {
+    justify-content: space-between;
+  }
+
+  .form-pagamento .finalizar .valorFinal {
+    font-size: 2.5rem;
+  }
+
+  .form-pagamento .finalizar .btn-finalizar-pagamento {
+    font-size: 2rem;
+    padding: 1.2rem 3rem;
+  }
 }
 @media (max-width: 480px) {
   /* SECTION INICIAL */
@@ -259,5 +361,65 @@
 
   .container-titulo-desc .p-pagamento-inicial {
     font-size: 2rem;
+  }
+
+  /* CONTAINER PAGAMENTO */
+
+  .container-pagamento .titulo-pagamento {
+    font-size: 4rem;
+  }
+
+  .container-pagamento {
+    padding: 4.2rem;
+  }
+
+  .form-pagamento .nome-titular .label-pagamento,
+  .form-pagamento .validade-cvv-dataNascimento .label-pagamento,
+  .form-pagamento .numeroCartao .label-pagamento,
+  .form-pagamento .cpf-telefone .label-pagamento {
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .form-pagamento .input-pagamento {
+    height: 5rem;
+    font-size: 2.2rem;
+  }
+
+  .form-pagamento .validade-cvv-dataNascimento {
+    margin-top: 0rem;
+    flex-direction: column;
+    gap: 0rem;
+  }
+
+  .container-inputs {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-pagamento .numeroCartao {
+    margin-top: 0rem;
+  }
+
+  .form-pagamento .cpf-telefone {
+    margin-top: 0rem;
+    flex-direction: column;
+    gap: 0rem;
+  }
+
+  .form-pagamento .finalizar {
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  .form-pagamento .finalizar .valorFinal {
+    font-size: 2.5rem;
+  }
+
+  .form-pagamento .finalizar .btn-finalizar-pagamento {
+    font-size: 2.5rem;
+    padding: 1.2rem 5rem;
   }
 }
