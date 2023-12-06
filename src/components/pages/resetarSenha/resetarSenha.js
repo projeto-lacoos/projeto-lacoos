@@ -71,7 +71,7 @@ export default function ResetarSenha() {
         alt="Logo da Laçoos, onde é uma imagem de duas alianças se entrelaçando"
       />
       <div class="container_form_reset">
-        <h2 className="title_form_reset">NOVA SENHA</h2>
+        <h2 className="title_form_reset">Nova Senha</h2>
         <label className="label_new_password_reset">
           Senha
           <Input
