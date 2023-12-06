@@ -9,7 +9,7 @@ import BackgroundCelular2 from "../../../img/sobre/background2.svg";
 import CorEsquerda from "../../../img/sobre/coresquerda.png";
 import CorDireita from "../../../img/sobre/cordireita.png";
 import Coracao from "../../../img/sobre/coracao.png";
-import Alianca from "../../../img/sobre/alianca.png";
+import AliancaL from "../../../img/sobre/aliancal.png";
 import Trigo from "../../../img/sobre/trigo.png";
 import Papel from "../../../img/sobre/papel.png";
 import Mensagem from "../../../img/sobre/msg.png";
@@ -26,8 +26,10 @@ import Instagram from "../../../img/sobre/instagram.png";
 import Linkedin from "../../../img/sobre/linkedin.png";
 import Github from "../../../img/sobre/github.png";
 import QRCode from "../../../img/sobre/qrcode.jpg";
-import Bodas from "../../../img/sobre/bodas.png";
-import Idvisual from "../../../img/sobre/icons-idvisual.png";
+
+import Limpay from "../../../img/sobre/limpay.png";
+import Lushe from "../../../img/sobre/lushe.png";
+import Aliancas from "../../../img/sobre/alianca.png";
 
 export default function Sobre() {
   return (
@@ -69,6 +71,15 @@ export default function Sobre() {
             uma maneira única.
           </p>
         </div>
+      </section>
+      <section className="sobre-bodas-parceiros">
+        <div className="sobre-parceiros">
+            <h1 className="tituloParceiros">Bodas de Casamento</h1>
+            <hr className="hr-conteudoParceiros" />
+            <img src={Limpay} className="imgParceiros"/>
+            <img src={Lushe} className="imgParceiros" />
+            <img src={Aliancas} className="imgParceiros"/>
+          </div>
       </section>
       <section className="sobre-cartaolacoos">
         <div className="images">
@@ -112,7 +123,7 @@ export default function Sobre() {
           <div className="conteudoicons">
             <div className="icons">
               <img className="imagesIcons" src={Coracao} alt="" />
-              <img className="imagesIcons" src={Alianca} alt="" />
+              <img className="imagesIcons" src={AliancaL} alt="" />
               <img className="imagesIcons" src={Trigo} alt="" />
               <img className="imagesIcons" src={Papel} alt="" />
             </div>

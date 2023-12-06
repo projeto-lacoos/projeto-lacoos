@@ -46,7 +46,7 @@ export default function Login() {
         }
       } catch (error) {
         console.log(error);
-        alert('Algo deu errado!');
+        alert('Inicie a aplicação.');
       }
     }
   }

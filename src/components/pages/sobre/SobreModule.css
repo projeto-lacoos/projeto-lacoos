@@ -114,6 +114,43 @@
   font-size: 2.6rem;
 }
 
+/* SECTION SOBRE PARCEIROS LAÇOOS */
+
+.sobre-bodas-parceiros{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.sobre-parceiros{
+  display: flex;
+  align-items: center;
+}
+
+.sobre-parceiros .tituloParceiros{
+  width: 47.8rem;
+  height: auto;
+  font-family: "Roboto", sans-serif;
+  font-size: 10.4rem;
+  color: #658955;
+  margin-right: 10rem;
+}
+
+.sobre-parceiros .hr-conteudoParceiros{
+  background-color: #c3b107;
+  width: 5px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.sobre-parceiros .imgParceiros{
+  width: 23.8rem;
+  margin-left: 5rem;
+}
+
+
+
 /* SECTION SOBRE CARTAO LAÇOOS */
 
 .sobre-cartaolacoos {

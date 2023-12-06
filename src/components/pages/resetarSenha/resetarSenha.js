@@ -61,7 +61,7 @@ export default function ResetarSenha() {
         }}>Confirmar senha</Input>
         <br />
         <br />
-        <button onClick={onSubmit}>Salvar</button>
+        <button onClick={onSubmit}>Alterar</button>
       </div>
     </div>
   );
