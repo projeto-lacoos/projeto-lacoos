@@ -3,6 +3,7 @@ import { useContext } from 'react';
 import Home from '../components/pages/home/Home';
 import Perfil from '../components/pages/perfil/Perfil';
 import { ApplicationContext } from '../components/context/ApplicationProvider';
+import ResetarSenha from '../components/pages/resetarSenha/resetarSenha';
 
 export const Auth = () => {
 
