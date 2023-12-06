@@ -1,3 +1,12 @@
+/* CORES MODO DALOTONICO */
+.footer.DPTT{
+  background-color: #0000FF;
+}
+
+.footer-cima .footer-informacoes .footer-amarelo.DPTT {
+  color: #FFA500;
+}
+
 .footer {
   background-color: #658955;
   display: flex;

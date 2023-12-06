@@ -1,10 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import { ThemeProvider } from "./context/ThemeContext";
 
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
 window.watsonAssistantChatOptions = {
   integrationID: "0cd1e9e9-d7f2-4bdf-80f1-7563dd0ec589", // The ID of this integration.
@@ -23,10 +24,13 @@ setTimeout(function () {
   document.head.appendChild(t);
 });
 
+
 root.render(
   <React.StrictMode>
-    <App />
-</React.StrictMode>
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
+  </React.StrictMode>
 );
 
 reportWebVitals();
