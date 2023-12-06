@@ -1,12 +1,58 @@
 import Input from "../../input/Input";
 import Logo from "../../../img/contaNova/logo.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import "./NovaContaModule.css";
 
 import Footer from "../../footer/Footer";
+import { useState } from "react";
 
 export default function NovaConta() {
+
+  const navigate = useNavigate();
+
+  const [nome, setNome] = useState('');
+  const [dataNasc, setDataNasc] = useState('');
+  const [celular, setCelular] = useState('');
+  const [telefone, setTelefone] = useState('');
+  const [sexo, setSexo] = useState('');
+  const [email, setEmail] = useState('');
+  const [senha, setSenha] = useState('');
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    if(nome !== "" && dataNasc !== "" && celular !== "" && telefone !== "" && sexo !== "" && email !== "" && senha !== ""){
+      try{
+        const response = await fetch("http://localhost:8080/v1/auth/sign-up", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            name: nome,
+            birthDate: dataNasc,
+            phone: celular,
+            telephone: telefone,
+            sexo: sexo,
+            email: email,
+            password: senha
+          })
+        });
+
+        alert("Cadastrado com sucesso!");
+        const data = await response.json();
+        console.log(data);
+        navigate("/");
+
+      } catch(error){
+        console.log(error);
+        alert("Algo deu errado!");
+      }
+    } else {
+      console.log("Insira um valor para todos os campos!");
+    }
+  }
+
   return (
     <>
       <div className="body-conta-nova">
@@ -30,6 +76,7 @@ export default function NovaConta() {
                       type={"text"}
                       placeholder={"Nome e sobrenome"}
                       name={"nome_cliente"}
+                      onchange={(e) => { setNome(e.target.value)}}
                     />
                   </label>
                   <label className="form_dados_label02">
@@ -39,6 +86,7 @@ export default function NovaConta() {
                       type={"date"}
                       placeholder={"Sua idade"}
                       name={"idade_cliente"}
+                      onchange={(e) => { setDataNasc(e.target.value)}}
                     />
                   </label>
                 </div>
@@ -50,6 +98,7 @@ export default function NovaConta() {
                       type={"tel"}
                       placeholder={"(xx) xxxxx-xxxx"}
                       name={"celular_cliente"}
+                      onchange={(e) => { setCelular(e.target.value)}}
                     />
                   </label>
                   <label className="form_dados_label02 ">
@@ -59,6 +108,7 @@ export default function NovaConta() {
                       type={"tel"}
                       placeholder={"(xx) xxxxx-xxxx"}
                       name={"telefone_cliente"}
+                      onchange={(e) => { setTelefone(e.target.value)}}
                     />
                   </label>
                 </div>
@@ -70,6 +120,7 @@ export default function NovaConta() {
                       type={"email"}
                       placeholder={"Exemplo.sac@xxxx.com"}
                       name={"email_cliente"}
+                      onchange={(e) => { setEmail(e.target.value)}}
                     />
                   </label>
                   <label className="form_dados_label02">
@@ -79,6 +130,7 @@ export default function NovaConta() {
                       type={"text"}
                       placeholder={"F, M ou outro"}
                       name={"sexo_cliente"}
+                      onchange={(e) => { setSexo(e.target.value)}}
                     />
                   </label>
                 </div>
@@ -90,6 +142,7 @@ export default function NovaConta() {
                       type={"password"}
                       placeholder={"Digite sua senha"}
                       name={"senha_cliente"}
+                      onchange={(e) => { setSenha(e.target.value)}}
                     />
                   </label>
                   <label className="form_dados_label02">
@@ -110,6 +163,7 @@ export default function NovaConta() {
                   className="input input_submit"
                   type="submit"
                   defaultValue="SALVAR"
+                  onClick={(e) => { onSubmit(e) }}
                 />
               </div>
             </div>

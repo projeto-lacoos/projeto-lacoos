@@ -16,10 +16,10 @@ export default function Navbar() {
   const navigate = useNavigate();
 
   const logoutUser = () => {
+    navigate("/");
     localStorage.clear();
     setAuth(false);
     window.location.reload();
-    navigate("/");
   };
 
   return (
