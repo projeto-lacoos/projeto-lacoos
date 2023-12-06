@@ -26,8 +26,10 @@ import Instagram from "../../../img/sobre/instagram.png";
 import Linkedin from "../../../img/sobre/linkedin.png";
 import Github from "../../../img/sobre/github.png";
 import QRCode from "../../../img/sobre/qrcode.jpg";
-import Bodas from "../../../img/sobre/bodas.png";
-import Idvisual from "../../../img/sobre/icons-idvisual.png";
+
+import Limpay from "../../../img/sobre/limpay.png";
+import Lushe from "../../../img/sobre/lushe.png";
+import AliancaP from "../../../img/sobre/aliancaPrimicias.png";
 
 export default function Sobre() {
   return (
@@ -69,6 +71,15 @@ export default function Sobre() {
             uma maneira única.
           </p>
         </div>
+      </section>
+      <section className="sobre-bodas-parceiros">
+        <div className="sobre-parceiros">
+            <h1 className="tituloParceiros">Bodas de Casamento</h1>
+            <hr className="hr-conteudoParceiros" />
+            <img src={Limpay} className="imgParceiros" alt=""/>
+            <img src={Lushe} className="imgParceiros" alt=""/>
+            <img src={AliancaP} className="imgParceiros" alt=""/>
+          </div>
       </section>
       <section className="sobre-cartaolacoos">
         <div className="images">

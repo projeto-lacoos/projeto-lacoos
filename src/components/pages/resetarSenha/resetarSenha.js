@@ -2,10 +2,13 @@ import "./resetarSenha.css";
 
 import Input from "../../input/Input";
 
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { ApplicationContext } from "../../context/ApplicationProvider";
 
 export default function ResetarSenha() {
+
+  const { setAuth } = useContext(ApplicationContext);
 
   const params = useParams();
 
@@ -30,14 +33,16 @@ export default function ResetarSenha() {
               confirmPassword: confirmaSenha
             })
           });
-        console.log(`${token}`);
 
+        /* console.log(`${token}`);
         const data = await response.json();
-        console.log(data);
+        console.log(data); */
 
-        if (typeof window !== undefined && response.ok) {
-          navigate("/login");
-        }
+        localStorage.clear();
+        setAuth(false);
+        navigate("/login");
+        // window.location.reload();
+
       } catch (error) {
         console.log(error);
         alert('Algo deu errado! Mas enviou o email!');
