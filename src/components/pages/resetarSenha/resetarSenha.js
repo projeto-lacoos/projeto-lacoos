@@ -37,14 +37,23 @@ export default function ResetarSenha() {
           }
         );
 
-        /* console.log(`${token}`);
+        /* /* console.log(`${token}`);
         const data = await response.json();
         console.log(data); */
 
-        localStorage.clear();
+        /* localStorage.clear();
         setAuth(false);
         navigate("/login");
-        // window.location.reload();
+        // window.location.reload(); 
+        const data = await response.json();
+        */
+
+        if (typeof window !== undefined && response.ok) {
+          localStorage.clear();
+          setAuth(false);
+          navigate("/login");
+        }
+
       } catch (error) {
         console.log(error);
         alert("Algo deu errado! Mas enviou o email!");

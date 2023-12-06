@@ -30,7 +30,6 @@ export default function Login() {
           })
         });
 
-        console.log("Errou a senha!!!");
         const data = await response.json();
         console.log(data);
 
@@ -43,6 +42,8 @@ export default function Login() {
             setAuth(true)
             navigate("/")
           }
+        } else {
+          alert("Usuário ou senha estão inválidos!");
         }
       } catch (error) {
         console.log(error);

@@ -16,10 +16,10 @@ export default function Navbar() {
   const navigate = useNavigate();
 
   const logoutUser = () => {
-    navigate("/");
+    /* navigate("/"); */
     localStorage.clear();
     setAuth(false);
-    window.location.reload();
+    /* window.location.reload(); */
   };
 
   return (
@@ -42,7 +42,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link className="logar item" to={"/perfil"}>
-                      <img className="user" src={FotoPerfil} alt="" />
+                      <img className="user" src={FotoUser} alt="" />
                       <span>{user.name ? user.name : "Maria do Nascimento"}</span>
                     </Link>
                   </li>

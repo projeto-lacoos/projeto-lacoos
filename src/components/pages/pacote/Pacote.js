@@ -120,7 +120,7 @@ export default function Pacote() {
             <p className="ver-mais" onClick={handleAbrirModal}>
               Ver mais
             </p>
-            <Link to={"/pagamento"} className="btn">
+            <Link to={auth ? "/pagamento" : "/login"} className="btn">
               Case Agora
             </Link>
           </div>

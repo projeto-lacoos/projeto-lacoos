@@ -13,8 +13,10 @@ export default function NovaConta() {
 
   const [nome, setNome] = useState('');
   const [dataNasc, setDataNasc] = useState('');
+
   const [celular, setCelular] = useState('');
   const [telefone, setTelefone] = useState('');
+
   const [sexo, setSexo] = useState('');
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
@@ -86,7 +88,9 @@ export default function NovaConta() {
                       type={"date"}
                       placeholder={"Sua idade"}
                       name={"idade_cliente"}
-                      onchange={(e) => { setDataNasc(e.target.value)}}
+                      onchange={(e) => {
+                        setDataNasc(e.target.value)
+                      }}
                     />
                   </label>
                 </div>
