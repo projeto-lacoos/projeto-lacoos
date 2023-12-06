@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./homeModule.css";
 
 import LogoReduzida from "../../../img/home/logo-reduzida.svg";
+
 import ImagemTexto1 from "../../../img/home/imagem-texto-1.jpg";
 import ImagemTexto2 from "../../../img/home/imagem-texto-2.jpg";
 import ImagemTexto3 from "../../../img/home/imagem-texto-3.jpg";
@@ -42,7 +43,7 @@ export default function Home() {
       <Navbar />
       <section className="home">
         <Link to={"/"}>
-          <img className="logo-laçoos" src={LogoReduzida} alt="" />
+          <img className="logo-laçoos" src={LogoReduzida} alt="Logo da Laçoos, onde é uma imagem de duas alianças se entrelaçando" />
         </Link>
         <div className="container-home">
           <div className="textos-central">
