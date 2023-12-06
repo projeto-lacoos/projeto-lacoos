@@ -42,8 +42,8 @@ export default function Navbar() {
                   </li>
                   <li>
                     <Link className="logar item" to={"/perfil"}>
-                      <img className="user" src={FotoUser} alt="" />
-                      <span>{user.name ? user.name : "Nome"}</span>
+                      <img className="user" src={FotoPerfil} alt="" />
+                      <span>{user.name ? user.name : "Maria do Nascimento"}</span>
                     </Link>
                   </li>
                   <li>

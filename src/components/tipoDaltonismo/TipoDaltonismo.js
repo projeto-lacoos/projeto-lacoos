@@ -2,16 +2,7 @@ import "./TipoDaltonismoModule.css";
 
 import Input from "../input/Input";
 
-import { useContext } from "react";
-import { ThemeContext } from "../../context/ThemeContext";
-
-export default function TipoDaltonismo({ imagem, tipos, classe }) {
-  const { toggleTheme } = useContext(ThemeContext);
-
-  const handleToggleTheme = () => {
-    toggleTheme(classe)
-  }
-
+export default function TipoDaltonismo({imagem, tipos}) {
   return (
     <div className="tipo-daltonismo">
       <div className="nome-daltonismo">
@@ -19,14 +10,7 @@ export default function TipoDaltonismo({ imagem, tipos, classe }) {
       </div>
       <div className="cores-alternador">
         <img className="cores-daltonismo" src={imagem} alt="" />
-        <Input
-          className={"input-tipoDaltonismo"}
-          type={"radio"}
-          name={"switch"}
-          id={"switch"}
-          classe={classe}
-          onClick={handleToggleTheme}
-        />
+        <Input className={"input-tipoDaltonismo"} type={"radio"} name={"switch"} id={"switch"}/>
       </div>
     </div>
   );

@@ -1,12 +1,3 @@
-/* CORES MODO DALTONISMO */
-.home .container-home .botao-home.DPTT{
-  background-color: #FFA500;
-}
-
-.home .container-home .textos-central .titulo-principal .css-titulo.DPTT {
-  color: #FFA500;
-}
-
 /* SECTION HOME */
 .home {
   height: 100vh;

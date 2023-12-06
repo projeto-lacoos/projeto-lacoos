@@ -21,10 +21,10 @@ export default function Perfil() {
   const navigate = useNavigate();
 
   const logoutUser = () => {
+    navigate("/"); 
     localStorage.clear();
     setAuth(false);
     window.location.reload();
-    navigate("/");
   }
   
   return (
@@ -88,7 +88,7 @@ export default function Perfil() {
                         <Input
                           className={"input-perfil"}
                           type={"tel"}
-                          placeholder={user?.telephone ? user?.telephone : "Insira um telefone"}
+                          placeholder={user?.telephone}
                           name={"telefone"}
                           id={"telefone"}
                         />
@@ -101,7 +101,7 @@ export default function Perfil() {
                       <Input
                         className={"input-perfil"}
                         type={"date"}
-                        placeholder={user?.birthdate ? user?.birthdate : ""} // birthDate
+                        placeholder={user?.birthDate} // birthDate
                         name={"idade"}
                         id={"idade"}
                       />

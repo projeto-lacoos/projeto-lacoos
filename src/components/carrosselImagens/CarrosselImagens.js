@@ -48,7 +48,7 @@ export default function CarrosselImagens() {
             </button>
             <div className='carrossel-image' ref={carousel} onClick={HandleNotificacao}>
                 {imagens.map((image, id) => (
-                    <img key={id} className='slide-item' src={image} alt='Convite' />
+                    <img className='slide-item' src={image} alt='Convite' />
                 ))}
             </div>
             <button className="btn-arrow">

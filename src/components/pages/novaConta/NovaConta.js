@@ -30,7 +30,7 @@ export default function NovaConta() {
           },
           body: JSON.stringify({
             name: nome,
-            birthdate: dataNasc,
+            birthDate: dataNasc,
             phone: celular,
             telephone: telefone,
             sexo: sexo,
@@ -39,14 +39,14 @@ export default function NovaConta() {
           })
         });
 
-        console.log("Cadastrado com sucesso!");
+        alert("Cadastrado com sucesso!");
         const data = await response.json();
         console.log(data);
         navigate("/");
 
       } catch(error){
         console.log(error);
-        console.log("Algo deu errado! Formatação da data!");
+        alert("Algo deu errado!");
       }
     } else {
       console.log("Insira um valor para todos os campos!");
