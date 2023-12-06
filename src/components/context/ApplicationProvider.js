@@ -46,7 +46,6 @@ export const ApplicationProvider = ({ children }) => {
                 setLocalUser(String(token))
             }
         }
-
         return null;
     }
 

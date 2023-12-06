@@ -1,3 +1,8 @@
+/* CORES MODO DALTONISMO */
+.home .container-home .botao-home.DPTT{
+  background-color: #000;
+}
+
 /* SECTION HOME */
 .home {
   height: 100vh;

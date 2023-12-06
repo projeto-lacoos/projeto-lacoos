@@ -6,7 +6,7 @@ import Monocromacia from "../../img/modoDaltonismo/Monocromacia.svg";
 import TritanopiaTritanomalia from "../../img/modoDaltonismo/Tritanopia-Tritanomalia.svg";
 import Acromatopsia from "../../img/modoDaltonismo/Acromatopsia.svg";
 
-export default function ModoDaltonismo({HandleModoDaltonismo}) {
+export default function ModoDaltonismo({ HandleModoDaltonismo }) {
   return (
     <div className="container-modo-daltonismo">
       <div className="caixa">
@@ -18,10 +18,10 @@ export default function ModoDaltonismo({HandleModoDaltonismo}) {
             <div className="escolhas-modo-daltonismo">
               <h2 className="titulo-escolha">Escolha o modo daltonismo</h2>
               <div className="tipos-daltonismo">
-                <TipoDaltonismo imagem={DPDP} tipos={"Deuteranomalia Protanopia Deuteranopia Protanomalia"} />
-                <TipoDaltonismo imagem={Monocromacia} tipos={"Monocromacia"} />
-                <TipoDaltonismo imagem={TritanopiaTritanomalia} tipos={"Tritanopia Tritanomalia"} />
-                <TipoDaltonismo imagem={Acromatopsia} tipos={"Acromatopsia"} />
+                <TipoDaltonismo imagem={DPDP} tipos={"Deuteranomalia Protanopia Deuteranopia Protanomalia"} classe={"DPTT"} />
+                <TipoDaltonismo imagem={Monocromacia} tipos={"Monocromacia"} classe={"M"}/>
+                <TipoDaltonismo imagem={TritanopiaTritanomalia} tipos={"Tritanopia Tritanomalia"} classe={"PD"}/>
+                <TipoDaltonismo imagem={Acromatopsia} tipos={"Acromatopsia"} classe={"A"}/>
               </div>
             </div>
           </div>

@@ -13,10 +13,32 @@ import Navbar from "../../navbar/Navbar";
 import PlanoCasamento from "../../planoCasamento/PlanoCasamento";
 import Footer from "../../footer/Footer";
 import CarrosselImagens from "../../carrosselImagens/CarrosselImagens";
+import { useContext } from "react";
+import { ThemeContext } from "../../context/ThemeContext";
 
 export default function Home() {
+
+  const {theme} = useContext(ThemeContext)
+
+  const getThemeClass = (theme) => {
+    switch (theme) {
+      case "DPTT":
+        return "DPTT";
+      case "M":
+        return "M";
+      case "PD":
+        return "PD";
+      case "A":
+        return "A";
+      default:
+        return "";
+    }
+  };
+  
+  console.log("getThemeClass", getThemeClass(theme));
+
   return (
-    <body>
+    <>
       <Navbar />
       <section className="home">
         <Link to={"/"}>
@@ -31,7 +53,7 @@ export default function Home() {
               de maneira acessível e com o planejamento que você merece!
             </p>
           </div>
-          <div className="botao-home">Começar agora!</div>
+          <div className={`botao-home ${getThemeClass(theme)}`}>Começar agora!</div>
         </div>
       </section>
       <section className="caminho-planejamento">
@@ -48,6 +70,6 @@ export default function Home() {
       </section>
       <CarrosselImagens />
       <Footer />
-    </body>
+    </>
   );
 }
