@@ -1,3 +1,80 @@
+/* CORES DO MODO DALTONISMO */
+.title_forms .title.DPTT,
+.form_dados_label01.DPTT, 
+.form_dados_label02.DPTT,
+.title_termos.DPTT {
+  color: #0000FF;
+}
+
+.input_submit.DPTT {
+  background-color: #0000FF;
+}
+
+.input.DPTT,
+.box_termos.DPTT {
+  border: 1px solid #FFA500;
+}
+/*  */
+.title_forms .title.M,
+.form_dados_label01.M, 
+.form_dados_label02.M,
+.title_termos.M {
+  color: #00008B;
+}
+
+.input_submit.M {
+  background-color: #00008B;
+}
+
+.input.M,
+.box_termos.M {
+  border: 1px solid #00008B;
+}
+/*  */
+.title_forms .title.PD,
+.form_dados_label01.PD, 
+.form_dados_label02.PD,
+.title_termos.PD {
+  color: #FF69B4;
+}
+
+.input_submit.PD {
+  background-color: #FF69B4;
+}
+
+.input.PD,
+.box_termos.PD {
+  border: 1px solid #000;
+}
+/*  */
+.title_forms .title.A,
+.form_dados_label01.A, 
+.form_dados_label02.A,
+.title_termos.A {
+  color: #000;
+}
+
+.input_submit.A {
+  background-color: #000;
+}
+
+.input.A,
+.box_termos.A {
+  border: 1px solid #808080;
+}
+
+.body-conta-nova.A {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../../../img/contaNova/fundo-cadastro-PB.svg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* COMEÇO DO CSS DA PÁGINA */
 .body-conta-nova {
   width: 100%;
   height: 100vh;
