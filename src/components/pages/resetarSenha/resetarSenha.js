@@ -3,12 +3,48 @@ import "./resetarSenha.css";
 import Input from "../../input/Input";
 
 import LogoReduzida from "../../../img/resetarSenha/logo-reduzida.svg";
+import DPTT from "../../../img/resetarSenha/oo.svg";
+import M from "../../../img/resetarSenha/oo-2.svg";
+import PD from "../../../img/resetarSenha/oo-1.svg";
+import A from "../../../img/resetarSenha/oo-3.svg";
 
 import { useContext, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { ApplicationContext } from "../../context/ApplicationProvider";
+import { ThemeContext } from "../../context/ThemeContext";
 
 export default function ResetarSenha() {
+  const { theme } = useContext(ThemeContext);
+
+  const getThemeClass = (theme) => {
+    switch (theme) {
+      case "DPTT":
+        return "DPTT";
+      case "M":
+        return "M";
+      case "PD":
+        return "PD";
+      case "A":
+        return "A";
+      default:
+        return "default";
+    }
+  };
+
+  const getThemeLogo = (theme) => {
+    switch (theme) {
+      case "DPTT":
+        return DPTT;
+      case "M":
+        return M;
+      case "PD":
+        return PD;
+      case "A":
+        return A;
+      default:
+        return LogoReduzida;
+    }
+  };
   const { setAuth } = useContext(ApplicationContext);
 
   const params = useParams();
@@ -64,28 +100,28 @@ export default function ResetarSenha() {
   };
 
   return (
-    <section className="container-resetar-senha">
+    <section className={`container-resetar-senha ${getThemeClass(theme)}`}>
       <img
         className="logo-reset-senha"
-        src={LogoReduzida}
+        src={getThemeLogo(theme)}
         alt="Logo da Laçoos, onde é uma imagem de duas alianças se entrelaçando"
       />
       <div class="container_form_reset">
-        <h2 className="title_form_reset">Nova Senha</h2>
-        <label className="label_new_password_reset">
+        <h2 className={`title_form_reset ${getThemeClass(theme)}`}>Nova Senha</h2>
+        <label className={`label_new_password_reset ${getThemeClass(theme)}`}>
           Senha
           <Input
-            className={"input-reset-senha"}
+            className={`input-reset-senha ${getThemeClass(theme)}`}
             placeholder={"Senha"}
             onchange={(e) => {
               setSenha(e.target.value);
             }}
           />
         </label>
-        <label className="label_new_password_reset">
+        <label className={`label_new_password_reset ${getThemeClass(theme)}`}>
           Confirmação da senha
           <Input
-            className={"input-reset-senha"}
+            className={`input-reset-senha ${getThemeClass(theme)}`}
             placeholder={"Confirmar senha"}
             onchange={(e) => {
               setConfirmaSenha(e.target.value);
@@ -93,7 +129,7 @@ export default function ResetarSenha() {
           />
         </label>
         <button
-          className="button_login_reset"
+          className={`button_login_reset ${getThemeClass(theme)}`}
           type="submit"
           value={"SALVAR"}
           onClick={onSubmit}

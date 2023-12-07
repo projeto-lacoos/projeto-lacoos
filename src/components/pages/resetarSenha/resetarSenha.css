@@ -1,3 +1,97 @@
+/* CORES DO MODO DALTONISMO */
+.title_form_reset.DPTT,
+.label_new_password_reset.DPTT {
+  color: #0000FF;
+}
+
+.input-reset-senha.DPTT {
+  border: 1px solid #0000FF;
+}
+
+.button_login_reset.DPTT {
+  background-color: #0000FF;
+  border: 1px solid #0000FF;
+}
+
+.button_login_reset:hover.DPTT {
+  background-color: #fff;
+  color: #0000FF;
+  border: 1px solid #0000FF;
+}
+/*  */
+.title_form_reset.M,
+.label_new_password_reset.M {
+  color: #00008B;
+}
+
+.input-reset-senha.M {
+  border: 1px solid #00008B;
+}
+
+.button_login_reset.M {
+  background-color: #00008B;
+  border: 1px solid #00008B;
+}
+
+.button_login_reset:hover.M {
+  background-color: #fff;
+  color: #00008B;
+  border: 1px solid #00008B;
+}
+/*  */
+.title_form_reset.PD,
+.label_new_password_reset.PD {
+  color: #FF69B4;
+}
+
+.input-reset-senha.PD {
+  border: 1px solid #000;
+}
+
+.button_login_reset.PD {
+  background-color: #FF69B4;
+  border: 1px solid #FF69B4;
+}
+
+.button_login_reset:hover.PD {
+  background-color: #fff;
+  color: #FF69B4;
+  border: 1px solid #FF69B4;
+}
+/*  */
+.title_form_reset.A,
+.label_new_password_reset.A {
+  color: #000;
+}
+
+.input-reset-senha.A {
+  border: 1px solid #808080;
+}
+
+.button_login_reset.A {
+  background-color: #000;
+  border: 1px solid #000;
+}
+
+.button_login_reset:hover.A {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+
+.container-resetar-senha.A {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background: url(../../../img/resetarSenha/fundo-reset-senha-PB.svg) no-repeat top
+    left;
+  background-size: cover;
+  position: relative;
+}
+
+/* COMEÇO DO CSS DA PÁGINA */
 .container-resetar-senha {
   display: flex;
   align-items: center;
