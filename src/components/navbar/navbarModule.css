@@ -18,6 +18,10 @@
 .home-navbar .navbar input:checked ~ label .menu .hamburguer.DPTT:after {
   background-color: #FFA500;
 }
+
+.navbar-d.DPTT .itens-menu li button {
+  color: #FFA500;
+}
 /*  */
 .navbar-d.M .itens-menu li a {
   color: #00BFFF;
@@ -37,6 +41,10 @@
 
 .home-navbar .navbar input:checked ~ label .menu .hamburguer.M:after {
   background-color: #00BFFF;
+}
+
+.navbar-d.M .itens-menu li button {
+  color: #00BFFF;
 }
 /*  */
 .navbar-d.PD .itens-menu li a {
@@ -58,6 +66,10 @@
 .home-navbar .navbar input:checked ~ label .menu .hamburguer.PD:after {
   background-color: #FF69B4;
 }
+
+.navbar-d.PD .itens-menu li button {
+  color: #FF69B4;
+}
 /*  */
 .navbar-d.A .itens-menu li a {
   color: #000;
@@ -77,6 +89,10 @@
 
 .home-navbar .navbar input:checked ~ label .menu .hamburguer.A:after {
   background-color: #000;
+}
+
+.navbar-d.A .itens-menu li button {
+  color: #000;
 }
 
 /* COMEÇO DO CSS DA PÁGINA */

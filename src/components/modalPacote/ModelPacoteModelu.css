@@ -1,3 +1,90 @@
+/* CORES DO MODO DALTONISMO */
+.pacotes .modal-pago .pacote .btn.DPTT {
+  background-color: #0000FF;
+  border: 1px solid #0000FF;
+}
+
+.container-pacote .pacotes .pacote .btn.DPTT:hover {
+  color: #0000FF;
+  border: 1px solid #0000FF;
+}
+
+.pacotes .modal-pago .btn-modal.DPTT {
+  color: #0000FF;
+}
+/*  */
+.pacotes .modal-pago .pacote .btn.M {
+  background-color: #00BFFF;
+  border: 1px solid #00BFFF;
+}
+
+.pacotes .modal-pago .pacote .btn.M:hover {
+  color: #00BFFF;
+  border: 1px solid #00BFFF;
+}
+
+.pacotes .modal-pago .btn-modal.M {
+  color: #00BFFF;
+}
+/*  */
+.pacotes .modal-pago .pacote .btn.PD {
+  background-color: #FF69B4;
+  border: 1px solid #FF69B4;
+}
+
+.pacotes .modal-pago .pacote .btn.PD:hover {
+  color: #FF69B4;
+  border: 1px solid #FF69B4;
+}
+
+.pacotes .modal-pago .btn-modal.PD {
+  color: #FF69B4;
+}
+/*  */
+.pacotes .modal-pago .pacote .btn.A {
+  background-color: #000;
+  border: 1px solid #000;
+}
+
+.pacotes .modal-pago .pacote .btn.A:hover {
+  color: #000;
+  border: 1px solid #000;
+}
+
+.pacotes .modal-pago .btn-modal.A {
+  color: #000;
+}
+/*  */
+.pacotes .modal-pago .pacote .btn.M {
+  background-color: #00BFFF;
+  border: 1px solid #00BFFF;
+}
+
+.pacotes .modal-pago .pacote .btn.M:hover {
+  color: #00BFFF;
+  border: 1px solid #00BFFF;
+}
+/*  */
+.pacotes .modal-pago .pacote .btn.PD {
+  background-color: #FF69B4;
+  border: 1px solid #FF69B4;
+}
+
+.pacotes .modal-pago .pacote .btn.PD:hover {
+  color: #FF69B4;
+  border: 1px solid #FF69B4;
+}
+/*  */
+.pacotes .modal-pago .pacote .btn.A {
+  background-color: #000;
+  border: 1px solid #000;
+}
+
+.pacotes .modal-pago .pacote .btn.A:hover {
+  color: #000;
+  border: 1px solid #000;
+}
+
 /* MODALS */
 .pacotes .modal-pago {
   display: flex;

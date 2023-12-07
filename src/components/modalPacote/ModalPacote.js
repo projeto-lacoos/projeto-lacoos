@@ -2,8 +2,26 @@ import "./ModelPacoteModelu.css";
 
 import { Link } from "react-router-dom";
 import { FaRegCheckCircle } from "react-icons/fa";
+import { useContext } from "react";
+import { ThemeContext } from "../context/ThemeContext";
 
 export default function ModalPacote({ handleAbrirModal }) {
+  const { theme } = useContext(ThemeContext);
+
+  const getThemeClass = (theme) => {
+    switch (theme) {
+      case "DPTT":
+        return "DPTT";
+      case "M":
+        return "M";
+      case "PD":
+        return "PD";
+      case "A":
+        return "A";
+      default:
+        return "default";
+    }
+  };
   return (
     <>
       <div className="pacotes">
@@ -92,10 +110,10 @@ export default function ModalPacote({ handleAbrirModal }) {
                 Piso tátil
               </li>
             </ul>
-            <Link to={"/pagamento"} className="btn">
+            <Link to={"/pagamento"} className={`btn ${getThemeClass(theme)}`}>
               Case Agora
             </Link>
-            <div className="btn-modal" onClick={handleAbrirModal}>
+            <div className={`btn-modal ${getThemeClass(theme)}`} onClick={handleAbrirModal}>
               X
             </div>
           </div>

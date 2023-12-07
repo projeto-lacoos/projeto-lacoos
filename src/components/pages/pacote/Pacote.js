@@ -9,8 +9,25 @@ import { Link } from "react-router-dom";
 import { FaRegCheckCircle } from "react-icons/fa";
 import { useContext, useState } from "react";
 import { ApplicationContext } from "../../context/ApplicationProvider";
+import { ThemeContext } from "../../context/ThemeContext";
 
 export default function Pacote() {
+  const { theme } = useContext(ThemeContext);
+
+  const getThemeClass = (theme) => {
+    switch (theme) {
+      case "DPTT":
+        return "DPTT";
+      case "M":
+        return "M";
+      case "PD":
+        return "PD";
+      case "A":
+        return "A";
+      default:
+        return "default";
+    }
+  };
   const [modalPacote, setModalPacote] = useState(false);
 
   const { user, setAuth, auth } = useContext(ApplicationContext);
@@ -120,7 +137,7 @@ export default function Pacote() {
             <p className="ver-mais" onClick={handleAbrirModal}>
               Ver mais
             </p>
-            <Link to={auth ? "/pagamento" : "/login"} className="btn">
+            <Link to={auth ? "/pagamento" : "/login"} className={`btn ${getThemeClass(theme)}`}>
               Case Agora
             </Link>
           </div>

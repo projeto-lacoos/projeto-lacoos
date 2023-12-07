@@ -1,3 +1,45 @@
+/* CORES DO MODO DALTONISMO */
+.container-pacote .pacotes .pacote .btn.DPTT {
+  background-color: #0000FF;
+  border: 1px solid #0000FF;
+}
+
+.container-pacote .pacotes .pacote .btn.DPTT:hover {
+  color: #0000FF;
+  border: 1px solid #0000FF;
+}
+/*  */
+.container-pacote .pacotes .pacote .btn.M {
+  background-color: #00BFFF;
+  border: 1px solid #00BFFF;
+}
+
+.container-pacote .pacotes .pacote .btn.M:hover {
+  color: #00BFFF;
+  border: 1px solid #00BFFF;
+}
+/*  */
+.container-pacote .pacotes .pacote .btn.PD {
+  background-color: #FF69B4;
+  border: 1px solid #FF69B4;
+}
+
+.container-pacote .pacotes .pacote .btn.PD:hover {
+  color: #FF69B4;
+  border: 1px solid #FF69B4;
+}
+/*  */
+.container-pacote .pacotes .pacote .btn.A {
+  background-color: #000;
+  border: 1px solid #000;
+}
+
+.container-pacote .pacotes .pacote .btn.A:hover {
+  color: #000;
+  border: 1px solid #000;
+}
+
+/* COMEÇO DO CSS DA PÁGINA */
 .container-pacote {
   height: 100vh;
   background: url(../../../img/pacote/fundo-pacote.svg) no-repeat top center;
