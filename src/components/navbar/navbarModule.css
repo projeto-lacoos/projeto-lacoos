@@ -1,3 +1,85 @@
+/* CORES DO MODO DALTONISMO */
+.navbar-d.DPTT .itens-menu li a {
+  color: #FFA500;
+}
+
+.navbar-d.DPTT .itens-menu .logar .user {
+  border: 2px solid #FFA500;
+}
+
+.home-navbar .navbar input:checked ~ label .menu .hamburguer.DPTT {
+  background-color: #FFA500;
+}
+
+.home-navbar .navbar input:checked ~ label .menu .hamburguer.DPTT:before {
+  background-color: #FFA500;
+}
+
+.home-navbar .navbar input:checked ~ label .menu .hamburguer.DPTT:after {
+  background-color: #FFA500;
+}
+/*  */
+.navbar-d.M .itens-menu li a {
+  color: #00BFFF;
+}
+
+.navbar-d.M .itens-menu .logar .user {
+  border: 2px solid #00BFFF;
+}
+
+.home-navbar .navbar input:checked ~ label .menu .hamburguer.M {
+  background-color: #00BFFF;
+}
+
+.home-navbar .navbar input:checked ~ label .menu .hamburguer.M:before {
+  background-color: #00BFFF;
+}
+
+.home-navbar .navbar input:checked ~ label .menu .hamburguer.M:after {
+  background-color: #00BFFF;
+}
+/*  */
+.navbar-d.PD .itens-menu li a {
+  color: #FF69B4;
+}
+
+.navbar-d.PD .itens-menu .logar .user {
+  border: 2px solid #FF69B4;
+}
+
+.home-navbar .navbar input:checked ~ label .menu .hamburguer.PD {
+  background-color: #FF69B4;
+}
+
+.home-navbar .navbar input:checked ~ label .menu .hamburguer.PD:before {
+  background-color: #FF69B4;
+}
+
+.home-navbar .navbar input:checked ~ label .menu .hamburguer.PD:after {
+  background-color: #FF69B4;
+}
+/*  */
+.navbar-d.A .itens-menu li a {
+  color: #000;
+}
+
+.navbar-d.A .itens-menu .logar .user {
+  border: 2px solid #000;
+}
+
+.home-navbar .navbar input:checked ~ label .menu .hamburguer.A {
+  background-color: #000;
+}
+
+.home-navbar .navbar input:checked ~ label .menu .hamburguer.A:before {
+  background-color: #000;
+}
+
+.home-navbar .navbar input:checked ~ label .menu .hamburguer.A:after {
+  background-color: #000;
+}
+
+/* COMEÇO DO CSS DA PÁGINA */
 .home-navbar {
   position: relative;
   display: flex;
