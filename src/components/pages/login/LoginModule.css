@@ -1,4 +1,80 @@
 /* CORES DO MODO DALTONISMO */
+.input-login.DPTT {
+  border: 1px solid #FFA500;
+}
+
+.button_login.DPTT {
+  background-color: #0000FF;
+}
+
+.link_login_password.DPTT,
+.link_creat_cont.DPTT,
+li.DPTT,
+.title_form.DPTT,
+.label_login.DPTT {
+  color: #0000FF;
+}
+/*  */
+.input-login.M {
+  border: 1px solid #00BFFF;
+}
+
+.button_login.M {
+  background-color: #00008B;
+}
+
+.link_login_password.M,
+.link_creat_cont.M,
+li.M,
+.title_form.M,
+.label_login.M {
+  color: #00008B;
+}
+/*  */
+.input-login.PD {
+  border: 1px solid #FF69B4;
+}
+
+.button_login.PD {
+  background-color: #FF69B4;
+}
+
+.link_login_password.PD,
+.link_creat_cont.PD,
+li.PD,
+.title_form.PD,
+.label_login.PD {
+  color: #FF69B4;
+}
+/*  */
+.input-login.A {
+  border: 1px solid #000;
+}
+
+.button_login.A {
+  background-color: #000;
+}
+
+.link_login_password.A,
+.link_creat_cont.A,
+li.A,
+.title_form.A,
+.label_login.A {
+  color: #000;
+}
+
+.header_logo.A {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
+  background: url(../../../img/login/fundo-login-PB.svg) no-repeat;
+  background-size: cover;
+}
+
 
 
 /* COMEÇO DO CSS DA PÁGINA */
