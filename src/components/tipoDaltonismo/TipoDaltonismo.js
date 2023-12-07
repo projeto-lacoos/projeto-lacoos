@@ -1,9 +1,9 @@
 import "./TipoDaltonismoModule.css";
 
-import Input from "../input/Input";
+import InputComFuncao from "../input/InputComFuncao";
+
 import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
-import InputComFuncao from "../input/InputComFuncao";
 
 export default function TipoDaltonismo({ imagem, tipos, classe }) {
 
@@ -11,7 +11,6 @@ export default function TipoDaltonismo({ imagem, tipos, classe }) {
 
   const handleToggleTheme = () => {
     toggleTheme(classe);
-    console.log(toggleTheme(classe));
   }
 
   return (

@@ -1,3 +1,37 @@
+/* CORES DO MODO DALTONISMO */
+.footer.DPTT {
+  background-color: #0000FF;
+}
+
+.footer-cima .footer-informacoes .footer-amarelo.DPTT {
+  color: #FFA500;
+}
+
+.footer.PD{
+  background-color: #008000;
+}
+
+.footer-cima .footer-informacoes .footer-amarelo.PD {
+  color: #FF69B4;
+}
+
+.footer.M {
+  background-color: #00BFFF;
+}
+
+.footer-cima .footer-informacoes .footer-amarelo.M {
+  color: #fff;
+}
+
+.footer.A {
+  background-color: #000;
+}
+
+.footer-cima .footer-informacoes .footer-amarelo.A {
+  color: #fff;
+}
+
+/* COMEÇO DO CSS DO SITE */
 .footer {
   background-color: #658955;
   display: flex;

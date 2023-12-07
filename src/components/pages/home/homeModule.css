@@ -1,6 +1,40 @@
 /* CORES MODO DALTONISMO */
 .home .container-home .botao-home.DPTT{
-  background-color: #000;
+  background-color: #FFA500;
+}
+
+.home .container-home .textos-central .titulo-principal .css-titulo.DPTT {
+  color: #FFA500;
+}
+
+.home .container-home .botao-home.PD{
+  background-color: #FF69B4;
+}
+
+.home .container-home .textos-central .titulo-principal .css-titulo.PD {
+  color: #FF69B4;
+}
+
+.home .container-home .botao-home.M{
+  background-color: #00BFFF;
+}
+
+.home .container-home .textos-central .titulo-principal .css-titulo.M {
+  color: #00BFFF;
+}
+
+.home .container-home .botao-home.A{
+  background-color: #fff;
+  color: #000;
+}
+
+.home .container-home .textos-central .titulo-principal .css-titulo.A {
+  color: #fff;
+}
+
+.home.A {
+  background: url(../../../img/home/fundo-home-preto-branco.svg) no-repeat top center;
+  background-size: cover;
 }
 
 /* SECTION HOME */

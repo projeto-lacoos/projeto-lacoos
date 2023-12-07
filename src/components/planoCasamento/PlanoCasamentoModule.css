@@ -1,3 +1,62 @@
+/* CORES MODO DALTONISMO */
+.caminho-planejamento .caixa-textos .texto .conteudo-home .titulo-planoCasamento.DPTT{
+  color: #0000FF;
+}
+
+.caminho-planejamento .caixa-textos .texto .conteudo-home .btn-caminho-planejamento.DPTT {
+  background-color: #0000FF;
+  border: 1px solid #0000FF;
+}
+
+.caminho-planejamento .caixa-textos .texto .conteudo-home .btn-caminho-planejamento.DPTT:hover {
+  background-color: #FFFFFF;
+  color: #0000FF;
+}
+
+.caminho-planejamento .caixa-textos .texto .conteudo-home .titulo-planoCasamento.PD{
+  color: #FF69B4;
+}
+
+.caminho-planejamento .caixa-textos .texto .conteudo-home .btn-caminho-planejamento.PD {
+  background-color: #FF69B4;
+  border: 1px solid #FF69B4;
+}
+
+.caminho-planejamento .caixa-textos .texto .conteudo-home .btn-caminho-planejamento.PD:hover {
+  background-color: #FFFFFF;
+  color: #FF69B4;
+}
+
+.caminho-planejamento .caixa-textos .texto .conteudo-home .titulo-planoCasamento.M{
+  color: #00BFFF;
+}
+
+.caminho-planejamento .caixa-textos .texto .conteudo-home .btn-caminho-planejamento.M {
+  background-color: #00BFFF;
+  border: 1px solid #00BFFF;
+}
+
+.caminho-planejamento .caixa-textos .texto .conteudo-home .btn-caminho-planejamento.M:hover {
+  background-color: #FFFFFF;
+  color: #00BFFF;
+}
+
+.caminho-planejamento .caixa-textos .texto .conteudo-home .titulo-planoCasamento.A{
+  color: #000;
+}
+
+.caminho-planejamento .caixa-textos .texto .conteudo-home .btn-caminho-planejamento.A {
+  background-color: #000;
+  border: 1px solid #000;
+}
+
+.caminho-planejamento .caixa-textos .texto .conteudo-home .btn-caminho-planejamento.A:hover {
+  background-color: #FFFFFF;
+  color: #000;
+}
+
+/* COMEÇO DO CSS DO SITE */
+
 .caminho-planejamento .decoracao-cima {
   position: absolute;
   top: -20rem;
