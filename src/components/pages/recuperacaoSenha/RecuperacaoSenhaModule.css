@@ -19,6 +19,81 @@
   border: 1px solid #0000FF;
   color: #0000FF;
 }
+/*  */
+.lado-d .box .textos .h1-textos.M,
+.lado-d .box .valores .valor-label.M,
+.lado-d .box .voltar-recuperacao-senha.M {
+  color: #00008B;
+}
+
+.lado-d .box .valores .input-valor.M {
+  border: 1px solid #00008B;
+}
+
+.lado-d .box .button-recuperacao-senha .btn-recup-senha.M {
+  background-color: #00008B;
+  border: 1px solid #00008B;
+}
+
+.lado-d .box .button-recuperacao-senha .btn-recup-senha:hover.M {
+  background-color: #fff;
+  border: 1px solid #00008B;
+  color: #00008B;
+}
+/*  */
+.lado-d .box .textos .h1-textos.PD,
+.lado-d .box .valores .valor-label.PD,
+.lado-d .box .voltar-recuperacao-senha.PD {
+  color: #FF69B4;
+}
+
+.lado-d .box .valores .input-valor.PD {
+  border: 1px solid #000;
+}
+
+.lado-d .box .button-recuperacao-senha .btn-recup-senha.PD {
+  background-color: #FF69B4;
+  border: 1px solid #FF69B4;
+}
+
+.lado-d .box .button-recuperacao-senha .btn-recup-senha:hover.PD {
+  background-color: #fff;
+  border: 1px solid #FF69B4;
+  color: #FF69B4;
+}
+/*  */
+.lado-d .box .textos .h1-textos.A,
+.lado-d .box .valores .valor-label.A,
+.lado-d .box .voltar-recuperacao-senha.A {
+  color: #000;
+}
+
+.lado-d .box .valores .input-valor.A {
+  border: 1px solid #000;
+}
+
+.lado-d .box .button-recuperacao-senha .btn-recup-senha.A {
+  background-color: #000;
+  border: 1px solid #000;
+}
+
+.lado-d .box .button-recuperacao-senha .btn-recup-senha:hover.A {
+  background-color: #fff;
+  border: 1px solid #000;
+  color: #000;
+}
+
+.container-recuperacao-senha.A {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../../../img/recuperacaoSenha/fundo-recuperacao-senha-PB.svg) no-repeat top
+  center;
+  background-size: cover;
+  position: relative;
+}
 
 /* COMEÇO DO CSS DA PÁGINA */
 .container-recuperacao-senha {

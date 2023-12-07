@@ -1,11 +1,11 @@
 import "./RecuperacaoSenhaModule.css";
 
 
-import LogoReduzida from '../../../img/login/logo-reduzida.svg'
-import DPTT from "../../../img/login/oo.svg";
-import M from "../../../img/login/oo-2.svg";
-import PD from "../../../img/login/oo-1.svg";
-import A from "../../../img/login/oo-3.svg";
+import LogoReduzida from '../../../img/recuperacaoSenha/logo-reduzida.svg'
+import DPTT from "../../../img/recuperacaoSenha/oo.svg";
+import M from "../../../img/recuperacaoSenha/oo-2.svg";
+import PD from "../../../img/recuperacaoSenha/oo-1.svg";
+import A from "../../../img/recuperacaoSenha/oo-3.svg";
 import Input from "../../input/Input";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -74,7 +74,7 @@ export default function RecuperacaoSenha() {
   }
 
   return (
-    <div className="container-recuperacao-senha">
+    <div className={`container-recuperacao-senha ${getThemeClass(theme)}`}>
       <div className="lado-e">
         <img src={getThemeLogo(theme)} className="logo-reduzido" alt="Logo da Laçoos, onde é uma imagem de duas alianças se entrelaçando" />
       </div>
