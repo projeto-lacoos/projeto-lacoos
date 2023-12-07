@@ -1,12 +1,49 @@
 import "./RecuperacaoSenhaModule.css";
 
-import LogoReduzido from "../../../img/recuperacaoSenha/logoReduzido.png";
+
+import LogoReduzida from '../../../img/login/logo-reduzida.svg'
+import DPTT from "../../../img/login/oo.svg";
+import M from "../../../img/login/oo-2.svg";
+import PD from "../../../img/login/oo-1.svg";
+import A from "../../../img/login/oo-3.svg";
 import Input from "../../input/Input";
 import { Link, useNavigate } from "react-router-dom";
 
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { ThemeContext } from "../../context/ThemeContext";
 
 export default function RecuperacaoSenha() {
+  const { theme } = useContext(ThemeContext);
+
+  const getThemeClass = (theme) => {
+    switch (theme) {
+      case "DPTT":
+        return "DPTT";
+      case "M":
+        return "M";
+      case "PD":
+        return "PD";
+      case "A":
+        return "A";
+      default:
+        return "default";
+    }
+  };
+
+  const getThemeLogo = (theme) => {
+    switch (theme) {
+      case "DPTT":
+        return DPTT;
+      case "M":
+        return M;
+      case "PD":
+        return PD;
+      case "A":
+        return A;
+      default:
+        return LogoReduzida;
+    }
+  };
 
   const [email, setEmail] = useState('');
 
@@ -39,30 +76,30 @@ export default function RecuperacaoSenha() {
   return (
     <div className="container-recuperacao-senha">
       <div className="lado-e">
-        <img src={LogoReduzido} className="logo-reduzido" alt="Logo Entrelaçoos" />
+        <img src={getThemeLogo(theme)} className="logo-reduzido" alt="Logo da Laçoos, onde é uma imagem de duas alianças se entrelaçando" />
       </div>
       <div className="lado-d">
         <div className="box">
           <div className="textos">
-            <h1 className="h1-textos">Recuperação de senha</h1>
+            <h1 className={`h1-textos ${getThemeClass(theme)}`}>Recuperação de senha</h1>
             <p className="p-textos">Para recuperarmos sua senha, informe seu endereço de e-mail para que possamos enviar um link de redefinição de senha.</p>
           </div>
           <form className="form-recup-senh" action="">
             <div className="valores">
-              <label className="valor-label" htmlFor={"email_usuario"}>E-mail</label>
+              <label className={`valor-label ${getThemeClass(theme)}`} htmlFor={"email_usuario"}>E-mail</label>
               <Input
                 type={"text"}
                 placeholder={"Exemplo.sac@xxxx.com"}
-                name={"email_usuario"}
-                className={"input-valor"}
+                name={`email_usuario`}
+                className={`input-valor ${getThemeClass(theme)}`}
                 onchange={(e) => { setEmail(e.target.value) }}
               />
             </div>
             <div className="button-recuperacao-senha">
-              <button type="submit" className="btn-recup-senha" onClick={onSubmit}>Enviar</button>
+              <button type="submit" className={`btn-recup-senha ${getThemeClass(theme)}`} onClick={onSubmit}>Enviar</button>
             </div>
           </form>
-          <Link style={{ textDecoration: "none" }} to={"/login"} className="voltar-recuperacao-senha">Voltar</Link>
+          <Link style={{ textDecoration: "none" }} to={"/login"} className={`voltar-recuperacao-senha ${getThemeClass(theme)}`}>Voltar</Link>
         </div>
       </div>
     </div>
