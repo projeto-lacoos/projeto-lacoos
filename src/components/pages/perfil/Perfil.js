@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 
-import { useContext } from "react";
+import { useContext, useState } from "react";
 
 import { ApplicationContext } from "../../context/ApplicationProvider";
 
@@ -26,6 +26,32 @@ export default function Perfil() {
     setAuth(false);
     window.location.reload();
   }
+
+  const [email, setEmail] = useState('');
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    if (email !== '') {
+      try {
+        const response = await fetch('http://localhost:8080/v1/user/recover-password',
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              email: email
+            })
+          });
+        if (typeof window !== undefined && response.ok) {
+          navigate("/");
+        }
+      } catch (error) {
+        console.log(error);
+        alert('Algo deu errado! Mas enviou o email!');
+      }
+    }
+  }
   
   return (
     <>
@@ -46,7 +72,7 @@ export default function Perfil() {
                   <Link to={"#"}>
                     <li className="lista-perfil">Meu Formulário</li>
                   </Link>
-                  <Link to={"#"}>
+                  <Link to={"/pacote"}>
                     <li className="lista-perfil">Meu Pacote</li>
                   </Link>
                   <Link to={"#"}>
@@ -59,7 +85,7 @@ export default function Perfil() {
               </div>
             </div>
             <div className="container-form-perfil">
-              <form action="" method="post" className="form-perfil">
+              <form className="form-perfil">
                 <div className="inputs-form-perfil">
                   <div className="form-user-e">
                     <div className="grupo">
@@ -70,6 +96,7 @@ export default function Perfil() {
                         placeholder={user?.email}
                         name={"email-user"}
                         id={"email-user"}
+                        onchange={(e) => setEmail(e.target.value)}
                       />
                     </div>
                     <div className="cel-tel">
@@ -78,7 +105,7 @@ export default function Perfil() {
                         <Input
                           className={"input-perfil"}
                           type={"tel"}
-                          placeholder={user?.phone}
+                          placeholder={user?.phone ? user?.phone : "Informe um telefone"}
                           name={"celular"}
                           id={"celular"}
                         />
@@ -88,7 +115,7 @@ export default function Perfil() {
                         <Input
                           className={"input-perfil"}
                           type={"tel"}
-                          placeholder={user?.telephone}
+                          placeholder={user?.telephone ? user?.telephone : "Informe um telefone"}
                           name={"telefone"}
                           id={"telefone"}
                         />
@@ -101,9 +128,10 @@ export default function Perfil() {
                       <Input
                         className={"input-perfil"}
                         type={"date"}
-                        placeholder={user?.birthDate} // birthDate
+                        placeholder={ user?.birthDate ? user?.birthDate : "2004-10-20"} // birthDate
                         name={"idade"}
                         id={"idade"}
+                        readonly
                       />
                     </div>
                     <div className="grupo">
@@ -122,7 +150,7 @@ export default function Perfil() {
                   <button type="submit" className="btn-perfil">
                     Salvar alteração
                   </button>
-                  <Link to={"/recuperacao-senha"} className="btn-perfil">
+                  <Link to="/perfil" onClick={onSubmit} className="btn-perfil">
                     Alterar senha
                   </Link>
                 </div>

@@ -72,7 +72,7 @@ li img {
   width: 100%;
   margin-top: 20px;
   color: #658955;
-  font-size: 1.3rem;
+  font-size: 1.8rem;
 }
 
 .input-login {
@@ -90,14 +90,13 @@ li img {
 
 .link_login_password {
   position: relative;
-  top: 10px;
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   color: #658955;
   text-decoration: none;
 }
 
 .link_creat_cont {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   color: #658955;
   text-decoration: none;
 }
@@ -112,7 +111,7 @@ li img {
   font-size: 1.6rem;
   border-radius: 25px;
   border: 0;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
@@ -178,7 +177,7 @@ li img {
 
   .title_form {
     color: #658955;
-    font-size: 3rem;
+    font-size: 4rem;
   }
 
   .label_login {
@@ -214,7 +213,7 @@ li img {
   }
 
   .link_creat_cont {
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     color: #658955;
     text-decoration: none;
   }

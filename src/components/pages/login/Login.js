@@ -73,12 +73,12 @@ export default function Login() {
             Senha
             <Input className={"input-login"} type={"password"} placeholder={"Digite sua senha"} name={"senha_usuario"} onchange={(e) => { setSenha(e.target.value) }} />
           </label>
+          <button className="button_login" onClick={(e) => { onSubmit(e) }}>ENTRAR</button>
           <p>
             <Link to={"/recuperacao-senha"} className="link_login_password">
               Esqueceu a senha?
             </Link>
           </p>
-          <button className="button_login" onClick={(e) => { onSubmit(e) }}>ENTRAR</button>
           <p>
             <Link to="/nova-conta" className="link_creat_cont">
               Não tem conta ainda? Crie agora
