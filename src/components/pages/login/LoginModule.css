@@ -5,6 +5,12 @@
 
 .button_login.DPTT {
   background-color: #0000FF;
+  border: 1px solid #0000FF;
+}
+
+.button_login.DPTT:hover {
+  background-color: #fff;
+  color: #0000FF;
 }
 
 .link_login_password.DPTT,
@@ -21,6 +27,12 @@ li.DPTT,
 
 .button_login.M {
   background-color: #00008B;
+  border: 1px solid #00008B;
+}
+
+.button_login.M:hover {
+  background-color: #fff;
+  color: #00008B;
 }
 
 .link_login_password.M,
@@ -37,6 +49,12 @@ li.M,
 
 .button_login.PD {
   background-color: #FF69B4;
+  border: 1px solid #FF69B4;
+}
+
+.button_login.PD:hover {
+  background-color: #fff;
+  color: #FF69B4;
 }
 
 .link_login_password.PD,
@@ -53,6 +71,12 @@ li.PD,
 
 .button_login.A {
   background-color: #000;
+  border: 1px solid #000;
+}
+
+.button_login:hover.A {
+  background-color: #fff;
+  color: #000;
 }
 
 .link_login_password.A,
@@ -199,6 +223,13 @@ li img {
   border-radius: 25px;
   border: 0;
   margin-bottom: 25px;
+  border: 1px solid #658955;
+  transition: .3s ease-in-out;
+}
+
+.button_login:hover {
+  color: #658955;
+  background-color: #fff;
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
