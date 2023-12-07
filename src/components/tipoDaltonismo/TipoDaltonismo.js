@@ -7,7 +7,22 @@ import { ThemeContext } from "../context/ThemeContext";
 
 export default function TipoDaltonismo({ imagem, tipos, classe }) {
 
-  const { toggleTheme } = useContext(ThemeContext);
+  const { toggleTheme, theme } = useContext(ThemeContext);
+
+  const getThemeClass = (theme) => {
+    switch (theme) {
+      case "DPTT":
+        return "DPTT";
+      case "M":
+        return "M";
+      case "PD":
+        return "PD";
+      case "A":
+        return "A";
+      default:
+        return "default";
+    }
+  };
 
   const handleToggleTheme = () => {
     toggleTheme(classe);
@@ -19,7 +34,7 @@ export default function TipoDaltonismo({ imagem, tipos, classe }) {
         <p className="tipos">{tipos}</p>
       </div>
       <div className="cores-alternador">
-        <img className="cores-daltonismo" src={imagem} alt="" />
+        <img className={`cores-daltonismo ${getThemeClass(theme)}`} src={imagem} alt="" />
         <InputComFuncao
           className={"input-tipoDaltonismo"}
           type={"radio"}

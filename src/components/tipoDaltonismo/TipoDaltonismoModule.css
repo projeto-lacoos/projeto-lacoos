@@ -1,3 +1,17 @@
+/* CORES DO MODO DALTONISMO */
+.cores-daltonismo.DPTT,
+.cores-daltonismo.M,
+.cores-daltonismo.PD {
+  border: 1px solid #000;
+  border-radius: 50%;
+}
+/*  */
+.cores-daltonismo.A {
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+
+/* COMEÇANDO O CSS DA PÁGINA */
 .tipos-daltonismo .tipo-daltonismo {
   display: flex;
   align-items: center;
@@ -10,6 +24,11 @@
     width: 20rem;
     font-size: 1.8rem;
   }
+
+.tipo-daltonismo .cores-alternador .cores-daltonismo {
+  border: 1px solid #658955;
+  border-radius: 50%;
+}
 
 .input-tipoDaltonismo {
   appearance: none;

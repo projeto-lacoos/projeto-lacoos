@@ -1,3 +1,37 @@
+/* CORES DO MODO DALTONISMO */
+.modo-daltonismo-caixa.DPTT {
+  background-color: #0000FF;
+}
+
+.modo-daltonismo-caixa .btn-voltar.DPTT {
+  color: #FFA500;
+}
+/*  */
+.modo-daltonismo-caixa.M {
+  background-color: #00BFFF;
+}
+
+.modo-daltonismo-caixa .btn-voltar.M {
+  color: #00008B;
+}
+/*  */
+.modo-daltonismo-caixa.PD {
+  background-color: #008000;
+}
+
+.modo-daltonismo-caixa .btn-voltar.PD {
+  color: #FF69B4;
+}
+/*  */
+.modo-daltonismo-caixa.A {
+  background-color: #000;
+}
+
+.modo-daltonismo-caixa .btn-voltar.A {
+  color: #fff;
+}
+
+/* COMEÇANDO O CSS DA PÁGINA */
 .caixa {
   position: fixed;
   top: 0;
@@ -42,7 +76,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #658955;
+  background-color: #658955;
   padding: 7rem;
   border-radius: 3.6rem;
   position: relative;
