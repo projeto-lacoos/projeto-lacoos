@@ -6,8 +6,25 @@ import { ApplicationContext } from "../../context/ApplicationProvider";
 import { jwtDecode } from 'jwt-decode'
 import Logo from "../../../img/login/Logo2.png";
 import { useNavigate } from "react-router-dom";
+import { ThemeContext } from "../../context/ThemeContext";
 
 export default function Login() {
+  const { theme } = useContext(ThemeContext);
+
+  const getThemeClass = (theme) => {
+    switch (theme) {
+      case "DPTT":
+        return "DPTT";
+      case "M":
+        return "M";
+      case "PD":
+        return "PD";
+      case "A":
+        return "A";
+      default:
+        return "default";
+    }
+  };
   const { setUser, setLocalUser, setAuth } = useContext(ApplicationContext);
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
@@ -74,16 +91,14 @@ export default function Login() {
             <Input className={"input-login"} type={"password"} placeholder={"Digite sua senha"} name={"senha_usuario"} onchange={(e) => { setSenha(e.target.value) }} />
           </label>
           <button className="button_login" onClick={(e) => { onSubmit(e) }}>ENTRAR</button>
-          <p>
+          <div className="container-links-login">
             <Link to={"/recuperacao-senha"} className="link_login_password">
               Esqueceu a senha?
             </Link>
-          </p>
-          <p>
             <Link to="/nova-conta" className="link_creat_cont">
               Não tem conta ainda? Crie agora
             </Link>
-          </p>
+          </div>
         </div>
       </section>
     </div>
