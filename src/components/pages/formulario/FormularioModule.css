@@ -1,3 +1,90 @@
+/* CORES DO MODO DALTONISMO */
+.title_forms.DPTT,
+.paragraph_question.DPTT {
+  color: #0000FF;
+}
+
+.input_extend.DPTT,
+.input_mini.DPTT {
+  border: 1px solid #0000FF;
+}
+
+.button_salvar.DPTT {
+  background-color: #0000FF;
+  border: 1px solid #0000FF;
+}
+
+.button_salvar:hover.DPTT {
+  background-color: #fff;
+  color: #0000FF;
+}
+/*  */
+.title_forms.M,
+.paragraph_question.M {
+  color: #000081;
+}
+
+.input_extend.M,
+.input_mini.M {
+  border: 1px solid #000081;
+}
+
+.button_salvar.M {
+  background-color: #000081;
+  border: 1px solid #000081;
+}
+
+.button_salvar:hover.M {
+  background-color: #fff;
+  color: #000081;
+}
+/*  */
+.title_forms.PD,
+.paragraph_question.PD {
+  color: #FF69B4;
+}
+
+.input_extend.PD,
+.input_mini.PD {
+  border: 1px solid #FF69B4;
+}
+
+.button_salvar.PD {
+  background-color: #FF69B4;
+  border: 1px solid #FF69B4;
+}
+
+.button_salvar:hover.PD {
+  background-color: #fff;
+  color: #FF69B4;
+}
+/*  */
+.title_forms.A,
+.paragraph_question.A {
+  color: #000;
+}
+
+.input_extend.A,
+.input_mini.A {
+  border: 1px solid #000;
+}
+
+.button_salvar.A {
+  background-color: #000;
+  border: 1px solid #000;
+}
+
+.button_salvar:hover.A {
+  background-color: #fff;
+  color: #000;
+}
+
+.container-formulario.A {
+  background: url(../../../img/formulario/fundo-formulario-PB.svg) no-repeat center;
+  background-size: cover;
+}
+
+/* COMEÇO DO CSS DA PÁGINA */
 .container-formulario {
   width: 100%;
   height: 100vh;
@@ -134,4 +221,11 @@
   font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
   cursor: pointer;
+  transition: .3s ease-in-out;
+  border: 1px solid #658955;
+}
+
+.button_salvar:hover {
+  background-color: #fff;
+  color: #658955;
 }
