@@ -78,7 +78,7 @@ export default function Formulario() {
   return (
     <>
       <Navbar />
-      <section className="container-formulario">
+      <section className={`container-formulario ${getThemeClass(theme)}`}>
         <img
           className="logo-laçoos-formulario"
           src={getThemeLogo(theme)}
@@ -86,19 +86,21 @@ export default function Formulario() {
         />
         <form className="forms_laçoos" action="#">
           <div className="title">
-            <h2 className="title_forms">Formulário</h2>
+            <h2 className={`title_forms ${getThemeClass(theme)}`}>
+              Formulário
+            </h2>
           </div>
 
           <div className="question_one">
             <div className="text_question">
-              <p className="paragraph_question">
+              <p className={`paragraph_question ${getThemeClass(theme)}`}>
                 1. Temos opções de decoração que variam de simples a mais
                 detalhadas. Qual estilo você prefere para o seu casamento?
               </p>
             </div>
             <div className="input_question">
               <input
-                className="input_extend"
+                className={`input_extend ${getThemeClass(theme)}`}
                 type="text"
                 placeholder="Descreva qual estilo você prefere?"
                 name="opc_decoracao"
@@ -108,13 +110,13 @@ export default function Formulario() {
 
           <div className="question_two">
             <div className="text_question">
-              <p className="paragraph_question">
+              <p className={`paragraph_question ${getThemeClass(theme)}`}>
                 2. Quanto de orçamento você tem disponivel para este evento?
               </p>
             </div>
             <div className="input_question">
               <input
-                className="input_extend"
+                className={`input_extend ${getThemeClass(theme)}`}
                 type="text"
                 placeholder="R$00,00"
                 name="orcamento"
@@ -124,14 +126,14 @@ export default function Formulario() {
 
           <div className="question_three">
             <div className="text_question">
-              <p className="paragraph_question">
+              <p className={`paragraph_question ${getThemeClass(theme)}`}>
                 3. Qual é o tipo específico de deficiência visual? (1) cegueira
                 total, (2) cegueira parcial, (3) daltonismo
               </p>
             </div>
             <div className="input_question mini">
               <input
-                className="input_mini"
+                className={`input_extend ${getThemeClass(theme)}`}
                 type="text"
                 placeholder="Ex:1"
                 name="tipo_deficienciaVisu"
@@ -141,14 +143,14 @@ export default function Formulario() {
 
           <div className="question_four">
             <div className="text_question">
-              <p className="paragraph_question">
+              <p className={`paragraph_question ${getThemeClass(theme)}`}>
                 4. Qual é o grau de visão residual? (grau de cegueira parcial/
                 tipos de daltonismo)
               </p>
             </div>
             <div className="input_question">
               <input
-                className="input_extend"
+                className={`input_extend ${getThemeClass(theme)}`}
                 type="text"
                 placeholder="Descreva aqui"
                 name="grau_residual"
@@ -158,11 +160,13 @@ export default function Formulario() {
 
           <div className="question_five">
             <div className="text_question">
-              <p className="paragraph_question">5. Você é sensível a luz?</p>
+              <p className={`paragraph_question ${getThemeClass(theme)}`}>
+                5. Você é sensível a luz?
+              </p>
             </div>
             <div className="input_question">
               <input
-                className="input_extend"
+                className={`input_extend ${getThemeClass(theme)}`}
                 type="text"
                 placeholder="Ex:sim"
                 name="sensivel_luz"
@@ -172,14 +176,14 @@ export default function Formulario() {
 
           <div className="question_six">
             <div className="text_question">
-              <p className="paragraph_question">
+              <p className={`paragraph_question ${getThemeClass(theme)}`}>
                 6. Há alguma preferência específica em relação à música ou
                 entretenimento durante o casamento?
               </p>
             </div>
             <div className="input_question">
               <input
-                className="input_extend"
+                className={`input_extend ${getThemeClass(theme)}`}
                 type="text"
                 placeholder="Descreva aqui"
                 name="preferencia_entreterimento"
@@ -189,14 +193,14 @@ export default function Formulario() {
 
           <div className="question_seven">
             <div className="text_question">
-              <p className="paragraph_question">
+              <p className={`paragraph_question ${getThemeClass(theme)}`}>
                 7. Existem restrições alimentares ou preferências específicas
                 que devem ser consideradas no cardápio?
               </p>
             </div>
             <div className="input_question">
               <input
-                className="input_extend"
+                className={`input_extend ${getThemeClass(theme)}`}
                 type="text"
                 placeholder="Descreva aqui"
                 name="resticao_alimentar"
@@ -206,14 +210,14 @@ export default function Formulario() {
 
           <div className="question_eight">
             <div className="text_question">
-              <p className="paragraph_question">
+              <p className={`paragraph_question ${getThemeClass(theme)}`}>
                 8. Como você prefere receber informações (1) braille, (2) áudio,
                 (3) texto ampliado?
               </p>
             </div>
             <div className="input_question mini">
               <input
-                className="input_mini"
+                className={`input_extend ${getThemeClass(theme)}`}
                 type="text"
                 placeholder="Ex:3"
                 name="receber_informacao"
@@ -223,13 +227,13 @@ export default function Formulario() {
 
           <div className="question_nine">
             <div className="text_question">
-              <p className="paragraph_question">
+              <p className={`paragraph_question ${getThemeClass(theme)}`}>
                 9. O local precisa ser acessível para cadeira de rodas?
               </p>
             </div>
             <div className="input_question mini">
               <input
-                className="input_mini"
+                className={`input_extend ${getThemeClass(theme)}`}
                 type="text"
                 placeholder="Ex:sim"
                 name="acessivel_cadeiraRodas"
@@ -239,13 +243,13 @@ export default function Formulario() {
 
           <div className="question_ten">
             <div className="text_question">
-              <p className="paragraph_question">
+              <p className={`paragraph_question ${getThemeClass(theme)}`}>
                 10.É necessário o uso do piso tátil?
               </p>
             </div>
             <div className="input_question mini">
               <input
-                className="input_mini"
+                className={`input_extend ${getThemeClass(theme)}`}
                 type="text"
                 placeholder="Ex:sim"
                 name="piso_portatil"
@@ -255,13 +259,13 @@ export default function Formulario() {
 
           <div className="question_eleven">
             <div className="text_question">
-              <p className="paragraph_question">
+              <p className={`paragraph_question ${getThemeClass(theme)}`}>
                 11. É necessário o cardápio ser em braille?
               </p>
             </div>
             <div className="input_question mini">
               <input
-                className="input_mini"
+                className={`input_extend ${getThemeClass(theme)}`}
                 type="text"
                 placeholder="Ex:sim"
                 name="cardapio_braille"
@@ -271,13 +275,13 @@ export default function Formulario() {
 
           <div className="question_twelve">
             <div className="text_question">
-              <p className="paragraph_question">
+              <p className={`paragraph_question ${getThemeClass(theme)}`}>
                 12. Qual é o nome do seu parceiro(a)?
               </p>
             </div>
             <div className="input_question">
               <input
-                className="input_extend"
+                className={`input_extend ${getThemeClass(theme)}`}
                 type="text"
                 placeholder="Ex:sim"
                 name="nome_parceiro"
@@ -287,13 +291,13 @@ export default function Formulario() {
 
           <div className="question_thirteen">
             <div className="text_question">
-              <p className="paragraph_question">
+              <p className={`paragraph_question ${getThemeClass(theme)}`}>
                 13. Qual é a data da sua cerimonia?
               </p>
             </div>
             <div className="input_question">
               <input
-                className="input_extend"
+                className={`input_extend ${getThemeClass(theme)}`}
                 type="text"
                 placeholder="XX/XX/XXXX"
                 name="data_cerimonia"
@@ -303,13 +307,13 @@ export default function Formulario() {
 
           <div className="question_fourteen">
             <div className="text_question">
-              <p className="paragraph_question">
+              <p className={`paragraph_question ${getThemeClass(theme)}`}>
                 14. Que horas você gostaria de realizar sua cerimônia?
               </p>
             </div>
             <div className="input_question">
               <input
-                className="input_extend"
+                className={`input_extend ${getThemeClass(theme)}`}
                 type="text"
                 placeholder="Ex:14:00"
                 name="horas_cerimonia"
@@ -319,13 +323,13 @@ export default function Formulario() {
 
           <div className="question_fiveteen">
             <div className="text_question">
-              <p className="paragraph_question">
+              <p className={`paragraph_question ${getThemeClass(theme)}`}>
                 15. Onde você mora dentro da Grande São Paulo?
               </p>
             </div>
             <div className="input_question">
               <input
-                className="input_extend"
+                className={`input_extend ${getThemeClass(theme)}`}
                 type="text"
                 placeholder="Ex:Moema"
                 name="reside"
@@ -335,14 +339,14 @@ export default function Formulario() {
 
           <div className="question_sixteen">
             <div className="text_question">
-              <p className="paragraph_question">
+              <p className={`paragraph_question ${getThemeClass(theme)}`}>
                 16. Como você imagina a cerimônia? Alguma preferência específica
                 para a troca de votos, leituras ou rituais?
               </p>
             </div>
             <div className="input_question">
               <input
-                className="input_extend"
+                className={`input_extend ${getThemeClass(theme)}`}
                 type="text"
                 placeholder="Descreva aqui"
                 name="prefencia_cerimonia"
@@ -352,14 +356,14 @@ export default function Formulario() {
 
           <div className="question_seventeen">
             <div className="text_question">
-              <p className="paragraph_question">
+              <p className={`paragraph_question ${getThemeClass(theme)}`}>
                 17. Você tem preferências específicas em relação à decoração que
                 envolvam texturas, aromas ou elementos táteis?
               </p>
             </div>
             <div className="input_question">
               <input
-                className="input_extend"
+                className={`input_extend ${getThemeClass(theme)}`}
                 type="text"
                 placeholder="Descreva aqui"
                 name="decoracao"
@@ -369,14 +373,14 @@ export default function Formulario() {
 
           <div className="question_eighteen">
             <div className="text_question">
-              <p className="paragraph_question">
+              <p className={`paragraph_question ${getThemeClass(theme)}`}>
                 18. Existe uma paleta de cores que você prefere ou que seja mais
                 acessível para daltonianos?
               </p>
             </div>
             <div className="input_question">
               <input
-                className="input_extend"
+                className={`input_extend ${getThemeClass(theme)}`}
                 type="text"
                 placeholder="Descreva aqui"
                 name="paleta_cores"
@@ -386,13 +390,13 @@ export default function Formulario() {
 
           <div className="question_nineteen">
             <div className="text_question">
-              <p className="paragraph_question">
+              <p className={`paragraph_question ${getThemeClass(theme)}`}>
                 19. Você gostaria de alguma indicação tátil na pista de dança?
               </p>
             </div>
             <div className="input_question mini">
               <input
-                className="input_mini"
+                className={`input_extend ${getThemeClass(theme)}`}
                 type="text"
                 placeholder="Ex:sim"
                 name="indicacao_tatil"
@@ -402,14 +406,14 @@ export default function Formulario() {
 
           <div className="question_twenty">
             <div className="text_question">
-              <p className="paragraph_question">
+              <p className={`paragraph_question ${getThemeClass(theme)}`}>
                 20. Como podemos garantir que a pista de dança seja segura e
                 acessível?
               </p>
             </div>
             <div className="input_question">
               <input
-                className="input_extend"
+                className={`input_extend ${getThemeClass(theme)}`}
                 type="text"
                 placeholder="Descreva aqui"
                 name="garantia_pistaAcessivel"
@@ -419,7 +423,7 @@ export default function Formulario() {
 
           <div className="question_twentyone">
             <div className="text_question">
-              <p className="paragraph_question">
+              <p className={`paragraph_question ${getThemeClass(theme)}`}>
                 21. Alguma preferência para o estilo de fotografia ou
                 videografia que facilite a experiência para pessoas com
                 deficiência visual?
@@ -427,7 +431,7 @@ export default function Formulario() {
             </div>
             <div className="input_question">
               <input
-                className="input_extend"
+                className={`input_extend ${getThemeClass(theme)}`}
                 type="text"
                 placeholder="Descreva aqui"
                 name="estilo_fotografia"
@@ -437,13 +441,13 @@ export default function Formulario() {
 
           <div className="question_twentytwo">
             <div className="text_question">
-              <p className="paragraph_question">
+              <p className={`paragraph_question ${getThemeClass(theme)}`}>
                 22. Você gostaria de ter descrições verbais ou táteis das fotos?
               </p>
             </div>
             <div className="input_question mini">
               <input
-                className="input_mini"
+                className={`input_extend ${getThemeClass(theme)}`}
                 type="text"
                 placeholder="Ex:sim"
                 name="descricao_foto"
@@ -453,14 +457,14 @@ export default function Formulario() {
 
           <div className="question_twentythree">
             <div className="text_question">
-              <p className="paragraph_question">
+              <p className={`paragraph_question ${getThemeClass(theme)}`}>
                 23. Como você prefere organizar os assentos para garantir
                 conforto e acessibilidade?
               </p>
             </div>
             <div className="input_question">
               <input
-                className="input_extend"
+                className={`input_extend ${getThemeClass(theme)}`}
                 type="text"
                 placeholder="Descreva aqui"
                 name="assentos"
@@ -470,14 +474,14 @@ export default function Formulario() {
 
           <div className="question_twentyfour">
             <div className="text_question">
-              <p className="paragraph_question">
+              <p className={`paragraph_question ${getThemeClass(theme)}`}>
                 24. Há alguma consideração especial para os arranjos de assentos
                 em relação aos convidados com deficiência visual?
               </p>
             </div>
             <div className="input_question">
               <input
-                className="input_extend"
+                className={`input_extend ${getThemeClass(theme)}`}
                 type="text"
                 placeholder="Descreva aqui"
                 name="arranjos_assentos"
@@ -487,14 +491,14 @@ export default function Formulario() {
 
           <div className="question_twentyfive">
             <div className="text_question">
-              <p className="paragraph_question">
+              <p className={`paragraph_question ${getThemeClass(theme)}`}>
                 25. Existe alguma adaptação que gostaria de fazer na programação
                 para acomodar suas necessidades?
               </p>
             </div>
             <div className="input_question">
               <input
-                className="input_extend"
+                className={`input_extend ${getThemeClass(theme)}`}
                 type="text"
                 placeholder="Descreva aqui"
                 name="adpatacao_programacao"
@@ -504,14 +508,14 @@ export default function Formulario() {
 
           <div className="question_twentysix">
             <div className="text_question">
-              <p className="paragraph_question">
+              <p className={`paragraph_question ${getThemeClass(theme)}`}>
                 26. Durante o planejamento e organização, como podemos garantir
                 que suas necessidades específicas sejam atendidas?
               </p>
             </div>
             <div className="input_question">
               <input
-                className="input_extend"
+                className={`input_extend ${getThemeClass(theme)}`}
                 type="text"
                 placeholder="Descreva aqui"
                 name="garantia_necessidades"
@@ -521,13 +525,13 @@ export default function Formulario() {
 
           <div className="question_twentyseven">
             <div className="text_question">
-              <p className="paragraph_question">
+              <p className={`paragraph_question ${getThemeClass(theme)}`}>
                 27. Gostaria de falar mais alguma coisa?
               </p>
             </div>
             <div className="input_question">
               <input
-                className="input_extend"
+                className={`input_extend ${getThemeClass(theme)}`}
                 type="text"
                 placeholder="Descreva aqui"
                 name="fala_final"
@@ -536,7 +540,12 @@ export default function Formulario() {
           </div>
 
           <div className="button_forms">
-            <input className="button_salvar" type="submit" value="SALVAR" />
+            <button
+              className={`button_salvar ${getThemeClass(theme)}`}
+              type="submit"
+            >
+              Salvar
+            </button>
           </div>
         </form>
       </section>

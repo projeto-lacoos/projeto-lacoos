@@ -1,3 +1,91 @@
+/* CORES DO MODO DALTONISMO */
+.title_forms.DPTT,
+.paragraph_question.DPTT {
+  color: #0000ff;
+}
+
+.input_extend.DPTT,
+.input_mini.DPTT {
+  border: 1px solid #0000ff;
+}
+
+.button_salvar.DPTT {
+  background-color: #0000ff;
+  border: 1px solid #0000ff;
+}
+
+.button_salvar:hover.DPTT {
+  background-color: #fff;
+  color: #0000ff;
+}
+/*  */
+.title_forms.M,
+.paragraph_question.M {
+  color: #000081;
+}
+
+.input_extend.M,
+.input_mini.M {
+  border: 1px solid #000081;
+}
+
+.button_salvar.M {
+  background-color: #000081;
+  border: 1px solid #000081;
+}
+
+.button_salvar:hover.M {
+  background-color: #fff;
+  color: #000081;
+}
+/*  */
+.title_forms.PD,
+.paragraph_question.PD {
+  color: #ff69b4;
+}
+
+.input_extend.PD,
+.input_mini.PD {
+  border: 1px solid #ff69b4;
+}
+
+.button_salvar.PD {
+  background-color: #ff69b4;
+  border: 1px solid #ff69b4;
+}
+
+.button_salvar:hover.PD {
+  background-color: #fff;
+  color: #ff69b4;
+}
+/*  */
+.title_forms.A,
+.paragraph_question.A {
+  color: #000;
+}
+
+.input_extend.A,
+.input_mini.A {
+  border: 1px solid #000;
+}
+
+.button_salvar.A {
+  background-color: #000;
+  border: 1px solid #000;
+}
+
+.button_salvar:hover.A {
+  background-color: #fff;
+  color: #000;
+}
+
+.container-formulario.A {
+  background: url(../../../img/formulario/fundo-formulario-PB.svg) no-repeat
+    center;
+  background-size: cover;
+}
+
+/* COMEÇO DO CSS DA PÁGINA */
 .container-formulario {
   width: 100%;
   height: 100vh;
@@ -18,9 +106,9 @@
 }
 
 .forms_laçoos {
-  width: 90%;
   height: 75vh;
   display: flex;
+  align-items: center;
   flex-direction: column;
   background-color: #ffffff;
   border-radius: 2rem 0.5rem 0.5rem 2rem;
@@ -30,6 +118,7 @@
 
 .title {
   display: flex;
+  width: 100%;
   flex: 1;
 }
 
@@ -101,17 +190,6 @@
   height: 7rem;
 }
 
-.input_mini {
-  width: 8vw;
-  height: 4rem;
-  border-radius: 20px;
-  padding: 20px;
-  border: 1px solid #658955;
-  outline: 0;
-  font-size: 1.2rem;
-  height: 7rem;
-}
-
 ::placeholder {
   font-size: 1.9rem;
   font-weight: 500;
@@ -125,13 +203,353 @@
 }
 
 .button_salvar {
-  width: 16rem;
-  height: 4rem;
+  padding: 1rem 4rem;
   border: 0;
   border-radius: 20px;
   background-color: #658955;
   color: #ffffff;
   font-family: "Roboto", sans-serif;
-  font-size: 1.6rem;
+  font-size: 3rem;
   cursor: pointer;
+  transition: 0.3s ease-in-out;
+  border: 1px solid #658955;
+}
+
+.button_salvar:hover {
+  background-color: #fff;
+  color: #658955;
+}
+
+@media (min-width: 1920px) {
+  .button_salvar {
+    padding: 1rem 5rem;
+    font-size: 3rem;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1919px) {
+  .forms_laçoos {
+    height: 75vh;
+    padding: 4rem;
+    margin-top: 1rem;
+  }
+
+  .button_salvar {
+    padding: 1rem 5rem;
+    font-size: 3rem;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .logo-laçoos-formulario {
+    top: 3%;
+    width: 8rem;
+  }
+
+  .forms_laçoos {
+    height: 75vh;
+    padding: 4rem;
+    margin-top: 1rem;
+  }
+
+  .paragraph_question {
+    font-size: 1.8rem;
+    width: 40rem;
+  }
+
+  .button_salvar {
+    padding: 1rem 5rem;
+    font-size: 3rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .logo-laçoos-formulario {
+    top: 3%;
+    width: 8rem;
+  }
+
+  .forms_laçoos {
+    width: 90%;
+    height: 75vh;
+    padding: 2rem;
+    margin-top: 1rem;
+  }
+
+  .title {
+    display: flex;
+    flex: 1;
+  }
+
+  .title_forms {
+    font-size: 3rem;
+  }
+
+  .question_one,
+  .question_two,
+  .question_three,
+  .question_four,
+  .question_five,
+  .question_six,
+  .question_seven,
+  .question_eight,
+  .question_nine,
+  .question_ten,
+  .question_eleven,
+  .question_twelve,
+  .question_thirteen,
+  .question_fourteen,
+  .question_fiveteen,
+  .question_sixteen,
+  .question_seventeen,
+  .question_eighteen,
+  .question_nineteen,
+  .question_twenty,
+  .question_twentyone,
+  .question_twentytwo,
+  .question_twentythree,
+  .question_twentyfour,
+  .question_twentyfive,
+  .question_twentysix,
+  .question_twentyseven,
+  .button_forms,
+  .text_question,
+  .input_question {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0rem;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+
+  .input_question {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .mini {
+    justify-content: flex-start;
+  }
+
+  .paragraph_question {
+    font-size: 1.8rem;
+    width: 100%;
+  }
+
+  .input_extend {
+    width: 100%;
+    height: 5rem;
+    border-radius: 2rem;
+    padding: 2rem;
+    font-size: 1.9rem;
+  }
+
+  .input_mini {
+    width: 100%;
+    height: 5rem;
+    border-radius: 2rem;
+    padding: 2rem;
+    font-size: 1.9rem;
+  }
+
+  .button_forms {
+    align-items: flex-end;
+  }
+
+  .button_salvar {
+    font-size: 2.2rem;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .logo-laçoos-formulario {
+    top: 3%;
+    width: 8rem;
+  }
+
+  .forms_laçoos {
+    width: 90%;
+    height: 75vh;
+    padding: 2rem;
+    margin-top: 1rem;
+  }
+
+  .title {
+    display: flex;
+    flex: 1;
+  }
+
+  .title_forms {
+    font-size: 3rem;
+  }
+
+  .question_one,
+  .question_two,
+  .question_three,
+  .question_four,
+  .question_five,
+  .question_six,
+  .question_seven,
+  .question_eight,
+  .question_nine,
+  .question_ten,
+  .question_eleven,
+  .question_twelve,
+  .question_thirteen,
+  .question_fourteen,
+  .question_fiveteen,
+  .question_sixteen,
+  .question_seventeen,
+  .question_eighteen,
+  .question_nineteen,
+  .question_twenty,
+  .question_twentyone,
+  .question_twentytwo,
+  .question_twentythree,
+  .question_twentyfour,
+  .question_twentyfive,
+  .question_twentysix,
+  .question_twentyseven,
+  .button_forms,
+  .text_question,
+  .input_question {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 0rem;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+
+  .input_question {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .mini {
+    justify-content: flex-start;
+  }
+
+  .paragraph_question {
+    font-size: 1.8rem;
+    width: 100%;
+  }
+
+  .input_extend {
+    width: 100%;
+    height: 5rem;
+    border-radius: 2rem;
+    padding: 2rem;
+    font-size: 1.9rem;
+  }
+
+  .input_mini {
+    width: 100%;
+    height: 5rem;
+    border-radius: 2rem;
+    padding: 2rem;
+    font-size: 1.9rem;
+  }
+
+  .button_forms {
+    align-items: flex-end;
+  }
+
+  .button_salvar {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 480px) {
+  .logo-laçoos-formulario {
+    top: 3%;
+    width: 8rem;
+  }
+
+  .forms_laçoos {
+    width: 90%;
+    height: 75vh;
+    padding: 2rem;
+    margin-top: 1rem;
+  }
+
+  .title {
+    display: flex;
+    flex: 1;
+  }
+
+  .title_forms {
+    font-size: 3rem;
+  }
+
+  .question_one,
+  .question_two,
+  .question_three,
+  .question_four,
+  .question_five,
+  .question_six,
+  .question_seven,
+  .question_eight,
+  .question_nine,
+  .question_ten,
+  .question_eleven,
+  .question_twelve,
+  .question_thirteen,
+  .question_fourteen,
+  .question_fiveteen,
+  .question_sixteen,
+  .question_seventeen,
+  .question_eighteen,
+  .question_nineteen,
+  .question_twenty,
+  .question_twentyone,
+  .question_twentytwo,
+  .question_twentythree,
+  .question_twentyfour,
+  .question_twentyfive,
+  .question_twentysix,
+  .question_twentyseven,
+  .button_forms,
+  .text_question,
+  .input_question {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+
+  .input_question {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .mini {
+    justify-content: flex-start;
+  }
+
+  .paragraph_question {
+    font-size: 1.5rem;
+    width: 100%;
+  }
+
+  .input_extend {
+    width: 100%;
+    height: 5rem;
+    border-radius: 2rem;
+    padding: 2rem;
+    font-size: 1.9rem;
+  }
+
+  .input_mini {
+    width: 100%;
+    height: 5rem;
+    border-radius: 2rem;
+    padding: 2rem;
+    font-size: 1.9rem;
+  }
+
+  .button_forms {
+    align-items: flex-end;
+  }
+
+  .button_salvar {
+    font-size: 1.8rem;
+  }
 }

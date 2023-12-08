@@ -70,7 +70,6 @@ export default function CarrosselImagens() {
 
     return (
         <section className='container-carrossel'>
-            {auth ? navigate("/convites") : notificacao ? (<NotificacaoLogar />) : ("")}
             <button className={`btn-arrow ${getThemeClass(theme)}`}>
                 <FaArrowLeft onClick={handleLeftClick} className='arrows' />
             </button>
