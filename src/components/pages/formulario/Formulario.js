@@ -11,6 +11,9 @@ import DPTT from "../../../img/formulario/oo.svg";
 import M from "../../../img/formulario/oo-2.svg";
 import PD from "../../../img/formulario/oo-1.svg";
 import A from "../../../img/formulario/oo-3.svg";
+import { useNavigate } from "react-router-dom";
+
+import Input from "../../input/Input";
 
 export default function Formulario() {
   const { theme } = useContext(ThemeContext);
@@ -45,6 +48,8 @@ export default function Formulario() {
     }
   };
 
+  const navigate = useNavigate();
+
   const [estilo, setEstilo] = useState('');
   const [orcamento, setOrcamento] = useState('');
   const [tipo_deficiencia, setTipo_deficiencia] = useState('');
@@ -59,7 +64,6 @@ export default function Formulario() {
   const [nome_parceiro, setNome_parceiro] = useState('');
   const [data_cerimonia, setData_cerimonia] = useState('');
   const [horario_cerimonia, setHorario_cerimonia] = useState('');
-
   const [onde_mora, setOnde_mora] = useState('');
   const [preferencias, setPreferencias] = useState('');
   const [preferencias_decoracao, setPreferencias_decoracao] = useState('');
@@ -74,6 +78,61 @@ export default function Formulario() {
   const [necessidades, setNecessidades] = useState('');
   const [mais_informacoes, setMais_informacoes] = useState('');
 
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    if(estilo !== "" && orcamento !== "" && tipo_deficiencia !== "" && grau_visao !== "" && sensivel_a_luz !== "" && musica_entretenimento !== "" && restricoes_alimentares !== "" && informacoes !== "" && cadeira_de_rodas !== "" && piso_tatil !== "" && cardapio_braile !== "" && nome_parceiro !== "" && data_cerimonia !== "" && restricoes_alimentares !== "" && horario_cerimonia !== "" && onde_mora !== "" && preferencias !== "" && preferencias_decoracao !== "" && paleta_de_cores !== "" && indicacao_tatil_danca !== "" && seguranca_pista !== "" && video_e_foto !== "" && descricoes_fotos !== "" && assentos !== "" && consideracoes_assentos !== "" && adaptacao_programacao !== "" && necessidades !== "" && mais_informacoes !== ""){
+      try{
+        const response = await fetch("", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            estilo: estilo,
+            orcamento: orcamento,
+            tipo_deficiencia: tipo_deficiencia,
+            grau_visao: grau_visao,
+            sensivel_a_luz: sensivel_a_luz,
+            musica_entretenimento: musica_entretenimento,
+            restricoes_alimentares: restricoes_alimentares,
+            informacoes: informacoes,
+            cadeira_de_rodas: cadeira_de_rodas,
+            piso_tatil: piso_tatil,
+            cardapio_braile: cardapio_braile,
+            nome_parceiro: nome_parceiro,
+            data_cerimonia: data_cerimonia,
+            horario_cerimonia: horario_cerimonia,
+            onde_mora: onde_mora,
+            preferencias: preferencias,
+            preferencias_decoracao: preferencias_decoracao,
+            paleta_de_cores: paleta_de_cores,
+            indicacao_tatil_danca: indicacao_tatil_danca,
+            seguranca_pista: seguranca_pista,
+            video_e_foto: video_e_foto,
+            descricoes_fotos: descricoes_fotos,
+            assentos: assentos,
+            consideracoes_assentos: consideracoes_assentos,
+            adaptacao_programacao: adaptacao_programacao,
+            necessidades: necessidades,
+            mais_informacoes: mais_informacoes
+          })
+        })
+
+        alert("Formulário cadastrado!");
+        const data = await response.json();
+        alert(data);
+        navigate("/pagamento");
+
+      } catch(error){
+        console.log(error);
+        alert("Problema na API.")
+      }
+
+    } else {
+      console.log("Preencha todos os campos: para que o seu sonho seja realizado!");
+    }
+
+  }
 
   return (
     <>
@@ -99,11 +158,12 @@ export default function Formulario() {
               </p>
             </div>
             <div className="input_question">
-              <input
+              <Input
                 className={`input_extend ${getThemeClass(theme)}`}
-                type="text"
-                placeholder="Descreva qual estilo você prefere?"
-                name="opc_decoracao"
+                type={"text"}
+                placeholder={"Descreva qual estilo você prefere?"}
+                name={"opc_decoracao"}
+                onchange={(e) => { setEstilo(e.target.value)}}
               />
             </div>
           </div>
@@ -115,11 +175,12 @@ export default function Formulario() {
               </p>
             </div>
             <div className="input_question">
-              <input
+              <Input
                 className={`input_extend ${getThemeClass(theme)}`}
-                type="text"
-                placeholder="R$00,00"
-                name="orcamento"
+                type={"text"}
+                placeholder={"R$00,00"}
+                name={"orcamento"}
+                onchange={(e) => { setOrcamento(e.target.value)}}
               />
             </div>
           </div>
@@ -132,11 +193,12 @@ export default function Formulario() {
               </p>
             </div>
             <div className="input_question mini">
-              <input
+              <Input
                 className={`input_extend ${getThemeClass(theme)}`}
-                type="text"
-                placeholder="Ex:1"
-                name="tipo_deficienciaVisu"
+                type={"text"}
+                placeholder={"Ex: 1"}
+                name={"tipo_deficienciaVisu"}
+                onchange={(e) => { setTipo_deficiencia(e.target.value)}}
               />
             </div>
           </div>
@@ -149,11 +211,12 @@ export default function Formulario() {
               </p>
             </div>
             <div className="input_question">
-              <input
+              <Input
                 className={`input_extend ${getThemeClass(theme)}`}
-                type="text"
-                placeholder="Descreva aqui"
-                name="grau_residual"
+                type={"text"}
+                placeholder={"Descreva aqui"}
+                name={"grau_residual"}
+                onchange={(e) => { setGrau_visao(e.target.value)}}
               />
             </div>
           </div>
@@ -165,11 +228,12 @@ export default function Formulario() {
               </p>
             </div>
             <div className="input_question">
-              <input
+              <Input
                 className={`input_extend ${getThemeClass(theme)}`}
-                type="text"
-                placeholder="Ex:sim"
-                name="sensivel_luz"
+                type={"text"}
+                placeholder={"Ex: Sim"}
+                name={"sensivel_luz"}
+                onchange={(e) => { setSensivel_a_luz(e.target.value)}}
               />
             </div>
           </div>
@@ -182,11 +246,12 @@ export default function Formulario() {
               </p>
             </div>
             <div className="input_question">
-              <input
+              <Input
                 className={`input_extend ${getThemeClass(theme)}`}
-                type="text"
-                placeholder="Descreva aqui"
-                name="preferencia_entreterimento"
+                type={"text"}
+                placeholder={"Descreva aqui"}
+                name={"preferencia_entreterimento"}
+                onchange={(e) => { setMusica_entretenimento(e.target.value)}}
               />
             </div>
           </div>
@@ -199,11 +264,12 @@ export default function Formulario() {
               </p>
             </div>
             <div className="input_question">
-              <input
+              <Input
                 className={`input_extend ${getThemeClass(theme)}`}
-                type="text"
-                placeholder="Descreva aqui"
-                name="resticao_alimentar"
+                type={"text"}
+                placeholder={"Descreva aqui"}
+                name={"resticao_alimentar"}
+                onchange={(e) => { setRestricoes_alimentares(e.target.value)}}
               />
             </div>
           </div>
@@ -216,11 +282,12 @@ export default function Formulario() {
               </p>
             </div>
             <div className="input_question mini">
-              <input
+              <Input
                 className={`input_extend ${getThemeClass(theme)}`}
-                type="text"
-                placeholder="Ex:3"
-                name="receber_informacao"
+                type={"text"}
+                placeholder={"Ex: 3"}
+                name={"receber_informacao"}
+                onchange={(e) => { setInformacoes(e.target.value)}}
               />
             </div>
           </div>
@@ -232,11 +299,12 @@ export default function Formulario() {
               </p>
             </div>
             <div className="input_question mini">
-              <input
+              <Input
                 className={`input_extend ${getThemeClass(theme)}`}
-                type="text"
-                placeholder="Ex:sim"
-                name="acessivel_cadeiraRodas"
+                type={"text"}
+                placeholder={"Ex: Sim"}
+                name={"acessivel_cadeiraRodas"}
+                onchange={(e) => { setCadeira_de_rodas(e.target.value)}}
               />
             </div>
           </div>
@@ -248,11 +316,12 @@ export default function Formulario() {
               </p>
             </div>
             <div className="input_question mini">
-              <input
+              <Input
                 className={`input_extend ${getThemeClass(theme)}`}
-                type="text"
-                placeholder="Ex:sim"
-                name="piso_portatil"
+                type={"text"}
+                placeholder={"Ex: Sim"}
+                name={"piso_portatil"}
+                onchange={(e) => { setPiso_tatil(e.target.value)}}
               />
             </div>
           </div>
@@ -264,11 +333,12 @@ export default function Formulario() {
               </p>
             </div>
             <div className="input_question mini">
-              <input
+              <Input
                 className={`input_extend ${getThemeClass(theme)}`}
-                type="text"
-                placeholder="Ex:sim"
-                name="cardapio_braille"
+                type={"text"}
+                placeholder={"Ex: Sim"}
+                name={"cardapio_braille"}
+                onchange={(e) => { setCardapio_braile(e.target.value)}}
               />
             </div>
           </div>
@@ -280,11 +350,12 @@ export default function Formulario() {
               </p>
             </div>
             <div className="input_question">
-              <input
+              <Input
                 className={`input_extend ${getThemeClass(theme)}`}
-                type="text"
-                placeholder="Ex:sim"
-                name="nome_parceiro"
+                type={"text"}
+                placeholder={"Ex: Sim"}
+                name={"nome_parceiro"}
+                onchange={(e) => { setNome_parceiro(e.target.value)}}
               />
             </div>
           </div>
@@ -296,11 +367,12 @@ export default function Formulario() {
               </p>
             </div>
             <div className="input_question">
-              <input
+              <Input
                 className={`input_extend ${getThemeClass(theme)}`}
-                type="text"
-                placeholder="XX/XX/XXXX"
-                name="data_cerimonia"
+                type={"text"}
+                placeholder={"XX/XX/XXXX"}
+                name={"data_cerimonia"}
+                onchange={(e) => { setData_cerimonia(e.target.value)}}
               />
             </div>
           </div>
@@ -312,11 +384,12 @@ export default function Formulario() {
               </p>
             </div>
             <div className="input_question">
-              <input
+              <Input
                 className={`input_extend ${getThemeClass(theme)}`}
-                type="text"
-                placeholder="Ex:14:00"
-                name="horas_cerimonia"
+                type={"text"}
+                placeholder={"Ex: 14:00"}
+                name={"horas_cerimonia"}
+                onchange={(e) => { setHorario_cerimonia(e.target.value)}}
               />
             </div>
           </div>
@@ -328,11 +401,12 @@ export default function Formulario() {
               </p>
             </div>
             <div className="input_question">
-              <input
+              <Input
                 className={`input_extend ${getThemeClass(theme)}`}
-                type="text"
-                placeholder="Ex:Moema"
-                name="reside"
+                type={"text"}
+                placeholder={"Ex:Moema"}
+                name={"reside"}
+                onchange={(e) => { setOnde_mora(e.target.value)}}
               />
             </div>
           </div>
@@ -345,11 +419,12 @@ export default function Formulario() {
               </p>
             </div>
             <div className="input_question">
-              <input
+              <Input
                 className={`input_extend ${getThemeClass(theme)}`}
-                type="text"
-                placeholder="Descreva aqui"
-                name="prefencia_cerimonia"
+                type={"text"}
+                placeholder={"Descreva aqui"}
+                name={"prefencia_cerimonia"}
+                onchange={(e) => { setPreferencias(e.target.value)}}
               />
             </div>
           </div>
@@ -362,11 +437,12 @@ export default function Formulario() {
               </p>
             </div>
             <div className="input_question">
-              <input
+              <Input
                 className={`input_extend ${getThemeClass(theme)}`}
-                type="text"
-                placeholder="Descreva aqui"
-                name="decoracao"
+                type={"text"}
+                placeholder={"Descreva aqui"}
+                name={"decoracao"}
+                onchange={(e) => { setPreferencias_decoracao(e.target.value)}}
               />
             </div>
           </div>
@@ -379,11 +455,12 @@ export default function Formulario() {
               </p>
             </div>
             <div className="input_question">
-              <input
+              <Input
                 className={`input_extend ${getThemeClass(theme)}`}
-                type="text"
-                placeholder="Descreva aqui"
-                name="paleta_cores"
+                type={"text"}
+                placeholder={"Descreva aqui"}
+                name={"paleta_cores"}
+                onchange={(e) => { setPaleta_de_cores(e.target.value)}}
               />
             </div>
           </div>
@@ -395,11 +472,12 @@ export default function Formulario() {
               </p>
             </div>
             <div className="input_question mini">
-              <input
+              <Input
                 className={`input_extend ${getThemeClass(theme)}`}
-                type="text"
-                placeholder="Ex:sim"
-                name="indicacao_tatil"
+                type={"text"}
+                placeholder={"Ex: Sim"}
+                name={"indicacao_tatil"}
+                onchange={(e) => { setIndicacao_tatil_danca(e.target.value)}}
               />
             </div>
           </div>
@@ -412,11 +490,12 @@ export default function Formulario() {
               </p>
             </div>
             <div className="input_question">
-              <input
+              <Input
                 className={`input_extend ${getThemeClass(theme)}`}
-                type="text"
-                placeholder="Descreva aqui"
-                name="garantia_pistaAcessivel"
+                type={"text"}
+                placeholder={"Descreva aqui"}
+                name={"garantia_pistaAcessivel"}
+                onchange={(e) => { setSeguranca_pista(e.target.value)}}
               />
             </div>
           </div>
@@ -430,11 +509,12 @@ export default function Formulario() {
               </p>
             </div>
             <div className="input_question">
-              <input
+              <Input
                 className={`input_extend ${getThemeClass(theme)}`}
-                type="text"
-                placeholder="Descreva aqui"
-                name="estilo_fotografia"
+                type={"text"}
+                placeholder={"Descreva aqui"}
+                name={"estilo_fotografia"}
+                onchange={(e) => { setVideo_e_foto(e.target.value)}}
               />
             </div>
           </div>
@@ -446,11 +526,12 @@ export default function Formulario() {
               </p>
             </div>
             <div className="input_question mini">
-              <input
+              <Input
                 className={`input_extend ${getThemeClass(theme)}`}
-                type="text"
-                placeholder="Ex:sim"
-                name="descricao_foto"
+                type={"text"}
+                placeholder={"Ex: Sim"}
+                name={"descricao_foto"}
+                onchange={(e) => { setDescricoes_fotos(e.target.value)}}
               />
             </div>
           </div>
@@ -463,11 +544,12 @@ export default function Formulario() {
               </p>
             </div>
             <div className="input_question">
-              <input
+              <Input
                 className={`input_extend ${getThemeClass(theme)}`}
-                type="text"
-                placeholder="Descreva aqui"
-                name="assentos"
+                type={"text"}
+                placeholder={"Descreva aqui"}
+                name={"assentos"}
+                onchange={(e) => { setAssentos(e.target.value)}}
               />
             </div>
           </div>
@@ -480,11 +562,12 @@ export default function Formulario() {
               </p>
             </div>
             <div className="input_question">
-              <input
+              <Input
                 className={`input_extend ${getThemeClass(theme)}`}
-                type="text"
-                placeholder="Descreva aqui"
-                name="arranjos_assentos"
+                type={"text"}
+                placeholder={"Descreva aqui"}
+                name={"arranjos_assentos"}
+                onchange={(e) => { setConsideracoes_assentos(e.target.value)}}
               />
             </div>
           </div>
@@ -497,11 +580,12 @@ export default function Formulario() {
               </p>
             </div>
             <div className="input_question">
-              <input
+              <Input
                 className={`input_extend ${getThemeClass(theme)}`}
-                type="text"
-                placeholder="Descreva aqui"
-                name="adpatacao_programacao"
+                type={"text"}
+                placeholder={"Descreva aqui"}
+                name={"adpatacao_programacao"}
+                onchange={(e) => { setAdaptacao_programacao(e.target.value)}}
               />
             </div>
           </div>
@@ -514,11 +598,12 @@ export default function Formulario() {
               </p>
             </div>
             <div className="input_question">
-              <input
+              <Input
                 className={`input_extend ${getThemeClass(theme)}`}
-                type="text"
-                placeholder="Descreva aqui"
-                name="garantia_necessidades"
+                type={"text"}
+                placeholder={"Descreva aqui"}
+                name={"garantia_necessidades"}
+                onchange={(e) => { setNecessidades(e.target.value)}}
               />
             </div>
           </div>
@@ -530,11 +615,12 @@ export default function Formulario() {
               </p>
             </div>
             <div className="input_question">
-              <input
+              <Input
                 className={`input_extend ${getThemeClass(theme)}`}
-                type="text"
-                placeholder="Descreva aqui"
-                name="fala_final"
+                type={"text"}
+                placeholder={"Descreva aqui"}
+                name={"fala_final"}
+                onchange={(e) => { setMais_informacoes(e.target.value)}}
               />
             </div>
           </div>
@@ -543,7 +629,7 @@ export default function Formulario() {
             <button
               className={`button_salvar ${getThemeClass(theme)}`}
               type="submit"
-            >
+              onClick={(e) => { onSubmit(e) }}>
               Salvar
             </button>
           </div>
