@@ -43,7 +43,7 @@ export default function Pacote() {
     <>
       {modalPacote ? <ModalPacote handleAbrirModal={handleAbrirModal} /> : ""}
       <Navbar />
-      <div className="container-pacote">
+      <div className={`container-pacote ${getThemeClass(theme)}`}>
         <h2 className="titulo-pacotes">
           Sua história de amor
           <br />

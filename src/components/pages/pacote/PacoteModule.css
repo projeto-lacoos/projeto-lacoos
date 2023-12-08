@@ -39,6 +39,11 @@
   border: 1px solid #000;
 }
 
+.container-pacote.A {
+  background: url(../../../img/pacote/fundo-pacote-PB.svg) no-repeat top center;
+  background-size: cover;
+}
+
 /* COMEÇO DO CSS DA PÁGINA */
 .container-pacote {
   height: 100vh;
