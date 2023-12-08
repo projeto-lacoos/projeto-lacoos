@@ -58,7 +58,6 @@ export default function ResetarSenha() {
     e.preventDefault();
     if (senha === confirmaSenha) {
       try {
-        let token;
         const response = await fetch(
           `http://localhost:8080/v1/user/reset-password/${params.token}`, // ${} | 87b6246c-35e7-4bc8-9e07-0334e79ca2f7
           {
@@ -73,17 +72,6 @@ export default function ResetarSenha() {
           }
         );
 
-        /* /* console.log(`${token}`);
-        const data = await response.json();
-        console.log(data); */
-
-        /* localStorage.clear();
-        setAuth(false);
-        navigate("/login");
-        // window.location.reload(); 
-        const data = await response.json();
-        */
-
         if (typeof window !== undefined && response.ok) {
           localStorage.clear();
           setAuth(false);
@@ -92,7 +80,7 @@ export default function ResetarSenha() {
 
       } catch (error) {
         console.log(error);
-        alert("Algo deu errado! Mas enviou o email!");
+        alert("Rode a API!");
       }
     } else {
       console.log("Informe as senhas iguais.");
