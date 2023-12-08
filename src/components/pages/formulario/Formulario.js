@@ -55,7 +55,9 @@ export default function Formulario() {
         />
         <form className="forms_laçoos" action="#">
           <div className="title">
-            <h2 className={`title_forms ${getThemeClass(theme)}`}>Formulário</h2>
+            <h2 className={`title_forms ${getThemeClass(theme)}`}>
+              Formulário
+            </h2>
           </div>
 
           <div className="question_one">
@@ -100,7 +102,7 @@ export default function Formulario() {
             </div>
             <div className="input_question mini">
               <input
-                className={`input_mini ${getThemeClass(theme)}`}
+                className={`input_extend ${getThemeClass(theme)}`}
                 type="text"
                 placeholder="Ex:1"
                 name="tipo_deficienciaVisu"
@@ -127,7 +129,9 @@ export default function Formulario() {
 
           <div className="question_five">
             <div className="text_question">
-              <p className={`paragraph_question ${getThemeClass(theme)}`}>5. Você é sensível a luz?</p>
+              <p className={`paragraph_question ${getThemeClass(theme)}`}>
+                5. Você é sensível a luz?
+              </p>
             </div>
             <div className="input_question">
               <input
@@ -182,7 +186,7 @@ export default function Formulario() {
             </div>
             <div className="input_question mini">
               <input
-                className={`input_mini ${getThemeClass(theme)}`}
+                className={`input_extend ${getThemeClass(theme)}`}
                 type="text"
                 placeholder="Ex:3"
                 name="receber_informacao"
@@ -198,7 +202,7 @@ export default function Formulario() {
             </div>
             <div className="input_question mini">
               <input
-                className={`input_mini ${getThemeClass(theme)}`}
+                className={`input_extend ${getThemeClass(theme)}`}
                 type="text"
                 placeholder="Ex:sim"
                 name="acessivel_cadeiraRodas"
@@ -214,7 +218,7 @@ export default function Formulario() {
             </div>
             <div className="input_question mini">
               <input
-                className={`input_mini ${getThemeClass(theme)}`}
+                className={`input_extend ${getThemeClass(theme)}`}
                 type="text"
                 placeholder="Ex:sim"
                 name="piso_portatil"
@@ -230,7 +234,7 @@ export default function Formulario() {
             </div>
             <div className="input_question mini">
               <input
-                className={`input_mini ${getThemeClass(theme)}`}
+                className={`input_extend ${getThemeClass(theme)}`}
                 type="text"
                 placeholder="Ex:sim"
                 name="cardapio_braille"
@@ -361,7 +365,7 @@ export default function Formulario() {
             </div>
             <div className="input_question mini">
               <input
-                className={`input_mini ${getThemeClass(theme)}`}
+                className={`input_extend ${getThemeClass(theme)}`}
                 type="text"
                 placeholder="Ex:sim"
                 name="indicacao_tatil"
@@ -412,7 +416,7 @@ export default function Formulario() {
             </div>
             <div className="input_question mini">
               <input
-                className={`input_mini ${getThemeClass(theme)}`}
+                className={`input_extend ${getThemeClass(theme)}`}
                 type="text"
                 placeholder="Ex:sim"
                 name="descricao_foto"
@@ -505,7 +509,10 @@ export default function Formulario() {
           </div>
 
           <div className="button_forms">
-            <button className={`button_salvar ${getThemeClass(theme)}`} type="submit" >
+            <button
+              className={`button_salvar ${getThemeClass(theme)}`}
+              type="submit"
+            >
               Salvar
             </button>
           </div>
