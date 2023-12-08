@@ -1,53 +1,131 @@
+/* CORES DO MODO DALTONISMO */
+.container-notificacao .notificacao-logar.DPTT {
+  background-color: #0000ff;
+  color: #ffa500;
+}
+
+.notificacao-logar .notificacao-paragrafo.DPTT {
+  color: #ffa500;
+}
+/*  */
+.container-notificacao .notificacao-logar.M {
+  background-color: #00bfff;
+  color: #00008b;
+}
+
+.notificacao-logar .notificacao-paragrafo.M {
+  color: #00008b;
+}
+/*  */
+.container-notificacao .notificacao-logar.PD {
+  background-color: #008000;
+  color: #ff69b4;
+}
+
+.notificacao-logar .notificacao-paragrafo.PD {
+  color: #ff69b4;
+}
+/*  */
+.container-notificacao .notificacao-logar.A {
+  background-color: #000;
+}
+
+/* COMEÇO DO CSS DA PÁGINA */
 .container-notificacao-logar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .container-notificacao {
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #0000003f;
-    z-index: 10;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0000003f;
+  z-index: 9;
 }
 
 .container-notificacao .notificacao-logar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 5rem;
-    background-color: #658955;
-    width: 50rem;
-    height: 50rem;
-    border-radius: 3.6rem;
-    color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  background-color: #658955;
+  width: 50rem;
+  height: 50rem;
+  border-radius: 3.6rem;
+  color: #fff;
 }
 
 .notificacao-logar .titulo {
-    font-size: 3rem;
-    font-weight: 600;
-    text-align: center;
-    width: 36rem;
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+  width: 36rem;
 }
 
 .notificacao-logar .notificacao-paragrafo {
-    width: 36.9rem;
+  width: 36.9rem;
 }
 
 .link-login {
-    color: #fff;
-    text-align: center;
-    bottom: 9rem;
+  color: #fff;
+  text-align: center;
+  bottom: 9rem;
 }
 
 .link-login:hover {
-    text-decoration: underline;
+  text-decoration: underline;
+}
+
+@media (min-width: 1920px) {
+}
+@media (min-width: 1200px) and (max-width: 1919px) {
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+@media (min-width: 768px) and (max-width: 991px) {
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .container-notificacao .notificacao-logar {
+    width: 40rem;
+    height: 40rem;
+  }
+
+  .notificacao-logar .titulo {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+  }
+
+  .notificacao-logar .notificacao-paragrafo {
+    width: 100%;
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 480px) {
+  .container-notificacao .notificacao-logar {
+    width: 31rem;
+    height: 40rem;
+  }
+
+  .notificacao-logar .titulo {
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+  }
+
+  .notificacao-logar .notificacao-paragrafo {
+    width: 100%;
+    font-size: 1.5rem;
+  }
 }

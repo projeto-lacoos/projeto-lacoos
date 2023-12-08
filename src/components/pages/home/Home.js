@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { ThemeContext } from "../../context/ThemeContext";
 
 import "./homeModule.css";
 
@@ -7,7 +9,6 @@ import DPTT from "../../../img/home/oo.svg";
 import M from "../../../img/home/oo-2.svg";
 import PD from "../../../img/home/oo-1.svg";
 import A from "../../../img/home/oo-3.svg";
-
 import ImagemTexto1 from "../../../img/home/imagem-texto-1.jpg";
 import ImagemTexto2 from "../../../img/home/imagem-texto-2.jpg";
 import ImagemTexto3 from "../../../img/home/imagem-texto-3.jpg";
@@ -21,8 +22,6 @@ import Navbar from "../../navbar/Navbar";
 import PlanoCasamento from "../../planoCasamento/PlanoCasamento";
 import Footer from "../../footer/Footer";
 import CarrosselImagens from "../../carrosselImagens/CarrosselImagens";
-import { useContext } from "react";
-import { ThemeContext } from "../../context/ThemeContext";
 
 export default function Home() {
   const { theme } = useContext(ThemeContext);
