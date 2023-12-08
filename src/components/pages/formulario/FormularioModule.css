@@ -102,7 +102,7 @@
 }
 
 .input_mini {
-  width: 5.5vw;
+  width: 8vw;
   height: 4rem;
   border-radius: 20px;
   padding: 20px;
@@ -113,8 +113,7 @@
 }
 
 ::placeholder {
-  font-size: 1.2rem;
-  font-family: "Poppins", sans-serif;
+  font-size: 1.9rem;
   font-weight: 500;
   color: #8b8b8b;
 }
