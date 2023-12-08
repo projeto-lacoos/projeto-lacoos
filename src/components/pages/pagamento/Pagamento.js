@@ -291,7 +291,7 @@ export default function Pagamento() {
                 </div>
               </div>
               <div className=" finalizar">
-                <p className="valorFinal">Total: R$ {"13.246"},00</p>
+                <p className="valorFinal">Total: R$ {"00"},00</p>
                 <button className="btn-finalizar-pagamento" type="submit">
                   Finalizar
                 </button>
