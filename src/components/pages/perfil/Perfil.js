@@ -111,17 +111,17 @@ export default function Perfil() {
   
   return (
     <>
-      <div className="container-perfil">
+      <div className={`container-perfil ${getThemeClass(theme)}`}>
         <div className="conteudo-container-perfil">
           <div className="conteudo">
             <header className="header">
               <Link to={"/"}>
                 <img className="logo-perfil" src={getThemeLogo(theme)} alt="Logo da Laçoos, onde é uma imagem de duas alianças se entrelaçando" />
               </Link>
-              <h2 className="titulo-perfil">MEU CASAMENTO</h2>
+              <h2 className={`titulo-perfil ${getThemeClass(theme)}`}>MEU CASAMENTO</h2>
             </header>
             <div className="funcoes-perfil">
-              <img className="foto-perfil" src={getFotoUser(theme)} alt="Foto de uma imagem em forma de humanoide sem feição, sem roupa, de apenas uma cor" />
+              <img className={`foto-perfil ${getThemeClass(theme)}`} src={getFotoUser(theme)} alt="Foto de uma imagem em forma de humanoide sem feição, sem roupa, de apenas uma cor" />
               <div class="funcoes">
                 <ul>
                   <li className="nome-usuario">Olá, {user?.name}</li>
@@ -140,14 +140,14 @@ export default function Perfil() {
                 </Link>
               </div>
             </div>
-            <div className="container-form-perfil">
-              <form className="form-perfil">
+            <div className={`container-form-perfil ${getThemeClass(theme)}`}>
+              <form className={`form-perfil ${getThemeClass(theme)}`}>
                 <div className="inputs-form-perfil">
-                  <div className="form-user-e">
+                  <div className={`form-user-e ${getThemeClass(theme)}`}>
                     <div className="grupo">
                       <label htmlFor="email-user">Login</label>
                       <Input
-                        className={"input-perfil"}
+                        className={`input-perfil ${getThemeClass(theme)}`}
                         type={"email"}
                         placeholder={user?.email}
                         name={"email-user"}
@@ -159,7 +159,7 @@ export default function Perfil() {
                       <div className="grupo">
                         <label htmlFor="celular">Celular</label>
                         <Input
-                          className={"input-perfil"}
+                          className={`input-perfil ${getThemeClass(theme)}`}
                           type={"tel"}
                           placeholder={user?.phone ? user?.phone : "Informe um telefone"}
                           name={"celular"}
@@ -169,7 +169,7 @@ export default function Perfil() {
                       <div className="grupo">
                         <label htmlFor="telefone">Telefone</label>
                         <Input
-                          className={"input-perfil"}
+                          className={`input-perfil ${getThemeClass(theme)}`}
                           type={"tel"}
                           placeholder={user?.telephone ? user?.telephone : "Informe um telefone"}
                           name={"telefone"}
@@ -178,11 +178,11 @@ export default function Perfil() {
                       </div>
                     </div>
                   </div>
-                  <div className="form-user-d">
+                  <div className={`form-user-d ${getThemeClass(theme)}`}>
                     <div className="grupo">
                       <label htmlFor="idade">Data de Nascimento</label>
                       <Input
-                        className={"input-perfil"}
+                        className={`input-perfil ${getThemeClass(theme)}`}
                         type={"date"}
                         placeholder={ user?.birthDate ? user?.birthDate : "2004-10-20"} // birthDate
                         name={"idade"}
@@ -193,7 +193,7 @@ export default function Perfil() {
                     <div className="grupo">
                       <label htmlFor="sexo">Sexo</label>
                       <Input
-                        className={"input-perfil"}
+                        className={`input-perfil ${getThemeClass(theme)}`}
                         type={"text"}
                         placeholder={user?.sexo ? user?.sexo : "F, M ou outro"}
                         name={"sexo"}
@@ -203,10 +203,10 @@ export default function Perfil() {
                   </div>
                 </div>
                 <div className="btns-form-perfil">
-                  <button type="submit" className="btn-perfil">
+                  <button type="submit" className={`btn-perfil ${getThemeClass(theme)}`}>
                     Salvar alteração
                   </button>
-                  <Link to="/perfil" onClick={onSubmit} className="btn-perfil">
+                  <Link to="/perfil" onClick={onSubmit} className={`btn-perfil ${getThemeClass(theme)}`}>
                     Alterar senha
                   </Link>
                 </div>

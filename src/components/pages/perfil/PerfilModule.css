@@ -1,3 +1,133 @@
+/* CORES DO MODO DALTONISMO */
+.conteudo .header .titulo-perfil.DPTT,
+.inputs-form-perfil .form-user-e.DPTT, 
+.inputs-form-perfil .form-user-d.DPTT  {
+  color: #0000FF;
+}
+
+.conteudo .funcoes-perfil .foto-perfil.DPTT {
+  border: 1px solid #FFA500;
+}
+
+.container-form-perfil.DPTT,
+.form-perfil.DPTT,
+.inputs-form-perfil .form-user-e .input-perfil.DPTT, 
+.inputs-form-perfil .form-user-d .input-perfil.DPTT {
+  border: 1px solid #0000FF;
+}
+
+.container-form-perfil .btns-form-perfil .btn-perfil.DPTT {
+  background-color: #0000FF;
+  border: 1px solid #0000FF;
+}
+
+.container-form-perfil .btns-form-perfil .btn-perfil:hover.DPTT {
+  background-color: #fff;
+  color: #0000FF;
+}
+
+.container-perfil.DPTT {
+  background: url(../../../img/perfil/fundo-perfil-DPTT.svg) no-repeat center;
+  background-size: cover;
+}
+/*  */
+.conteudo .header .titulo-perfil.M,
+.inputs-form-perfil .form-user-e.M, 
+.inputs-form-perfil .form-user-d.M  {
+  color: #000081;
+}
+
+.conteudo .funcoes-perfil .foto-perfil.M {
+  border: 1px solid #00BFFF;
+}
+
+.container-form-perfil.M,
+.form-perfil.M,
+.inputs-form-perfil .form-user-e .input-perfil.M, 
+.inputs-form-perfil .form-user-d .input-perfil.M {
+  border: 1px solid #000081;
+}
+
+.container-form-perfil .btns-form-perfil .btn-perfil.M {
+  background-color: #000081;
+  border: 1px solid #000081;
+}
+
+.container-form-perfil .btns-form-perfil .btn-perfil:hover.M {
+  background-color: #fff;
+  color: #000081;
+}
+
+.container-perfil.M {
+  background: url(../../../img/perfil/fundo-perfil-M.svg) no-repeat center;
+  background-size: cover;
+}
+/*  */
+.conteudo .header .titulo-perfil.PD,
+.inputs-form-perfil .form-user-e.PD, 
+.inputs-form-perfil .form-user-d.PD  {
+  color: #FF69B4;
+}
+
+.conteudo .funcoes-perfil .foto-perfil.PD {
+  border: 1px solid #FF69B4;
+}
+
+.container-form-perfil.PD,
+.form-perfil.PD,
+.inputs-form-perfil .form-user-e .input-perfil.PD, 
+.inputs-form-perfil .form-user-d .input-perfil.PD {
+  border: 1px solid #FF69B4;
+}
+
+.container-form-perfil .btns-form-perfil .btn-perfil.PD {
+  background-color: #FF69B4;
+  border: 1px solid #FF69B4;
+}
+
+.container-form-perfil .btns-form-perfil .btn-perfil:hover.PD {
+  background-color: #fff;
+  color: #FF69B4;
+}
+
+.container-perfil.PD {
+  background: url(../../../img/perfil/fundo-perfil-PD.svg) no-repeat center;
+  background-size: cover;
+}
+/*  */
+.conteudo .header .titulo-perfil.A,
+.inputs-form-perfil .form-user-e.A, 
+.inputs-form-perfil .form-user-d.A  {
+  color: #000;
+}
+
+.conteudo .funcoes-perfil .foto-perfil.A {
+  border: 1px solid #000;
+}
+
+.container-form-perfil.A,
+.form-perfil.A,
+.inputs-form-perfil .form-user-e .input-perfil.A, 
+.inputs-form-perfil .form-user-d .input-perfil.A {
+  border: 1px solid #000;
+}
+
+.container-form-perfil .btns-form-perfil .btn-perfil.A {
+  background-color: #000;
+  border: 1px solid #000;
+}
+
+.container-form-perfil .btns-form-perfil .btn-perfil:hover.A {
+  background-color: #fff;
+  color: #000;
+}
+
+.container-perfil.A {
+  background: url(../../../img/perfil/fundo-perfil-A.svg) no-repeat center;
+  background-size: cover;
+}
+
+/* COMEÇO DO CSS DA PÁGINA */
 .container-perfil {
   display: flex;
   align-items: center;
@@ -97,8 +227,8 @@
   gap: 1.5rem;
 }
 
-.inputs-form-perfil .form-user-e input,
-.inputs-form-perfil .form-user-d input {
+.inputs-form-perfil .form-user-e .input-perfil,
+.inputs-form-perfil .form-user-d .input-perfil {
   border: 1px solid #658955;
   border-radius: 5rem;
   height: 4.5rem;
