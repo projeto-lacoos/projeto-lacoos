@@ -301,11 +301,11 @@
   }
 
   .home-navbar .navbar .modal-navbar .navbar-e {
-    width: 78vw;
+    width: 70vw;
   }
   .home-navbar .navbar .modal-navbar .navbar-d {
     display: flex;
-    width: 22vw;
+    width: 30vw;
   }
 
   .navbar-d .itens-menu {
@@ -325,7 +325,7 @@
   .navbar-d .itens-menu li a,
   .navbar-d .itens-menu li span,
   .navbar-d .itens-menu li button {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
   }
 }
 
@@ -379,10 +379,10 @@
     height: 3rem;
   }
   .home-navbar .navbar .modal-navbar .navbar-e {
-    width: 55vw;
+    width: 50vw;
   }
   .home-navbar .navbar .modal-navbar .navbar-d {
-    width: 45vw;
+    width: 50vw;
   }
 
   .navbar-d .itens-menu {
@@ -418,11 +418,11 @@
     height: 3rem;
   }
   .home-navbar .navbar .modal-navbar .navbar-e {
-    width: 40vw;
+    width: 0vw;
   }
   .home-navbar .navbar .modal-navbar .navbar-d {
     display: flex;
-    width: 60vw;
+    width: 100vw;
   }
 
   .navbar-d .itens-menu {
