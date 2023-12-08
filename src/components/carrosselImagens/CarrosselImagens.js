@@ -1,7 +1,7 @@
 import './CarrosselImagensModule.css'
 
 import { useContext, useRef, useState } from 'react'
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ThemeContext } from '../context/ThemeContext'
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { ApplicationContext } from '../context/ApplicationProvider'
@@ -75,9 +75,12 @@ export default function CarrosselImagens() {
             </button>
             <div className='carrossel-image' ref={carousel} onClick={HandleNotificacao}>
                 {theme !== "A" ? (imagens.map((image, id) => (
-                    <img key={id} className='slide-item' src={image} alt='Convite' />
+                    <Link to={"/convites"}
+                    >
+                        <img key={id} className='slide-item' src={image} alt='Convite' />
+                    </Link>
                 ))) : (imagensPB.map((image, id) => (
-                    <img key={id} className='slide-item' src={image} alt='Convite' />
+                    <Link to={"/convites"}><img key={id} className='slide-item' src={image} alt='Convite' /></Link>
                 )))}
             </div>
             <button className={`btn-arrow ${getThemeClass(theme)}`}>

@@ -13,6 +13,7 @@ import ResetarSenha from '../components/pages/resetarSenha/resetarSenha';
 import { ApplicationContext } from '../components/context/ApplicationProvider';
 import { useContext } from 'react';
 import Formulario from '../components/pages/formulario/Formulario';
+import Convites from '../components/pages/convites/Convites';
 
 export const Public = () => {
 
@@ -31,6 +32,7 @@ export const Public = () => {
                 <Route exact path="/resetar-senha/:token" element={<ResetarSenha />} />
                 <Route exact path="/pagamento" element={auth ? <Pagamento /> : <Home />} />
                 <Route exact path="/formulario" element={auth ? <Formulario /> : <Home />} />
+                <Route exact path="/convites" element={auth ? <Convites /> : <Login />} />
             </Routes>
         </BrowserRouter >
     )
