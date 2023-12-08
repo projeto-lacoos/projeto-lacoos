@@ -1,0 +1,138 @@
+.container-formulario {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../../../img/formulario/fundo-formulario.svg) no-repeat center;
+  background-size: cover;
+  position: relative;
+}
+
+.logo-laçoos-formulario {
+  position: absolute;
+  top: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10rem;
+}
+
+.forms_laçoos {
+  width: 90%;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 2rem 0.5rem 0.5rem 2rem;
+  padding: 6rem;
+  overflow-y: auto;
+}
+
+.title {
+  display: flex;
+  flex: 1;
+}
+
+.title_forms {
+  font-weight: bold;
+  font-size: 4.4rem;
+  color: #658955;
+}
+
+.question_one,
+.question_two,
+.question_three,
+.question_four,
+.question_five,
+.question_six,
+.question_seven,
+.question_eight,
+.question_nine,
+.question_ten,
+.question_eleven,
+.question_twelve,
+.question_thirteen,
+.question_fourteen,
+.question_fiveteen,
+.question_sixteen,
+.question_seventeen,
+.question_eighteen,
+.question_nineteen,
+.question_twenty,
+.question_twentyone,
+.question_twentytwo,
+.question_twentythree,
+.question_twentyfour,
+.question_twentyfive,
+.question_twentysix,
+.question_twentyseven,
+.button_forms,
+.text_question,
+.input_question {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.input_question {
+  justify-content: center;
+}
+
+.mini {
+  justify-content: flex-start;
+}
+
+.paragraph_question {
+  font-weight: 500;
+  color: #658955;
+  font-size: 2.1rem;
+  width: 60rem;
+}
+
+.input_extend {
+  width: 30vw;
+  height: 4rem;
+  border-radius: 2rem;
+  padding: 2rem;
+  border: 1px solid #658955;
+  outline: 0;
+  font-size: 1.9rem;
+  height: 7rem;
+}
+
+.input_mini {
+  width: 5.5vw;
+  height: 4rem;
+  border-radius: 20px;
+  padding: 20px;
+  border: 1px solid #658955;
+  outline: 0;
+  font-size: 1.2rem;
+  height: 7rem;
+}
+
+::placeholder {
+  font-size: 1.2rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #8b8b8b;
+}
+
+.button_forms {
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 60px;
+}
+
+.button_salvar {
+  width: 16rem;
+  height: 4rem;
+  border: 0;
+  border-radius: 20px;
+  background-color: #658955;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  cursor: pointer;
+}

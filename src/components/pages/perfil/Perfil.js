@@ -10,11 +10,67 @@ import Input from "../../input/Input";
 import Footer from '../../footer/Footer'
 
 import LogoReduzida from "../../../img/perfil/logo-reduzida.svg";
+import DPTT from "../../../img/perfil/oo.svg";
+import M from "../../../img/perfil/oo-2.svg";
+import PD from "../../../img/perfil/oo-1.svg";
+import A from "../../../img/perfil/oo-3.svg";
 
-import FotoUser from "../../../img/navbar/foto-user.svg";
+import FotoUserDPTT from "../../../img/perfil/foto-user-DPTT.svg";
+import FotoUserM from "../../../img/perfil/foto-user-M.svg";
+import FotoUserPD from "../../../img/perfil/foto-user-PD.svg";
+import FotoUserA from "../../../img/perfil/foto-user-A.svg";
+import FotoUser from "../../../img/perfil/foto-user.svg";
+
+import { ThemeContext } from "../../context/ThemeContext";
 
 
 export default function Perfil() {
+  const { theme } = useContext(ThemeContext);
+
+  const getThemeClass = (theme) => {
+    switch (theme) {
+      case "DPTT":
+        return "DPTT";
+      case "M":
+        return "M";
+      case "PD":
+        return "PD";
+      case "A":
+        return "A";
+      default:
+        return "default";
+    }
+  };
+
+  const getThemeLogo = (theme) => {
+    switch (theme) {
+      case "DPTT":
+        return DPTT;
+      case "M":
+        return M;
+      case "PD":
+        return PD;
+      case "A":
+        return A;
+      default:
+        return LogoReduzida;
+    }
+  };
+
+  const getFotoUser = (theme) => {
+    switch (theme) {
+      case "DPTT":
+        return FotoUserDPTT;
+      case "M":
+        return FotoUserM;
+      case "PD":
+        return FotoUserPD;
+      case "A":
+        return FotoUserA;
+      default:
+        return FotoUser;
+    }
+  };
 
   const { user, setAuth } = useContext(ApplicationContext);
 
@@ -60,21 +116,21 @@ export default function Perfil() {
           <div className="conteudo">
             <header className="header">
               <Link to={"/"}>
-                <img className="logo-perfil" src={LogoReduzida} alt="" />
+                <img className="logo-perfil" src={getThemeLogo(theme)} alt="Logo da Laçoos, onde é uma imagem de duas alianças se entrelaçando" />
               </Link>
               <h2 className="titulo-perfil">MEU CASAMENTO</h2>
             </header>
             <div className="funcoes-perfil">
-              <img className="foto-perfil" src={FotoUser} alt="" />
+              <img className="foto-perfil" src={getFotoUser(theme)} alt="Foto de uma imagem em forma de humanoide sem feição, sem roupa, de apenas uma cor" />
               <div class="funcoes">
                 <ul>
                   <li className="nome-usuario">Olá, {user?.name}</li>
-                  <Link to={"#"}>
+                  <Link to={"/formulario"}>
                     <li className="lista-perfil">Meu Formulário</li>
                   </Link>
-                  <Link to={"/pacote"}>
+                  {/* <Link to={"/pacote"}>
                     <li className="lista-perfil">Meu Pacote</li>
-                  </Link>
+                  </Link> */}
                   <Link to={"#"}>
                     <li className="lista-perfil">Convites</li>
                   </Link>
