@@ -78,6 +78,7 @@ export default function Login() {
             const localUser = jwtDecode(token);
             setUser(localUser)
             setAuth(true)
+            /* console.log(localUser); */
             navigate("/")
           }
         } else {
