@@ -24,6 +24,12 @@ body {
   opacity: 0.5;
 }
 
+@media (min-width: 1200px) and (max-width: 1919px) {
+    .container-acessibilidade .icone-acessibilidade{
+        right: 2%;
+    } 
+}
+
 @media (max-height: 700px) {
     .container-acessibilidade .icone-acessibilidade{
         right: 9.6%;
