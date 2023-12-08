@@ -57,18 +57,7 @@ export default function NovaConta() {
   const [sexo, setSexo] = useState('');
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
-
-
-  const dados = {
-    nome,
-    dataNasc,
-    celular,
-    telefone,
-    sexo,
-    email,
-    senha
-  }
-
+  
   const onSubmit = async (e) => {
     e.preventDefault();
     if(nome !== "" && dataNasc !== "" && celular !== "" && telefone !== "" && sexo !== "" && email !== "" && senha !== ""){
