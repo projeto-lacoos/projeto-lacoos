@@ -46,7 +46,6 @@ export default function NovaConta() {
     }
   };
 
-
   const navigate = useNavigate();
 
   const [nome, setNome] = useState('');
@@ -59,6 +58,17 @@ export default function NovaConta() {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
 
+
+  const dados = {
+    nome,
+    dataNasc,
+    celular,
+    telefone,
+    sexo,
+    email,
+    senha
+  }
+
   const onSubmit = async (e) => {
     e.preventDefault();
     if(nome !== "" && dataNasc !== "" && celular !== "" && telefone !== "" && sexo !== "" && email !== "" && senha !== ""){
@@ -69,27 +79,26 @@ export default function NovaConta() {
             "Content-Type": "application/json"
           },
           body: JSON.stringify({
-            name: nome,
-            birthDate: dataNasc,
-            phone: celular,
-            telephone: telefone,
-            sexo: sexo,
-            email: email,
-            password: senha
+            birthDate: dataNasc, 
+            email: email, 
+            name: nome, 
+            password: senha, 
+            phone: celular, 
+            sexo: sexo, 
+            telephone: telefone
           })
         });
 
-        alert("Cadastrado com sucesso!");
-        const data = await response.json();
-        console.log(data);
-        navigate("/");
+        if(response.ok){
+          alert("Cadastro realizado com sucesso!");
+          navigate("/login");
+        } else {
+          alert("Error");
+        }
 
       } catch(error){
         console.log(error);
-        alert("Algo deu errado!");
       }
-    } else {
-      console.log("Insira um valor para todos os campos!");
     }
   }
 
@@ -125,9 +134,7 @@ export default function NovaConta() {
                       type={"date"}
                       placeholder={"Sua idade"}
                       name={"idade_cliente"}
-                      onchange={(e) => {
-                        setDataNasc(e.target.value)
-                      }}
+                      onchange={(e) => { setDataNasc(e.target.value) }}
                     />
                   </label>
                 </div>

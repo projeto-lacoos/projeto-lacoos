@@ -65,6 +65,8 @@ export default function RecuperacaoSenha() {
           });
         if (typeof window !== undefined && response.ok) {
           navigate("/login");
+        } else{
+          alert("Email não encontrado!")
         }
       } catch (error) {
         console.log(error);
