@@ -115,19 +115,19 @@
 }
 
 /* SECTION SOBRE PARCEIROS */
-.sobre-bodas-parceiros{
+.sobre-bodas-parceiros {
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
 }
 
-.sobre-parceiros{
+.sobre-parceiros {
   display: flex;
   align-items: center;
 }
 
-.sobre-parceiros .tituloParceiros{
+.sobre-parceiros .tituloParceiros {
   width: 47.8rem;
   height: auto;
   font-family: "Roboto", sans-serif;
@@ -136,14 +136,14 @@
   margin-right: 10rem;
 }
 
-.sobre-parceiros .hr-conteudoParceiros{
+.sobre-parceiros .hr-conteudoParceiros {
   background-color: #c3b107;
   width: 5px;
   height: 200px;
   border-radius: 10px;
 }
 
-.sobre-parceiros .imgParceiros{
+.sobre-parceiros .imgParceiros {
   width: 23.8rem;
   margin-left: 5rem;
 }
@@ -253,8 +253,6 @@
 
 .sobre-integrantelacoos {
   width: 100%;
-  height: 100vh;
-  font-family: "Poppins";
   text-align: center;
   background-image: url(../../../img/sobre/sobre-back.jpg);
   background-size: cover;
@@ -271,16 +269,17 @@
 }
 
 .conteudointegrantes {
-  display: grid;
-  grid-template-columns: repeat(4, 2fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-gap: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 20px;
+  margin: 0 auto;
+  width: 80vh;
   color: #fff;
 }
 
 .card {
-  /* width: 173px;
-  height: 244px; */
+  width: 153px;
+  height: 200px;
   border-radius: 17px;
   background-color: #c3b107;
   margin: 7.5px;
@@ -322,6 +321,10 @@
 .cardsocial {
   display: flex;
   gap: 0.5rem;
+}
+
+.imageQRCode {
+  width: 20rem;
 }
 
 @media (min-width: 1920px) {
@@ -391,30 +394,46 @@
     align-items: center;
     justify-content: center;
     margin: 0rem;
+    position: relative;
   }
 
   .conteudointegrantes {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    width: 90rem;
     grid-gap: 20px;
     color: #fff;
   }
 
   .card {
     padding: 1rem;
-    border-radius: 17px;
-    background-color: #c3b107;
-    margin: 7.5px;
-  }
-
-  .card .imageIntegrante {
-    margin-top: 0.5rem;
-    width: 18rem;
+    height: 22rem;
   }
 
   .caixaGarrafinha {
-    width: 60rem;
+    position: absolute;
+    right: 3rem;
+    top: 10rem;
+    width: 45rem;
     margin-top: 0;
+  }
+
+  /* SECTION SOBRE BODAS PARCEIROS */
+  .sobre-parceiros {
+    height: 100vh;
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .sobre-parceiros .tituloParceiros {
+    width: 35rem;
+    font-size: 7rem;
+    margin-right: 1rem;
+  }
+
+  .sobre-parceiros .imgParceiros {
+    width: 18rem;
+    margin-left: 1rem;
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -492,7 +511,6 @@
     align-items: center;
     justify-content: center;
     margin-top: 0rem;
-    background: none;
   }
 
   .containerIntegrantes {
@@ -501,9 +519,7 @@
   }
 
   .conteudointegrantes {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: none;
+    width: 80vw;
     grid-gap: 3rem;
     color: #fff;
   }
@@ -531,9 +547,29 @@
   }
 
   /* SECTION SOBRE FOOTER LAÇOOS */
-  
+
   .imageQRCode {
     width: 30rem;
+  }
+
+  /* SECTION SOBRE BODAS PARCEIROS */
+  .sobre-parceiros {
+    height: 100vh;
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .sobre-parceiros .tituloParceiros {
+    width: 35rem;
+    font-size: 6.5rem;
+    margin-right: 0rem;
+    margin-bottom: 1rem;
+  }
+
+  .sobre-parceiros .imgParceiros {
+    width: 15rem;
+    margin-left: 0rem;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -554,11 +590,11 @@
   .conteudo-sobre .h1-conteudoSobre {
     font-size: 7rem;
     margin-right: 0rem;
+    margin-bottom: 2rem;
   }
 
   .conteudo-sobre .hr-conteudoSobre {
-    transform: rotate(90deg);
-    height: 20rem;
+    display: none;
   }
 
   .conteudo-sobre .p-conteudoSobre {
@@ -659,10 +695,9 @@
   }
 
   .conteudointegrantes {
-    display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    grid-template-rows: none;
-    grid-gap: 3rem;
+    display: flex;
+    justify-content: center;
+    grid-gap: 1rem;
     color: #fff;
   }
 
@@ -714,6 +749,31 @@
   .imageQRCode {
     width: 30rem;
   }
+
+  /* SECTION SOBRE BODAS PARCEIROS */
+  .sobre-parceiros {
+    height: 100vh;
+    flex-direction: column;
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .sobre-parceiros .tituloParceiros {
+    width: 50rem;
+    font-size: 7rem;
+    margin-right: 0rem;
+    margin-bottom: 1rem;
+  }
+
+  .sobre-parceiros .hr-conteudoParceiros {
+    display: none;
+  }
+
+  .sobre-parceiros .imgParceiros {
+    width: 15rem;
+    margin-left: 0rem;
+  }
 }
 @media (min-width: 481px) and (max-width: 767px) {
   .sobre-home .conteudo-logo {
@@ -752,11 +812,11 @@
   .conteudo-sobre .h1-conteudoSobre {
     font-size: 7rem;
     margin-right: 0rem;
+    margin-bottom: 2rem;
   }
 
   .conteudo-sobre .hr-conteudoSobre {
-    transform: rotate(90deg);
-    height: 20rem;
+    display: none;
   }
 
   .conteudo-sobre .p-conteudoSobre {
@@ -880,9 +940,9 @@
   }
 
   .conteudointegrantes {
-    display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    grid-template-rows: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     grid-gap: 1rem;
     color: #fff;
   }
@@ -935,6 +995,31 @@
   .imageQRCode {
     width: 20rem;
   }
+
+  /* SECTION SOBRE BODAS PARCEIROS */
+  .sobre-parceiros {
+    height: 100vh;
+    flex-direction: column;
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .sobre-parceiros .tituloParceiros {
+    width: 100%;
+    font-size: 5.4rem;
+    margin-right: 0rem;
+    margin-bottom: 2rem;
+  }
+
+  .sobre-parceiros .hr-conteudoParceiros {
+    display: none;
+  }
+
+  .sobre-parceiros .imgParceiros {
+    width: 15rem;
+    margin-left: 0rem;
+  }
 }
 @media (max-width: 480px) {
   .sobre-home .conteudo-logo {
@@ -949,11 +1034,11 @@
   .img-detalhes {
     position: absolute;
     right: 0;
-    bottom: -15rem;
+    bottom: -10rem;
   }
 
   .detalhes {
-    width: 20rem;
+    width: 15rem;
   }
 
   /* SOBRE LAÇOOS */
@@ -973,10 +1058,11 @@
   .conteudo-sobre .h1-conteudoSobre {
     font-size: 5rem;
     margin-right: 0rem;
+    margin-bottom: 2rem;
   }
 
   .conteudo-sobre .hr-conteudoSobre {
-    transform: rotate(90deg);
+    display: none;
   }
 
   .conteudo-sobre .p-conteudoSobre {
@@ -1099,9 +1185,10 @@
   }
 
   .conteudointegrantes {
-    display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    grid-template-rows: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     grid-gap: 1rem;
     color: #fff;
   }
@@ -1153,5 +1240,30 @@
 
   .imageQRCode {
     width: 20rem;
+  }
+
+  /* SECTION SOBRE BODAS PARCEIROS */
+  .sobre-parceiros {
+    height: 100vh;
+    flex-direction: column;
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .sobre-parceiros .tituloParceiros {
+    width: 100%;
+    font-size: 5.4rem;
+    margin-right: 0rem;
+    margin-bottom: 2rem;
+  }
+
+  .sobre-parceiros .hr-conteudoParceiros {
+    display: none;
+  }
+
+  .sobre-parceiros .imgParceiros {
+    width: 15rem;
+    margin-left: 0rem;
   }
 }

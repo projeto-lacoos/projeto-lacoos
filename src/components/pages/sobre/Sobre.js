@@ -155,7 +155,7 @@ export default function Sobre() {
             <div className="card">
               <img className="imageIntegrante" src={Gusbic} alt="" />
               <p>Front-End</p>
-              <p>Desenvolvedor chatbot</p>
+              <p>Dev chatbot</p>
             </div>
             <div className="card">
               <img className="imageIntegrante" src={Ferraz} alt="" />
