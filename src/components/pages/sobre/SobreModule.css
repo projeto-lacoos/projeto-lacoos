@@ -1,3 +1,118 @@
+/* COES DO MODO DALTONISMO */
+.conteudo-sobre .h1-conteudoSobre.DPTT,
+.sobre-parceiros .tituloParceiros.DPTT {
+  color: #0000FF;
+}
+
+.conteudo-sobre .hr-conteudoSobre.DPTT,
+.sobre-parceiros .hr-conteudoParceiros.DPTT,
+.sobre-cartaolacoos.DPTT,
+.button .btn-sobreNos.DPTT,
+.card.DPTT {
+  background-color: #FFA500;
+}
+
+.tituloBodas.DPTT {
+  color: #FFA500;
+}
+
+.sobre-integrantelacoos.DPTT {
+  background-image: url(../../../img/sobre/sobre-back-DPTT.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+/*  */
+.conteudo-sobre .h1-conteudoSobre.M,
+.sobre-parceiros .tituloParceiros.M {
+  color: #00008B;
+}
+
+.conteudo-sobre .hr-conteudoSobre.M,
+.sobre-parceiros .hr-conteudoParceiros.M,
+.sobre-cartaolacoos.M,
+.button .btn-sobreNos.M,
+.card.M {
+  background-color: #00BFFF;
+}
+
+.tituloBodas.M {
+  color: #00BFFF;
+}
+
+.sobre-integrantelacoos.M {
+  background-image: url(../../../img/sobre/sobre-back-M.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+/*  */
+.conteudo-sobre .h1-conteudoSobre.PD,
+.sobre-parceiros .tituloParceiros.PD {
+  color: #008000;
+}
+
+.conteudo-sobre .hr-conteudoSobre.PD,
+.sobre-parceiros .hr-conteudoParceiros.PD,
+.sobre-cartaolacoos.PD,
+.button .btn-sobreNos.PD,
+.card.PD {
+  background-color: #FF69B4;
+}
+
+.tituloBodas.PD {
+  color: #FF69B4;
+}
+
+.sobre-integrantelacoos.PD {
+  background-image: url(../../../img/sobre/sobre-back-PD.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+/*  */
+.conteudo-sobre .h1-conteudoSobre.A,
+.sobre-parceiros .tituloParceiros.A {
+  color: #000;
+}
+
+.conteudo-sobre .hr-conteudoSobre.A,
+.sobre-parceiros .hr-conteudoParceiros.A,
+.sobre-cartaolacoos.A,
+.button .btn-sobreNos.A,
+.card.A {
+  background-color: #000;
+}
+
+.tituloBodas.A {
+  color: #fff;
+}
+
+.sobre-integrantelacoos.A {
+  background-image: url(../../../img/sobre/sobre-back-A.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.sobre-home.A {
+  background: url(../../../img/sobre/fundo-sobre-PB.svg) no-repeat;
+  background-size: cover;
+}
+
+.sobre-bodas.A {
+  background: url(../../../img/sobre/fundo-bodas-PB.svg) no-repeat;
+  background-size: cover;
+}
+
+.sobre-footerlacoos.A {
+  background: url(../../../img/sobre/fundo-rodape-PB.svg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+/* COMEÇO DO CSS DA PÁGINA */
 .container {
   position: relative;
 }
@@ -254,7 +369,7 @@
 .sobre-integrantelacoos {
   width: 100%;
   text-align: center;
-  background-image: url(../../../img/sobre/sobre-back.jpg);
+  background-image: url(../../../img/sobre/sobre-back.svg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top right;
@@ -287,6 +402,8 @@
 
 .card img {
   margin-top: 0.5rem;
+  width: 13.7rem;
+  height: 14.7rem;
 }
 
 .caixaGarrafinha {
