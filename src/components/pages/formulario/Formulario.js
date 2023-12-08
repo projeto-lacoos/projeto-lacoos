@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { ThemeContext } from "../../context/ThemeContext";
 
 import Navbar from "../../navbar/Navbar";
@@ -44,6 +44,37 @@ export default function Formulario() {
         return LogoReduzida;
     }
   };
+
+  const [estilo, setEstilo] = useState('');
+  const [orcamento, setOrcamento] = useState('');
+  const [tipo_deficiencia, setTipo_deficiencia] = useState('');
+  const [grau_visao, setGrau_visao] = useState('');
+  const [sensivel_a_luz, setSensivel_a_luz] = useState('');
+  const [musica_entretenimento, setMusica_entretenimento] = useState('');
+  const [restricoes_alimentares, setRestricoes_alimentares] = useState('');
+  const [informacoes, setInformacoes] = useState('');
+  const [cadeira_de_rodas, setCadeira_de_rodas] = useState('');
+  const [piso_tatil, setPiso_tatil] = useState('');
+  const [cardapio_braile, setCardapio_braile] = useState('');
+  const [nome_parceiro, setNome_parceiro] = useState('');
+  const [data_cerimonia, setData_cerimonia] = useState('');
+  const [horario_cerimonia, setHorario_cerimonia] = useState('');
+
+  const [onde_mora, setOnde_mora] = useState('');
+  const [preferencias, setPreferencias] = useState('');
+  const [preferencias_decoracao, setPreferencias_decoracao] = useState('');
+  const [paleta_de_cores, setPaleta_de_cores] = useState('');
+  const [indicacao_tatil_danca, setIndicacao_tatil_danca] = useState('');
+  const [seguranca_pista, setSeguranca_pista] = useState('');
+  const [video_e_foto, setVideo_e_foto] = useState('');
+  const [descricoes_fotos, setDescricoes_fotos] = useState('');
+  const [assentos, setAssentos] = useState('');
+  const [consideracoes_assentos, setConsideracoes_assentos] = useState('');
+  const [adaptacao_programacao, setAdaptacao_programacao] = useState('');
+  const [necessidades, setNecessidades] = useState('');
+  const [mais_informacoes, setMais_informacoes] = useState('');
+
+
   return (
     <>
       <Navbar />
