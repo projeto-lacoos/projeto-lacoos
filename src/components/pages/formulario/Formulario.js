@@ -80,8 +80,8 @@ export default function Formulario() {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    if(estilo !== "" && orcamento !== "" && tipo_deficiencia !== "" && grau_visao !== "" && sensivel_a_luz !== "" && musica_entretenimento !== "" && restricoes_alimentares !== "" && informacoes !== "" && cadeira_de_rodas !== "" && piso_tatil !== "" && cardapio_braile !== "" && nome_parceiro !== "" && data_cerimonia !== "" && restricoes_alimentares !== "" && horario_cerimonia !== "" && onde_mora !== "" && preferencias !== "" && preferencias_decoracao !== "" && paleta_de_cores !== "" && indicacao_tatil_danca !== "" && seguranca_pista !== "" && video_e_foto !== "" && descricoes_fotos !== "" && assentos !== "" && consideracoes_assentos !== "" && adaptacao_programacao !== "" && necessidades !== "" && mais_informacoes !== ""){
-      try{
+    if (estilo !== "" && orcamento !== "" && tipo_deficiencia !== "" && grau_visao !== "" && sensivel_a_luz !== "" && musica_entretenimento !== "" && restricoes_alimentares !== "" && informacoes !== "" && cadeira_de_rodas !== "" && piso_tatil !== "" && cardapio_braile !== "" && nome_parceiro !== "" && data_cerimonia !== "" && restricoes_alimentares !== "" && horario_cerimonia !== "" && onde_mora !== "" && preferencias !== "" && preferencias_decoracao !== "" && paleta_de_cores !== "" && indicacao_tatil_danca !== "" && seguranca_pista !== "" && video_e_foto !== "" && descricoes_fotos !== "" && assentos !== "" && consideracoes_assentos !== "" && adaptacao_programacao !== "" && necessidades !== "" && mais_informacoes !== "") {
+      try {
         const response = await fetch("", {
           method: "POST",
           headers: {
@@ -116,14 +116,16 @@ export default function Formulario() {
             necessidades: necessidades,
             mais_informacoes: mais_informacoes
           })
-        })
+        });
 
-        alert("Formulário cadastrado!");
-        const data = await response.json();
-        alert(data);
-        navigate("/pagamento");
+        if (response.ok) {
+          alert("Formulário cadastrado!");
+          navigate("/pagamento");
+        } else {
+          alert("Error");
+        }
 
-      } catch(error){
+      } catch (error) {
         console.log(error);
         alert("Problema na API.")
       }
@@ -131,7 +133,6 @@ export default function Formulario() {
     } else {
       console.log("Preencha todos os campos: para que o seu sonho seja realizado!");
     }
-
   }
 
   return (
@@ -163,7 +164,7 @@ export default function Formulario() {
                 type={"text"}
                 placeholder={"Descreva qual estilo você prefere?"}
                 name={"opc_decoracao"}
-                onchange={(e) => { setEstilo(e.target.value)}}
+                onchange={(e) => { setEstilo(e.target.value) }}
               />
             </div>
           </div>
@@ -180,7 +181,7 @@ export default function Formulario() {
                 type={"text"}
                 placeholder={"R$00,00"}
                 name={"orcamento"}
-                onchange={(e) => { setOrcamento(e.target.value)}}
+                onchange={(e) => { setOrcamento(e.target.value) }}
               />
             </div>
           </div>
@@ -198,7 +199,7 @@ export default function Formulario() {
                 type={"text"}
                 placeholder={"Ex: 1"}
                 name={"tipo_deficienciaVisu"}
-                onchange={(e) => { setTipo_deficiencia(e.target.value)}}
+                onchange={(e) => { setTipo_deficiencia(e.target.value) }}
               />
             </div>
           </div>
@@ -216,7 +217,7 @@ export default function Formulario() {
                 type={"text"}
                 placeholder={"Descreva aqui"}
                 name={"grau_residual"}
-                onchange={(e) => { setGrau_visao(e.target.value)}}
+                onchange={(e) => { setGrau_visao(e.target.value) }}
               />
             </div>
           </div>
@@ -233,7 +234,7 @@ export default function Formulario() {
                 type={"text"}
                 placeholder={"Ex: Sim"}
                 name={"sensivel_luz"}
-                onchange={(e) => { setSensivel_a_luz(e.target.value)}}
+                onchange={(e) => { setSensivel_a_luz(e.target.value) }}
               />
             </div>
           </div>
@@ -251,7 +252,7 @@ export default function Formulario() {
                 type={"text"}
                 placeholder={"Descreva aqui"}
                 name={"preferencia_entreterimento"}
-                onchange={(e) => { setMusica_entretenimento(e.target.value)}}
+                onchange={(e) => { setMusica_entretenimento(e.target.value) }}
               />
             </div>
           </div>
@@ -269,7 +270,7 @@ export default function Formulario() {
                 type={"text"}
                 placeholder={"Descreva aqui"}
                 name={"resticao_alimentar"}
-                onchange={(e) => { setRestricoes_alimentares(e.target.value)}}
+                onchange={(e) => { setRestricoes_alimentares(e.target.value) }}
               />
             </div>
           </div>
@@ -287,7 +288,7 @@ export default function Formulario() {
                 type={"text"}
                 placeholder={"Ex: 3"}
                 name={"receber_informacao"}
-                onchange={(e) => { setInformacoes(e.target.value)}}
+                onchange={(e) => { setInformacoes(e.target.value) }}
               />
             </div>
           </div>
@@ -304,7 +305,7 @@ export default function Formulario() {
                 type={"text"}
                 placeholder={"Ex: Sim"}
                 name={"acessivel_cadeiraRodas"}
-                onchange={(e) => { setCadeira_de_rodas(e.target.value)}}
+                onchange={(e) => { setCadeira_de_rodas(e.target.value) }}
               />
             </div>
           </div>
@@ -321,7 +322,7 @@ export default function Formulario() {
                 type={"text"}
                 placeholder={"Ex: Sim"}
                 name={"piso_portatil"}
-                onchange={(e) => { setPiso_tatil(e.target.value)}}
+                onchange={(e) => { setPiso_tatil(e.target.value) }}
               />
             </div>
           </div>
@@ -338,7 +339,7 @@ export default function Formulario() {
                 type={"text"}
                 placeholder={"Ex: Sim"}
                 name={"cardapio_braille"}
-                onchange={(e) => { setCardapio_braile(e.target.value)}}
+                onchange={(e) => { setCardapio_braile(e.target.value) }}
               />
             </div>
           </div>
@@ -355,7 +356,7 @@ export default function Formulario() {
                 type={"text"}
                 placeholder={"Ex: Sim"}
                 name={"nome_parceiro"}
-                onchange={(e) => { setNome_parceiro(e.target.value)}}
+                onchange={(e) => { setNome_parceiro(e.target.value) }}
               />
             </div>
           </div>
@@ -372,7 +373,7 @@ export default function Formulario() {
                 type={"text"}
                 placeholder={"XX/XX/XXXX"}
                 name={"data_cerimonia"}
-                onchange={(e) => { setData_cerimonia(e.target.value)}}
+                onchange={(e) => { setData_cerimonia(e.target.value) }}
               />
             </div>
           </div>
@@ -389,7 +390,7 @@ export default function Formulario() {
                 type={"text"}
                 placeholder={"Ex: 14:00"}
                 name={"horas_cerimonia"}
-                onchange={(e) => { setHorario_cerimonia(e.target.value)}}
+                onchange={(e) => { setHorario_cerimonia(e.target.value) }}
               />
             </div>
           </div>
@@ -406,7 +407,7 @@ export default function Formulario() {
                 type={"text"}
                 placeholder={"Ex:Moema"}
                 name={"reside"}
-                onchange={(e) => { setOnde_mora(e.target.value)}}
+                onchange={(e) => { setOnde_mora(e.target.value) }}
               />
             </div>
           </div>
@@ -424,7 +425,7 @@ export default function Formulario() {
                 type={"text"}
                 placeholder={"Descreva aqui"}
                 name={"prefencia_cerimonia"}
-                onchange={(e) => { setPreferencias(e.target.value)}}
+                onchange={(e) => { setPreferencias(e.target.value) }}
               />
             </div>
           </div>
@@ -442,7 +443,7 @@ export default function Formulario() {
                 type={"text"}
                 placeholder={"Descreva aqui"}
                 name={"decoracao"}
-                onchange={(e) => { setPreferencias_decoracao(e.target.value)}}
+                onchange={(e) => { setPreferencias_decoracao(e.target.value) }}
               />
             </div>
           </div>
@@ -460,7 +461,7 @@ export default function Formulario() {
                 type={"text"}
                 placeholder={"Descreva aqui"}
                 name={"paleta_cores"}
-                onchange={(e) => { setPaleta_de_cores(e.target.value)}}
+                onchange={(e) => { setPaleta_de_cores(e.target.value) }}
               />
             </div>
           </div>
@@ -477,7 +478,7 @@ export default function Formulario() {
                 type={"text"}
                 placeholder={"Ex: Sim"}
                 name={"indicacao_tatil"}
-                onchange={(e) => { setIndicacao_tatil_danca(e.target.value)}}
+                onchange={(e) => { setIndicacao_tatil_danca(e.target.value) }}
               />
             </div>
           </div>
@@ -495,7 +496,7 @@ export default function Formulario() {
                 type={"text"}
                 placeholder={"Descreva aqui"}
                 name={"garantia_pistaAcessivel"}
-                onchange={(e) => { setSeguranca_pista(e.target.value)}}
+                onchange={(e) => { setSeguranca_pista(e.target.value) }}
               />
             </div>
           </div>
@@ -514,7 +515,7 @@ export default function Formulario() {
                 type={"text"}
                 placeholder={"Descreva aqui"}
                 name={"estilo_fotografia"}
-                onchange={(e) => { setVideo_e_foto(e.target.value)}}
+                onchange={(e) => { setVideo_e_foto(e.target.value) }}
               />
             </div>
           </div>
@@ -531,7 +532,7 @@ export default function Formulario() {
                 type={"text"}
                 placeholder={"Ex: Sim"}
                 name={"descricao_foto"}
-                onchange={(e) => { setDescricoes_fotos(e.target.value)}}
+                onchange={(e) => { setDescricoes_fotos(e.target.value) }}
               />
             </div>
           </div>
@@ -549,7 +550,7 @@ export default function Formulario() {
                 type={"text"}
                 placeholder={"Descreva aqui"}
                 name={"assentos"}
-                onchange={(e) => { setAssentos(e.target.value)}}
+                onchange={(e) => { setAssentos(e.target.value) }}
               />
             </div>
           </div>
@@ -567,7 +568,7 @@ export default function Formulario() {
                 type={"text"}
                 placeholder={"Descreva aqui"}
                 name={"arranjos_assentos"}
-                onchange={(e) => { setConsideracoes_assentos(e.target.value)}}
+                onchange={(e) => { setConsideracoes_assentos(e.target.value) }}
               />
             </div>
           </div>
@@ -585,7 +586,7 @@ export default function Formulario() {
                 type={"text"}
                 placeholder={"Descreva aqui"}
                 name={"adpatacao_programacao"}
-                onchange={(e) => { setAdaptacao_programacao(e.target.value)}}
+                onchange={(e) => { setAdaptacao_programacao(e.target.value) }}
               />
             </div>
           </div>
@@ -603,7 +604,7 @@ export default function Formulario() {
                 type={"text"}
                 placeholder={"Descreva aqui"}
                 name={"garantia_necessidades"}
-                onchange={(e) => { setNecessidades(e.target.value)}}
+                onchange={(e) => { setNecessidades(e.target.value) }}
               />
             </div>
           </div>
@@ -620,7 +621,7 @@ export default function Formulario() {
                 type={"text"}
                 placeholder={"Descreva aqui"}
                 name={"fala_final"}
-                onchange={(e) => { setMais_informacoes(e.target.value)}}
+                onchange={(e) => { setMais_informacoes(e.target.value) }}
               />
             </div>
           </div>

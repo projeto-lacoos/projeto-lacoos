@@ -200,16 +200,17 @@ li img {
 
 .link_login_password {
   position: relative;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   color: #658955;
   text-decoration: none;
 }
 
 .link_creat_cont {
   text-align: center;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   color: #658955;
   text-decoration: none;
+  margin-top: 1.5rem;
 }
 
 .button_login {
@@ -325,7 +326,7 @@ li img {
   .link_login_password {
     position: relative;
     top: 10px;
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     color: #658955;
     text-decoration: none;
   }
