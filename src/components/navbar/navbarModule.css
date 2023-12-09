@@ -418,7 +418,7 @@
     height: 3rem;
   }
   .home-navbar .navbar .modal-navbar .navbar-e {
-    width: 0vw;
+    width: 85vw;
   }
   .home-navbar .navbar .modal-navbar .navbar-d {
     display: flex;
@@ -436,8 +436,8 @@
 
   .navbar-d .itens-menu .logar .user {
     padding: 1rem;
-    width: 14rem;
-    margin-top: 4rem;
+    width: 10rem;
+    margin-top: 7rem;
   }
 
   .navbar-d .itens-menu li a,
