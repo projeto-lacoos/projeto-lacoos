@@ -12,6 +12,7 @@ import { useContext, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { ApplicationContext } from "../../context/ApplicationProvider";
 import { ThemeContext } from "../../context/ThemeContext";
+import { ToastContainer, toast } from "react-toastify";
 
 export default function ResetarSenha() {
   const { theme } = useContext(ThemeContext);
@@ -72,12 +73,15 @@ export default function ResetarSenha() {
           }
         );
 
-        if (typeof window !== undefined && response.ok) {
-          localStorage.clear();
+        if (response.ok) {
+          toast.success('Senha recuperada com sucesso!', {
+            position: toast.POSITION.TOP_RIGHT,
+            autoClose: 3500,
+          });
+          /* localStorage.clear();
           setAuth(false);
-          navigate("/login");
+          navigate("/login"); */
         }
-
       } catch (error) {
         console.log(error);
         alert("Rode a API!");
@@ -120,10 +124,10 @@ export default function ResetarSenha() {
           className={`button_login_reset ${getThemeClass(theme)}`}
           type="submit"
           value={"SALVAR"}
-          onClick={onSubmit}
-        >
+          onClick={onSubmit}>
           Salvar
         </button>
+        <ToastContainer />
       </div>
     </section>
   );

@@ -70,7 +70,7 @@ export default function NovaConta() {
           body: JSON.stringify({
             birthDate: dataNasc, 
             email: email, 
-            name: nome, 
+            name: nome,
             password: senha, 
             phone: celular, 
             sexo: sexo, 

@@ -6,7 +6,6 @@ import { ThemeProvider } from './components/context/ThemeContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-
 window.watsonAssistantChatOptions = {
   integrationID: "0cd1e9e9-d7f2-4bdf-80f1-7563dd0ec589", // The ID of this integration.
   region: "us-south", // The region your integration is hosted in.

@@ -265,12 +265,12 @@ export default function Sobre() {
           <img
             className="conteudo-logo"
             src={getThemeLogo(theme)}
-            alt="background-images"
+            alt="Casal brinando taças com champaign"
           />
           <p className="p-sobre">um vínculo além da visão</p>
         </div>
         <div className="img-detalhes">
-          <img className="detalhes" src={getThemeDetalhes(theme)} alt="" />
+          <img className="detalhes" src={getThemeDetalhes(theme)} alt="Logo Laçoos infinito entrelaçados" />
         </div>
       </section>
       <section className="sobre-lacoos">
@@ -301,14 +301,14 @@ export default function Sobre() {
         <div className="sobre-parceiros">
             <h1 className={`tituloParceiros ${getThemeClass(theme)}`}>Bodas de Casamento</h1>
             <hr className={`hr-conteudoParceiros ${getThemeClass(theme)}`} />
-            <img src={Limpay} className="imgParceiros" alt=""/>
-            <img src={Lushe} className="imgParceiros" alt=""/>
-            <img src={AliancaP} className="imgParceiros" alt=""/>
+            <img src={Limpay} className="imgParceiros" alt="Logo limpay"/>
+            <img src={Lushe} className="imgParceiros" alt="Logo Lushe"/>
+            <img src={AliancaP} className="imgParceiros" alt="Logo Aliança Primicias"/>
           </div>
       </section>
       <section className={`sobre-cartaolacoos ${getThemeClass(theme)}`}>
         <div className="images">
-          <img className="front-img" src={theme === "A" ? CartaoVisitaPB : CartaoVisita} alt="" />
+          <img className="front-img" src={theme === "A" ? CartaoVisitaPB : CartaoVisita} alt="Cartões verdes da Laçoos" />
         </div>
       </section>
       <section className="sobre-fontslacoos">
@@ -363,58 +363,58 @@ export default function Sobre() {
         <div className="containerIntegrantes">
           <div className="conteudointegrantes">
             <div className={`card ${getThemeClass(theme)}`}>
-              <img className="imageIntegrante" src={theme === "A" ? GarrettPB : Garrett} alt="" />
+              <img className="imageIntegrante" src={theme === "A" ? GarrettPB : Garrett} alt="Integrante Laçoos" />
               <p>FullStack</p>
               <p>Product Owner</p>
             </div>
             <div className={`card ${getThemeClass(theme)}`}>
-              <img className="imageIntegrante" src={theme === "A" ? MouraPB : Moura} alt="" />
+              <img className="imageIntegrante" src={theme === "A" ? MouraPB : Moura} alt="Integrante Laçoos" />
               <p>Back-End</p>
               <p>Scrum Master</p>
             </div>
             <div className={`card ${getThemeClass(theme)}`}>
-              <img className="imageIntegrante" src={theme === "A" ? FilipePB : Filipe} alt="" />
+              <img className="imageIntegrante" src={theme === "A" ? FilipePB : Filipe} alt="Integrante Laçoos" />
               <p>Front-End</p>
               <p>Financeiro</p>
             </div>
             <div className={`card ${getThemeClass(theme)}`}>
-              <img className="imageIntegrante" src={theme === "A" ? GusbicPB : Gusbic} alt="" />
+              <img className="imageIntegrante" src={theme === "A" ? GusbicPB : Gusbic} alt="Integrante Laçoos" />
               <p>Front-End</p>
               <p>Dev chatbot</p>
             </div>
             <div className={`card ${getThemeClass(theme)}`}>
-              <img className="imageIntegrante" src={theme === "A" ? FerrazPB : Ferraz} alt="" />
+              <img className="imageIntegrante" src={theme === "A" ? FerrazPB : Ferraz} alt="Integrante Laçoos" />
               <p>Design</p>
               <p>Social Media</p>
             </div>
             <div className={`card ${getThemeClass(theme)}`}>
-              <img className="imageIntegrante" src={theme === "A" ? MasonPB : Mason} alt="" />
+              <img className="imageIntegrante" src={theme === "A" ? MasonPB : Mason} alt="Integrante Laçoos" />
               <p>Design</p>
             </div>
             <div className={`card ${getThemeClass(theme)}`}>
-              <img className="imageIntegrante" src={theme === "A" ? LuizaPB : Luiza} alt="" />
+              <img className="imageIntegrante" src={theme === "A" ? LuizaPB : Luiza} alt="Integrante Laçoos" />
               <p>Design</p>
               <p>Banco de Dados</p>
             </div>
           </div>
-          <img className="caixaGarrafinha" src={theme === "A" ? CaixaGarrafinhaA : CaixaGarrafinha} alt="" />
+          <img className="caixaGarrafinha" src={theme === "A" ? CaixaGarrafinhaA : CaixaGarrafinha} alt="Garrafinha Laçoos" />
         </div>
       </section>
       <section className={`sobre-footerlacoos ${getThemeClass(theme)}`}>
         <div className="redesocial">
           <div className="cardsocial">
-            <img src={Instagram} alt="" />
+            <img src={Instagram} alt="Instagram Icon" />
             <p>@l.acoos</p>
           </div>
           <div className="cardsocial">
-            <img src={Linkedin} alt="" />
+            <img src={Linkedin} alt="Linkedin Icon" />
             <p>Projeto Laçoos</p>
           </div>
           <div className="cardsocial">
-            <img src={Github} alt="" />
+            <img src={Github} alt="GitHub Icon" />
             <p>Projeto-lacoos</p>
           </div>
-          <img className="imageQRCode" src={theme === "A" ? QRCodePB : QRCode} alt="" />
+          <img className="imageQRCode" src={theme === "A" ? QRCodePB : QRCode} alt="QR Code Bentome Laçoos" />
         </div>
       </section>
     </div>

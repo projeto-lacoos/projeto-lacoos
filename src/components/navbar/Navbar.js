@@ -98,12 +98,17 @@ export default function Navbar() {
                   <li>
                     <Link className="logar item" to={"/perfil"}>
                       <img className="user" src={getFotoUser(theme)} alt="" />
-                      <span>{user.name ? user.name : "Maria do Nascimento"}</span>
+                      {/* {user.name ? user.name : "Maria do Nascimento"} */}
                     </Link>
                   </li>
                   <li>
                     <Link className="item" to={"/"}>
                       Início
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="item" to={"/perfil"}>
+                      Perfil
                     </Link>
                   </li>
                   <li>

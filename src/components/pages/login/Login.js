@@ -12,8 +12,12 @@ import DPTT from "../../../img/login/oo.svg";
 import M from "../../../img/login/oo-2.svg";
 import PD from "../../../img/login/oo-1.svg";
 import A from "../../../img/login/oo-3.svg";
+import { ToastContainer, toast } from "react-toastify";
+
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Login() {
+
   const { theme } = useContext(ThemeContext);
 
   const getThemeClass = (theme) => {
@@ -50,8 +54,9 @@ export default function Login() {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const onSubmit = async (e) => {
     e.preventDefault();
     if (email !== '' && senha !== '') {
@@ -72,17 +77,23 @@ export default function Login() {
         console.log(data);
 
         if (typeof window !== undefined && response.ok) {
+/*           toast.success('Você foi logado com sucesso!', {
+            position: toast.POSITION.TOP_RIGHT,
+            autoClose: 10000,
+          }); */
           const token = data.token;
           if (token) {
             window.localStorage.setItem('token', token);
             const localUser = jwtDecode(token);
-            setUser(localUser)
-            setAuth(true)
-            /* console.log(localUser); */
-            navigate("/")
+            setUser(localUser);
+            setAuth(true);
+            navigate("/");
           }
         } else {
-          alert("Usuário ou senha estão inválidos!");
+          toast.error('Usuário ou senha estão inválidos!', {
+            position: toast.POSITION.TOP_CENTER,
+            autoClose: 3500
+          });
         }
       } catch (error) {
         console.log(error);
@@ -112,7 +123,8 @@ export default function Login() {
             Senha
             <Input className={`input-login ${getThemeClass(theme)}`} type={"password"} placeholder={"Digite sua senha"} name={"senha_usuario"} onchange={(e) => { setSenha(e.target.value) }} />
           </label>
-          <button className={`button_login ${getThemeClass(theme)}`} onClick={(e) => { onSubmit(e) }}>ENTRAR</button>
+          <button className={`button_login ${getThemeClass(theme)}`} onClick={onSubmit}>ENTRAR</button>
+          {/* <ToastContainer /> */}
           <div className={`container-links-login`}>
             <Link to={"/recuperacao-senha"} className={`link_login_password ${getThemeClass(theme)}`}>
               Esqueceu a senha?

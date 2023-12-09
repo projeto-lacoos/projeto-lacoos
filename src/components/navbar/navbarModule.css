@@ -112,7 +112,6 @@
   z-index: 3;
 }
 
-
 .modal-navbar {
   display: flex;
   position: fixed;
@@ -313,13 +312,13 @@
   }
 
   .navbar-d .itens-menu .logo-reduzida {
-    top: 3%;
+    top: 5%;
     width: 8rem;
   }
 
   .navbar-d .itens-menu .logar .user {
-    width: 18rem;
-    margin-top: 4rem;
+    width: 12.5rem;
+    margin-top: 10rem;
   }
 
   .navbar-d .itens-menu li a,
@@ -332,6 +331,7 @@
 @media (min-width: 992px) and (max-width: 1199px) {
   .navbar-d .itens-menu .logar .user {
     padding: 1.3rem;
+    width: 12.5rem;
   }
 
   .navbar-d .itens-menu {
@@ -355,7 +355,7 @@
   }
 
   .navbar-d .itens-menu .logar .user {
-    width: 18rem;
+    width: 12.5rem;
     margin-top: 4rem;
   }
 
@@ -396,7 +396,7 @@
 
   .navbar-d .itens-menu .logar .user {
     padding: 1rem;
-    width: 14rem;
+    width: 10rem;
     margin-top: 4rem;
   }
 

@@ -11,6 +11,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 import { useContext, useState } from "react";
 import { ThemeContext } from "../../context/ThemeContext";
+import { ToastContainer, toast } from "react-toastify";
 
 export default function RecuperacaoSenha() {
   const { theme } = useContext(ThemeContext);
@@ -63,14 +64,26 @@ export default function RecuperacaoSenha() {
               email: email
             })
           });
-        if (typeof window !== undefined && response.ok) {
-          navigate("/login");
+        if (response.ok) {
+          toast.success('Email de recuperação de senha enviado!', {
+            position: toast.POSITION.TOP_RIGHT,
+            autoClose: 3500,
+          });
+          /* navigate("/login"); */
         } else{
-          alert("Email não encontrado!")
+          /* setEmail(""); */
+          toast.error('Email não encontrado!', {
+            position: toast.POSITION.TOP_RIGHT,
+            autoClose: 3500,
+          });
         }
       } catch (error) {
-        console.log(error);
-        alert('Algo deu errado! Mas enviou o email!');
+        toast.error('Email não encontrado!', {
+          position: toast.POSITION.TOP_RIGHT,
+          autoClose: 3500,
+        });
+        /* console.log(error);
+        alert('Algo deu errado! Mas enviou o email!'); */
       }
     }
   }
@@ -99,6 +112,7 @@ export default function RecuperacaoSenha() {
             </div>
             <div className="button-recuperacao-senha">
               <button type="submit" className={`btn-recup-senha ${getThemeClass(theme)}`} onClick={onSubmit}>Enviar</button>
+              <ToastContainer />
             </div>
           </form>
           <Link style={{ textDecoration: "none" }} to={"/login"} className={`voltar-recuperacao-senha ${getThemeClass(theme)}`}>Voltar</Link>
