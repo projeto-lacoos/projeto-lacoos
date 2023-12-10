@@ -83,10 +83,14 @@
   }
 }
 @media (min-width: 481px) and (max-width: 767px) {
+  .h2-convites {
+    font-size: 6rem;
+  }
 }
 @media (max-width: 480px) {
   .h2-convites {
-    font-size: 4.8rem;
+    font-size: 3.8rem;
+    margin-bottom: 2rem;
   }
 
   .container-todas-convites {
