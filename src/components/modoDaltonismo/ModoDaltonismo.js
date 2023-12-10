@@ -12,8 +12,8 @@ import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 
 export default function ModoDaltonismo({ HandleModoDaltonismo }) {
-  const { toggleTheme, theme } = useContext(ThemeContext);  
-  
+  const { toggleTheme, theme } = useContext(ThemeContext);
+
   const getThemeClass = (theme) => {
     switch (theme) {
       case "DPTT":
@@ -31,13 +31,16 @@ export default function ModoDaltonismo({ HandleModoDaltonismo }) {
 
   const handleToggleTheme = () => {
     toggleTheme("reset");
-  }
+  };
   return (
     <div className={`container-modo-daltonismo`}>
       <div className="caixa">
         <div className="conteudo-caixa">
           <div className={`modo-daltonismo-caixa ${getThemeClass(theme)}`}>
-            <span onClick={HandleModoDaltonismo} className={`btn-voltar ${getThemeClass(theme)}`}>
+            <span
+              onClick={HandleModoDaltonismo}
+              className={`btn-voltar ${getThemeClass(theme)}`}
+            >
               Voltar
             </span>
             <div className="escolhas-modo-daltonismo">
