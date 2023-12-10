@@ -1,0 +1,101 @@
+/* CORES DO MODO DALTONISMO */
+.h2-convites.DPTT {
+  color: #0000ff;
+}
+/*  */
+.h2-convites.M {
+  color: #00bfff;
+}
+/*  */
+.h2-convites.PD {
+  color: #008000;
+}
+/*  */
+.h2-convites.A {
+  color: #fff;
+}
+
+.container-convites.A {
+  background: url(../../../img/convites/fundo-convites-PB.svg) no-repeat center
+    center;
+  background-size: cover;
+}
+
+/* COMEÇO DO CSS DA PÁGINA */
+.container-convites {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  background: url(../../../img/convites/fundo-convites.svg) no-repeat center
+    center;
+  background-size: cover;
+}
+
+.h2-convites {
+  color: #658955;
+  font-size: 7.8rem;
+  font-weight: 600;
+}
+
+.container-todas-convites {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 70vw;
+  gap: 2rem;
+  overflow-y: auto;
+  margin-bottom: 3rem;
+}
+
+.cada-convite {
+  width: 30rem;
+}
+
+@media (min-width: 1920px) {
+}
+@media (min-width: 1200px) and (max-width: 1919px) {
+  .container-todas-convites {
+    width: 90vw;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .cada-convite {
+    width: 30rem;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .h2-convites {
+    font-size: 6.8rem;
+  }
+
+  .container-todas-convites {
+    width: 80vw;
+    gap: 2rem;
+  }
+
+  .cada-convite {
+    width: 27rem;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+}
+@media (max-width: 480px) {
+  .h2-convites {
+    font-size: 4.8rem;
+  }
+
+  .container-todas-convites {
+    width: 80vw;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .cada-convite {
+    width: 75vw;
+  }
+}

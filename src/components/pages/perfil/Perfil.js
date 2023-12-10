@@ -131,7 +131,7 @@ export default function Perfil() {
                   {/* <Link to={"/pacote"}>
                     <li className="lista-perfil">Meu Pacote</li>
                   </Link> */}
-                  <Link to={"#"}>
+                  <Link to={"/convites"}>
                     <li className="lista-perfil">Convites</li>
                   </Link>
                 </ul>
@@ -206,7 +206,7 @@ export default function Perfil() {
                   <button type="submit" className={`btn-perfil ${getThemeClass(theme)}`}>
                     Salvar alteração
                   </button>
-                  <Link to="/perfil" onClick={onSubmit} className={`btn-perfil ${getThemeClass(theme)}`}>
+                  <Link to="/recuperacao-senha" onClick={onSubmit} className={`btn-perfil ${getThemeClass(theme)}`}>
                     Alterar senha
                   </Link>
                 </div>

@@ -117,7 +117,7 @@ export default function Navbar() {
                     </Link>
                   </li>
                   <li>
-                    <Link className="item" to={"/"}>
+                    <Link className="item" to={"/convites"}>
                       Convites
                     </Link>
                   </li>
