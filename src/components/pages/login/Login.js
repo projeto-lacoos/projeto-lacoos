@@ -124,7 +124,7 @@ export default function Login() {
             <Input className={`input-login ${getThemeClass(theme)}`} type={"password"} placeholder={"Digite sua senha"} name={"senha_usuario"} onchange={(e) => { setSenha(e.target.value) }} />
           </label>
           <button className={`button_login ${getThemeClass(theme)}`} onClick={onSubmit}>ENTRAR</button>
-          {/* <ToastContainer /> */}
+          <ToastContainer />
           <div className={`container-links-login`}>
             <Link to={"/recuperacao-senha"} className={`link_login_password ${getThemeClass(theme)}`}>
               Esqueceu a senha?

@@ -14,8 +14,11 @@ import A from "../../../img/formulario/oo-3.svg";
 import { useNavigate } from "react-router-dom";
 
 import Input from "../../input/Input";
+import { ToastContainer, toast } from "react-toastify";
+import { ApplicationContext } from "../../context/ApplicationProvider";
 
 export default function Formulario() {
+
   const { theme } = useContext(ThemeContext);
 
   const getThemeClass = (theme) => {
@@ -79,10 +82,10 @@ export default function Formulario() {
   const [mais_informacoes, setMais_informacoes] = useState('');
 
   const onSubmit = async (e) => {
+    console.log("Oi");
     e.preventDefault();
-    if (estilo !== "" && orcamento !== "" && tipo_deficiencia !== "" && grau_visao !== "" && sensivel_a_luz !== "" && musica_entretenimento !== "" && restricoes_alimentares !== "" && informacoes !== "" && cadeira_de_rodas !== "" && piso_tatil !== "" && cardapio_braile !== "" && nome_parceiro !== "" && data_cerimonia !== "" && restricoes_alimentares !== "" && horario_cerimonia !== "" && onde_mora !== "" && preferencias !== "" && preferencias_decoracao !== "" && paleta_de_cores !== "" && indicacao_tatil_danca !== "" && seguranca_pista !== "" && video_e_foto !== "" && descricoes_fotos !== "" && assentos !== "" && consideracoes_assentos !== "" && adaptacao_programacao !== "" && necessidades !== "" && mais_informacoes !== "") {
       try {
-        const response = await fetch("", {
+        const response = await fetch("http://localhost:8080/v1/form/sign-up/form", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
@@ -90,31 +93,31 @@ export default function Formulario() {
           body: JSON.stringify({
             estilo: estilo,
             orcamento: orcamento,
-            tipo_deficiencia: tipo_deficiencia,
-            grau_visao: grau_visao,
-            sensivel_a_luz: sensivel_a_luz,
-            musica_entretenimento: musica_entretenimento,
-            restricoes_alimentares: restricoes_alimentares,
+            tipoDeficiencia: tipo_deficiencia,
+            grauVisao: grau_visao,
+            sensivelALuz: sensivel_a_luz,
+            musicaEntretenimento: musica_entretenimento,
+            restricoesAlimentares: restricoes_alimentares,
             informacoes: informacoes,
-            cadeira_de_rodas: cadeira_de_rodas,
-            piso_tatil: piso_tatil,
-            cardapio_braile: cardapio_braile,
-            nome_parceiro: nome_parceiro,
-            data_cerimonia: data_cerimonia,
-            horario_cerimonia: horario_cerimonia,
-            onde_mora: onde_mora,
+            cadeiraDeRodas: cadeira_de_rodas,
+            pisoTatil: piso_tatil,
+            cardapioBraille: cardapio_braile,
+            nomeParceiro: nome_parceiro,
+            dataCerimonia: data_cerimonia,
+            horarioCerimonia: horario_cerimonia,
+            ondeMora: onde_mora,
             preferencias: preferencias,
-            preferencias_decoracao: preferencias_decoracao,
-            paleta_de_cores: paleta_de_cores,
-            indicacao_tatil_danca: indicacao_tatil_danca,
-            seguranca_pista: seguranca_pista,
-            video_e_foto: video_e_foto,
-            descricoes_fotos: descricoes_fotos,
+            preferenciasDecoracao: preferencias_decoracao,
+            paletaDeCores: paleta_de_cores,
+            indicacaoTatilDanca: indicacao_tatil_danca,
+            segurancaPista: seguranca_pista,
+            videoEFoto: video_e_foto,
+            descricoesFotos: descricoes_fotos,
             assentos: assentos,
-            consideracoes_assentos: consideracoes_assentos,
-            adaptacao_programacao: adaptacao_programacao,
+            consideracoesAssentos: consideracoes_assentos,
+            adaptacaoProgramacao: adaptacao_programacao,
             necessidades: necessidades,
-            mais_informacoes: mais_informacoes
+            maisInformacoes: mais_informacoes
           })
         });
 
@@ -122,18 +125,24 @@ export default function Formulario() {
           alert("Formulário cadastrado!");
           navigate("/pagamento");
         } else {
-          alert("Error");
+          toast.error('Reveja dados do formulário!', {
+            position: toast.POSITION.TOP_RIGHT,
+            autoClose: 3500,
+          });
+          console.log("Error");
         }
 
       } catch (error) {
         console.log(error);
-        alert("Problema na API.")
+        toast.error('Problema na API.', {
+          position: toast.POSITION.TOP_RIGHT,
+          autoClose: 3500,
+        });
+        /* alert("Problema na API.") */
       }
+  };
 
-    } else {
-      console.log("Preencha todos os campos: para que o seu sonho seja realizado!");
-    }
-  }
+  const { user } = useContext(ApplicationContext);
 
   return (
     <>
@@ -625,14 +634,14 @@ export default function Formulario() {
               />
             </div>
           </div>
-
           <div className="button_forms">
             <button
               className={`button_salvar ${getThemeClass(theme)}`}
               type="submit"
-              onClick={(e) => { onSubmit(e) }}>
+              onClick={onSubmit}>
               Salvar
             </button>
+            <ToastContainer />
           </div>
         </form>
       </section>

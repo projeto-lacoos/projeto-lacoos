@@ -50,14 +50,12 @@ export default function NovaConta() {
 
   const [nome, setNome] = useState('');
   const [dataNasc, setDataNasc] = useState('');
-
   const [celular, setCelular] = useState('');
   const [telefone, setTelefone] = useState('');
-
   const [sexo, setSexo] = useState('');
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
-  
+
   const onSubmit = async (e) => {
     e.preventDefault();
     if(nome !== "" && dataNasc !== "" && celular !== "" && telefone !== "" && sexo !== "" && email !== "" && senha !== ""){
@@ -77,7 +75,7 @@ export default function NovaConta() {
             telephone: telefone
           })
         });
-
+          
         if(response.ok){
           alert("Cadastro realizado com sucesso!");
           navigate("/login");
@@ -113,7 +111,9 @@ export default function NovaConta() {
                       className={`input input_name ${getThemeClass(theme)}`}                      type={"text"}
                       placeholder={"Nome e sobrenome"}
                       name={"nome_cliente"}
-                      onchange={(e) => { setNome(e.target.value)}}
+                      onchange={(e) => { 
+                        setNome(e.target.value)
+                      }} 
                     />
                   </label>
                   <label className={`form_dados_label02 ${getThemeClass(theme)}`}>
