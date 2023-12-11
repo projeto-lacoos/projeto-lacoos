@@ -71,25 +71,25 @@ import LogoLacoosPD from "../../../img/sobre/lacoos-PD.svg";
 import LogoLacoosM from "../../../img/sobre/lacoos-M.svg";
 import LogoLacoosA from "../../../img/sobre/lacoos-PB.svg";
 
-import Garrett from "../../../img/sobre/garrett.png";
+import Garrett from "../../../img/sobre/garrett.svg";
 import GarrettPB from "../../../img/sobre/garrett-PB.svg";
 
-import Moura from "../../../img/sobre/moura.png";
+import Moura from "../../../img/sobre/moura.svg";
 import MouraPB from "../../../img/sobre/moura-PB.svg";
 
-import Filipe from "../../../img/sobre/filipe.png";
+import Filipe from "../../../img/sobre/filipe.svg";
 import FilipePB from "../../../img/sobre/filipe-PB.svg";
 
-import Gusbic from "../../../img/sobre/gusbic.png";
+import Gusbic from "../../../img/sobre/gusbic.svg";
 import GusbicPB from "../../../img/sobre/gusbic-PB.svg";
 
-import Ferraz from "../../../img/sobre/ferraz.png";
+import Ferraz from "../../../img/sobre/ferraz.svg";
 import FerrazPB from "../../../img/sobre/ferraz-PB.svg";
 
-import Mason from "../../../img/sobre/mason.png";
+import Mason from "../../../img/sobre/mason.svg";
 import MasonPB from "../../../img/sobre/mason-PB.svg";
 
-import Luiza from "../../../img/sobre/luiza.png";
+import Luiza from "../../../img/sobre/luiza.svg";
 import LuizaPB from "../../../img/sobre/luiza-PB.svg";
 
 import CaixaGarrafinha from "../../../img/sobre/images-caixaGarrafinha.png";
