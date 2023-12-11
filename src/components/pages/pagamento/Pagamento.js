@@ -9,78 +9,52 @@ import Navbar from "../../navbar/Navbar";
 import Servicos from "../../servicos/Servicos";
 import Input from "../../input/Input";
 
-import ImagemEmpresa1 from "../../../img/servicos/imagemEmpresa1.svg";
-import ImagemEmpresa2 from "../../../img/servicos/imagemEmpresa2.svg";
-import ImagemEmpresa3 from "../../../img/servicos/imagemEmpresa3.svg";
-import ImagemEmpresa4 from "../../../img/servicos/imagemEmpresa4.svg";
-import ImagemEmpresa5 from "../../../img/servicos/imagemEmpresa5.svg";
-import ImagemEmpresa6 from "../../../img/servicos/imagemEmpresa6.svg";
-import ImagemEmpresa7 from "../../../img/servicos/imagemEmpresa7.svg";
-import ImagemEmpresa8 from "../../../img/servicos/imagemEmpresa8.svg";
-import ImagemEmpresa9 from "../../../img/servicos/imagemEmpresa9.svg";
-import ImagemEmpresa10 from "../../../img/servicos/imagemEmpresa10.svg";
-import ImagemEmpresa11 from "../../../img/servicos/imagemEmpresa11.svg";
-import ImagemEmpresa12 from "../../../img/servicos/imagemEmpresa12.svg";
-import ImagemEmpresa13 from "../../../img/servicos/imagemEmpresa13.svg";
-import ImagemEmpresa14 from "../../../img/servicos/imagemEmpresa14.svg";
-import ImagemEmpresa15 from "../../../img/servicos/imagemEmpresa15.svg";
-import ImagemEmpresa16 from "../../../img/servicos/imagemEmpresa16.svg";
-import ImagemEmpresa17 from "../../../img/servicos/imagemEmpresa17.svg";
-import ImagemEmpresa18 from "../../../img/servicos/imagemEmpresa18.svg";
-import ImagemEmpresa19 from "../../../img/servicos/imagemEmpresa19.svg";
-import ImagemEmpresa20 from "../../../img/servicos/imagemEmpresa20.svg";
-import ImagemEmpresa21 from "../../../img/servicos/imagemEmpresa21.svg";
+// import ImagemEmpresa1 from "../../../img/servicos/imagemEmpresa1.svg";
+// import ImagemEmpresa2 from "../../../img/servicos/imagemEmpresa2.svg";
+// import ImagemEmpresa3 from "../../../img/servicos/imagemEmpresa3.svg";
+// import ImagemEmpresa4 from "../../../img/servicos/imagemEmpresa4.svg";
+// import ImagemEmpresa5 from "../../../img/servicos/imagemEmpresa5.svg";
+// import ImagemEmpresa6 from "../../../img/servicos/imagemEmpresa6.svg";
+// import ImagemEmpresa7 from "../../../img/servicos/imagemEmpresa7.svg";
+// import ImagemEmpresa8 from "../../../img/servicos/imagemEmpresa8.svg";
+// import ImagemEmpresa9 from "../../../img/servicos/imagemEmpresa9.svg";
+// import ImagemEmpresa10 from "../../../img/servicos/imagemEmpresa10.svg";
+// import ImagemEmpresa11 from "../../../img/servicos/imagemEmpresa11.svg";
+// import ImagemEmpresa12 from "../../../img/servicos/imagemEmpresa12.svg";
+// import ImagemEmpresa13 from "../../../img/servicos/imagemEmpresa13.svg";
+// import ImagemEmpresa14 from "../../../img/servicos/imagemEmpresa14.svg";
+// import ImagemEmpresa15 from "../../../img/servicos/imagemEmpresa15.svg";
+// import ImagemEmpresa16 from "../../../img/servicos/imagemEmpresa16.svg";
+// import ImagemEmpresa17 from "../../../img/servicos/imagemEmpresa17.svg";
+// import ImagemEmpresa18 from "../../../img/servicos/imagemEmpresa18.svg";
+// import ImagemEmpresa19 from "../../../img/servicos/imagemEmpresa19.svg";
+// import ImagemEmpresa20 from "../../../img/servicos/imagemEmpresa20.svg";
+// import ImagemEmpresa21 from "../../../img/servicos/imagemEmpresa21.svg";
 
 export default function Pagamento() {
-<<<<<<< Updated upstream
   // const imagens = [
-    // ImagemEmpresa1,
-    // ImagemEmpresa2,
-    // ImagemEmpresa3,
+  //   ImagemEmpresa1,
+  //   ImagemEmpresa2,
+  //   ImagemEmpresa3,
   //   ImagemEmpresa4,
   //   ImagemEmpresa5,
   //   ImagemEmpresa6,
   //   ImagemEmpresa7,
   //   ImagemEmpresa8,
   //   ImagemEmpresa9,
-  //   ImagemEmpresa10, 
-  //   ImagemEmpresa11, 
+  //   ImagemEmpresa10,
+  //   ImagemEmpresa11,
   //   ImagemEmpresa12,
-  //   ImagemEmpresa13, 
-  //   ImagemEmpresa14, 
+  //   ImagemEmpresa13,
+  //   ImagemEmpresa14,
   //   ImagemEmpresa15,
-  //   ImagemEmpresa16, 
-  //   ImagemEmpresa17, 
+  //   ImagemEmpresa16,
+  //   ImagemEmpresa17,
   //   ImagemEmpresa18,
-  //   ImagemEmpresa19, 
-  //   ImagemEmpresa20, 
-  //   ImagemEmpresa21
+  //   ImagemEmpresa19,
+  //   ImagemEmpresa20,
+  //   ImagemEmpresa21,
   // ];
-=======
-   const imagens = [
-     ImagemEmpresa1,
-     ImagemEmpresa2,
-     ImagemEmpresa3,
-     ImagemEmpresa4,
-     ImagemEmpresa5,
-     ImagemEmpresa6,
-     ImagemEmpresa7,
-     ImagemEmpresa8,
-     ImagemEmpresa9,
-     ImagemEmpresa10, 
-     ImagemEmpresa11, 
-     ImagemEmpresa12,
-     ImagemEmpresa13, 
-     ImagemEmpresa14, 
-     ImagemEmpresa15,
-    ImagemEmpresa16, 
-    ImagemEmpresa17, 
-    ImagemEmpresa18,
-    ImagemEmpresa19, 
-    ImagemEmpresa20, 
-    ImagemEmpresa21
-  ];
->>>>>>> Stashed changes
 
   const prices = {
     musica: {
@@ -141,8 +115,8 @@ export default function Pagamento() {
     "Um buffet de festas com diversas mesas, podemos ver em cima delas  pratos brancos com pães dentro, taças de vidro, canecas brancas com detalhes dourados de ponta cabeça em cima de pratos brancos com detalhes dourados, uma toalha branca de renda, guardanapos azuis abertos, guardanapos brancos dobrados, talheres dourados, um grande vaso de vidro no centro com folhas enroladas em sua volta e em sua base e por dentro, flores brancas, vermelhas e rosas. Por ultimo, cada mesa tem cadeiras douradas. Ao fundo vemos o bolo de casamento branco de andares, e no teto luzes suspensas.",
     "Um cenário ao ar livre durante o dia, composto por árvores e uma construção de vidro atrás. Um casal de mãos dadas esta lá. O homem é branco com cabelo castanho e esta usando um terno preto com uma camisa branca, e no bolso do terno tem flores brancas, ele esta usando um sapato marrom. A mulher é branca com cabelo castanho e esta usando um vestido de noiva branco com mangas bufantes caindo sob os ombros, ela esta segurando um buque de flores brancas.",
     "Um cenário ao ar livre em um gramado durante o dia. Ao fundo temos uma cerca com plantas, em frente vemos um arco de casamento com panos brancos e flores brancas, à frente do lado esquerdo temos cadeiras de madeira com flores brancas em uma fita branca.",
-    "Um cenário ao ar livre em um gramado durante a noite. Ao fundo temos uma porta de madeira, no meio um caminho de grama com flores vermelhas e brancas dos dois lados, as cadeiras de madeira com almofadas brancas estão tanto do lado esquerdo quanto do direito. Na frente esta uma mesa de madeira com flores brancas, papéis e canetas em cima. No teto temos estruturas que vem do chão para segurar lâmpadas suspensas e flores vermelhas e brancas."
-  ]
+    "Um cenário ao ar livre em um gramado durante a noite. Ao fundo temos uma porta de madeira, no meio um caminho de grama com flores vermelhas e brancas dos dois lados, as cadeiras de madeira com almofadas brancas estão tanto do lado esquerdo quanto do direito. Na frente esta uma mesa de madeira com flores brancas, papéis e canetas em cima. No teto temos estruturas que vem do chão para segurar lâmpadas suspensas e flores vermelhas e brancas.",
+  ];
 
   console.log(altImagens[20]);
   return (
@@ -150,7 +124,10 @@ export default function Pagamento() {
       <Navbar />
       <section className="pagamento-inicial">
         <Link className="logo-reduzida" to={"/"}>
-          <img src={LogoReduzida} alt="Logo da Laçoos, um sinal de infinito amarelo formado por duas letras o’s." />
+          <img
+            src={LogoReduzida}
+            alt="Logo da Laçoos, um sinal de infinito amarelo formado por duas letras o’s."
+          />
         </Link>
 
         <div className="container-titulo-desc">
@@ -164,11 +141,7 @@ export default function Pagamento() {
         </div>
       </section>
       <form action="" method="post" className="form-escolhas-pacotes">
-<<<<<<< Updated upstream
-         {/*<section className="container-escolhas-pacotes">
-=======
-        <section className="container-escolhas-pacotes">
->>>>>>> Stashed changes
+        {/* <section className="container-escolhas-pacotes">
           <Servicos
             name={"musica"}
             valorServico={[
@@ -225,10 +198,16 @@ export default function Pagamento() {
               prices.cabeloMaquiagem.option2,
               prices.cabeloMaquiagem.option3,
             ]}
-            nomeEmpresa={["Luiza Vasconcelos", "Torres Eventos", "Rogerio Peregrini"]}
+            nomeEmpresa={[
+              "Luiza Vasconcelos",
+              "Torres Eventos",
+              "Rogerio Peregrini",
+            ]}
             imagens={imagens}
             indice={[12, 13, 14]}
-            tituloEmpresa={"Profissionais na Área de Maquiagem e Cabelo Social "}
+            tituloEmpresa={
+              "Profissionais na Área de Maquiagem e Cabelo Social "
+            }
           />
           <Servicos
             name={"decoracao"}
@@ -237,7 +216,11 @@ export default function Pagamento() {
               prices.decoracao.option2,
               prices.decoracao.option3,
             ]}
-            nomeEmpresa={["Denise Decorações", "Verrotti Eventos", "Romeus Eventos "]}
+            nomeEmpresa={[
+              "Denise Decorações",
+              "Verrotti Eventos",
+              "Romeus Eventos ",
+            ]}
             imagens={imagens}
             indice={[15, 16, 17]}
             tituloEmpresa={"Profissionais na Área de Decoração"}
@@ -254,7 +237,7 @@ export default function Pagamento() {
             indice={[18, 19, 20]}
             tituloEmpresa={"Lugares para Realizar seu Casamento"}
           />
-        </section>
+        </section> */}
         <section className="container-tela-pagamento">
           <div className="container-pagamento">
             <h2 className="titulo-pagamento">PAGAMENTO</h2>
