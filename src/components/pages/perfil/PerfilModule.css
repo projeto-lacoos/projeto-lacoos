@@ -275,6 +275,7 @@
   border-radius: 3.6rem;
   border: 1px solid #658955;
   transition: 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .container-form-perfil .btns-form-perfil .btn-perfil:hover {
