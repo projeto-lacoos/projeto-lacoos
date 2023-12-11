@@ -91,7 +91,7 @@ export default function RecuperacaoSenha() {
   return (
     <div className={`container-recuperacao-senha ${getThemeClass(theme)}`}>
       <div className="lado-e">
-        <img src={getThemeLogo(theme)} className="logo-reduzido" alt="Logo da Laçoos, onde é uma imagem de duas alianças se entrelaçando" />
+        <img src={getThemeLogo(theme)} className="logo-reduzido" alt="Logo da Laçoos, um sinal de infinito amarelo formado por duas letras o’s." />
       </div>
       <div className="lado-d">
         <div className="box">

@@ -10,12 +10,12 @@ import convite1 from '../../img/carrosselImagens/convite1.jpg'
 import convite2 from '../../img/carrosselImagens/convite2.jpg'
 import convite3 from '../../img/carrosselImagens/convite1.jpg'
 import convite4 from '../../img/carrosselImagens/convite2.jpg'
-import convite5 from '../../img/carrosselImagens/convite1.jpg'
+import convite5 from "../../img/carrosselImagens/convite-9.svg";
 import convite1PB from '../../img/carrosselImagens/convite1PB.jpeg'
 import convite2PB from '../../img/carrosselImagens/convite2PB.jpeg'
 import convite3PB from '../../img/carrosselImagens/convite1PB.jpeg'
 import convite4PB from '../../img/carrosselImagens/convite2PB.jpeg'
-import convite5PB from '../../img/carrosselImagens/convite1PB.jpeg'
+import convite5PB from "../../img/carrosselImagens/convite-9-PB.svg";
 
 import NotificacaoLogar from '../../service/notificacaoLogar/NotificacaoLogar'
 
@@ -75,12 +75,12 @@ export default function CarrosselImagens() {
             </button>
             <div className='carrossel-image' ref={carousel} onClick={HandleNotificacao}>
                 {theme !== "A" ? (imagens.map((image, id) => (
-                    <Link to={"/convites"}
+                    <Link key={id} to={"/convites"}
                     >
-                        <img key={id} className='slide-item' src={image} alt='Convite' />
+                        <img className='slide-item' src={image} alt='Convite de casamento, onde vai o nome dos casados, enderço onde vai acontecer a cerimônia, uma decoração de acordo com o tema da decoração do casamento, horário de início e um texto de boas vindas.' />
                     </Link>
                 ))) : (imagensPB.map((image, id) => (
-                    <Link to={"/convites"}><img key={id} className='slide-item' src={image} alt='Convite' /></Link>
+                    <Link key={id} to={"/convites"}><img className='slide-item' src={image} alt='Convite de casamento, onde vai o nome dos casados, enderço onde vai acontecer a cerimônia, uma decoração de acordo com o tema da decoração do casamento, horário de início e um texto de boas vindas.' /></Link>
                 )))}
             </div>
             <button className={`btn-arrow ${getThemeClass(theme)}`}>

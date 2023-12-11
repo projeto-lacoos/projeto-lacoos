@@ -116,7 +116,7 @@ export default function Perfil() {
           <div className="conteudo">
             <header className="header">
               <Link to={"/"}>
-                <img className="logo-perfil" src={getThemeLogo(theme)} alt="Logo da Laçoos, onde é uma imagem de duas alianças se entrelaçando" />
+                <img className="logo-perfil" src={getThemeLogo(theme)} alt="Logo da Laçoos, um sinal de infinito amarelo formado por duas letras o’s." />
               </Link>
               <h2 className={`titulo-perfil ${getThemeClass(theme)}`}>MEU CASAMENTO</h2>
             </header>

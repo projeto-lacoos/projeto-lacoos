@@ -96,7 +96,7 @@ export default function ResetarSenha() {
       <img
         className="logo-reset-senha"
         src={getThemeLogo(theme)}
-        alt="Logo da Laçoos, onde é uma imagem de duas alianças se entrelaçando"
+        alt="Logo da Laçoos, um sinal de infinito amarelo formado por duas letras o’s."
       />
       <div class="container_form_reset">
         <h2 className={`title_form_reset ${getThemeClass(theme)}`}>Nova Senha</h2>

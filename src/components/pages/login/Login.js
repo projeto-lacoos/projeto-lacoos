@@ -108,7 +108,7 @@ export default function Login() {
         <li className={`${getThemeClass(theme)}`}>BEM VINDO</li>
         <li>
           <Link to={"/"}>
-            <img src={getThemeLogo(theme)} alt="Logo da Laçoos, onde é uma imagem de duas alianças se entrelaçando" />
+            <img src={getThemeLogo(theme)} alt="Logo da Laçoos, um sinal de infinito amarelo formado por duas letras o’s." />
           </Link>
         </li>
       </ul>

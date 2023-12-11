@@ -142,7 +142,7 @@ export default function Formulario() {
         <img
           className="logo-laçoos-formulario"
           src={getThemeLogo(theme)}
-          alt="Logo da Laçoos, onde é uma imagem de duas alianças se entrelaçando"
+          alt="Logo da Laçoos, um sinal de infinito amarelo formado por duas letras o’s."
         />
         <form className="forms_laçoos" action="#">
           <div className="title">

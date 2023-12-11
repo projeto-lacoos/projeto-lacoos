@@ -93,11 +93,11 @@ export default function Navbar() {
               {auth ? (
                 <>
                   <li>
-                    <img className="logo-reduzida" src={getThemeLogo(theme)} alt="Logo da Laçoos, onde é uma imagem de duas alianças se entrelaçando" />
+                    <img className="logo-reduzida" src={getThemeLogo(theme)} alt="Logo da Laçoos, um sinal de infinito amarelo formado por duas letras o’s." />
                   </li>
                   <li>
                     <Link className="logar item" to={"/perfil"}>
-                      <img className="user" src={getFotoUser(theme)} alt="" />
+                      <img className="user" src={getFotoUser(theme)} alt="Foto de uma imagem em forma de humanoide sem feição, sem roupa, de apenas uma cor" />
                       {/* {user.name ? user.name : "Maria do Nascimento"} */}
                     </Link>
                   </li>
@@ -141,11 +141,11 @@ export default function Navbar() {
               ) : (
                 <>
                   <li>
-                    <img className="logo-reduzida" src={getThemeLogo(theme)} alt="Logo da Laçoos, onde é uma imagem de duas alianças se entrelaçando" />
+                    <img className="logo-reduzida" src={getThemeLogo(theme)} alt="Logo da Laçoos, um sinal de infinito amarelo formado por duas letras o’s." />
                   </li>
                   <li>
                     <Link className="logar item" to={"/login"}>
-                      <img className="user" src={getFotoUser(theme)} alt="" />
+                      <img className="user" src={getFotoUser(theme)} alt="Foto de uma imagem em forma de humanoide sem feição, sem roupa, de apenas uma cor" />
                       <span>Login / Registrar-se</span>
                     </Link>
                   </li>
@@ -160,7 +160,7 @@ export default function Navbar() {
                     </Link>
                   </li>
                   <li>
-                    <Link className="item" to={"/"}>
+                    <Link className="item" to={"/convites"}>
                       Convites
                     </Link>
                   </li>

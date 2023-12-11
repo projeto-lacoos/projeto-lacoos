@@ -34,7 +34,7 @@ export default function TipoDaltonismo({ imagem, tipos, classe }) {
         <p className="tipos">{tipos}</p>
       </div>
       <div className="cores-alternador">
-        <img className={`cores-daltonismo ${getThemeClass(theme)}`} src={imagem} alt="" />
+        <img className={`cores-daltonismo ${getThemeClass(theme)}`} src={imagem} alt="Um circulo divido em pedaços igual a pedaços de pizza e cada pedaço é uma cor que a pessoa com daltonismo consegue enxergar" />
         <InputComFuncao
           className={"input-tipoDaltonismo"}
           type={"radio"}

@@ -71,9 +71,9 @@ export default function Convites() {
         <h2 className={`h2-convites ${getThemeClass(theme)}`}>Convites</h2>
         <div class="container-todas-convites">
             {theme === "A" ? convitesPB.map((convite, id) => (
-                <img className="cada-convite" key={id} src={convite} alt="" />
+                <img className="cada-convite" key={id} src={convite} alt="Convite de casamento, onde vai o nome dos casados, enderço onde vai acontecer a cerimônia, uma decoração de acordo com o tema da decoração do casamento, horário de início e um texto de boas vindas." />
             )) : convites.map((convite, id) => (
-                <img className="cada-convite" key={id} src={convite} alt="" />
+                <img className="cada-convite" key={id} src={convite} alt="Convite de casamento, onde vai o nome dos casados, enderço onde vai acontecer a cerimônia, uma decoração de acordo com o tema da decoração do casamento, horário de início e um texto de boas vindas." />
             ))}
         </div>
       </section>

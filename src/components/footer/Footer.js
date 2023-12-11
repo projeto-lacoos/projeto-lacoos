@@ -82,7 +82,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="footer-baixo">
-        <img src={getThemeLogo(theme)} alt="Logo da Laçoos, onde é uma imagem de duas alianças se entrelaçando" className="footer-logo-reduzido" />
+        <img src={getThemeLogo(theme)} alt="Logo da Laçoos, um sinal de infinito amarelo formado por duas letras o’s." className="footer-logo-reduzido" />
         <p className="footer-p">Laçoos Ltda. © 2023</p>
       </div>
     </footer>

@@ -265,12 +265,12 @@ export default function Sobre() {
           <img
             className="conteudo-logo"
             src={getThemeLogo(theme)}
-            alt="Casal brinando taças com champaign"
+            alt="Foto onde mostra apenas a parte dos ombros até os cotovelos de um casal composto por um homem branco usando uma aliança prata na mão direita seguranda uma taça transparte de champagne e uma mulher branca segurando um buque de flores brancas na mão esquerda, segurando uma taça transparente de champagne na mão direita com unhas longas pintadas de rosa claro e uma aliança prata. A roupa do homem é composta de um terno marrom com linhas vermelhas, amarelas e brancas, com 3 botões pretos e 1 amarelo, com um colete preto em baixo com uma camisa branca e uma gravata borboleta preta e a da mulher é composta por um vestido de noiva branco coma  as mangas caidas sobre os ombros."
           />
           <p className="p-sobre">um vínculo além da visão</p>
         </div>
         <div className="img-detalhes">
-          <img className="detalhes" src={getThemeDetalhes(theme)} alt="Logo Laçoos infinito entrelaçados" />
+          <img className="detalhes" src={getThemeDetalhes(theme)} alt="Logo da Laçoos, um sinal de infinito amarelo formado por duas letras o’s." />
         </div>
       </section>
       <section className="sobre-lacoos">
@@ -301,14 +301,14 @@ export default function Sobre() {
         <div className="sobre-parceiros">
             <h1 className={`tituloParceiros ${getThemeClass(theme)}`}>Bodas de Casamento</h1>
             <hr className={`hr-conteudoParceiros ${getThemeClass(theme)}`} />
-            <img src={Limpay} className="imgParceiros" alt="Logo limpay"/>
-            <img src={Lushe} className="imgParceiros" alt="Logo Lushe"/>
-            <img src={AliancaP} className="imgParceiros" alt="Logo Aliança Primicias"/>
+            <img src={Limpay} className="imgParceiros" alt="Logo de nossa parceria “Limpay”, na cor preta, onde a letra L é representada por um aspirador de pó, e a letra Y por um espanador."/>
+            <img src={Lushe} className="imgParceiros" alt="Logo de nossa parceria “Lushe Festas e Balões”, com o fundo em preto e a parte escrita em branco, com balões cinzas por cima."/>
+            <img src={AliancaP} className="imgParceiros" alt="Logo de nossa parceria “Primicias Alianças”, onde o nome esta escrito em volta de um par de alianças pretas."/>
           </div>
       </section>
       <section className={`sobre-cartaolacoos ${getThemeClass(theme)}`}>
         <div className="images">
-          <img className="front-img" src={theme === "A" ? CartaoVisitaPB : CartaoVisita} alt="Cartões verdes da Laçoos" />
+          <img className="front-img" src={theme === "A" ? CartaoVisitaPB : CartaoVisita} alt="Foto demonstrativa de nosso cartão, onde a parte da frente é composta pelo nosso nome “Laçoos”, onde na parte dos o’s fica a nossa logo de um sinal de infinito amarelo feito com as letras. Na parte de trás temos um qr code amarelo, as logos do instagram, linkedin e github com nossos respectivos nomes e na parte inferior direita esta os nossos 3 adesivos amarelos e redondos com um coração, um par de alianças com um coração em cima e um buque de flores. Tanto a parte da frente quanto a de trás contem o fundo verde." />
         </div>
       </section>
       <section className="sobre-fontslacoos">
@@ -335,26 +335,26 @@ export default function Sobre() {
       </section>
       <section className="sobre-imageslacoos">
         <div className="images">
-          <img className="imagesLacoos-sobre" src={theme === "A" ? BackgroundCelular1PB : BackgroundCelular1} alt="" />
-          <img className="imagesLacoos-sobre" src={theme === "A" ? BackgroundCelular2PB : BackgroundCelular2} alt="" />
+          <img className="imagesLacoos-sobre" src={theme === "A" ? BackgroundCelular1PB : BackgroundCelular1} alt="Foto de um celular em cima de um notebook cinza com o instagram da Laçoos aberto." />
+          <img className="imagesLacoos-sobre" src={theme === "A" ? BackgroundCelular2PB : BackgroundCelular2} alt="Foto de uma sacola de tecido branca com revistas e flores roxas dentro. Os detalhes da sacola são compostos por adesivos redondos, amarelos e verdes com corações, alianças e buques de flores; Com nossa logo amarela e algumas com contorno verde, composta por um sinal de infinito feito com duas letras o’s e com uma frase que diz “Estamos aqui para fazer seus sonhos se tornarem realidade” em um fundo amarelo espalhados." />
         </div>
       </section>
       <section className="sobre-idvisuallacoos">
         <div className="conteudo-id">
           <div className="cores">
-            <img className="imagesCores" src={getThemeCorEsquerda(theme)} alt="" />
-            <img className="imagesCores" src={getThemeCorDireita(theme)} alt="" />
+            <img className="imagesCores" src={getThemeCorEsquerda(theme)} alt="Um retângulo de cor verde, com a cor em  hexadecimal escrita nele: '#c9b920'" />
+            <img className="imagesCores" src={getThemeCorDireita(theme)} alt="Um retângulo de cor verde, com a cor em  hexadecimal escrita nele: '#658955'" />
           </div>
           <div className="conteudoicons">
             <div className="icons">
-              <img className="imagesIcons" src={getThemeCoracao(theme)} alt="" />
-              <img className="imagesIcons" src={getThemeAlianca(theme)} alt="" />
-              <img className="imagesIcons" src={getThemeTrigo(theme)} alt="" />
-              <img className="imagesIcons" src={theme === "A" ? PapelPB : Papel} alt="" />
+              <img className="imagesIcons" src={getThemeCoracao(theme)} alt="Nosso adesivo redondo, com o fundo verde e um coração branco." />
+              <img className="imagesIcons" src={getThemeAlianca(theme)} alt="Nosso adesivo redondo, com o fundo amarelo e um par de alianças brancas com um coração branco em cima." />
+              <img className="imagesIcons" src={getThemeTrigo(theme)} alt="Nosso adesivo redondo, com o fundo amarelo e o contorno de um buque de flores branco." />
+              <img className="imagesIcons" src={theme === "A" ? PapelPB : Papel} alt="Nosso adesivo redondo, com o fundo branco e o contorno de uma folha de papel com uma lista de afazeres e um coraçãozinho em cima amarelo." />
             </div>
-            <img className="icons-msg" src={getThemMensagen(theme)} alt="" />
+            <img className="icons-msg" src={getThemMensagen(theme)} alt="Um adesivo com pontas circular e no meio tem um texto escrito 'Estamos aqui para fazer seus sonhos se tornarem realidade'" />
             <div className="div-imageLacoos">
-              <img className="imagesLacoos" src={getThemeLogoLacoos(theme)} alt="" />
+              <img className="imagesLacoos" src={getThemeLogoLacoos(theme)} alt="Logo da Laçoos, composta por um jogo da velha no início, em seguida com nosso nome e um sinal de infinito amarelo formado por duas letras o’s no lugar das letras em si, com o contorno em verde." />
             </div>
           </div>
         </div>
@@ -363,41 +363,41 @@ export default function Sobre() {
         <div className="containerIntegrantes">
           <div className="conteudointegrantes">
             <div className={`card ${getThemeClass(theme)}`}>
-              <img className="imageIntegrante" src={theme === "A" ? GarrettPB : Garrett} alt="Integrante Laçoos" />
+              <img className="imageIntegrante" src={theme === "A" ? GarrettPB : Garrett} alt="Foto do nosso PO e programador Fullstack Nathan Garret com um contorno amarelo em volta e o fundo branco. Um homem branco, sorrindo, de óculos e cabelos castanhos, olhos castanhos, usando o uniforme do instituto PROA (azul com os detalhes em branco.)" />
               <p>FullStack</p>
               <p>Product Owner</p>
             </div>
             <div className={`card ${getThemeClass(theme)}`}>
-              <img className="imageIntegrante" src={theme === "A" ? MouraPB : Moura} alt="Integrante Laçoos" />
+              <img className="imageIntegrante" src={theme === "A" ? MouraPB : Moura} alt="Foto da nossa scrum master e programadora Back End Gabriella Moura com um contorno amarelo em volta e o fundo branco. Uma mulher branca, sorrindo, com cabelos castanhos e lisos, olhos castanhos, usando o uniforme do instituto PROA (azul com os detalhes em branco.)" />
               <p>Back-End</p>
               <p>Scrum Master</p>
             </div>
             <div className={`card ${getThemeClass(theme)}`}>
-              <img className="imageIntegrante" src={theme === "A" ? FilipePB : Filipe} alt="Integrante Laçoos" />
+              <img className="imageIntegrante" src={theme === "A" ? FilipePB : Filipe} alt="Foto do nosso programador Front End Filipe Rocha com um contorno amarelo em volta e o fundo branco. Um homem branco, sorrindo, com cabelos e barba castanhos, olhos castanhos, usando o uniforme do instituto PROA (azul com os detalhes em branco.)" />
               <p>Front-End</p>
               <p>Financeiro</p>
             </div>
             <div className={`card ${getThemeClass(theme)}`}>
-              <img className="imageIntegrante" src={theme === "A" ? GusbicPB : Gusbic} alt="Integrante Laçoos" />
+              <img className="imageIntegrante" src={theme === "A" ? GusbicPB : Gusbic} alt="Foto do nosso programador Front End e ChatBot Gustavo Maia com um contorno amarelo em volta e o fundo branco. Um homem branco, sorrindo, com cabelo raspado castanho, olhos castanhos, usando o uniforme do instituto PROA (azul com os detalhes em branco.) " />
               <p>Front-End</p>
               <p>Dev chatbot</p>
             </div>
             <div className={`card ${getThemeClass(theme)}`}>
-              <img className="imageIntegrante" src={theme === "A" ? FerrazPB : Ferraz} alt="Integrante Laçoos" />
+              <img className="imageIntegrante" src={theme === "A" ? FerrazPB : Ferraz} alt="Foto da nossa Designer Gabriela Ferraz com um contorno amarelo em volta e o fundo branco. Uma mulher branca, sorrindo, de óculos, com cabelos castanhos e cacheados, olhos castanhos, usando o uniforme do instituto PROA (azul com os detalhes em branco.)" />
               <p>Design</p>
               <p>Social Media</p>
             </div>
             <div className={`card ${getThemeClass(theme)}`}>
-              <img className="imageIntegrante" src={theme === "A" ? MasonPB : Mason} alt="Integrante Laçoos" />
+              <img className="imageIntegrante" src={theme === "A" ? MasonPB : Mason} alt="Foto da nossa Designer Nicole Felix com um contorno amarelo em volta e o fundo branco. Uma mulher branca, sorrindo, com cabelos castanhos e lisos raspado do lado, olhos castanhos, usando o uniforme do instituto PROA (azul com os detalhes em branco.)" />
               <p>Design</p>
             </div>
             <div className={`card ${getThemeClass(theme)}`}>
-              <img className="imageIntegrante" src={theme === "A" ? LuizaPB : Luiza} alt="Integrante Laçoos" />
+              <img className="imageIntegrante" src={theme === "A" ? LuizaPB : Luiza} alt="Foto da nossa Designer e Banco de Dados Luiza Muniz com um contorno amarelo em volta e o fundo branco. Uma mulher branca, sorrindo, com cabelos castanhos e cacheados com tranças do lado presas com piranhas azuis, olhos castanhos, usando o uniforme do instituto PROA (azul com os detalhes em branco.)" />
               <p>Design</p>
               <p>Banco de Dados</p>
             </div>
           </div>
-          <img className="caixaGarrafinha" src={theme === "A" ? CaixaGarrafinhaA : CaixaGarrafinha} alt="Garrafinha Laçoos" />
+          <img className="caixaGarrafinha" src={theme === "A" ? CaixaGarrafinhaA : CaixaGarrafinha} alt="Uma caixa quadrada e uma garrafa d’água com tampa, ambas brancas, contendo nossos adesivos redondos, amarelos e verdes com corações, alianças e buques de flores; Com nossa logo amarela e algumas com contorno verde, composta por um sinal de infinito feito com duas letras o’s e com uma frase que diz “Estamos aqui para fazer seus sonhos se tornarem realidade” em um fundo amarelo espalhados sobre as mesmas." />
         </div>
       </section>
       <section className={`sobre-footerlacoos ${getThemeClass(theme)}`}>
