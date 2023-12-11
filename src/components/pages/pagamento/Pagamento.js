@@ -9,9 +9,9 @@ import Navbar from "../../navbar/Navbar";
 import Servicos from "../../servicos/Servicos";
 import Input from "../../input/Input";
 
-import ImagemEmpresa1 from "../../../img/servicos/imagemEmpresa1.svg";
-import ImagemEmpresa2 from "../../../img/servicos/imagemEmpresa2.svg";
-import ImagemEmpresa3 from "../../../img/servicos/imagemEmpresa3.svg";
+// import ImagemEmpresa1 from "../../../img/servicos/imagemEmpresa1.svg";
+// import ImagemEmpresa2 from "../../../img/servicos/imagemEmpresa2.svg";
+// import ImagemEmpresa3 from "../../../img/servicos/imagemEmpresa3.svg";
 // import ImagemEmpresa4 from "../../../img/servicos/imagemEmpresa4.svg";
 // import ImagemEmpresa5 from "../../../img/servicos/imagemEmpresa5.svg";
 // import ImagemEmpresa6 from "../../../img/servicos/imagemEmpresa6.svg";
@@ -32,10 +32,10 @@ import ImagemEmpresa3 from "../../../img/servicos/imagemEmpresa3.svg";
 // import ImagemEmpresa21 from "../../../img/servicos/imagemEmpresa21.svg";
 
 export default function Pagamento() {
-  const imagens = [
-    ImagemEmpresa1,
-    ImagemEmpresa2,
-    ImagemEmpresa3,
+  // const imagens = [
+    // ImagemEmpresa1,
+    // ImagemEmpresa2,
+    // ImagemEmpresa3,
   //   ImagemEmpresa4,
   //   ImagemEmpresa5,
   //   ImagemEmpresa6,
@@ -54,7 +54,7 @@ export default function Pagamento() {
   //   ImagemEmpresa19, 
   //   ImagemEmpresa20, 
   //   ImagemEmpresa21
-  ];
+  // ];
 
   const prices = {
     musica: {
@@ -138,7 +138,7 @@ export default function Pagamento() {
         </div>
       </section>
       <form action="" method="post" className="form-escolhas-pacotes">
-         <section className="container-escolhas-pacotes">
+         {/*<section className="container-escolhas-pacotes">
           <Servicos
             name={"musica"}
             valorServico={[
@@ -152,8 +152,7 @@ export default function Pagamento() {
             indice={[0, 1, 2]}
             tituloEmpresa={"Profissionais na Área de Música"}
           />
-          </section>
-         {/* <Servicos
+          <Servicos
             name={"cerimonia-"}
             valorServico={[
               prices.comida.option1,

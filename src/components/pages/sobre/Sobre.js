@@ -390,6 +390,7 @@ export default function Sobre() {
             <div className={`card ${getThemeClass(theme)}`}>
               <img className="imageIntegrante" src={theme === "A" ? MasonPB : Mason} alt="Foto da nossa Designer Nicole Felix com um contorno amarelo em volta e o fundo branco. Uma mulher branca, sorrindo, com cabelos castanhos e lisos raspado do lado, olhos castanhos, usando o uniforme do instituto PROA (azul com os detalhes em branco.)" />
               <p>Design</p>
+              <p>Design Gráfico</p>
             </div>
             <div className={`card ${getThemeClass(theme)}`}>
               <img className="imageIntegrante" src={theme === "A" ? LuizaPB : Luiza} alt="Foto da nossa Designer e Banco de Dados Luiza Muniz com um contorno amarelo em volta e o fundo branco. Uma mulher branca, sorrindo, com cabelos castanhos e cacheados com tranças do lado presas com piranhas azuis, olhos castanhos, usando o uniforme do instituto PROA (azul com os detalhes em branco.)" />
