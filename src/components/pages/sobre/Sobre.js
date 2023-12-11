@@ -270,7 +270,7 @@ export default function Sobre() {
           <p className="p-sobre">um vínculo além da visão</p>
         </div>
         <div className="img-detalhes">
-          <img className="detalhes" src={getThemeDetalhes(theme)} alt="Logo da Laçoos, um sinal de infinito amarelo formado por duas letras o’s." />
+          <img className="detalhes" src={getThemeDetalhes(theme)} alt="3 adesivos redondos, 1 com o fundo amarelo e um coração branco e 2 com o fundo verde, um com um par de alianças brancas e um coração branco em cima e o outro com o controno de um buque de flores branco." />
         </div>
       </section>
       <section className="sobre-lacoos">
