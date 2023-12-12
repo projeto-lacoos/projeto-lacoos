@@ -54,6 +54,8 @@ export default function Login() {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
 
+  const [notificacao, setNotificacao] = useState(null);
+
   const navigate = useNavigate();
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -76,19 +78,22 @@ export default function Login() {
         const data = await response.json();
         console.log(data);
 
-        if (typeof window !== undefined && response.ok) {
-/*           toast.success('Você foi logado com sucesso!', {
-            position: toast.POSITION.TOP_RIGHT,
-            autoClose: 10000,
-          }); */
+        if (response.ok) {
           const token = data.token;
           if (token) {
             window.localStorage.setItem('token', token);
             const localUser = jwtDecode(token);
             setUser(localUser);
             setAuth(true);
-            navigate("/");
           }
+          navigate("/");
+          setTimeout(() => {
+            setNotificacao(
+              toast.success(`Olá, você logou :)`, {
+                position: toast.POSITION.TOP_RIGHT,
+              })
+            )
+          }, 3500);
         } else {
           toast.error('Usuário ou senha estão inválidos!', {
             position: toast.POSITION.TOP_CENTER,

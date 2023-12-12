@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+/* import { Link } from "react-router-dom";
 
 import "./PagamentoModule.css";
 
@@ -32,7 +32,6 @@ import ImagemEmpresa20 from "../../../img/servicos/imagemEmpresa20.svg";
 import ImagemEmpresa21 from "../../../img/servicos/imagemEmpresa21.svg";
 
 export default function Pagamento() {
-<<<<<<< Updated upstream
   // const imagens = [
     // ImagemEmpresa1,
     // ImagemEmpresa2,
@@ -56,31 +55,6 @@ export default function Pagamento() {
   //   ImagemEmpresa20, 
   //   ImagemEmpresa21
   // ];
-=======
-   const imagens = [
-     ImagemEmpresa1,
-     ImagemEmpresa2,
-     ImagemEmpresa3,
-     ImagemEmpresa4,
-     ImagemEmpresa5,
-     ImagemEmpresa6,
-     ImagemEmpresa7,
-     ImagemEmpresa8,
-     ImagemEmpresa9,
-     ImagemEmpresa10, 
-     ImagemEmpresa11, 
-     ImagemEmpresa12,
-     ImagemEmpresa13, 
-     ImagemEmpresa14, 
-     ImagemEmpresa15,
-    ImagemEmpresa16, 
-    ImagemEmpresa17, 
-    ImagemEmpresa18,
-    ImagemEmpresa19, 
-    ImagemEmpresa20, 
-    ImagemEmpresa21
-  ];
->>>>>>> Stashed changes
 
   const prices = {
     musica: {
@@ -164,11 +138,7 @@ export default function Pagamento() {
         </div>
       </section>
       <form action="" method="post" className="form-escolhas-pacotes">
-<<<<<<< Updated upstream
          {/*<section className="container-escolhas-pacotes">
-=======
-        <section className="container-escolhas-pacotes">
->>>>>>> Stashed changes
           <Servicos
             name={"musica"}
             valorServico={[
@@ -361,3 +331,4 @@ export default function Pagamento() {
     </>
   );
 }
+ */

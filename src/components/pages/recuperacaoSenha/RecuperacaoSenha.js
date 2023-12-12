@@ -50,6 +50,8 @@ export default function RecuperacaoSenha() {
 
   const navigate = useNavigate();
 
+  const [notificacao, setNotificacao] = useState(null);
+
   const onSubmit = async (e) => {
     e.preventDefault();
     if (email !== '') {
@@ -65,59 +67,62 @@ export default function RecuperacaoSenha() {
             })
           });
         if (response.ok) {
-          toast.success('Email de recuperação de senha enviado!', {
-            position: toast.POSITION.TOP_RIGHT,
-            autoClose: 3500,
-          });
-          /* navigate("/login"); */
-        } else{
-          /* setEmail(""); */
-          toast.error('Email não encontrado!', {
-            position: toast.POSITION.TOP_RIGHT,
-            autoClose: 3500,
-          });
-        }
+          navigate("/login");
+          setTimeout(() => {
+            setNotificacao(
+              toast.success('Email de recuperação de senha enviado!', {
+                position: toast.POSITION.TOP_RIGHT,
+                /* autoClose: 3500, */
+              })
+            )
+          }, 3500);
+} else {
+  toast.error('Email não encontrado!', {
+    position: toast.POSITION.TOP_RIGHT,
+    autoClose: 3500,
+  });
+}
       } catch (error) {
-        toast.error('Email não encontrado!', {
-          position: toast.POSITION.TOP_RIGHT,
-          autoClose: 3500,
-        });
-        /* console.log(error);
-        alert('Algo deu errado! Mas enviou o email!'); */
-      }
+  toast.error('Email não encontrado!', {
+    position: toast.POSITION.TOP_RIGHT,
+    autoClose: 3500,
+  });
+  /* console.log(error);
+  alert('Algo deu errado! Mas enviou o email!'); */
+}
     }
   }
 
-  return (
-    <div className={`container-recuperacao-senha ${getThemeClass(theme)}`}>
-      <div className="lado-e">
-        <img src={getThemeLogo(theme)} className="logo-reduzido" alt="Logo da Laçoos, um sinal de infinito amarelo formado por duas letras o’s." />
-      </div>
-      <div className="lado-d">
-        <div className="box">
-          <div className="textos">
-            <h1 className={`h1-textos ${getThemeClass(theme)}`}>Recuperação de senha</h1>
-            <p className="p-textos">Para recuperarmos sua senha, informe seu endereço de e-mail para que possamos enviar um link de redefinição de senha.</p>
-          </div>
-          <form className="form-recup-senh" action="">
-            <div className="valores">
-              <label className={`valor-label ${getThemeClass(theme)}`} htmlFor={"email_usuario"}>E-mail</label>
-              <Input
-                type={"text"}
-                placeholder={"Exemplo.sac@xxxx.com"}
-                name={`email_usuario`}
-                className={`input-valor ${getThemeClass(theme)}`}
-                onchange={(e) => { setEmail(e.target.value) }}
-              />
-            </div>
-            <div className="button-recuperacao-senha">
-              <button type="submit" className={`btn-recup-senha ${getThemeClass(theme)}`} onClick={onSubmit}>Enviar</button>
-              <ToastContainer />
-            </div>
-          </form>
-          <Link style={{ textDecoration: "none" }} to={"/login"} className={`voltar-recuperacao-senha ${getThemeClass(theme)}`}>Voltar</Link>
+return (
+  <div className={`container-recuperacao-senha ${getThemeClass(theme)}`}>
+    <div className="lado-e">
+      <img src={getThemeLogo(theme)} className="logo-reduzido" alt="Logo da Laçoos, um sinal de infinito amarelo formado por duas letras o’s." />
+    </div>
+    <div className="lado-d">
+      <div className="box">
+        <div className="textos">
+          <h1 className={`h1-textos ${getThemeClass(theme)}`}>Recuperação de senha</h1>
+          <p className="p-textos">Para recuperarmos sua senha, informe seu endereço de e-mail para que possamos enviar um link de redefinição de senha.</p>
         </div>
+        <form className="form-recup-senh" action="">
+          <div className="valores">
+            <label className={`valor-label ${getThemeClass(theme)}`} htmlFor={"email_usuario"}>E-mail</label>
+            <Input
+              type={"text"}
+              placeholder={"Exemplo.sac@xxxx.com"}
+              name={`email_usuario`}
+              className={`input-valor ${getThemeClass(theme)}`}
+              onchange={(e) => { setEmail(e.target.value) }}
+            />
+          </div>
+          <div className="button-recuperacao-senha">
+            <button type="submit" className={`btn-recup-senha ${getThemeClass(theme)}`} onClick={onSubmit}>Enviar</button>
+            <ToastContainer />
+          </div>
+        </form>
+        <Link style={{ textDecoration: "none" }} to={"/login"} className={`voltar-recuperacao-senha ${getThemeClass(theme)}`}>Voltar</Link>
       </div>
     </div>
-  );
+  </div>
+);
 }

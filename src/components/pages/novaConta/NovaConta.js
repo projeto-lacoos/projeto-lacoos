@@ -12,6 +12,7 @@ import A from "../../../img/login/oo-3.svg";
 import Footer from "../../footer/Footer";
 import { ThemeContext } from "../../context/ThemeContext";
 import { useContext, useState } from "react";
+import { toast } from "react-toastify";
 
 export default function NovaConta() {
   const { theme } = useContext(ThemeContext);
@@ -56,6 +57,8 @@ export default function NovaConta() {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
 
+  const [notificacao, setNotificacao] = useState(null);
+
   const onSubmit = async (e) => {
     e.preventDefault();
     if(nome !== "" && dataNasc !== "" && celular !== "" && telefone !== "" && sexo !== "" && email !== "" && senha !== ""){
@@ -77,7 +80,14 @@ export default function NovaConta() {
         });
           
         if(response.ok){
-          alert("Cadastro realizado com sucesso!");
+          navigate("/login");
+          setTimeout(() => {
+            setNotificacao(
+              toast.success('Cadastro realizado com sucesso!', {
+                position: toast.POSITION.TOP_RIGHT,
+              })
+            )
+          }, 3500);
           navigate("/login");
         } else {
           alert("Error");
