@@ -122,7 +122,7 @@ export default function Perfil() {
             </header>
             <div className="funcoes-perfil">
               <img className={`foto-perfil ${getThemeClass(theme)}`} src={getFotoUser(theme)} alt="Foto de uma imagem em forma de humanoide sem feição, sem roupa, de apenas uma cor" />
-              <div class="funcoes">
+              <div className="funcoes">
                 <ul>
                   <li className="nome-usuario">Olá, {user?.name}</li>
                   <Link to={"/formulario"}>

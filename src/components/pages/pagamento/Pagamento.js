@@ -117,8 +117,6 @@ export default function Pagamento() {
     "Um cenário ao ar livre em um gramado durante o dia. Ao fundo temos uma cerca com plantas, em frente vemos um arco de casamento com panos brancos e flores brancas, à frente do lado esquerdo temos cadeiras de madeira com flores brancas em uma fita branca.",
     "Um cenário ao ar livre em um gramado durante a noite. Ao fundo temos uma porta de madeira, no meio um caminho de grama com flores vermelhas e brancas dos dois lados, as cadeiras de madeira com almofadas brancas estão tanto do lado esquerdo quanto do direito. Na frente esta uma mesa de madeira com flores brancas, papéis e canetas em cima. No teto temos estruturas que vem do chão para segurar lâmpadas suspensas e flores vermelhas e brancas.",
   ];
-
-  console.log(altImagens[20]);
   return (
     <>
       <Navbar />
@@ -141,7 +139,7 @@ export default function Pagamento() {
         </div>
       </section>
       <form action="" method="post" className="form-escolhas-pacotes">
-        {/* <section className="container-escolhas-pacotes">
+         {/*<section className="container-escolhas-pacotes">
           <Servicos
             name={"musica"}
             valorServico={[

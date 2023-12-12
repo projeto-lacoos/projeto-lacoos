@@ -81,6 +81,8 @@ export default function Formulario() {
   const [necessidades, setNecessidades] = useState('');
   const [mais_informacoes, setMais_informacoes] = useState('');
 
+  const [notificacao, setNotificacao] = useState(null);
+
   const onSubmit = async (e) => {
     console.log("Oi");
     e.preventDefault();
@@ -122,7 +124,14 @@ export default function Formulario() {
         });
 
         if (response.ok) {
-          alert("Formulário cadastrado!");
+          navigate("/login");
+          setTimeout(() => {
+            setNotificacao(
+              toast.success('Formulário cadastrado com sucesso!', {
+                position: toast.POSITION.TOP_RIGHT,
+              })
+            )
+          }, 3500);
           navigate("/pagamento");
         } else {
           toast.error('Reveja dados do formulário!', {
