@@ -63,7 +63,7 @@ export default function Login() {
     e.preventDefault();
     if (email !== '' && senha !== '') {
       try {
-        const response = await fetch('http://localhost:8080/v1/auth/login', {
+        const response = await fetch('http://testelacoos.us-east-1.elasticbeanstalk.com/v1/auth/login', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

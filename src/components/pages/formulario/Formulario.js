@@ -87,7 +87,7 @@ export default function Formulario() {
     console.log("Oi");
     e.preventDefault();
       try {
-        const response = await fetch("http://localhost:8080/v1/form/sign-up/form", {
+        const response = await fetch("http://testelacoos.us-east-1.elasticbeanstalk.com/v1/form/sign-up/form", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"

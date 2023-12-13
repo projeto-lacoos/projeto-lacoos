@@ -3,7 +3,6 @@ import "./PacoteModule.css";
 import Navbar from "../../navbar/Navbar";
 import Footer from "../../footer/Footer";
 import ModalPacote from "../../modalPacote/ModalPacote";
-import NotificacaoLogar from '../../../service/notificacaoLogar/NotificacaoLogar'
 
 import { Link } from "react-router-dom";
 import { FaRegCheckCircle } from "react-icons/fa";

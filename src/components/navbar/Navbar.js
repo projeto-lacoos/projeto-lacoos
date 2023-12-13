@@ -71,10 +71,8 @@ export default function Navbar() {
   const navigate = useNavigate();
 
   const logoutUser = () => {
-    /* navigate("/"); */
     localStorage.clear();
     setAuth(false);
-    /* window.location.reload(); */
   };
 
   return (
@@ -98,7 +96,6 @@ export default function Navbar() {
                   <li>
                     <Link className="logar item" to={"/perfil"}>
                       <img className="user" src={getFotoUser(theme)} alt="Foto de uma imagem em forma de humanoide sem feição, sem roupa, de apenas uma cor" />
-                      {/* {user.name ? user.name : "Maria do Nascimento"} */}
                     </Link>
                   </li>
                   <li>
