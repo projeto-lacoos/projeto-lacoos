@@ -27,7 +27,6 @@ export const ApplicationProvider = ({ children }) => {
                     console.log(error)
                     return false
                 }
-
             }
         }
         return false;
@@ -35,8 +34,7 @@ export const ApplicationProvider = ({ children }) => {
 
     const setLocalUser = (token) => {
         if (typeof window !== undefined) {
-
-            token = String(token)
+            token = String(token);
 
             if (token) {
                 window.localStorage.setItem('token', token);

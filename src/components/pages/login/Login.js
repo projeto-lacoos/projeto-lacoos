@@ -86,14 +86,6 @@ export default function Login() {
             setUser(localUser);
             setAuth(true);
           }
-          navigate("/");
-          setTimeout(() => {
-            setNotificacao(
-              toast.success(`Olá, você logou :)`, {
-                position: toast.POSITION.TOP_RIGHT,
-              })
-            )
-          }, 3500);
         } else {
           toast.error('Usuário ou senha estão inválidos!', {
             position: toast.POSITION.TOP_CENTER,
@@ -101,8 +93,10 @@ export default function Login() {
           });
         }
       } catch (error) {
-        console.log(error);
-        alert('Algo deu errado!');
+        toast.error('API não está rodando!', {
+          position: toast.POSITION.TOP_CENTER,
+          autoClose: 3500
+        });
       }
     }
   }

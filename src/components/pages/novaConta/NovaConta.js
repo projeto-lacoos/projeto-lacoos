@@ -61,25 +61,25 @@ export default function NovaConta() {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    if(nome !== "" && dataNasc !== "" && celular !== "" && telefone !== "" && sexo !== "" && email !== "" && senha !== ""){
-      try{
+    if (nome !== "" && dataNasc !== "" && celular !== "" && telefone !== "" && sexo !== "" && email !== "" && senha !== "") {
+      try {
         const response = await fetch("http://localhost:8080/v1/auth/sign-up", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
           },
           body: JSON.stringify({
-            birthDate: dataNasc, 
-            email: email, 
+            birthDate: dataNasc,
+            email: email,
             name: nome,
-            password: senha, 
-            phone: celular, 
-            sexo: sexo, 
+            password: senha,
+            phone: celular,
+            sexo: sexo,
             telephone: telefone
           })
         });
-          
-        if(response.ok){
+
+        if (response.ok) {
           navigate("/login");
           setTimeout(() => {
             setNotificacao(
@@ -93,7 +93,7 @@ export default function NovaConta() {
           alert("Error");
         }
 
-      } catch(error){
+      } catch (error) {
         console.log(error);
       }
     }
@@ -118,12 +118,12 @@ export default function NovaConta() {
                   <label className={`form_dados_label01 ${getThemeClass(theme)}`}>
                     Nome
                     <Input
-                      className={`input input_name ${getThemeClass(theme)}`}                      type={"text"}
+                      className={`input input_name ${getThemeClass(theme)}`} type={"text"}
                       placeholder={"Nome e sobrenome"}
                       name={"nome_cliente"}
-                      onchange={(e) => { 
+                      onchange={(e) => {
                         setNome(e.target.value)
-                      }} 
+                      }}
                     />
                   </label>
                   <label className={`form_dados_label02 ${getThemeClass(theme)}`}>
@@ -145,7 +145,7 @@ export default function NovaConta() {
                       type={"tel"}
                       placeholder={"(xx) xxxxx-xxxx"}
                       name={"celular_cliente"}
-                      onchange={(e) => { setCelular(e.target.value)}}
+                      onchange={(e) => { setCelular(e.target.value) }}
                     />
                   </label>
                   <label className={`form_dados_label02 ${getThemeClass(theme)}`}>
@@ -155,7 +155,7 @@ export default function NovaConta() {
                       type={"tel"}
                       placeholder={"(xx) xxxxx-xxxx"}
                       name={"telefone_cliente"}
-                      onchange={(e) => { setTelefone(e.target.value)}}
+                      onchange={(e) => { setTelefone(e.target.value) }}
                     />
                   </label>
                 </div>
@@ -167,7 +167,7 @@ export default function NovaConta() {
                       type={"email"}
                       placeholder={"Exemplo.sac@xxxx.com"}
                       name={"email_cliente"}
-                      onchange={(e) => { setEmail(e.target.value)}}
+                      onchange={(e) => { setEmail(e.target.value) }}
                     />
                   </label>
                   <label className={`form_dados_label02 ${getThemeClass(theme)}`}>
@@ -177,7 +177,7 @@ export default function NovaConta() {
                       type={"text"}
                       placeholder={"F, M ou outro"}
                       name={"sexo_cliente"}
-                      onchange={(e) => { setSexo(e.target.value)}}
+                      onchange={(e) => { setSexo(e.target.value) }}
                     />
                   </label>
                 </div>
@@ -189,7 +189,7 @@ export default function NovaConta() {
                       type={"password"}
                       placeholder={"Digite sua senha"}
                       name={"senha_cliente"}
-                      onchange={(e) => { setSenha(e.target.value)}}
+                      onchange={(e) => { setSenha(e.target.value) }}
                     />
                   </label>
                   <label className={`form_dados_label02 ${getThemeClass(theme)}`}>
@@ -205,7 +205,20 @@ export default function NovaConta() {
               </div>
               <div className="form_termos">
                 <p className={`title_termos ${getThemeClass(theme)}`}>Termos de uso</p>
-                <textarea className={`box_termos ${getThemeClass(theme)}`} defaultValue={""} />
+                <textarea className={`box_termos ${getThemeClass(theme)}`} value="1. Autorização de Uso de Imagem:
+Ao fornecer imagens à empresa Laçoos, você concede permissão irrevogável e não exclusiva para o uso dessas imagens em materiais promocionais, publicitários, digitais e impressos.
+2. Propriedade Intelectual:
+Você declara ser o detentor dos direitos autorais ou possuir permissão adequada para conceder o uso das imagens à Laçoos. A empresa respeitará os direitos autorais existentes e não reivindicará a propriedade das imagens fornecidas.
+3. Uso Responsável:
+A Laçoos compromete-se a utilizar as imagens de maneira ética e profissional, evitando qualquer uso que possa difamar, desacreditar ou prejudicar a reputação do provedor das imagens.
+4. Modificações e Edições:
+A Laçoos reserva o direito de realizar edições ou modificações nas imagens fornecidas, desde que essas alterações não comprometam a integridade ou intenção original das imagens.
+5. Vigência:
+Esta autorização permanecerá em vigor enquanto a empresa Laçoos continuar a utilizar as imagens fornecidas, a menos que seja revogada por escrito pelo provedor das imagens.
+6. Compensação:
+Esta autorização é concedida de forma voluntária e gratuita, sem qualquer expectativa de compensação financeira.
+Ao fornecer suas imagens à Laçoos, você concorda com os termos acima descritos. A empresa compromete-se a utilizar as imagens de maneira ética e responsável.
+São Paulo, 12 de Dezembro de 2023" />
                 <input
                   className={`input input_submit ${getThemeClass(theme)}`}
                   type="submit"
