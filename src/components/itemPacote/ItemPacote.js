@@ -1,22 +1,21 @@
 import "./ItemPacoteModule.css";
 
-import Input from "../input/Input";
-
-export default function ItemPacote({ imagemEmpresa, nomeEmpresa, valor, name, altImagem }) {
+export default function ItemPacote({ imagemEmpresa, handleEscolha, nomeEmpresa, valor, name, altImagem }) {
+  console.log(handleEscolha);
 
   return (
     <>
       <div className="container-itemPacote">
         <img className="img-container-itemPacote" src={imagemEmpresa} alt={altImagem} />
         <h3 className="h3-itemPacote">{nomeEmpresa}</h3>
-        <label kay={valor} className="label-radio-pagamento input-valor">
+        <label key={valor} className="label-radio-pagamento input-valor">
           <p className="p-itemPacote">R${valor},00</p>
-          <Input
+          <input
             className={"input-radio-pagamento"}
             type={"radio"}
             name={name}
-            value={valor}
             id={name}
+            onClick={() => handleEscolha()}
           />
         </label>
       </div>
