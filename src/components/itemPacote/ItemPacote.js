@@ -1,7 +1,6 @@
 import "./ItemPacoteModule.css";
 
 export default function ItemPacote({ imagemEmpresa, handleEscolha, nomeEmpresa, valor, name, altImagem }) {
-  console.log(handleEscolha);
 
   return (
     <>
