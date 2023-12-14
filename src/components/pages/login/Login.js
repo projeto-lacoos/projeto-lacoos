@@ -58,7 +58,6 @@ export default function Login() {
 
   const navigate = useNavigate();
 
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const onSubmit = async (e) => {
     e.preventDefault();
     if (email !== '' && senha !== '') {
@@ -85,18 +84,31 @@ export default function Login() {
             const localUser = jwtDecode(token);
             setUser(localUser);
             setAuth(true);
-          }
+            setTimeout(() => {
+              setNotificacao(
+                toast.success('Seja-bem vindo ao local que dia do SIM irá acontecer!', {
+                  position: toast.POSITION.TOP_CENTER,
+                })
+              )
+            }, 250);
+          } 
         } else {
-          toast.error('Usuário ou senha estão inválidos!', {
-            position: toast.POSITION.TOP_CENTER,
-            autoClose: 3500
-          });
+          setTimeout(() => {
+            setNotificacao(
+              toast.error('As credenciais estão realmente corretas?', {
+                position: toast.POSITION.TOP_CENTER,
+              })
+            )
+          }, 250);
         }
       } catch (error) {
-        toast.error('API não está rodando!', {
-          position: toast.POSITION.TOP_CENTER,
-          autoClose: 3500
-        });
+        setTimeout(() => {
+          setNotificacao(
+            toast.error('API não está rodando!', {
+              position: toast.POSITION.TOP_CENTER
+            })
+          )
+        }, 250);
       }
     }
   }

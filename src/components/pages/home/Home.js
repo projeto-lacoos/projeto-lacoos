@@ -22,6 +22,7 @@ import Navbar from "../../navbar/Navbar";
 import PlanoCasamento from "../../planoCasamento/PlanoCasamento";
 import Footer from "../../footer/Footer";
 import CarrosselImagens from "../../carrosselImagens/CarrosselImagens";
+import { ToastContainer } from "react-toastify";
 
 export default function Home() {
   const { theme } = useContext(ThemeContext);
@@ -59,6 +60,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
+      <ToastContainer />
       <section className={`home ${getThemeClass(theme)}`}>
         <Link to={"/"}>
           <img
@@ -77,9 +79,11 @@ export default function Home() {
               de maneira acessível e com o planejamento que você merece!
             </p>
           </div>
-          <div className={`botao-home ${getThemeClass(theme)}`}>
-            Começar agora!
-          </div>
+          <Link to={"/pacote"}>
+            <div className={`botao-home ${getThemeClass(theme)}`}>
+              Começar agora!
+            </div>
+          </Link>
         </div>
       </section>
       <section className="caminho-planejamento">

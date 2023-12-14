@@ -12,7 +12,7 @@ import A from "../../../img/login/oo-3.svg";
 import Footer from "../../footer/Footer";
 import { ThemeContext } from "../../context/ThemeContext";
 import { useContext, useState } from "react";
-import { toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 
 export default function NovaConta() {
   const { theme } = useContext(ThemeContext);
@@ -56,46 +56,76 @@ export default function NovaConta() {
   const [sexo, setSexo] = useState('');
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
+  const [senhaConfirmar, setsenhaConfirmar] = useState('');
 
   const [notificacao, setNotificacao] = useState(null);
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    if (nome !== "" && dataNasc !== "" && celular !== "" && telefone !== "" && sexo !== "" && email !== "" && senha !== "") {
-      try {
-        const response = await fetch("http://testelacoos.us-east-1.elasticbeanstalk.com/v1/auth/sign-up", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-            birthDate: dataNasc,
-            email: email,
-            name: nome,
-            password: senha,
-            phone: celular,
-            sexo: sexo,
-            telephone: telefone
-          })
-        });
 
-        if (response.ok) {
-          navigate("/login");
+    if (nome !== "" && dataNasc !== "" && celular !== "" && telefone !== "" && sexo !== "" && email !== "") {
+      if (senha == senhaConfirmar) {
+        try {
+          const response = await fetch("http://testelacoos.us-east-1.elasticbeanstalk.com/v1/auth/sign-up", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+              birthDate: dataNasc,
+              email: email,
+              name: nome,
+              password: senha,
+              phone: celular,
+              sexo: sexo,
+              telephone: telefone
+            })
+          });
+
+          if (response.ok) {
+            setTimeout(() => {
+              setNotificacao(
+                toast.success('Cadastro realizado com sucesso!', {
+                  position: toast.POSITION.TOP_CENTER,
+                })
+              )
+            }, 250);
+            navigate("/login");
+          } else {
+            setTimeout(() => {
+              setNotificacao(
+                toast.error('Já existe um usuário com esse e-mail!', {
+                  position: toast.POSITION.TOP_CENTER,
+                })
+              )
+            }, 250);
+          }
+
+        } catch (error) {
           setTimeout(() => {
-            setNotificacao(
-              toast.success('Cadastro realizado com sucesso!', {
-                position: toast.POSITION.TOP_RIGHT,
-              })
-            )
-          }, 3500);
-          navigate("/login");
-        } else {
-          alert("Error");
+            toast.error(`API não está rodando! ${error}`, {
+              position: toast.POSITION.TOP_CENTER,
+              autoClose: 500
+            })
+          }, 250);
         }
-
-      } catch (error) {
-        console.log(error);
+      } else {
+        setTimeout(() => {
+          setNotificacao(
+            toast.error('Coloque as senhas iguais!', {
+              position: toast.POSITION.TOP_RIGHT,
+            })
+          )
+        }, 2500);
       }
+    } else {
+      setTimeout(() => {
+        setNotificacao(
+          toast.error('Preencha todos os campos!', {
+            position: toast.POSITION.TOP_RIGHT,
+          })
+        )
+      }, 2500);
     }
   }
 
@@ -153,7 +183,7 @@ export default function NovaConta() {
                     <Input
                       className={`input input_telefone ${getThemeClass(theme)}`}
                       type={"tel"}
-                      placeholder={"(xx) xxxxx-xxxx"}
+                      placeholder={"Opcional"}
                       name={"telefone_cliente"}
                       onchange={(e) => { setTelefone(e.target.value) }}
                     />
@@ -199,6 +229,7 @@ export default function NovaConta() {
                       type={"password"}
                       placeholder={"Digite novamente a senha"}
                       name={"confirmacao_senha"}
+                      onchange={(e) => { setsenhaConfirmar(e.target.value) }}
                     />
                   </label>
                 </div>
@@ -225,6 +256,7 @@ São Paulo, 12 de Dezembro de 2023" />
                   defaultValue="SALVAR"
                   onClick={(e) => { onSubmit(e) }}
                 />
+                <ToastContainer />
               </div>
             </div>
           </form>

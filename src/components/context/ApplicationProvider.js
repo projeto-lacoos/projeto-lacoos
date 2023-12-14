@@ -22,7 +22,6 @@ export const ApplicationProvider = ({ children }) => {
                     const localUser = jwtDecode(token);
                     setUser(localUser);
                     return true;
-
                 } catch (error) {
                     console.log(error)
                     return false

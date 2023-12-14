@@ -9,7 +9,7 @@ export const Auth = () => {
     const { auth } = useContext(ApplicationContext);
 
     return (
-        <BrowserRouter >
+        <BrowserRouter>
             <Routes>
                 <Route exact path="/" element={<Home />} />
                 <Route exact path="/perfil" element={auth ? <Perfil /> : <Home />} />

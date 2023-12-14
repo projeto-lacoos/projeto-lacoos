@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 import "./PagamentoModule.css";
 
@@ -31,8 +31,15 @@ import ImagemEmpresa18 from "../../../img/servicos/imagemEmpresa18.jpg";
 import ImagemEmpresa19 from "../../../img/servicos/imagemEmpresa19.jpg";
 import ImagemEmpresa20 from "../../../img/servicos/imagemEmpresa20.jpg";
 import ImagemEmpresa21 from "../../../img/servicos/imagemEmpresa21.jpg";
+import { ToastContainer, toast } from "react-toastify";
+import { ApplicationContext } from "../../context/ApplicationProvider";
 
 export default function Pagamento() {
+
+  const { user } = useContext(ApplicationContext);
+
+  const [notificacao, setNotificacao] = useState(null);
+
   const [escolhas, setEscolhas] = useState({
     musica: null,
     cerimonia: null,
@@ -45,6 +52,8 @@ export default function Pagamento() {
 
   const handleEscolha = (servico, valor) => {
     setEscolhas((prevEscolhas) => ({ ...prevEscolhas, [servico]: valor }));
+    console.log(servico);
+    console.log(valor);
   };
 
   const valorTotal = Object.values(escolhas).reduce(
@@ -137,6 +146,50 @@ export default function Pagamento() {
     "Um cenário ao ar livre em um gramado durante o dia. Ao fundo temos uma cerca com plantas, em frente vemos um arco de casamento com panos brancos e flores brancas, à frente do lado esquerdo temos cadeiras de madeira com flores brancas em uma fita branca.",
     "Um cenário ao ar livre em um gramado durante a noite. Ao fundo temos uma porta de madeira, no meio um caminho de grama com flores vermelhas e brancas dos dois lados, as cadeiras de madeira com almofadas brancas estão tanto do lado esquerdo quanto do direito. Na frente esta uma mesa de madeira com flores brancas, papéis e canetas em cima. No teto temos estruturas que vem do chão para segurar lâmpadas suspensas e flores vermelhas e brancas.",
   ];
+
+  const navigate = useNavigate();
+
+  const dados = {
+    "musica": handleEscolha,
+    "cerimonia": handleEscolha,
+    "comida": handleEscolha,
+    "fotografia": handleEscolha,
+    "cabeloMaquiagem": handleEscolha,
+    "decoracao": handleEscolha,
+    "local": handleEscolha,
+    "totalP": valorTotal
+  };
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    console.log(valorTotal);
+    try {
+      const response = await fetch("http://testelacoos.us-east-1.elasticbeanstalk.com/v1/pag/sign-up/pag", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({...escolhas, totalP: valorTotal})
+      })
+
+      if (response.ok) {
+        navigate("/login");
+          setTimeout(() => {
+            setNotificacao(
+              toast.success('Pagamento realizado com sucesso!', {
+                position: toast.POSITION.TOP_CENTER,
+                autoClose: 3500
+              })
+            )
+          }, 3500);
+      } else {
+        alert("Error");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   return (
     <>
       <Navbar />
@@ -147,7 +200,6 @@ export default function Pagamento() {
             alt="Logo da Laçoos, um sinal de infinito amarelo formado por duas letras o’s."
           />
         </Link>
-
         <div className="container-titulo-desc">
           <h2 className="text-shadow h2-pagamento-inicial">
             Chegou a hora das escolhas para{" "}
@@ -158,7 +210,7 @@ export default function Pagamento() {
           </p>
         </div>
       </section>
-      <form action="" method="post" className="form-escolhas-pacotes">
+      <form className="form-escolhas-pacotes">
         <section className="container-escolhas-pacotes">
           <Servicos
             name={"musica"}
@@ -363,9 +415,12 @@ export default function Pagamento() {
               </div>
               <div className=" finalizar">
                 <p className="valorFinal">Total: R$ {valorTotal.toFixed(0)},00</p>
-                <button className="btn-finalizar-pagamento" type="submit">
+                <button
+                  onClick={onSubmit}
+                  className="btn-finalizar-pagamento" type="submit">
                   Finalizar
                 </button>
+                <ToastContainer />
               </div>
             </form>
           </div>

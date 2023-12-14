@@ -56,8 +56,7 @@ export default function RecuperacaoSenha() {
     e.preventDefault();
     if (email !== '') {
       try {
-        const response = await fetch('http://testelacoos.us-east-1.elasticbeanstalk.com/v1/user/recover-password',
-          {
+        const response = await fetch('http://testelacoos.us-east-1.elasticbeanstalk.com/v1/user/recover-password', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
@@ -68,27 +67,18 @@ export default function RecuperacaoSenha() {
           });
         if (response.ok) {
           setTimeout(() => {
-            setNotificacao(
-              toast.success('Email de recuperação de senha enviado!', {
-                position: toast.POSITION.TOP_RIGHT,
-                /* autoClose: 3500, */
-              })
-            )
-          }, 3500);
+            toast.success('Email de recuperação de senha enviado!', {
+              position: toast.POSITION.TOP_CENTER,
+            })
+          }, 250);
           navigate("/login");
-        } else {
-          toast.error('Email não encontrado!', {
-            position: toast.POSITION.TOP_RIGHT,
-            autoClose: 3500,
-          });
         }
       } catch (error) {
-        toast.error('Email não encontrado!', {
-          position: toast.POSITION.TOP_RIGHT,
-          autoClose: 3500,
-        });
-        /* console.log(error);
-        alert('Algo deu errado! Mas enviou o email!'); */
+        setTimeout(() => {
+          toast.error('Email não encontrado!', {
+            position: toast.POSITION.TOP_CENTER
+          })
+        }, 250);
       }
     }
   }

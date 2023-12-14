@@ -84,30 +84,6 @@ export default function Perfil() {
   }
 
   const [email, setEmail] = useState('');
-
-  const onSubmit = async (e) => {
-    e.preventDefault();
-    if (email !== '') {
-      try {
-        const response = await fetch('http://localhost:8080/v1/user/recover-password',
-          {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-              email: email
-            })
-          });
-        if (typeof window !== undefined && response.ok) {
-          navigate("/");
-        }
-      } catch (error) {
-        console.log(error);
-        alert('Algo deu errado! Mas enviou o email!');
-      }
-    }
-  }
   
   return (
     <>
@@ -128,11 +104,11 @@ export default function Perfil() {
                   <Link to={"/formulario"}>
                     <li className="lista-perfil">Meu Formulário</li>
                   </Link>
-                  {/* <Link to={"/pacote"}>
-                    <li className="lista-perfil">Meu Pacote</li>
-                  </Link> */}
                   <Link to={"/convites"}>
                     <li className="lista-perfil">Convites</li>
+                  </Link>
+                  <Link to={"/sobre"}>
+                    <li className="lista-perfil">Sobre Nós</li>
                   </Link>
                 </ul>
                 <Link to={"/"}>
@@ -206,7 +182,7 @@ export default function Perfil() {
                   <button type="submit" className={`btn-perfil ${getThemeClass(theme)}`}>
                     Salvar alteração
                   </button>
-                  <Link to="/recuperacao-senha" onClick={onSubmit} className={`btn-perfil ${getThemeClass(theme)}`}>
+                  <Link to="/recuperacao-senha" className={`btn-perfil ${getThemeClass(theme)}`}> {/* onClick={onSubmit} */}
                     Alterar senha
                   </Link>
                 </div>
