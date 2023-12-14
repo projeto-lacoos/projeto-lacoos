@@ -415,12 +415,12 @@ export default function Pagamento() {
               </div>
               <div className=" finalizar">
                 <p className="valorFinal">Total: R$ {valorTotal.toFixed(0)},00</p>
+                <ToastContainer />
                 <button
                   onClick={onSubmit}
                   className="btn-finalizar-pagamento" type="submit">
                   Finalizar
                 </button>
-                <ToastContainer />
               </div>
             </form>
           </div>
