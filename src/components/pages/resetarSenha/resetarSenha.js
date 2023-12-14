@@ -9,7 +9,7 @@ import PD from "../../../img/resetarSenha/oo-1.svg";
 import A from "../../../img/resetarSenha/oo-3.svg";
 
 import { useContext, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { ApplicationContext } from "../../context/ApplicationProvider";
 import { ThemeContext } from "../../context/ThemeContext";
 import { ToastContainer, toast } from "react-toastify";
@@ -55,31 +55,34 @@ export default function ResetarSenha() {
   const [senha, setSenha] = useState("");
   const [confirmaSenha, setConfirmaSenha] = useState("");
 
+  const [notificacao, setNotificacao] = useState(null);
+
   const onSubmit = async (e) => {
     e.preventDefault();
     if (senha === confirmaSenha) {
       try {
         const response = await fetch(
           `http://testelacoos.us-east-1.elasticbeanstalk.com/v1/user/reset-password/${params.token}`, {
-            method: "PATCH",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              password: senha,
-              confirmPassword: confirmaSenha,
-            }),
-          }
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            password: senha,
+            confirmPassword: confirmaSenha,
+          }),
+        }
         );
 
         if (response.ok) {
-          toast.success('Senha recuperada com sucesso!', {
-            position: toast.POSITION.TOP_RIGHT,
-            autoClose: 3500,
-          });
-          /* localStorage.clear();
-          setAuth(false);
-          navigate("/login"); */
+          setTimeout(() => {
+            setNotificacao(
+              toast.success('Senha recuperada com sucesso!', {
+                position: toast.POSITION.TOP_CENTER
+              })
+            )
+          }, 250);
+          navigate("/login");
         }
       } catch (error) {
         console.log(error);
@@ -102,6 +105,7 @@ export default function ResetarSenha() {
         <label className={`label_new_password_reset ${getThemeClass(theme)}`}>
           Senha
           <Input
+            type={"password"}
             className={`input-reset-senha ${getThemeClass(theme)}`}
             placeholder={"Senha"}
             onchange={(e) => {
@@ -112,6 +116,7 @@ export default function ResetarSenha() {
         <label className={`label_new_password_reset ${getThemeClass(theme)}`}>
           Confirmação da senha
           <Input
+            type={"password"}
             className={`input-reset-senha ${getThemeClass(theme)}`}
             placeholder={"Confirmar senha"}
             onchange={(e) => {

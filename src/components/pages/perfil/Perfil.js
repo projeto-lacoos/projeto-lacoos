@@ -77,14 +77,19 @@ export default function Perfil() {
   const navigate = useNavigate();
 
   const logoutUser = () => {
-    navigate("/"); 
+    navigate("/");
     localStorage.clear();
     setAuth(false);
     window.location.reload();
   }
 
-  const [email, setEmail] = useState('');
-  
+  const logoutUserAlterarSenha = () => {
+    navigate("/recuperacao-senha");
+    localStorage.clear();
+    setAuth(false);
+    window.location.reload();
+  }
+
   return (
     <>
       <div className={`container-perfil ${getThemeClass(theme)}`}>
@@ -128,7 +133,6 @@ export default function Perfil() {
                         placeholder={user?.email}
                         name={"email-user"}
                         id={"email-user"}
-                        onchange={(e) => setEmail(e.target.value)}
                       />
                     </div>
                     <div className="cel-tel">
@@ -159,8 +163,8 @@ export default function Perfil() {
                       <label htmlFor="idade">Data de Nascimento</label>
                       <Input
                         className={`input-perfil ${getThemeClass(theme)}`}
-                        type={"date"}
-                        placeholder={ user?.birthDate ? user?.birthDate : "2004-10-20"} // birthDate
+                        type={"text"}
+                        placeholder={user?.birthDate ? user?.birthDate : "Sua data de nascimento"} // birthDate
                         name={"idade"}
                         id={"idade"}
                         readonly
@@ -179,12 +183,15 @@ export default function Perfil() {
                   </div>
                 </div>
                 <div className="btns-form-perfil">
-                  <button type="submit" className={`btn-perfil ${getThemeClass(theme)}`}>
-                    Salvar alteração
-                  </button>
-                  <Link to="/recuperacao-senha" className={`btn-perfil ${getThemeClass(theme)}`}> {/* onClick={onSubmit} */}
-                    Alterar senha
+                  <Link to={"/"}>
+                    <button type="submit" className={`btn-perfil ${getThemeClass(theme)}`}>
+                      Voltar ao início
+                    </button>
                   </Link>
+                  <button onClick={logoutUserAlterarSenha}
+                    className={`btn-perfil ${getThemeClass(theme)}`}>
+                    Recuperar senha
+                  </button>
                 </div>
               </form>
             </div>
