@@ -56,7 +56,7 @@ export default function RecuperacaoSenha() {
     e.preventDefault();
     if (email !== '') {
       try {
-        const response = await fetch('http://testelacoos.us-east-1.elasticbeanstalk.com/v1/user/recover-password', {
+        const response = await fetch('http://localhost:8080/v1/user/recover-password', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'

@@ -150,8 +150,8 @@ export default function Perfil() {
                         <label htmlFor="telefone">Telefone</label>
                         <Input
                           className={`input-perfil ${getThemeClass(theme)}`}
-                          type={"tel"}
-                          placeholder={user?.telephone ? user?.telephone : "Informe um telefone"}
+                          type={"tel"} 
+                          placeholder={user.telephone ? user.telephone : "Informe um telefone"}
                           name={"telefone"}
                           id={"telefone"}
                         />
@@ -164,10 +164,9 @@ export default function Perfil() {
                       <Input
                         className={`input-perfil ${getThemeClass(theme)}`}
                         type={"text"}
-                        placeholder={user?.birthDate ? user?.birthDate : "Sua data de nascimento"} // birthDate
+                        placeholder={user.birthDate ? user.birthDate : "Sua data de nascimento"}
                         name={"idade"}
                         id={"idade"}
-                        readonly
                       />
                     </div>
                     <div className="grupo">

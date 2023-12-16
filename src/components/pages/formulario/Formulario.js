@@ -84,74 +84,96 @@ export default function Formulario() {
   const [notificacao, setNotificacao] = useState(null);
 
   const onSubmit = async (e) => {
-    console.log("Oi");
     e.preventDefault();
-      try {
-        const response = await fetch("http://testelacoos.us-east-1.elasticbeanstalk.com/v1/form/sign-up/form", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-            estilo: estilo,
-            orcamento: orcamento,
-            tipoDeficiencia: tipo_deficiencia,
-            grauVisao: grau_visao,
-            sensivelALuz: sensivel_a_luz,
-            musicaEntretenimento: musica_entretenimento,
-            restricoesAlimentares: restricoes_alimentares,
-            informacoes: informacoes,
-            cadeiraDeRodas: cadeira_de_rodas,
-            pisoTatil: piso_tatil,
-            cardapioBraille: cardapio_braile,
-            nomeParceiro: nome_parceiro,
-            dataCerimonia: data_cerimonia,
-            horarioCerimonia: horario_cerimonia,
-            ondeMora: onde_mora,
-            preferencias: preferencias,
-            preferenciasDecoracao: preferencias_decoracao,
-            paletaDeCores: paleta_de_cores,
-            indicacaoTatilDanca: indicacao_tatil_danca,
-            segurancaPista: seguranca_pista,
-            videoEFoto: video_e_foto,
-            descricoesFotos: descricoes_fotos,
-            assentos: assentos,
-            consideracoesAssentos: consideracoes_assentos,
-            adaptacaoProgramacao: adaptacao_programacao,
-            necessidades: necessidades,
-            maisInformacoes: mais_informacoes
-          })
-        });
+    if (tipo_deficiencia !== "1" || tipo_deficiencia !== "2" || tipo_deficiencia !== "Sim" && informacoes !== "1" || informacoes !== "2" || informacoes !== "Sim") {
+      if (sensivel_a_luz !== "Não" || sensivel_a_luz !== "Sim" && cadeira_de_rodas !== "Não" || cadeira_de_rodas !== "Sim" &&
+        piso_tatil !== "Não" || piso_tatil !== "Sim" && cardapio_braile !== "Não" || cardapio_braile !== "Sim" &&
+        indicacao_tatil_danca !== "Não" || indicacao_tatil_danca !== "Sim") {
+        try { /* testelacoos.us-east-1.elasticbeanstalk.com */
+          const response = await fetch("http://localhost:8080/v1/form/sign-up/form", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+              estilo: estilo,
+              orcamento: orcamento,
+              tipoDeficiencia: tipo_deficiencia,
+              grauVisao: grau_visao,
+              sensivelALuz: sensivel_a_luz,
+              musicaEntretenimento: musica_entretenimento,
+              restricoesAlimentares: restricoes_alimentares,
+              informacoes: informacoes,
+              cadeiraDeRodas: cadeira_de_rodas,
+              pisoTatil: piso_tatil,
+              cardapioBraille: cardapio_braile,
+              nomeParceiro: nome_parceiro,
+              dataCerimonia: data_cerimonia,
+              horarioCerimonia: horario_cerimonia,
+              ondeMora: onde_mora,
+              preferencias: preferencias,
+              preferenciasDecoracao: preferencias_decoracao,
+              paletaDeCores: paleta_de_cores,
+              indicacaoTatilDanca: indicacao_tatil_danca,
+              segurancaPista: seguranca_pista,
+              videoEFoto: video_e_foto,
+              descricoesFotos: descricoes_fotos,
+              assentos: assentos,
+              consideracoesAssentos: consideracoes_assentos,
+              adaptacaoProgramacao: adaptacao_programacao,
+              necessidades: necessidades,
+              maisInformacoes: mais_informacoes
+            })
+          });
 
-        if (response.ok) {
-          navigate("/login");
-          setTimeout(() => {
-            setNotificacao(
-              toast.success('Formulário cadastrado com sucesso!', {
-                position: toast.POSITION.TOP_RIGHT,
-              })
-            )
-          }, 3500);
-          navigate("/pagamento");
-        } else {
-          toast.error('Reveja dados do formulário!', {
+          if (response.ok) {
+            navigate("/login");
+            setTimeout(() => {
+              setNotificacao(
+                toast.success('Formulário cadastrado com sucesso!', {
+                  position: toast.POSITION.TOP_RIGHT,
+                })
+              )
+            }, 3500);
+            navigate("/pagamento");
+          } else {
+            toast.error('Reveja dados do formulário!', {
+              position: toast.POSITION.TOP_RIGHT,
+              autoClose: 3500,
+            });
+            console.log("Error");
+          }
+
+        } catch (error) {
+          console.log(error);
+          toast.error('Problema na API.', {
             position: toast.POSITION.TOP_RIGHT,
             autoClose: 3500,
           });
-          console.log("Error");
         }
-
-      } catch (error) {
-        console.log(error);
-        toast.error('Problema na API.', {
+      } else {
+        toast.error('Respostas que permitem sim ou não, ultrapassaram o limite de caracteres.', {
           position: toast.POSITION.TOP_RIGHT,
           autoClose: 3500,
         });
-        /* alert("Problema na API.") */
       }
+    } else {
+      toast.error('Respostas que permitem 1,2 ou 3, ultrapassaram o limite de caracteres.', {
+        position: toast.POSITION.TOP_RIGHT,
+        autoClose: 3500,
+      });
+    }
   };
 
   const { user } = useContext(ApplicationContext);
+
+  const [value, setValue] = useState('');
+
+  const handleChange = (event) => {
+    if (event.target.value.length <= 3) {
+      setValue(event.target.value);
+    }
+  };
 
   return (
     <>
@@ -252,7 +274,9 @@ export default function Formulario() {
                 type={"text"}
                 placeholder={"Ex: Sim"}
                 name={"sensivel_luz"}
-                onchange={(e) => { setSensivel_a_luz(e.target.value) }}
+                onchange={(e) => {
+                  setSensivel_a_luz(e.target.value);
+                }}
               />
             </div>
           </div>
@@ -372,7 +396,7 @@ export default function Formulario() {
               <Input
                 className={`input_extend ${getThemeClass(theme)}`}
                 type={"text"}
-                placeholder={"Ex: Sim"}
+                placeholder={"Ex: Cláudio"}
                 name={"nome_parceiro"}
                 onchange={(e) => { setNome_parceiro(e.target.value) }}
               />

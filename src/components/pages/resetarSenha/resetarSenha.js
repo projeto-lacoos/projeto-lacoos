@@ -62,7 +62,7 @@ export default function ResetarSenha() {
     if (senha === confirmaSenha) {
       try {
         const response = await fetch(
-          `http://testelacoos.us-east-1.elasticbeanstalk.com/v1/user/reset-password/${params.token}`, {
+          `http://localhost:8080/v1/user/reset-password/${params.token}`, {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",

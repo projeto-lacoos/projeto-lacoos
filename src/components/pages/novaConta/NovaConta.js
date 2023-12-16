@@ -65,8 +65,8 @@ export default function NovaConta() {
 
     if (nome !== "" && dataNasc !== "" && celular !== "" && telefone !== "" && sexo !== "" && email !== "") {
       if (senha == senhaConfirmar) {
-        try {
-          const response = await fetch("http://testelacoos.us-east-1.elasticbeanstalk.com/v1/auth/sign-up", {
+        try { /* testelacoos.us-east-1.elasticbeanstalk.com */
+          const response = await fetch("http://localhost:8080/v1/auth/sign-up", {
             method: "POST",
             headers: {
               "Content-Type": "application/json"

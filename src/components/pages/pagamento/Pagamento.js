@@ -163,8 +163,8 @@ export default function Pagamento() {
   const onSubmit = async (e) => {
     e.preventDefault();
     console.log(valorTotal);
-    try {
-      const response = await fetch("http://testelacoos.us-east-1.elasticbeanstalk.com/v1/pag/sign-up/pag", {
+    try { /* testelacoos.us-east-1.elasticbeanstalk.com */
+      const response = await fetch("http://localhost:8080/v1/pag/sign-up/pag", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
