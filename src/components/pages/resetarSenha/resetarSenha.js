@@ -89,7 +89,13 @@ export default function ResetarSenha() {
         alert("Rode a API!");
       }
     } else {
-      console.log("Informe as senhas iguais.");
+      setTimeout(() => {
+        setNotificacao(
+          toast.error('Informe as senhas iguais.', {
+            position: toast.POSITION.TOP_CENTER
+          })
+        )
+      }, 250);
     }
   };
 

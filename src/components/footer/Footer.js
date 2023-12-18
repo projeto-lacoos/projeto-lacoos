@@ -77,7 +77,7 @@ export default function Footer() {
           </div>
           <div className="footer-informacoes-d">
             <p>Telefone para contato</p>
-            <p className={`footer-amarelo ${getThemeClass(theme)}`}>(55) 11 XXXXX-XXXX</p>
+            <p className={`footer-amarelo ${getThemeClass(theme)}`}>(11) 2888-5500</p>
           </div>
         </div>
       </div>

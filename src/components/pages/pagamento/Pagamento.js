@@ -36,6 +36,14 @@ import { ApplicationContext } from "../../context/ApplicationProvider";
 
 export default function Pagamento() {
 
+  const [nomeTitular, setNomeTitular] = useState('');
+  const [validade, setValidade] = useState('');
+  const [CVV, setCVV] = useState('');
+  const [dataNascimento, setDataNascimento] = useState('');
+  const [numeroCartao, setNumeroCartao] = useState('');
+  const [CPF, setCPF] = useState('');
+  const [telefone, setTelefone] = useState('');
+
   const { user } = useContext(ApplicationContext);
 
   const [notificacao, setNotificacao] = useState(null);
@@ -162,31 +170,60 @@ export default function Pagamento() {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    console.log(valorTotal);
-    try { /* testelacoos.us-east-1.elasticbeanstalk.com */
-      const response = await fetch("http://localhost:8080/v1/pag/sign-up/pag", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({...escolhas, totalP: valorTotal})
-      })
+    if (nomeTitular != "" && validade != "" && CVV != "" && dataNascimento != "" && numeroCartao != "" && CPF != "" && telefone != "") {
+      try { /* testelacoos.us-east-1.elasticbeanstalk.com */
+        const response = await fetch("http://localhost:8080/v1/pag/sign-up/pag", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ ...escolhas, totalP: valorTotal })
+        })
 
-      if (response.ok) {
-        navigate("/login");
+        if (response.ok) {
+          setTimeout(() => {
+            setNotificacao(
+              toast.warning('Pagamento em processamento!', {
+                position: toast.POSITION.TOP_CENTER,
+                autoClose: 1500
+              })
+            )
+          }, 1250);
           setTimeout(() => {
             setNotificacao(
               toast.success('Pagamento realizado com sucesso!', {
                 position: toast.POSITION.TOP_CENTER,
-                autoClose: 3500
+                autoClose: 1500
               })
             )
           }, 3500);
-      } else {
-        alert("Error");
+          navigate("/");
+        } else {
+          setTimeout(() => {
+            setNotificacao(
+              toast.error('Error', {
+                position: toast.POSITION.TOP_RIGHT,
+              })
+            )
+          }, 2500);
+        }
+      } catch (error) {
+        setTimeout(() => {
+          setNotificacao(
+            toast.error(`${error}`, {
+              position: toast.POSITION.TOP_RIGHT,
+            })
+          )
+        }, 2500);
       }
-    } catch (error) {
-      console.log(error);
+    } else {
+      setTimeout(() => {
+        setNotificacao(
+          toast.error('Preencha todos os campos!', {
+            position: toast.POSITION.TOP_RIGHT,
+          })
+        )
+      }, 2500);
     }
   }
 
@@ -335,6 +372,7 @@ export default function Pagamento() {
                   name={"nome"}
                   id={"nome"}
                   placeholder={"Nome como exibido no cartão"}
+                  onchange={(e) => { setNomeTitular(e.target.value)}}
                 />
               </div>
               <div className="validade-cvv-dataNascimento">
@@ -348,6 +386,7 @@ export default function Pagamento() {
                     name={"validade"}
                     id={"validade"}
                     placeholder={"MM/AA"}
+                    onchange={(e) => { setValidade(e.target.value)}}
                   />
                 </div>
                 <div className="container-inputs">
@@ -360,6 +399,7 @@ export default function Pagamento() {
                     name={"cvv"}
                     id={"cvv"}
                     placeholder={"CVV"}
+                    onchange={(e) => { setCVV(e.target.value)}}
                   />
                 </div>
                 <div className="container-inputs">
@@ -372,6 +412,7 @@ export default function Pagamento() {
                     name={"dataNascimento"}
                     id={"dataNascimento"}
                     placeholder={"DD/MM/AA"}
+                    onchange={(e) => { setDataNascimento(e.target.value)}}
                   />
                 </div>
               </div>
@@ -385,6 +426,7 @@ export default function Pagamento() {
                   name={"numeroCartao"}
                   id={"numeroCartao"}
                   placeholder={"xxxx.xxxx.xxxx.xxxx"}
+                  onchange={(e) => { setNumeroCartao(e.target.value)}}
                 />
               </div>
               <div className="cpf-telefone">
@@ -398,6 +440,7 @@ export default function Pagamento() {
                     name={"cpf"}
                     id={"cpf"}
                     placeholder={"xxx.xxx.xxx-xx"}
+                    onchange={(e) => { setCPF(e.target.value)}}
                   />
                 </div>
                 <div className="container-inputs">
@@ -410,6 +453,7 @@ export default function Pagamento() {
                     name={"telefone"}
                     id={"telefone"}
                     placeholder={"(xx) xxxx-xxxx"}
+                    onchange={(e) => { setTelefone(e.target.value)}}
                   />
                 </div>
               </div>
