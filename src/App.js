@@ -11,7 +11,7 @@ import Acessibilidade from './components/acessibilidade/Acessibilidade';
 function App() {
   const [modoDaltonismo, setModoDaltonismo] = useState(false);
   const { auth } = useContext( ApplicationContext );
-
+ 
   const HandleModoDaltonismo = () => {
     if (modoDaltonismo === false) {
       setModoDaltonismo(true)

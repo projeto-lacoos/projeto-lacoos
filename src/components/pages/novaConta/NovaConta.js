@@ -63,7 +63,7 @@ export default function NovaConta() {
   const onSubmit = async (e) => {
     e.preventDefault();
 
-    if (nome !== "" && dataNasc !== "" && celular !== "" && sexo !== "" && email !== "") {
+    if (nome !== "" && dataNasc !== "" && celular !== "" && telefone != "" && sexo !== "" && email !== "") {
       if (senha == senhaConfirmar) {
         try { /* testelacoos.us-east-1.elasticbeanstalk.com */
           const response = await fetch("http://localhost:8080/v1/auth/sign-up", {
@@ -118,6 +118,7 @@ export default function NovaConta() {
           )
         }, 2500);
       }
+
     } else {
       setTimeout(() => {
         setNotificacao(
@@ -183,7 +184,7 @@ export default function NovaConta() {
                     <Input
                       className={`input input_telefone ${getThemeClass(theme)}`}
                       type={"tel"}
-                      placeholder={"Opcional"}
+                      placeholder={"(xx) xxxx-xxxx"}
                       name={"telefone_cliente"}
                       onchange={(e) => { setTelefone(e.target.value) }}
                     />
